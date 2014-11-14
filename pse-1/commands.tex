@@ -1,0 +1,20 @@
+%----------------------------------
+% thomi fa list implementation
+%----------------------------------
+
+\newlist{falist}{enumerate}{2}
+\setlist[falist,1]{label={/FA\arabic{falisti}\arabic{falistii}/},align=left,labelwidth=17pt,labelsep=3pt,leftmargin=20pt}
+\setlist[falist,2]{label={/FA\arabic{falisti}\arabic{falistii}/}}%,align=left,labelwidth=17pt,labelsep=3pt,leftmargin=0pt}
+
+\usepackage{chngcntr}
+\counterwithin{falistii}{falisti}
+
+\newlist{pdlist}{enumerate}{2}
+\setlist[pdlist,1]{label={/PD\arabic{pdlisti}\arabic{pdlistii}/},align=left,labelwidth=17pt,labelsep=3pt,leftmargin=20pt}
+\setlist[pdlist,2]{label={/PD\arabic{pdlisti}\arabic{pdlistii}/}}%,align=left,labelwidth=17pt,labelsep=3pt,leftmargin=0pt}
+\counterwithin{pdlistii}{pdlisti}
+
+\newlist{nflist}{enumerate}{2}
+\setlist[nflist,1]{label={/NF\arabic{nflisti}\arabic{nflistii}/},align=left,labelwidth=17pt,labelsep=3pt,leftmargin=20pt}
+\setlist[nflist,2]{label={/NF\arabic{nflisti}\arabic{nflistii}/}}%,align=left,labelwidth=17pt,labelsep=3pt,leftmargin=0pt}
+\counterwithin{nflistii}{nflisti}
