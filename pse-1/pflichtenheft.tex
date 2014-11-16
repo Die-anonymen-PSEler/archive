@@ -112,9 +112,9 @@ Die Kinder sollen durch das Spiel in die Lage versetzt werden, sich die Prinzipi
 
 \section{Spielaufbau}
 
-Das Spiel besteht aus einem Jump 'n' Run und einem Rätselteil, die in einer engen Verbindung zueinander stehen. Der Jump 'n' Run Teil dient dazu die benötigten Bauteile für den Rätselteil zu sammeln. Im Rätselteil werden die Bauteile zusammengesetzt, was wiederrum das nächste Level freischaltet.
-
 \subsection{Spielprinzip}
+Das Spielprinzip beruht auf dem Verschieben von Blöcken. Der Spieler muss die verschiedenen Teile des Spieles, die Maschinen(), die Maschinen-Cluster() und die Metallstücke, in die dafür vorgesehenen Positionen schieben. Hat er alle Teile in die richtigen Positionen geschoben, öffnet sich die Tür zum nächsten Level.
+
 
 \subsection{Spielelemente}
 
@@ -122,7 +122,8 @@ Zu Beginn eines Levels wird die Spielerfigur angezeigt und bewegt zweidimensiona
 
 \begin{description}
 	\item[Spielerfigur] bewegt sich durch die Welt, sammelt Gegenstände um mit diesen die Levelquest zu lösen
-	\item[Spielwelt] zweidimensionale Spielwelt auf einem Raster basierend, in der sich der Spieler im Jump 'n' Run Teil bewegt
+	\item[Spielwelt] zweidimensionale Spielwelt auf einem Raster basierend, in der sich der Spieler bewegt
+	\item[Spielebenen] verschiedene Ebenen in der Spielwelt auf die der Spieler springen kann.
 	\item[Collectable Items] \label{elemente:collectable}sind in der Spielwelt verteilt und müssen von der Spielfigur eingesammelt werden um im Rätselteil eingesetzt zu werden. Diese bestehen aus:
 	\begin{enumerate}[label=\arabic*]
 		\item Maschinen (entspricht der Abstraktion)
@@ -134,6 +135,31 @@ Zu Beginn eines Levels wird die Spielerfigur angezeigt und bewegt zweidimensiona
 \end{description}
 
 \subsection{Regeln}
+
+\begin{description}
+	\item[Spielregeln] Die Spielfigur beginnt an der unteren, linken Ecke der Spielwelt und muss es schaffen die Tür an der rechten unteren Ecke zu öffnen. Dies gelingt ihm in dem er die Teile des Spieles an die richtige Position schiebt.\\
+	Er muss hinter dem Teil stehen können, um es zu verschieben. \\
+	Der Spieler kann nur ein Teil gleichzeitig bewegen, bei zwei oder mehreren Teilen kommt er nicht weiter voran. \\
+	Um auf die oberen Ebenen der Spielwelt zu gelangen, kann die Spielfigur springen, dabei ist aber zu beachten, dass die Figur nur so hoch wie seine eigene Körpergröße springen kann und er somit auf zu hohe Ebenen nicht durch einfaches Springen gelangen kann. 
+	Sind alle Teile in die freien Felder positioniert, wird ausgewertet, ob die Maschinen und Metallstücke an den richtigen Positionen stehen und der $\lambda$-Kalkül erfüllt ist. Sind sie nicht an der richtigen Position gilt das Level als nicht geschafft und der Spieler muss es wiederholen, um ins nächste Level zu gelangen. \\
+	%Sind noch nicht alle Teile in den freien Felder angeordnet, aber kein Zug ist mehr möglich(z.B. wenn kein Teil mehr verschoben werden oder der Spieler sich nicht mehr bewegen kann) gilt das Level ebenso als nicht geschafft.
+	
+	\item[Die Verarbeitungsregel der Maschinen] Die Verarbeitung der einzelnen Metallstücke erfolgt in fester Reihenfolge().\\
+	Es wird immer nur ein Metallstück zu einem bestimmten Zeitpunkt verarbeitet.\\
+	Wie das Objekt verarbeitet wird bestimmt die jeweilige Maschine.\\
+	Die Maschinen werden in fester Reihenfolge () angeordnet und verarbeiten nacheinander die gegebenen Metallobjekte.\\
+	Dabei kann jede Maschine nur ein Objekt verarbeiten, nachdem sie dieses Metallobjekt verarbeitet hat verschwindet sie.\\
+	Jede Maschine kann Form, Farbe/Muster und Anzahl des zu verarbeitenden Objekts verändern. Hierbei ist zu beachten das eine Maschine auch ein Objekt komplett entfernen kann. Was eine Maschine genau am zu verarbeitenden Objekt verändert ist durch ihr aussehen eindeutig bestimmt.\\
+	Das verarbeitete Objekt landet im Output-Bereich unterhalb des Maschinen-Bereichs, dieser ist gleichzeitig Input-Bereich des nachfolgenden Maschinenbereichs.\\
+	Sind keine Maschinen mehr im Maschinen-Bereich vorhanden, so werden alle noch im Input-Bereich liegenden Metallobjekte ohne Verarbeitung in den darunter liegenden Output-Bereich verschoben. Anschließend beginnt der nächste darunterliegende Maschinen-Bereich nach selben Regeln seine Arbeit.\\
+	Sollte unterhalb des aktuellen I/O Bereichs kein Maschinen-Bereich mehr vorhanden sein, so ist das Level Beendet und der aktuelle Output wird mit den Zielvorgaben vom Level beginn verglichen.
+	
+	\item[Sonderfälle/regeln:] Sollten in einem Maschinen-Bereich noch Maschinen vorhanden sein, im zugehörigen Input-Bereich jedoch keine Metallobjekte mehr, so verschwindet entsprechende Maschine einfach.\\
+	Sollte die im Maschinen-Bereich aktuell arbeitende Maschine ein Ampel-Konstrukt sein, so wird vor Verarbeitung des aktuellen Objekts im Input-Bereich der im Ampel-Konstrukt dargestellte Maschinen-Cluster minimiert, sodass er durch eine Maschine dargestellt wird. Dann wird das Aktuelle Metallobjekt von der Minimalen Maschine im Ampel-Konstrukt normal verarbeitet.\\
+	Der im Ampel-Konstrukt vorhandene Maschinen-Cluster darf keine Maschinen ohne Output enthalten(Sollte diese Bedingung verletzt werden so gilt das Level als nicht geschafft).\\
+	Der im Ampel-Konstrukt vorhandene Maschinen-Cluster darf keine 2 aufeinanderfolgenden Maschinen mit mehr als einem Output enthalten(Sollte diese Bedingung verletzt werden so gilt das Level als nicht geschafft).\\
+	Die oberste Maschine im Cluster bestimmt die Anzahl Outputs der minimalen Maschine (die Anzahl der Outputs wird 1:1 von ihr übertragen). Form und Muster/Farbe Veränderungseigenschaften erhält der minimale Automat des Clusters vom untersten der Automaten im Cluster.
+\end{description}
 
 \subsection{Aufgabentypen}
 
