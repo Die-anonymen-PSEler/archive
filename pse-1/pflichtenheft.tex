@@ -31,6 +31,15 @@
 \clearpage
 \setcounter{page}{1}
 
+
+
+
+
+
+% ---------------
+% Einleitung
+% ---------------
+
 \section{Einleitung}
 
 Der derzeitige und auch kommende Ingenieursmangel in Deutschland ist
@@ -71,6 +80,17 @@ durch Eltern oder Lehrkräfte einsehbar ist.
 
 \clearpage
 
+
+
+
+
+
+
+
+% ---------------
+% Zielbestimmungen
+% ---------------
+
 \section{Zielbestimmungen}
 
 
@@ -79,12 +99,12 @@ Die Kinder sollen durch das Spiel in die Lage versetzt werden, sich die Prinzipi
 \subsection{Musskritieren}
 
 \begin{enumerate}
-	\item Spielerisches Vermitteln des Lambda Kalküls für Kinder ab acht Jahren
-	\item Das Spiel muss in der Simulationsumgebung von Android laufen
-	\item komplett über das simulierte Touchinterface bedienbar sein
-	\item eine modulare Architektur besitzen (z.B. Model-View-Controller-Prinzip)
-	\item mindestens fünf individuelle Level
-	\item Tutorial Level
+	\item \label{muss:vermittelnlamba}Spielerisches Vermitteln des Lambda Kalküls für Kinder ab acht Jahren
+	\item \label{muss:simulationandroid}Das Spiel muss in der Simulationsumgebung von Android laufen
+	\item \label{muss:touchinterface}komplett über das simulierte Touchinterface bedienbar sein
+	\item \label{muss:mvc}eine modulare Architektur besitzen (z.B. Model-View-Controller-Prinzip)
+	\item \label{muss:5indilevel}mindestens fünf individuelle Level
+	\item \label{muss:tutorial}Tutorial Level
 \end{enumerate}
 
 \subsection{Wunschkriterien}
@@ -97,8 +117,8 @@ Die Kinder sollen durch das Spiel in die Lage versetzt werden, sich die Prinzipi
 	\item \label{wunsch:8bit}8-Bit Grafik
 	\item \label{wunsch:multiplechar}Mehrere Spielcharaktere (männlich, weiblich)
 	\item \label{wunsch:multiplemode}Mehrere Spielmodi (siehe Aufgabentyp \ref{aufgabentyp:fehlerfindung})
-    \item \label{wunsch:story} Begleitende Story
-    \item \label{wunsch:erweiterndeLevelelemente} Erweiternde Levelelement, z.B. Leitern, Aufzüge usw.
+    \item \label{wunsch:story}Begleitende Story
+    \item \label{wunsch:erweiterndeLevelelemente}Erweiternde Levelelement, z.B. Leitern, Aufzüge usw.
 \end{enumerate}
 
 \subsection{Abgrenzungskritieren}
@@ -110,6 +130,19 @@ Die Kinder sollen durch das Spiel in die Lage versetzt werden, sich die Prinzipi
 \end{enumerate}
 
 \clearpage
+
+
+
+
+
+
+
+
+
+
+% ---------------
+% Spielaufbau
+% ---------------
 
 \section{Spielaufbau}
 
@@ -176,6 +209,17 @@ Zu Beginn eines Levels wird die Spielerfigur angezeigt und bewegt zweidimensiona
 
 \clearpage
 
+
+
+
+
+
+
+% ---------------
+% Produkteinsatz Anforderungen
+% ---------------
+
+
 \section{Produkteinsatz}
 
 Das Produkt soll auf jedem Android Gerät ab Android 4.0 einsatzfähig sein. Ein Einsatz auf Emulatoren der Android Plattform ist ebenfalls vorgesehen.
@@ -197,14 +241,47 @@ Der primäre Einsatzbereich
 
 \clearpage
 
+
+
+
+
+
+
+% ---------------
+% Produktumgebung
+% ---------------
+
 \section{Produktumgebung}
 
+\subsection{Software}
+
+\begin{itemize}
+	\item Die Software ist für die Unterstützung der API 17+ von Android ausgelegt
+\end{itemize}
+
+\subsection{Hardware}
+
+\begin{itemize}
+	\item Die eingesetzte Hardware muss über ein Touch-Interface verfügen.
+\end{itemize}
+
 \clearpage
+
+
+
+
+
+
+
+
+% ---------------
+% Funktionale Anforderungen
+% ---------------
 
 \section{Funktionale Anforderungen}
 
 \begin{falist}
-	\item Tutorial Modus findet nach dem ersten Starten des Spiels statt
+	\item Tutorial Modus (Musskriterium \ref{muss:tutorial}) findet nach dem ersten Starten des Spiels statt
 	\begin{falist}
         \item Der Tutorial Modus basiert auf einem minimum an textuellen Erklärungen
         \item Erklärt die Funktionsweise des Spiels
@@ -217,7 +294,7 @@ Der primäre Einsatzbereich
 		\item Löschen von Spielerprofilen
 		\item Wechseln zu Spielerprofilen
 	\end{falist}
-	\item Levelmenü bietet eine Auswahl der freigeschalteten Level
+	\item Levelmenü bietet eine Übersicht über alle Level des Spiels (Musskriterium \ref{muss:5indilevel}). Diese sind unterteilt in abgeschlossene und nicht abgeschlossene Level.
     \begin{falist}
         \item Das erste Level ist automatisch freigeschaltet
         \item Die restlichen Level werden durch das Beenden des vorherigen Levels freigeschaltet
@@ -244,9 +321,17 @@ Der primäre Einsatzbereich
 
 \clearpage
 
+
+
+
+
+
+
+
 % ---------------
 % Produktdaten
 % ---------------
+
 \section{Produktdaten}
 Das Produkt muss Daten speichern und verwalten, insbesondere: 
 
@@ -265,13 +350,19 @@ Das Produkt muss Daten speichern und verwalten, insbesondere:
         \item Spieldauer
         \item Anzahl gelöste Level
         \item Anzahl Achievments
-        \item Anzahl Niederlagen/Versagen/Looser sein/Noob/Deine mudda alda
     \end{pdlist}
 \end{pdlist}
 
 \subsection{Einstellungen}
 
 \clearpage
+
+
+
+
+
+
+
 
 % ---------------
 % Nichtfunktionale Anforderungen
@@ -318,6 +409,15 @@ Das Produkt muss Daten speichern und verwalten, insbesondere:
 \clearpage
 
 
+
+
+
+
+
+% -------------------------
+% Globale Testfälle
+%-------------------------
+
 \section{Globale Testfälle}
 
 \subsection{Funktionssequenzen}
@@ -331,21 +431,41 @@ Das Produkt muss Daten speichern und verwalten, insbesondere:
 		\item In diesem Dialog kann er einen Charakter auswählen und sowie auswählen, ob dieses Profil im Rechts- oder Linkshänder Modus gespielt werden soll. Der Dialog wird durch Betätigen des \glqq OK\grqq-Buttons beendet.
 	\end{itemize}
 	\item Ein Benutzerprofil auswählen
+	\begin{itemize}
+		\item Der Anweder befindet sich im Startfenster und drückt auf den \glqq Benutzerverwaltungsbutton\grqq. Diese Aktion führt den Benutzer zu einer neuen Anzeige, die seine bisherigen Profile beinhaltet.
+		\item Durch Scrollen kann der Benutzer seine Profile einsehen. Bei Erreichen des gewünschten Profils wählt er dieses durch Berühren aus.
+	\end{itemize}
+	\item Ein Benutzerprofil löschen
+	\begin{itemize}
+		\item Der Anweder befindet sich im Startfenster und drückt auf den \glqq Benutzerverwaltungsbutton\grqq. Diese Aktion führt den Benutzer zu einer neuen Anzeige, die seine bisherigen Profile beinhaltet.
+		\item Durch Scrollen kann der Benutzer seine Profile einsehen. 
+	\end{itemize}
+	\item Ein Benutzerprofil bearbeiten
 	\item Ein Level starten
 	\item Speicher / Laden von Applikationszustandes
 	\item Speichern / Laden von Spielzuständen
-	\item Ein Benutzerprofil löschen
-	\item Ein Benutzerprofil bearbeiten
+	
 	\item 
 \end{telist}
 
 \subsection{Datenkonsistenz}
 
 \begin{telist}[resume]
-	\item 
+	\item Der Spielfortschritt eines jeden Profils wird unabhängig von den anderen Profilen gespeichert und verwaltet. Im Spielfortschritt eingeschlossen sind die Achievements des jeweiligen Nutzers.
+	\item Das Anlegen zweier Profile, die über den selben Namen verügen, ist nicht gestattet. Sollte der Benutzer sich dazu entschließen ein Profil zu löschen, wird der Name wieder freigegeben und kann für ein neues Profil verwendet werden.
 \end{telist}
 
 \clearpage
+
+
+
+
+
+
+
+
+
+
 
 % ---------------
 % Systemmodelle
@@ -432,6 +552,19 @@ Allgemein soll jedoch beibehalten werden, das so viel wie möglich ohne Text, so
 \end{enumerate}
 
 \clearpage
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 % ---------------
 % Szenarien
