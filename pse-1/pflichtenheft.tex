@@ -176,35 +176,43 @@ Zu Beginn eines Levels wird die Spielerfigur angezeigt und bewegt zweidimensiona
 \subsection{Regeln}
 
 \begin{description}
-	\item[Spielregeln] \label{spielaufbau:Spielregeln} Die Spielfigur beginnt an der unteren, linken Ecke der Spielwelt und muss es schaffen die Tür an der rechten unteren Ecke zu öffnen. Dies gelingt ihm in dem er die Teile des Spieles an die richtige Position bringt.\\
-	Er muss neben einem Teil stehen, um es hochheben zu können.\\
-	Der Spieler kann nur ein Teil gleichzeitig bewegen, sobald er etwas trägt, muss er dies erst wieder ablegen, um ein anderes Teil hochheben zu können. \\
-	Um auf die oberen Ebenen der Spielwelt zu gelangen, kann die Spielfigur springen, dabei ist zu beachten, dass die Figur nur eine feste Höhe hochspringen kann und er somit auf zu Ebenen, außerhalb seiner Reichweite, nicht durch einfaches Springen gelangen kann. Die Figur kann auch springen wenn sie etwas in den Händen trägt (dabei kann es zu einer geringen Trägheit kommen, z.B. ungenauere Spielsteuerung).\\
-	Sind alle Teile in die freien Felder positioniert, wird ausgewertet, ob die Maschinen und Metallstücke an den richtigen Positionen stehen und der $\lambda$-Kalkül erfüllt ist. Stehen die Elemente an der richtigen Position, geht die Tür zum nächsten Level auf.
 
+\begin{minipage}{1\textwidth}
+	\item[Spielregeln] \label{spielaufbau:Spielregeln} Die Spielfigur beginnt an der unteren, linken Ecke der Spielwelt und muss es schaffen die Tür an der rechten unteren Ecke zu öffnen. Dies gelingt ihm in dem er diverse Objekte (Maschinen, Metallobjekte und Maschinen-Cluster)auf dem Spielfeld in Position bringt, sodass diese nach den Prinzipien des Lambda Kalküls einen Lambdaausdruck bilden  welcher zu einem gewünschten Ergebnis zusammengefasst oder gelöst werden kann.\\
+	Der Spieler muss neben einem Objekt stehen, um dieses aufheben zu können.\\
+	Der Spieler kann immer nur ein Objekt tragen. Um ein anderes Objekt aufzuheben muss er erst das Objekt das er trägt ablegen.\\
+	Um auf die oberen Ebenen der Spielwelt zu gelangen, kann die Spielfigur springen, dabei ist zu beachten, dass die Figur nur eine feste Höhe hochspringen kann und er somit auf Ebenen außerhalb seiner Reichweite, nicht durch einfaches Springen gelangen kann. Die Figur kann auch springen wenn sie etwas in den Händen trägt (dabei kann es zu einer geringen Trägheit kommen, z.B. ungenauere Spielsteuerung(diese ist gewollt und soll das Spiel ein wenig schwieriger gestalten)).\\
+	Befindet sich in jedem freien Feld ein Objekt, wird der daraus resultierende Lambdaausdruck ausgewertet. Falls die Maschinen und Metallstücke an den richtigen Positionen stehen und der $\lambda$-Kalkül erfüllt ist, wird dem Spieler das Ergebnis und die spezifische Abarbeitung des Maschinenkonstrukts nach den regeln des $\lambda$-Kalküls gezeigt. Anschließend öffnet sich die Tür am Level ende und das Level gilt als geschafft sobald diese erreicht ist.\\
 	
-	\item[Die Verarbeitungsregel der Maschinen] Die Verarbeitung der einzelnen Metallstücke erfolgt in fester Reihenfolge().\\
+\end{minipage}
+
+\begin{minipage}{1\textwidth}
+	\item[Die Verarbeitungsregel der Maschinen] Die Verarbeitung der einzelnen Metallstücke erfolgt in fester Reihenfolge.\\
 	Es wird immer nur ein Metallstück zu einem bestimmten Zeitpunkt verarbeitet.\\
 	Wie das Objekt verarbeitet wird bestimmt die jeweilige Maschine.\\
-	Die Maschinen werden in fester Reihenfolge () angeordnet und verarbeiten nacheinander die gegebenen Metallobjekte.\\
-	Dabei kann jede Maschine nur ein Objekt verarbeiten, nachdem sie dieses Metallobjekt verarbeitet hat verschwindet sie.\\
-	Jede Maschine kann Form, Farbe/Muster und Anzahl des zu verarbeitenden Objekts verändern. Hierbei ist zu beachten das eine Maschine auch ein Objekt komplett entfernen kann. Was eine Maschine genau am zu verarbeitenden Objekt verändert ist durch ihr aussehen eindeutig bestimmt.\\
-	Das verarbeitete Objekt landet im Output-Bereich unterhalb des Maschinen-Bereichs, dieser ist gleichzeitig Input-Bereich des nachfolgenden Maschinenbereichs.\\
-	Sind keine Maschinen mehr im Maschinen-Bereich vorhanden, so werden alle noch im Input-Bereich liegenden Metallobjekte ohne Verarbeitung in den darunter liegenden Output-Bereich verschoben. Anschließend beginnt der nächste darunterliegende Maschinen-Bereich nach selben Regeln seine Arbeit.\\
-	Sollte unterhalb des aktuellen I/O Bereichs kein Maschinen-Bereich mehr vorhanden sein, so ist das Level Beendet und der aktuelle Output wird mit den Zielvorgaben vom Level beginn verglichen.
+	Was die Maschine verarbeiten soll befindet sich immer rechts neben dieser Maschine.\\
+	Die Maschinen werden in fester Reihenfolge angeordnet und verarbeiten nacheinander die gegebenen Metallobjekte.\\
+	Dabei kann jede Maschine nur ein Objekt verarbeiten, nachdem sie dieses Objekt verarbeitet hat verschwindet sie.\\
+	Jede Maschine kann die Anzahl des zu verarbeitenden Objekts und ggf. dessen Farbe/Muster verändern. Hierbei ist zu beachten das eine Maschine auch ein Objekt komplett entfernen kann. Was eine Maschine genau am zu verarbeitenden Objekt verändert ist durch ihr aussehen eindeutig bestimmt.\\
+	Das verarbeitete Objekt landet im Bereich unterhalb der Maschine an vorgegebenen Stellen.\\
+	Nachdem die Maschine verschwunden ist rücken die Objekte unter ihr alle um eine Position nach oben, und die in der obersten Ebene am weitesten links liegende Maschine beginnt die Verarbeitung.\\
+\end{minipage}	
 	
-	\item[Sonderfälle/regeln:] Sollten in einem Maschinen-Bereich noch Maschinen vorhanden sein, im zugehörigen Input-Bereich jedoch keine Metallobjekte mehr, so verschwindet entsprechende Maschine einfach.\\
-	Sollte die im Maschinen-Bereich aktuell arbeitende Maschine ein Ampel-Konstrukt sein, so wird vor Verarbeitung des aktuellen Objekts im Input-Bereich der im Ampel-Konstrukt dargestellte Maschinen-Cluster minimiert, sodass er durch eine Maschine dargestellt wird. Dann wird das Aktuelle Metallobjekt von der Minimalen Maschine im Ampel-Konstrukt normal verarbeitet.\\
-	Der im Ampel-Konstrukt vorhandene Maschinen-Cluster darf keine Maschinen ohne Output enthalten(Sollte diese Bedingung verletzt werden so gilt das Level als nicht geschafft).\\
-	Der im Ampel-Konstrukt vorhandene Maschinen-Cluster darf keine 2 aufeinanderfolgenden Maschinen mit mehr als einem Output enthalten(Sollte diese Bedingung verletzt werden so gilt das Level als nicht geschafft).\\
-	Die oberste Maschine im Cluster bestimmt die Anzahl Outputs der minimalen Maschine (die Anzahl der Outputs wird 1:1 von ihr übertragen). Form und Muster/Farbe Veränderungseigenschaften erhält der minimale Automat des Clusters vom untersten der Automaten im Cluster.
+\begin{minipage}{1\textwidth}
+	\item[Sonderfälle/regeln:] Maschinencluster: Ein Maschinencluster ist eine besonderer Form der Maschinen, sie verarbeitet keinen Input sondern dient als eine Art "Klammerung". Ist ein Maschinencluster an der Reihe zu arbeiten, so verarbeitet sie keinen Input. Stattdessen werden alle Objekte in diesem Cluster nach den normalen Verarbeitungsregeln zuerst verarbeitet, bis nur noch eine Maschine und eine Menge an Metallobjekten darin vorhanden sind. Danach verschwindet der Cluster und sein Inhalt übernimmt seinen Platz in der aktuellen Verarbeitung.\\
+\end{minipage}
+
 \end{description}
 
 \subsection{Aufgabentypen}
 
 \begin{enumerate}
-	\item \label{aufgabentyp:puzzle}
-	\item \label{aufgabentyp:fehlerfindung}
+	\item \label{aufgabentyp:puzzle} Puzzle: Aufgabentyp bei dem an die vorgegebenen stellen Maschinen, Metallobjekte oder Maschinen-Cluster eingefügt werden müssen um einen "Lambdaausdruck" zu bauen der ein gewünschtes Ergebnis liefert oder einen gewünschten Endzustand hat.\\
+	Die benötigten Teile sind in der Spielwelt verstreut und müssen an den passenden Stellen eingefügt werden.\\
+	Der Spieler kann dabei immer nur ein Objekt tragen.\\
+	Es sind auch falsche Konstellationen möglich die zu einem falschen Ergebnis führen.\\
+	\item \label{aufgabentyp:fehlerfindung} Fehlerfindung: Aufgabentyp bei dem der Lambdaausdruck schon fertig zusammengesetzt ist, jedoch nicht in der richtigen Konstellation.\\
+	Der Spieler muss die Fehler finden und die entsprechenden Objekte austauschen.\\
 \end{enumerate}
 
 \clearpage
@@ -472,81 +480,95 @@ Das Produkt muss Daten speichern und verwalten, insbesondere:
 % ---------------
 \section{Systemmodelle}
 
-\subsection{Allgemeiner Appaufbau}
+\subsection{Allgemeine Appaufteilung}
 
 Der hier gezeigte Systemaufbau ist lediglich eine grobe \glqq Skizze\grqq,
-die die zusammenhänge zwischen den einzelnen Menüs verdeutlichen soll.
-Außerdem soll es helfen die Gestaltung und Aufteilung der App zu verdeutlichen.\\
-Allgemein soll jedoch beibehalten werden, das so viel wie möglich ohne Text, sondern durch Symbolik erklärt bzw. dargestellt werden soll. Da die Zielgruppe nicht zwangsläufig lesen und schreiben kann.
+die die zusammenhänge zwischen den einzelnen Menüs sowie, 
+die Gestaltung und Aufteilung der App verdeutlichen soll.\\
+Allgemein gilt jedoch, das so viel wie möglich ohne Text, sondern durch Symbolik erklärt bzw. dargestellt werden soll. Da die Zielgruppe nicht zwangsläufig lesen und schreiben kann.\\
+
 \begin{enumerate}
 	\begin{minipage}{1\textwidth}
 		\item \subsection*{Ladebildschirm:} \label{appaufbau:Ladebildschirm}
-		Nach dem Starten der App, öffnet diese im Ladebildschirm, in diesem werden für die App notwendige Daten geladen, um zu Garantieren das das Spiel flüssig und Fehlerfrei läuft. Benutzeingaben sind zu diesem Zeitpunkt nicht möglich.\\
-		\includegraphics[width=\textwidth, height=7.5cm]{assets/LoadScreen}
+		Nach dem Starten der App, öffnet diese im Ladebildschirm, hier werden für die App notwendige Daten geladen, um zu Garantieren das das Spiel flüssig und Fehlerfrei läuft. Benutzeingaben sind zu diesem Zeitpunkt nicht möglich.\\
+		\includegraphics[width=\textwidth]{assets/LoadScreen}
 	\end{minipage}
 	
 	\begin{minipage}{1\textwidth}
+		
 		\item \subsection*{Profilmenü:}
-		Das Profilmenü öffnet sich unmittelbar nach erfolgreicher Beendigung des Ladevorgangs(Nähere informationen zum Ablauf und Ausnahmen folgen im Kapitel Szenarien).
+		Das Profilmenü öffnet sich unmittelbar nach erfolgreicher Beendigung des Ladevorgangs(Nähere Informationen zum Ablauf und Ausnahmen folgen im Kapitel Szenarien).\\
+		Die einzelenn Spielerprofile werden durch anzeige des Avatar / Spielecharakters sowie den zugehörigen Profilnamen bestimmt.\\
+		Es gibt eine maximale Anzahl an Spielerprofilen, sollte diese erreicht sein so verschwindet der Button zum erzeugen eines neuen Profils.\\
+		Gleichzeitig muss immer ein Spielerprofil vorhanden sein, sollte es nur noch ein Spielerprofil geben , so kann dieses nicht gelöscht werden , bis ein weiteres Profil angelegt wurde.\\
 		In diesem Menü kann der Spieler aus den bestehenden Spielerprofilen auswählen oder in das Menü zum anlegen eines neuen Spielers gelangen.\\
-		\includegraphics[width=\textwidth, height=7.5cm]{assets/PlayerScreen}
+		\includegraphics[width=\textwidth]{assets/PlayerScreen}
 	\end{minipage}
 	
 	\begin{minipage}{1\textwidth}
 		\item \subsection*{Profil anlegen:}
-		In diesem Menü kann ein neues Spielerprofil vom Spieler angelegt werden. Der Spieler kann einen Namen für das Profil eingeben und aus einer gegebenen Menge an Avataren einen als Identifikationsmerkmal aussuchen.Sollte der Spieler hier abbrechen, so gelangt er zurück ins Profilmenü, ansonsten landet er entweder im Tutorial oder im Hauptmenü(Mehr dazu im Kapitel Szenarien)\\
-		\includegraphics[width=\textwidth, height=7.5cm]{assets/CreateProfile}
+		In diesem Menü kann ein neues Spielerprofil vom Spieler angelegt werden.\\
+		Der Spieler kann einen Namen für das Profil eingeben und aus einer gegebenen Menge an Avataren bzw. Avatarteilen einen als Identifikationsmerkmal aussuchen bzw zusammen setzen.\\
+		Der gewählte Avatar dient im weiteren Verlauf auch als Spielfigur, wobei jedoch keine Unterschiede außer dem aussehen zwischen den einzelnen Figuren besteht(Alle sind gleich groß, schnell...).\\
+		Auch die Wahl ob man als Linkshänder oder Rechtshänder spielen will kann hier Profil spezifisch gewählt werden.\\
+		Man kann jederzeit über das Einstellungsmenü hierhin gelangen um Änderungen am Profil vorzunehmen.\\
+		Sollte der Spieler hier abbrechen, so gelangt er zurück ins Profilmenü, ansonsten landet er entweder im Tutorial oder im Hauptmenü(Mehr dazu im Kapitel Szenarien)\\
+		\includegraphics[width=\textwidth]{assets/CreateProfile2}
 	\end{minipage}
 	
 	\begin{minipage}{1\textwidth}
 		\item \subsection*{Hauptmenü:} \label{appaufbau:Hauptmenü}
-		Dies ist der Zentrale Knotenpunkt der App. von hier aus kann der Spieler zur Stageauswahl, den Einstellungen, seiner Statistik, zurück ins Profilmenü gelangen oder das Spiel komplett verlassen.\\
-		\includegraphics[width=\textwidth, height=7.5cm]{assets/Mainmenu}
+		Dies ist der Zentrale Knotenpunkt der App.\\
+		Von hier aus kann der Spieler zur Stageauswahl, den Einstellungen, seiner Statistik, zurück ins Profilmenü gelangen oder das Spiel komplett verlassen.\\
+		\includegraphics[width=\textwidth]{assets/Mainmenu}
 	\end{minipage}
 	
 	\begin{minipage}{1\textwidth}
 		\item \subsection*{Einstellungen:}
-		Hier können verschiedene grundlegende Einstellungen vorgenommen werden. Außerdem gelangt man von hier ins Profilbearbeitungsmenü und zur Ansicht aller Achievments (Achievmentmenu).Der Zurück-Button führt ins Hauptmenü, beim verlassen werden sämtliche Änderungen gespeichert.\\
-		\includegraphics[width=\textwidth, height=7.5cm]{assets/Einstellungen}
+		Hier können verschiedene grundlegende Einstellungen vorgenommen werden.\\
+		Von hier gelangt man ins Profilbearbeitungsmenü und zur Ansicht aller Achievments (Achievmentmenu).\\
+		Der Zurück-Button führt ins Hauptmenü, beim verlassen werden sämtliche Änderungen automatisch gespeichert.\\
+		\includegraphics[width=\textwidth]{assets/Einstellungen}
 	\end{minipage}
 
 	\begin{minipage}{1\textwidth}
 		\item \subsection*{Profilbearbeitungsmenü:}
-		Dieses Menü ist absolut identisch mit dem Menü zum Anlegen eines neuen Spielerprofils. Der einzige Unterschied ist das jeder Weg aus diesem Menü zurück in die Einstellungen führt.\\
-		\includegraphics[width=\textwidth, height=7.5cm]{assets/CreateProfile}
+		Dieses Menü ist identisch mit dem Menü zum Anlegen eines neuen Spielerprofils.\\
+		Beendet man dieses Menü kommt man automatisch zurück ins Einstellungsmenü.\\
+		Außerdem kann hier ein bestehendes Profil gelöscht werden, sollte man ein Profil löschen so landet man anschließend im Profilmenü um ein anderes Profil zu wählen.
+		\includegraphics[width=\textwidth]{assets/CreateProfile2}
 	\end{minipage}
 
 	\begin{minipage}{1\textwidth}
 		\item \subsection*{Achievments:}
 		Hier sind alle Achievments zu sehen, die die man schon erlangt hat sind durch ein Bild gekennzeichnet, ansonsten ist dort ein Platzhalter zu sehen. Ein Abbruch führt zurück in die Einstellungen.\\
-		\includegraphics[width=\textwidth, height=7.5cm]{assets/Achievments}
+		\includegraphics[width=\textwidth]{assets/Achievments}
 	\end{minipage}
 	
 	\begin{minipage}{1\textwidth}
-		\item \subsection*{Stagemenü:}
-		Hier kann man sich eine Stage zum Spiele auswählen sie sind der Schwierigkeit nach geordnet und können im Spielverlauf freigeschaltet werden.\\
-		\includegraphics[width=\textwidth, height=7.5cm]{assets/Stagemenu}
+		\item \subsection*{Stageauswahl:}
+		Hier kann man sich eine Stage zum spielen auswählen. Sie sind der Schwierigkeit nach geordnet und können im Spielverlauf freigeschaltet werden.\\
+		\includegraphics[width=\textwidth]{assets/Stagemenu}
 	\end{minipage}
 	
 	\begin{minipage}{1\textwidth}
-		\item \subsection*{Levelmenü:}
-		hier kann ein Level der Stage in der man sich aktuell befindet gestartet werden.(auch diese müssen nach und nach freigeschaltet werden).\\
-		\includegraphics[width=\textwidth, height=7.5cm]{assets/Levelmenu}
+		\item \subsection*{Levelauswahl:}
+		Hier kann ein Level der Stage in der man sich aktuell befindet gestartet werden.(auch diese müssen nach und nach freigeschaltet werden).\\
+		\includegraphics[width=\textwidth]{assets/Levelmenu}
 	\end{minipage}
 	
 	\begin{minipage}{1\textwidth}
 		\item \subsection*{Leveldesign:} \label{appaufbau:Leveldesign}
-		Jedes Level hat den selben Grundaufbau. Am rechten Rand befindet sich eine Leiste aus der der Spieler per Drag and Drop die Spielelemente(siehe Spielaufbau) platzieren kann. Der Rest des Bildschirms nimmt das Spielfeld ein, auf dem zusätzlich am Rand Knöpfe zum Zoomen, dem aufrufen des Levelmenüs ,ansehen von Zielvorgabe und Hinweisen, sowie starten der Auswertung platziert sind.\\
-		Das Levelmenü bietet die Auswahl zur Rückkehr ins Level(auswahl)menü, Hauptmenü, Neustarten des Levels und Rückkehr ins Level.\\
-		\includegraphics[width=\textwidth, height=7.5cm]{assets/LevelDesign}
+		Jedes Level  hat den selben Aufbau am unteren Rand sind die Button und das Steuerkreuz zum bedienen des Spielecharcters sowie ein Button um sich das aktuelle Level-ziel oder Hinweise zum Level geben zu lassen.\\ Die Anordnung der Buttons wird gespiegelt falls man als Linkshänder spielen will. Der komplette Buttonbereich ist transparent, sodass der Spieler mehr vom Spielfeld sieht.\\
+		In der Linken Oberen Ecke ist ein Button der ins Levelmenü führt. Das Spiel wird dann pausiert und es erscheinen Buttons zum Neustart des Levels, dem verlassen ins Levelmenü, dem Verlassen ins Hauptmenü und Einstellungen(Lautstärke).\\
+		Das eigentliche Spielfeld nimmt den Rest des Bildschirms ein.\\
+		\includegraphics[width=\textwidth]{assets/LevelDesign2}
 	\end{minipage}
 	
 	\begin{minipage}{1\textwidth}
 		\item \subsection*{Auswertungsmenü:}
-		Hier erfährt der Spieler ob er das Level richtig gelöst hat oder nicht.
-		Im Falle des Erfolgs kann der Spieler zurück zm Hauptmenü oder das nächste Level starten.
-		Sollte er es nicht geschafft haben, kann er zurück zum Hauptmenü oder das Level Neustarten. Auch freigeschaltete Achievments werden hier angezeigt.\\
-		\includegraphics[width=\textwidth, height=7.5cm]{assets/Auswertungsmenu}
+		Sollte der Spieler ein Level erfolgreich gelöst haben so kommt er ins Auswertungsmenü, hier werden ihm Informationen zu seinem Erfolg , sowie errungene Achievments mitgeteilt. Er hat die Wahl das nächste Level zu starten oder zurück zum Hauptmenü zu kommen. 
+		\includegraphics[width=\textwidth]{assets/Auswertungsmenu}
 	\end{minipage}
 
 \end{enumerate}
@@ -554,10 +576,11 @@ Allgemein soll jedoch beibehalten werden, das so viel wie möglich ohne Text, so
 \clearpage
 
 
+\subsection{Appstruktur}
+	Die folgende Grafik stellt die Struktur der App grafisch dar.\\
+	\includegraphics[width=\textwidth]{assets/Menustructur}
 
-
-
-
+\clearpage
 
 
 
