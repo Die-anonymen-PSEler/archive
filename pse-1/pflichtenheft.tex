@@ -98,6 +98,7 @@ Die Kinder sollen durch das Spiel in die Lage versetzt werden, sich die Prinzipi
 	\item \label{wunsch:multiplechar}Mehrere Spielcharaktere (männlich, weiblich)
 	\item \label{wunsch:multiplemode}Mehrere Spielmodi (siehe Aufgabentyp \ref{aufgabentyp:fehlerfindung})
     \item \label{wunsch:story} Begleitende Story
+    \item \label{wunsch:erweiterndeLevelelemente} Erweiternde Levelelement, z.B. Leitern, Aufzüge usw.
 \end{enumerate}
 
 \subsection{Abgrenzungskritieren}
@@ -113,7 +114,7 @@ Die Kinder sollen durch das Spiel in die Lage versetzt werden, sich die Prinzipi
 \section{Spielaufbau}
 
 \subsection{Spielprinzip}
-Das Spielprinzip beruht auf dem Verschieben von Blöcken. Der Spieler muss die verschiedenen Teile des Spieles, die Maschinen(), die Maschinen-Cluster() und die Metallstücke, in die dafür vorgesehenen Positionen schieben. Hat er alle Teile in die richtigen Positionen geschoben, öffnet sich die Tür zum nächsten Level.
+Das Spielprinzip beruht auf dem Bewegen von Blöcken, indem der Spieler die Blöcke hochhebt und wieder absetzt. Der Spieler muss die verschiedenen Teile des Spieles, die Maschinen(), die Maschinen-Cluster() und die Metallstücke, in die dafür vorgesehenen Positionen bringen. Hat er alle Teile in die richtigen Positionen gebracht, öffnet sich die Tür zum nächsten Level.
 
 
 \subsection{Spielelemente}
@@ -122,8 +123,13 @@ Zu Beginn eines Levels wird die Spielerfigur angezeigt und bewegt zweidimensiona
 
 \begin{description}
 	\item[Spielerfigur] bewegt sich durch die Welt, sammelt Gegenstände um mit diesen die Levelquest zu lösen
+	\item[Leben] Jeder Spieler hat je Level drei Leben, die er verlieren kann, wenn er ins Wasser fällt
 	\item[Spielwelt] zweidimensionale Spielwelt auf einem Raster basierend, in der sich der Spieler bewegt
-	\item[Spielebenen] verschiedene Ebenen in der Spielwelt auf die der Spieler springen kann.
+	\item[Spielebenen] verschiedene Ebenen in der Spielwelt auf die der Spieler springen kann, sie sind auf einem Raster angeordnet
+		\begin{enumerate}[label=\arabic*]
+			\item Landebenen: Auf diesen Ebenen liegen die Collectable Items
+			\item Wasserebenen: Fällt der Spieler in das Wasser, muss er wieder am linken unteren Rand anfangen und er verliert ein Leben, hat er kein Leben mehr, so muss er das Level neu beginnen
+		\end{enumerate}
 	\item[Collectable Items] \label{elemente:collectable}sind in der Spielwelt verteilt und müssen von der Spielfigur eingesammelt werden um im Rätselteil eingesetzt zu werden. Diese bestehen aus:
 	\begin{enumerate}[label=\arabic*]
 		\item Maschinen (entspricht der Abstraktion)
@@ -137,12 +143,12 @@ Zu Beginn eines Levels wird die Spielerfigur angezeigt und bewegt zweidimensiona
 \subsection{Regeln}
 
 \begin{description}
-	\item[Spielregeln] Die Spielfigur beginnt an der unteren, linken Ecke der Spielwelt und muss es schaffen die Tür an der rechten unteren Ecke zu öffnen. Dies gelingt ihm in dem er die Teile des Spieles an die richtige Position schiebt.\\
-	Er muss hinter dem Teil stehen können, um es zu verschieben. \\
-	Der Spieler kann nur ein Teil gleichzeitig bewegen, bei zwei oder mehreren Teilen kommt er nicht weiter voran. \\
-	Um auf die oberen Ebenen der Spielwelt zu gelangen, kann die Spielfigur springen, dabei ist aber zu beachten, dass die Figur nur so hoch wie seine eigene Körpergröße springen kann und er somit auf zu hohe Ebenen nicht durch einfaches Springen gelangen kann. 
-	Sind alle Teile in die freien Felder positioniert, wird ausgewertet, ob die Maschinen und Metallstücke an den richtigen Positionen stehen und der $\lambda$-Kalkül erfüllt ist. Sind sie nicht an der richtigen Position gilt das Level als nicht geschafft und der Spieler muss es wiederholen, um ins nächste Level zu gelangen. \\
-	%Sind noch nicht alle Teile in den freien Felder angeordnet, aber kein Zug ist mehr möglich(z.B. wenn kein Teil mehr verschoben werden oder der Spieler sich nicht mehr bewegen kann) gilt das Level ebenso als nicht geschafft.
+	\item[Spielregeln] \label{spielaufbau:Spielregeln} Die Spielfigur beginnt an der unteren, linken Ecke der Spielwelt und muss es schaffen die Tür an der rechten unteren Ecke zu öffnen. Dies gelingt ihm in dem er die Teile des Spieles an die richtige Position bringt.\\
+	Er muss neben einem Teil stehen, um es hochheben zu können.\\
+	Der Spieler kann nur ein Teil gleichzeitig bewegen, sobald er etwas trägt, muss er dies erst wieder ablegen, um ein anderes Teil hochheben zu können. \\
+	Um auf die oberen Ebenen der Spielwelt zu gelangen, kann die Spielfigur springen, dabei ist zu beachten, dass die Figur nur eine feste Höhe hochspringen kann und er somit auf zu Ebenen, außerhalb seiner Reichweite, nicht durch einfaches Springen gelangen kann. Die Figur kann auch springen wenn sie etwas in den Händen trägt (dabei kann es zu einer geringen Trägheit kommen, z.B. ungenauere Spielsteuerung).\\
+	Sind alle Teile in die freien Felder positioniert, wird ausgewertet, ob die Maschinen und Metallstücke an den richtigen Positionen stehen und der $\lambda$-Kalkül erfüllt ist. Stehen die Elemente an der richtigen Position, geht die Tür zum nächsten Level auf.
+
 	
 	\item[Die Verarbeitungsregel der Maschinen] Die Verarbeitung der einzelnen Metallstücke erfolgt in fester Reihenfolge().\\
 	Es wird immer nur ein Metallstück zu einem bestimmten Zeitpunkt verarbeitet.\\
@@ -214,6 +220,7 @@ Der primäre Einsatzbereich
 	\item Levelmenü bietet eine Auswahl der freigeschalteten Level
     \begin{falist}
         \item Das erste Level ist automatisch freigeschaltet
+        \item Die restlichen Level werden durch das Beenden des vorherigen Levels freigeschaltet
     \end{falist}
 	\item Spieleinstellungen
 	\begin{falist}
@@ -232,6 +239,7 @@ Der primäre Einsatzbereich
 	\item Hinweise
 	\item Infobereich
     \item Achievements
+    \item Animierte Auswertung der Maschinenkonstellation
 \end{falist}
 
 \clearpage
@@ -352,7 +360,7 @@ Außerdem soll es helfen die Gestaltung und Aufteilung der App zu verdeutlichen.
 Allgemein soll jedoch beibehalten werden, das so viel wie möglich ohne Text, sondern durch Symbolik erklärt bzw. dargestellt werden soll. Da die Zielgruppe nicht zwangsläufig lesen und schreiben kann.
 \begin{enumerate}
 	\begin{minipage}{1\textwidth}
-		\item \subsection*{Ladebildschirm:}
+		\item \subsection*{Ladebildschirm:} \label{appaufbau:Ladebildschirm}
 		Nach dem Starten der App, öffnet diese im Ladebildschirm, in diesem werden für die App notwendige Daten geladen, um zu Garantieren das das Spiel flüssig und Fehlerfrei läuft. Benutzeingaben sind zu diesem Zeitpunkt nicht möglich.\\
 		\includegraphics[width=\textwidth, height=7.5cm]{assets/LoadScreen}
 	\end{minipage}
@@ -371,7 +379,7 @@ Allgemein soll jedoch beibehalten werden, das so viel wie möglich ohne Text, so
 	\end{minipage}
 	
 	\begin{minipage}{1\textwidth}
-		\item \subsection*{Hauptmenü:}
+		\item \subsection*{Hauptmenü:} \label{appaufbau:Hauptmenü}
 		Dies ist der Zentrale Knotenpunkt der App. von hier aus kann der Spieler zur Stageauswahl, den Einstellungen, seiner Statistik, zurück ins Profilmenü gelangen oder das Spiel komplett verlassen.\\
 		\includegraphics[width=\textwidth, height=7.5cm]{assets/Mainmenu}
 	\end{minipage}
@@ -407,7 +415,7 @@ Allgemein soll jedoch beibehalten werden, das so viel wie möglich ohne Text, so
 	\end{minipage}
 	
 	\begin{minipage}{1\textwidth}
-		\item \subsection*{Leveldesign:}
+		\item \subsection*{Leveldesign:} \label{appaufbau:Leveldesign}
 		Jedes Level hat den selben Grundaufbau. Am rechten Rand befindet sich eine Leiste aus der der Spieler per Drag and Drop die Spielelemente(siehe Spielaufbau) platzieren kann. Der Rest des Bildschirms nimmt das Spielfeld ein, auf dem zusätzlich am Rand Knöpfe zum Zoomen, dem aufrufen des Levelmenüs ,ansehen von Zielvorgabe und Hinweisen, sowie starten der Auswertung platziert sind.\\
 		Das Levelmenü bietet die Auswahl zur Rückkehr ins Level(auswahl)menü, Hauptmenü, Neustarten des Levels und Rückkehr ins Level.\\
 		\includegraphics[width=\textwidth, height=7.5cm]{assets/LevelDesign}
@@ -422,5 +430,62 @@ Allgemein soll jedoch beibehalten werden, das so viel wie möglich ohne Text, so
 	\end{minipage}
 
 \end{enumerate}
+
+\clearpage
+
+% ---------------
+% Szenarien
+% ---------------
+\section{Szenarien}
+
+\subsection{Erstes Ausführen des Spieles}
+	\begin{enumerate}
+		\item Starten der Applikation durch Anklicken der App-Verknüpfung
+		\item Der Ladebildschirm(\ref{appaufbau:Ladebildschirm}) wird sichtbar und informiert über den Ladezustand des Spieles.
+		\item Der Spieler wird direkt zum "Benutzer-Anlegen"  weitergeleitet
+		\item Wurde ein Benutzer angelegt, öffnet sich die Einstellung
+		\item Geht der Spieler von den Einstellungen weiter, beginnt der Tutorial-Modus
+		\item Lamdbalino begrüßt den Spieler
+		\item Es wird in die Handlung des Spieles eingeführt
+		\item Nach dem Tutorial-Modus öffnet sich das Levelmenü und das erste Level ist freigeschaltet 
+	\end{enumerate}
+	
+\subsection{Benutzer-Profil anlegen} \label{szenarien:ProfilAnlegen}
+	\begin{enumerate}
+		\item "Benutzer-Profil anlegen" wurde gewählt
+		\item Der Spieler wählt einen Avatar
+		\item Er gibt seinen Namen an
+		\item Er kann wählen, ob er Rechtshänder oder Linkshänder ist
+		\item Mit dem "Menü"-Knopf kommt der Benutzer ins Hauptmenü (\ref{appaufbau:Hauptmenü})
+	\end{enumerate}	
+	
+\subsection{Tutorial-Modus}
+	\begin{enumerate}
+		\item Das Auswählen des Levels wird animiert
+		\item Die Elemente des Spieles werden erklärt
+		\item Ein Level wird Schrittweise simuliert
+		\item Es öffnen sich kleine Felder um die nächste Handlung animiert zu erklären
+		\item Schließt man die Felder, geht das Tutorial weiter
+		\item Wie die Level, wird gezeigt wie die Maschinen funktionieren und wie sie angeordnet werden müssen
+	\end{enumerate}
+	
+\subsection{Allgemeiner Spielstart}
+	\begin{enumerate}
+		\item Starten der Applikation durch Anklicken der App-Verknüpfung
+		\item Der Ladebildschirm(\ref{appaufbau:Ladebildschirm}) wird sichtbar und informiert über den Ladezustand des Spieles
+		\item Nach dem Laden kann man den Benutzer aus vorhandenen Profilen auswählen oder man legt ein neues Profil (\ref{szenarien:ProfilAnlegen}) an
+		\item Das Hauptmenü (\ref{appaufbau:Hauptmenü}) wird geöffnet		
+	\end{enumerate}
+	
+\subsection{Spielen} 
+	\begin{enumerate}
+		\item Im Hauptmenü wählt man die Stages
+		\item In den Stages wählt man das Level (\ref{appaufbau:Leveldesign})
+		\item Nach dem Öffnen des Levels, wird angezeigt, was die Maschine(n) produzieren müssen
+		\item Möchte der Spieler erneut das gewünschte Produkt ansehen, kann er dies durch einen Knopf wählen
+		\item Er spielt nach den Spielregeln (\ref{spielaufbau:Spielregeln})
+		\item 
+	\end{enumerate}
+
 
 \end{document}
