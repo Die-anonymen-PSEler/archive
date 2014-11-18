@@ -575,10 +575,17 @@ Allgemein gilt jedoch, das so viel wie möglich ohne Text, sondern durch Symboli
 
 \clearpage
 
-
+\begin{minipage}{1\textwidth}
 \subsection{Appstruktur}
 	Die folgende Grafik stellt die Struktur der App grafisch dar.\\
 	\includegraphics[width=\textwidth]{assets/Menustructur}
+\end{minipage}
+
+\begin{minipage}{1\textwidth}
+\subsection{Benutzer Interaktionen}
+Die folgende Grafik enthält die möglichkeiten des benutzers auf die App einzuwirken.\\
+\includegraphics[width=\textwidth]{assets/Benutzerdiagramm}
+\end{minipage}
 
 \clearpage
 
@@ -656,8 +663,22 @@ Allgemein gilt jedoch, das so viel wie möglich ohne Text, sondern durch Symboli
 		\item Dort drückt man auf den Button "Profil bearbeiten"
 		\item Hier kann man, wie schon beim Anlegen des Profils (\ref{szenarien:ProfilAnlegen}), den ausgewählten Avatar, seinen Namen und auch, ob Rechts- oder Linkshändersteuerung gewünscht wird, editieren.
 	\end{enumerate}
+	
+\subsection{Benutzer-Profil löschen} \label{szenarien:ProfilBearbeiten}
+\begin{enumerate}
+	\item Im Hauptmenü wählt man den Punkt \grqq Einstellungen"
+	\item Dort drückt man auf den Button "Profil bearbeiten"
+	\item Durch drücken des Button "Profil löschen" erscheint dort ein Frage Fenster ob man das Profil wirklich löschen will.
+	\item Mit einem Klick auf "Ja" wird das aktuelle Profil gelöscht, sofern noch mindestens ein anderes Profil existiert.
+	\item Nach erfolgreichem löschen des Profils landet man automatisch im Profilmenü.
+\end{enumerate}
 
 \subsection{Informationen aufrufen}
+\begin{enumerate}
+	\item Im Hauptmenü wählt man den Punkt \grqq Einstellungen"
+	\item Dort klickt man auf den Button \grqq Infos".
+	\item Es erscheint ein vereinfachte Erklärung des Lambda-Kalküls, sowie ein Erläuterung zu den Zusammenhängen des Lambda-Kalküls und des Spiels.
+\end{enumerate}
 
 \subsection{Statistiken}
 	\begin{enumerate}
@@ -666,18 +687,38 @@ Allgemein gilt jedoch, das so viel wie möglich ohne Text, sondern durch Symboli
 	\end{enumerate}
 
 \subsection{Achievements}
+ \begin{enumerate}
+ 	\item Freischalten
+ 		\begin{enumerate}
+ 			\item Achievments werden während des spielen eines Level freigeschaltet
+ 			\item Über neu freigeschaltete Achievments wird der Spieler nach Abschluss eines Levels im Auswertungsmenü informiert
+ 		\end{enumerate}
+ 	\item Anzeige
+ 	 	\begin{enumerate}
+ 	 		\item Im
+ 		\end{enumerate}
+ \end{enumerate}
 
 \subsection{Hauptmenü}
+	\begin{enumerate}
+		\item 
+	\end{enumerate}	
 
 \subsection{Spiel verlassen}
 	\begin{enumerate}
 		\item Spiel beenden
 			\begin{enumerate}
-				\item 
+				\item Man klickt auf den Button links oben im Hauptmenü
+				\item Es erscheint ein Fenster "Wirklich verlassen?"
+				\item Beim betätigen des Button "Ja" wird das Spiel verlassen und die App beendet
+				\item Außerdem werden alle nicht gespeicherten Änderungen gespeichert
 			\end{enumerate}
 		\item Spiel über das Betriebssystem verlassen
 			\begin{enumerate}
-				\item 
+				\item Im Hauptmenü wählt man den Punkt \grqq Einstellungen"
+				\item Dort wählt man \grqq Achievments"
+				\item Es wird eine Liste aller Achievments angezeigt.
+				\item Freigespielte Achievments sind farbig markiert. 
 			\end{enumerate}
 	\end{enumerate}
 
