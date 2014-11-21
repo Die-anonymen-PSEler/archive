@@ -7,6 +7,7 @@
 \usepackage{enumitem}
 \usepackage{hyperref}
 \usepackage{graphicx}
+\usepackage[autostyle=true,german=quotes]{csquotes}
 \renewcommand{\familydefault}{\sfdefault}
 \input{commands}
 
@@ -197,7 +198,7 @@ Zu Beginn eines Levels wird die Spielerfigur angezeigt und bewegt zweidimensiona
 \end{minipage}	
 	
 \begin{minipage}{1\textwidth}
-	\item[Sonderfälle/regeln:] Maschinencluster: Ein Maschinencluster ist eine besonderer Form der Maschinen, sie verarbeitet keinen Input sondern dient als eine Art \glqq Klammerung\grqq. Ist ein Maschinencluster an der Reihe zu arbeiten, so verarbeitet sie keinen Input. Stattdessen werden alle Objekte in diesem Cluster nach den normalen Verarbeitungsregeln zuerst verarbeitet, bis nur noch eine Maschine und eine Menge an Metallobjekten darin vorhanden sind. Danach verschwindet der Cluster und sein Inhalt übernimmt seinen Platz in der aktuellen Verarbeitung.\\
+	\item[Sonderfälle/regeln:] Maschinencluster: Ein Maschinencluster ist eine besonderer Form der Maschinen, sie verarbeitet keinen Input sondern dient als eine Art \enquote{Klammerung}. Ist ein Maschinencluster an der Reihe zu arbeiten, so verarbeitet sie keinen Input. Stattdessen werden alle Objekte in diesem Cluster nach den normalen Verarbeitungsregeln zuerst verarbeitet, bis nur noch eine Maschine und eine Menge an Metallobjekten darin vorhanden sind. Danach verschwindet der Cluster und sein Inhalt übernimmt seinen Platz in der aktuellen Verarbeitung.\\
 \end{minipage}
 
 \end{description}
@@ -205,7 +206,7 @@ Zu Beginn eines Levels wird die Spielerfigur angezeigt und bewegt zweidimensiona
 \subsection{Aufgabentypen}
 
 \begin{enumerate}
-	\item \label{aufgabentyp:puzzle} Puzzle: Aufgabentyp bei dem an die vorgegebenen stellen Maschinen, Metallobjekte oder Maschinen-Cluster eingefügt werden müssen um einen \glqq Lambdaausdruck\grqq zu bauen der ein gewünschtes Ergebnis liefert oder einen gewünschten Endzustand hat.\\
+	\item \label{aufgabentyp:puzzle} Puzzle: Aufgabentyp bei dem an die vorgegebenen stellen Maschinen, Metallobjekte oder Maschinen-Cluster eingefügt werden müssen um einen \enquote{Lambdaausdruck} zu bauen der ein gewünschtes Ergebnis liefert oder einen gewünschten Endzustand hat.\\
 	Die benötigten Teile sind in der Spielwelt verstreut und müssen an den passenden Stellen eingefügt werden.\\
 	Der Spieler kann dabei immer nur ein Objekt tragen.\\
 	Es sind auch falsche Konstellationen möglich die zu einem falschen Ergebnis führen.\\
@@ -431,19 +432,19 @@ Das Produkt muss Daten speichern und verwalten, insbesondere:
 \begin{telist}
 	\item Ein Benutzerprofil anlegen
 	\begin{itemize}
-		\item Der Anwender befindet sich im Startfenster und drückt auf den \glqq Benutzerverwaltungsbutton\grqq. Diese Aktion führt den Benutzer zu einer neuen Anzeige, die seine bisherigen Profile beinhaltet.
-		\item Durch Wischgewesen gelangt der Benutzer an das Ende der Liste, wo sich ein \glqq +\grqq-Zeichen befindet. Durch Drücken dieses Symbols wird ein neuer Dialog gestartet.
-		\item In diesem Dialogfenster kann der Benutzer einen neuen Profilnamen angeben. Durch drücken des \glqq Weiter\grqq-Buttons gelangt der zu einem weitern Dialog.
-		\item In diesem Dialog kann er einen Charakter auswählen und sowie auswählen, ob dieses Profil im Rechts- oder Linkshänder Modus gespielt werden soll. Der Dialog wird durch Betätigen des \glqq OK\grqq-Buttons beendet.
+		\item Der Anwender befindet sich im Startfenster und drückt auf den \enquote{Benutzerverwaltungsbutton}. Diese Aktion führt den Benutzer zu einer neuen Anzeige, die seine bisherigen Profile beinhaltet.
+		\item Durch Wischgewesen gelangt der Benutzer an das Ende der Liste, wo sich ein \enquote{+}-Zeichen befindet. Durch Drücken dieses Symbols wird ein neuer Dialog gestartet.
+		\item In diesem Dialogfenster kann der Benutzer einen neuen Profilnamen angeben. Durch drücken des \enquote{Weiter}-Buttons gelangt der zu einem weitern Dialog.
+		\item In diesem Dialog kann er einen Charakter auswählen und sowie auswählen, ob dieses Profil im Rechts- oder Linkshänder Modus gespielt werden soll. Der Dialog wird durch Betätigen des \enquote{OK}-Buttons beendet.
 	\end{itemize}
 	\item Ein Benutzerprofil auswählen
 	\begin{itemize}
-		\item Der Anweder befindet sich im Startfenster und drückt auf den \glqq Benutzerverwaltungsbutton\grqq. Diese Aktion führt den Benutzer zu einer neuen Anzeige, die seine bisherigen Profile beinhaltet.
+		\item Der Anweder befindet sich im Startfenster und drückt auf den \enquote{Benutzerverwaltungsbutton}. Diese Aktion führt den Benutzer zu einer neuen Anzeige, die seine bisherigen Profile beinhaltet.
 		\item Durch Scrollen kann der Benutzer seine Profile einsehen. Bei Erreichen des gewünschten Profils wählt er dieses durch Berühren aus.
 	\end{itemize}
 	\item Ein Benutzerprofil löschen
 	\begin{itemize}
-		\item Der Anweder befindet sich im Startfenster und drückt auf den \glqq Benutzerverwaltungsbutton\grqq. Diese Aktion führt den Benutzer zu einer neuen Anzeige, die seine bisherigen Profile beinhaltet.
+		\item Der Anweder befindet sich im Startfenster und drückt auf den \enquote{Benutzerverwaltungsbutton}. Diese Aktion führt den Benutzer zu einer neuen Anzeige, die seine bisherigen Profile beinhaltet.
 		\item Durch Scrollen kann der Benutzer seine Profile einsehen. 
 	\end{itemize}
 	\item Ein Benutzerprofil bearbeiten
@@ -480,7 +481,7 @@ Das Produkt muss Daten speichern und verwalten, insbesondere:
 
 \subsection{Allgemeine Appaufteilung}
 
-Der hier gezeigte Systemaufbau ist lediglich eine grobe \glqq Skizze\grqq,
+Der hier gezeigte Systemaufbau ist lediglich eine grobe \enquote{Skizze},
 die die zusammenhänge zwischen den einzelnen Menüs sowie, 
 die Gestaltung und Aufteilung der App verdeutlichen soll.\\
 Allgemein gilt jedoch, das so viel wie möglich ohne Text, sondern durch Symbolik erklärt bzw. dargestellt werden soll. Da die Zielgruppe nicht zwangsläufig lesen und schreiben kann.\\
@@ -603,7 +604,7 @@ Die folgende Grafik enthält die möglichkeiten des benutzers auf die App einzuw
 	\begin{enumerate}
 		\item Starten der Applikation durch Anklicken der App-Verknüpfung
 		\item Der Ladebildschirm(\ref{appaufbau:Ladebildschirm}) wird sichtbar und informiert über den Ladezustand des Spieles.
-		\item Der Spieler wird direkt zum "Benutzer-Anlegen"  weitergeleitet
+		\item Der Spieler wird direkt zum "`Benutzer-Anlegen"'  weitergeleitet
 		\item Wurde ein Benutzer angelegt, öffnet sich die Einstellung
 		\item Geht der Spieler von den Einstellungen weiter, beginnt der Tutorial-Modus
 		\item Lamdbalino begrüßt den Spieler
@@ -613,11 +614,11 @@ Die folgende Grafik enthält die möglichkeiten des benutzers auf die App einzuw
 	
 \subsection{Benutzer-Profil anlegen} \label{szenarien:ProfilAnlegen}
 	\begin{enumerate}
-		\item "Benutzer-Profil anlegen" wurde gewählt
+		\item \enquote{Benutzer-Profil anlegen} wurde gewählt
 		\item Der Spieler wählt einen Avatar
 		\item Er gibt seinen Namen an
 		\item Er kann wählen, ob er Rechtshänder oder Linkshänder ist
-		\item Mit dem "Menü"-Knopf kommt der Benutzer ins Hauptmenü (\ref{appaufbau:Hauptmenü})
+		\item Mit dem \enquote{Menü}-Knopf kommt der Benutzer ins Hauptmenü (\ref{appaufbau:Hauptmenü})
 	\end{enumerate}	
 	
 \subsection{Tutorial-Modus}
@@ -650,37 +651,37 @@ Die folgende Grafik enthält die möglichkeiten des benutzers auf die App einzuw
 	
 \subsection{Einstellungen}
 	\begin{enumerate}
-		\item Im Hauptmenü wählt man den Punkt \glqq Einstellungen\grqq
-		\item Dort kann man mithilfe eines stufenlosen Reglers die Lautstärke einstellen sowie den Button "Profil bearbeiten" (\ref{szenarien:ProfilBearbeiten}) drücken
-		\item Über die \glqq Zurück\grqq-Taste des Geräts gelangt man in das Hauptmenü (\ref{appaufbau:Hauptmenü})
+		\item Im Hauptmenü wählt man den Punkt \enquote{Einstellungen}
+		\item Dort kann man mithilfe eines stufenlosen Reglers die Lautstärke einstellen sowie den Button \enquote{Profil bearbeiten} (\ref{szenarien:ProfilBearbeiten}) drücken
+		\item Über die \enquote{Zurück}-Taste des Geräts gelangt man in das Hauptmenü (\ref{appaufbau:Hauptmenü})
 	\end{enumerate}
 
 \subsection{Benutzer-Profil bearbeiten} \label{szenarien:ProfilBearbeiten}
 	\begin{enumerate}
-		\item Im Hauptmenü wählt man den Punkt "Einstellungen"
-		\item Dort drückt man auf den Button \glqq Profil bearbeiten\grqq
+		\item Im Hauptmenü wählt man den Punkt \enquote{Einstellungen}
+		\item Dort drückt man auf den Button \enquote{Profil bearbeiten}
 		\item Hier kann man, wie schon beim Anlegen des Profils (\ref{szenarien:ProfilAnlegen}), den ausgewählten Avatar, seinen Namen und auch, ob Rechts- oder Linkshändersteuerung gewünscht wird, editieren.
 	\end{enumerate}
 	
 \subsection{Benutzer-Profil löschen} \label{szenarien:ProfilLoeschen}
 \begin{enumerate}
-	\item Im Hauptmenü wählt man den Punkt \grqq Einstellungen"
-	\item Dort drückt man auf den Button "Profil bearbeiten"
-	\item Durch drücken des Button "Profil löschen" erscheint dort ein Frage Fenster ob man das Profil wirklich löschen will.
-	\item Mit einem Klick auf "Ja" wird das aktuelle Profil gelöscht, sofern noch mindestens ein anderes Profil existiert.
+	\item Im Hauptmenü wählt man den Punkt \enquote{Einstellungen}
+	\item Dort drückt man auf den Button \enquote{Profil bearbeiten}
+	\item Durch drücken des Button \enquote{Profil löschen} erscheint dort ein Frage Fenster ob man das Profil wirklich löschen will.
+	\item Mit einem Klick auf \enquote{Ja} wird das aktuelle Profil gelöscht, sofern noch mindestens ein anderes Profil existiert.
 	\item Nach erfolgreichem löschen des Profils landet man automatisch im Profilmenü.
 \end{enumerate}
 
 \subsection{Informationen aufrufen}
 \begin{enumerate}
-	\item Im Hauptmenü wählt man den Punkt \grqq Einstellungen"
-	\item Dort klickt man auf den Button \grqq Infos".
+	\item Im Hauptmenü wählt man den Punkt \enquote{Einstellungen}
+	\item Dort klickt man auf den Button \enquote{Infos}.
 	\item Es erscheint ein vereinfachte Erklärung des Lambda-Kalküls, sowie ein Erläuterung zu den Zusammenhängen des Lambda-Kalküls und des Spiels.
 \end{enumerate}
 
 \subsection{Statistiken}
 	\begin{enumerate}
-		\item Im Hauptmenü wählt man den Punkt "Statistiken"
+		\item Im Hauptmenü wählt man den Punkt \enquote{Statistiken}
 		\item Dort können sowohl die Achievements, sowie verschiedene Statistiken zu Spieldauer etc. eingesehen werden.
 	\end{enumerate}
 
@@ -707,14 +708,14 @@ Die folgende Grafik enthält die möglichkeiten des benutzers auf die App einzuw
 		\item Spiel beenden
 			\begin{enumerate}
 				\item Man klickt auf den Button links oben im Hauptmenü
-				\item Es erscheint ein Fenster "Wirklich verlassen?"
-				\item Beim betätigen des Button "Ja" wird das Spiel verlassen und die App beendet
+				\item Es erscheint ein Fenster \enquote{Wirklich verlassen?}
+				\item Beim betätigen des Button \enquote{Ja} wird das Spiel verlassen und die App beendet
 				\item Außerdem werden alle nicht gespeicherten Änderungen gespeichert
 			\end{enumerate}
 		\item Spiel über das Betriebssystem verlassen
 			\begin{enumerate}
-				\item Im Hauptmenü wählt man den Punkt \grqq Einstellungen"
-				\item Dort wählt man \grqq Achievments"
+				\item Im Hauptmenü wählt man den Punkt \enquote{Einstellungen}
+				\item Dort wählt man \enquote{Achievments}
 				\item Es wird eine Liste aller Achievments angezeigt.
 				\item Freigespielte Achievments sind farbig markiert. 
 			\end{enumerate}
