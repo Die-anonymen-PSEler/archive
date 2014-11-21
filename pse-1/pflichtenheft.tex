@@ -230,22 +230,18 @@ In jedem Spieltyp läuft im Hintergrund ein Timer mit, der die Spielzeit des Lev
 
 \section{Produkteinsatz}
 
-Das Produkt soll auf jedem Android Gerät ab Android 4.0 einsatzfähig sein. Ein Einsatz auf Emulatoren der Android Plattform ist ebenfalls vorgesehen.
+Das Produkt soll auf jedem Android Gerät ab Android 4.2 einsatzfähig sein. Ein Einsatz auf Emulatoren der Android Plattform ist ebenfalls vorgesehen.
 
 \subsection{Anwendungsbereich}
 
 \begin{enumerate}
-	\item Einsatz an Grundschulen, die das Programm zur Vermittlung von Wissen nutzen
-	\item Freizeitgestaltung von unter zwölfjährigen Kindern
+	\item Freizeitgestaltung von Kindern ab 8 Jahren
+	\item Einsatz an Vor- und Grundschulen
 \end{enumerate}
 
 \subsection{Zielgruppen}
 
-Die Zielgruppe besteht überwiegend aus Kinder im Alter von acht bis zwölf Jahren, die das Spiel entweder aus Interesse oder aber das Spiel im Rahmen eines Projektes an der Schule spielen.
-
-\subsection{Betriebsbedingungen}
-
-Der primäre Einsatzbereich 
+Die Zielgruppe besteht überwiegend aus Kindern im Alter von acht bis zwölf Jahren, die das Spiel entweder aus Interesse oder im Rahmen eines Projektes an der Schule spielen.
 
 \clearpage
 
@@ -289,11 +285,11 @@ Der primäre Einsatzbereich
 \section{Funktionale Anforderungen}
 
 \begin{falist}
-	\item Tutorial Modus (Musskriterium \ref{muss:tutorial}) findet nach dem ersten Starten des Spiels statt
-	\begin{falist}
-        \item Der Tutorial Modus basiert auf einem minimum an textuellen Erklärungen
-        \item Erklärt die Funktionsweise des Spiels
-		\item Ein wiederholtes Starten des Tutorial Modus ist möglich
+	\item \label{fa:tutorial}Tutorial Modus (Musskriterium \ref{muss:tutorial}) findet nach dem ersten Starten des Spiels statt
+	\begin{falist} 
+        \item \label{fa:tutorial_01}Der Tutorial Modus basiert auf einem Minimum an textuellen Erklärungen
+        \item \label{fa: tutorial_02}Erklärt die Funktionsweise des Spiels
+		\item \label{fa: tutorial_03}Ein wiederholtes Starten des Tutorial Modus ist möglich
 	\end{falist}
 	\item Spielerprofile
 	\begin{falist}
@@ -436,6 +432,7 @@ Das Produkt muss Daten speichern und verwalten, insbesondere:
 \subsection{Funktionssequenzen}
 
 \begin{telist}
+	\item Basierend auf \ref{fa:tutorial}
 	\item Ein Benutzerprofil anlegen
 	\begin{itemize}
 		\item Der Anwender befindet sich im Startfenster und drückt auf den \enquote{Benutzerverwaltungsbutton}. Diese Aktion führt den Benutzer zu einer neuen Anzeige, die seine bisherigen Profile beinhaltet.
