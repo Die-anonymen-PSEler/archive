@@ -114,7 +114,7 @@ Die Kinder sollen durch das Spiel in die Lage versetzt werden, sich die Prinzipi
 	\item \label{wunsch:highscore}Highscore-Tabelle
 	\item \label{wunsch:challengemode}Challengemode mit Zeitdruck
 	\item \label{wunsch:multilang}Auslieferung in mehreren Sprachen
-	\item \label{wunsch:8bit}8-Bit Grafik
+	\item \label{wunsch:8bit}Pixelgrafik / Retroloook / 8-Bit Grafik
 	\item \label{wunsch:multiplechar}Mehrere Spielcharaktere (männlich, weiblich)
 	\item \label{wunsch:multiplemode}Mehrere Spielmodi (siehe Aufgabentyp \ref{aufgabentyp:fehlerfindung})
     \item \label{wunsch:story}Begleitende Story
@@ -124,9 +124,9 @@ Die Kinder sollen durch das Spiel in die Lage versetzt werden, sich die Prinzipi
 \subsection{Abgrenzungskritieren}
 
 \begin{enumerate}
-	\item Kein Onlinemodus
-	\item Kein Multiplayer Modus
-	\item Keine vorgesehene Kompatiblität mit anderen Geräten/Betriebssystem ohne Emulation
+	\item \label{abgrenz:online}Kein Onlinemodus
+	\item \label{abgrenz:multiplayer}Kein Multiplayer Modus
+	\item \label{abgrenz:emu}Keine vorgesehene Kompatiblität mit anderen Geräten/Betriebssystem ohne Emulation
 \end{enumerate}
 
 \clearpage
@@ -199,7 +199,7 @@ Zu Beginn eines Levels wird die Spielerfigur angezeigt und bewegt zweidimensiona
 \end{minipage}	
 	
 \begin{minipage}{1\textwidth}
-	\item[Sonderfälle/regeln:] Maschinencluster: Ein Maschinencluster ist eine besonderer Form der Maschinen, sie verarbeitet keinen Input sondern dient als eine Art "Klammerung". Ist ein Maschinencluster an der Reihe zu arbeiten, so verarbeitet sie keinen Input. Stattdessen werden alle Objekte in diesem Cluster nach den normalen Verarbeitungsregeln zuerst verarbeitet, bis nur noch eine Maschine und eine Menge an Metallobjekten darin vorhanden sind. Danach verschwindet der Cluster und sein Inhalt übernimmt seinen Platz in der aktuellen Verarbeitung.\\
+	\item[Sonderfälle/regeln:] Maschinencluster: Ein Maschinencluster ist eine besonderer Form der Maschinen, sie verarbeitet keinen Input sondern dient als eine Art \glqq Klammerung\grqq. Ist ein Maschinencluster an der Reihe zu arbeiten, so verarbeitet sie keinen Input. Stattdessen werden alle Objekte in diesem Cluster nach den normalen Verarbeitungsregeln zuerst verarbeitet, bis nur noch eine Maschine und eine Menge an Metallobjekten darin vorhanden sind. Danach verschwindet der Cluster und sein Inhalt übernimmt seinen Platz in der aktuellen Verarbeitung.\\
 \end{minipage}
 
 \end{description}
@@ -207,7 +207,7 @@ Zu Beginn eines Levels wird die Spielerfigur angezeigt und bewegt zweidimensiona
 \subsection{Aufgabentypen}
 
 \begin{enumerate}
-	\item \label{aufgabentyp:puzzle} Puzzle: Aufgabentyp bei dem an die vorgegebenen stellen Maschinen, Metallobjekte oder Maschinen-Cluster eingefügt werden müssen um einen "Lambdaausdruck" zu bauen der ein gewünschtes Ergebnis liefert oder einen gewünschten Endzustand hat.\\
+	\item \label{aufgabentyp:puzzle} Puzzle: Aufgabentyp bei dem an die vorgegebenen stellen Maschinen, Metallobjekte oder Maschinen-Cluster eingefügt werden müssen um einen \glqq Lambdaausdruck\grqq zu bauen der ein gewünschtes Ergebnis liefert oder einen gewünschten Endzustand hat.\\
 	Die benötigten Teile sind in der Spielwelt verstreut und müssen an den passenden Stellen eingefügt werden.\\
 	Der Spieler kann dabei immer nur ein Objekt tragen.\\
 	Es sind auch falsche Konstellationen möglich die zu einem falschen Ergebnis führen.\\
@@ -410,7 +410,7 @@ Das Produkt muss Daten speichern und verwalten, insbesondere:
 		\item PNG, JPG für pixelbasierte Grafiken 
 	\end{itemize}
 	\item Die Auslieferung der finalen Version erfolgt in Form einer .apk-Datei.
-	\item Impressum und ausschließliche Verwendung von frei verfügbare Biblitoheken
+	\item Impressum und ausschließliche Verwendung von frei verfügbare Bibliotheken
 	für den Fall der Veröffentlichung
 \end{nflist}
 
@@ -652,15 +652,15 @@ Die folgende Grafik enthält die möglichkeiten des benutzers auf die App einzuw
 	
 \subsection{Einstellungen}
 	\begin{enumerate}
-		\item Im Hauptmenü wählt man den Punkt "Einstellungen"
+		\item Im Hauptmenü wählt man den Punkt \glqq Einstellungen\grqq
 		\item Dort kann man mithilfe eines stufenlosen Reglers die Lautstärke einstellen sowie den Button "Profil bearbeiten" (\ref{szenarien:ProfilBearbeiten}) drücken
-		\item Über die "Zurück"-Taste des Geräts gelangt man in das Hauptmenü (\ref{appaufbau:Hauptmenü})
+		\item Über die \glqq Zurück\grqq-Taste des Geräts gelangt man in das Hauptmenü (\ref{appaufbau:Hauptmenü})
 	\end{enumerate}
 
 \subsection{Benutzer-Profil bearbeiten} \label{szenarien:ProfilBearbeiten}
 	\begin{enumerate}
 		\item Im Hauptmenü wählt man den Punkt "Einstellungen"
-		\item Dort drückt man auf den Button "Profil bearbeiten"
+		\item Dort drückt man auf den Button \glqq Profil bearbeiten\grqq
 		\item Hier kann man, wie schon beim Anlegen des Profils (\ref{szenarien:ProfilAnlegen}), den ausgewählten Avatar, seinen Namen und auch, ob Rechts- oder Linkshändersteuerung gewünscht wird, editieren.
 	\end{enumerate}
 	
