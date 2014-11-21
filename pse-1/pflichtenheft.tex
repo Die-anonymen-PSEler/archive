@@ -213,7 +213,7 @@ In jedem Spieltyp läuft im Hintergrund ein Timer mit, der die Spielzeit des Lev
 	Es sind auch falsche Konstellationen möglich die zu einem falschen Ergebnis führen.\\
 	\item \label{aufgabentyp:fehlerfindung} Fehlerfindung: Aufgabentyp bei dem der $\lambda$-Ausdruck schon fertig zusammengesetzt ist, jedoch nicht in der richtigen Konstellation.\\
 	Der Spieler muss die Fehler finden und die entsprechenden Objekte austauschen.\\
-	\item \label{aufgabentyp: ergebnis} Ergebnisbestimmung: Die Maschinenkonstruktion ist gegeben, der Spieler muss mit einer gegebenen Menge an Elementen die Endkonstellation bestimmen und angeben. ($\beta$ - Reduktion durchführen) 
+	\item \label{aufgabentyp:ergebnis} Ergebnisbestimmung: Die Maschinenkonstruktion ist gegeben, der Spieler muss mit einer gegebenen Menge an Elementen die Endkonstellation bestimmen und angeben. ($\beta$ - Reduktion durchführen) 
 \end{enumerate}
 
 \clearpage
@@ -242,7 +242,7 @@ Das Produkt soll auf jedem Android Gerät ab Android 4.2 einsatzfähig sein. Ein
 
 \subsection{Zielgruppen}
 
-Die Zielgruppe besteht überwiegend aus Kindern im Alter von acht bis zwölf Jahren, die das Spiel entweder aus Interesse oder im Rahmen eines Projektes an der Schule spielen.
+Die Zielgruppe besteht überwiegend aus Kindern im Alter von acht bis zwölf Jahren, die das Spiel entweder aus Interesse oder im Rahmen eines Projektes an der Schule spielen. Hierbei wird ihnen subtil der Umgang mit dem $\lambda$-Kalkül beigebracht.
 
 \clearpage
 
@@ -261,13 +261,15 @@ Die Zielgruppe besteht überwiegend aus Kindern im Alter von acht bis zwölf Jah
 \subsection{Software}
 
 \begin{itemize}
-	\item Die Software ist für die Unterstützung der API 17+ von Android ausgelegt
+	\item Die Software ist für die Unterstützung der API 17+ (Android 4.2) von Android ausgelegt
 \end{itemize}
 
 \subsection{Hardware}
 
 \begin{itemize}
 	\item Die eingesetzte Hardware muss über ein Touch-Interface verfügen.
+	\item Das Spiel ist für die Verwendung mit einem Tablet-Gerät ausgelegt.
+	\item Eine Verwendung mit einem Smartphone soll jedoch auch möglich sein.
 \end{itemize}
 
 \clearpage
@@ -316,9 +318,16 @@ Die Zielgruppe besteht überwiegend aus Kindern im Alter von acht bis zwölf Jah
 		\item Aufnehmen von Spielelementen
 		\item Abgabe für die Levelquests
 	\end{falist}
-	\item Hinweise
-	\item Infobereich
-    \item Achievements
+	\item Infobereich, der weiterführende Informationen zum Thema $\lambda$-Kalkül enthält
+    \item Achievements, unter anderem
+    \begin{falist}
+    	\item Abschließen des Tutorial-Modus
+    	\item Abschließen eines Kapitels
+    	\item Spielzeit unterhalb einer gegebenen Schranke
+    	\item Spielzeit oberhalb einer gegebenen Schranke
+    	\item Fun-Achievements (Nicht-Schwimmer, Nachtsschwärmer)
+    	\item First-Try
+    \end{falist}
     \item Animierte Auswertung der Maschinenkonstellation
 \end{falist}
 
@@ -405,9 +414,10 @@ Das Produkt muss Daten speichern und verwalten, insbesondere:
 \begin{nflist}[resume]
 	\item Das Programm verwendet für Dateien folgende Standards: 
 	\begin{itemize}
-		\item WAV, OGG für Audio Dateien 
+		\item WAV, OGG, MP3 für Audio Dateien 
 		\item SVG für Vektorgrafiken 
 		\item PNG, JPG für pixelbasierte Grafiken 
+		\item JSON für strukturierte Textdateien.
 	\end{itemize}
 	\item Die Auslieferung der finalen Version erfolgt in Form einer .apk-Datei.
 	\item Impressum und ausschließliche Verwendung von frei verfügbare Bibliotheken
@@ -624,7 +634,7 @@ Die folgende Grafik enthält die möglichkeiten des benutzers auf die App einzuw
 % ---------------
 \section{Szenarien}
 
-\subsection{Erstes Ausführen des Spieles}
+\subsection{Erstes Ausführen des Spieles} \label{szenarien:first_run}
 	\begin{enumerate}
 		\item Starten der Applikation durch Anklicken der App-Verknüpfung
 		\item Der Ladebildschirm(\ref{appaufbau:Ladebildschirm}) wird sichtbar und informiert über den Ladezustand des Spieles.
@@ -645,7 +655,7 @@ Die folgende Grafik enthält die möglichkeiten des benutzers auf die App einzuw
 		\item Mit dem \enquote{Menü}-Knopf kommt der Benutzer ins Hauptmenü (\ref{appaufbau:Hauptmenü})
 	\end{enumerate}	
 	
-\subsection{Tutorial-Modus}
+\subsection{Tutorial-Modus} \label{szenarien:tutorial_mode}
 	\begin{enumerate}
 		\item Das Auswählen des Levels wird animiert
 		\item Die Elemente des Spieles werden erklärt
@@ -655,7 +665,7 @@ Die folgende Grafik enthält die möglichkeiten des benutzers auf die App einzuw
 		\item Wie die Level, wird gezeigt wie die Maschinen funktionieren und wie sie angeordnet werden müssen
 	\end{enumerate}
 	
-\subsection{Allgemeiner Spielstart}
+\subsection{Allgemeiner Spielstart} \label{szenarien:allg_spielstart}
 	\begin{enumerate}
 		\item Starten der Applikation durch Anklicken der App-Verknüpfung
 		\item Der Ladebildschirm(\ref{appaufbau:Ladebildschirm}) wird sichtbar und informiert über den Ladezustand des Spieles
@@ -663,7 +673,7 @@ Die folgende Grafik enthält die möglichkeiten des benutzers auf die App einzuw
 		\item Das Hauptmenü (\ref{appaufbau:Hauptmenü}) wird geöffnet		
 	\end{enumerate}
 	
-\subsection{Spielen} 
+\subsection{Spielen} \label{szenarien:spielen}
 	\begin{enumerate}
 		\item Im Hauptmenü wählt man die Stages
 		\item In den Stages wählt man das Level (\ref{appaufbau:Leveldesign})
@@ -672,7 +682,7 @@ Die folgende Grafik enthält die möglichkeiten des benutzers auf die App einzuw
 		\item Er spielt nach den Spielregeln (\ref{spielaufbau:Spielregeln})
 	\end{enumerate}
 	
-\subsection{Einstellungen}
+\subsection{Einstellungen} \label{szenarien:einstellungen}
 	\begin{enumerate}
 		\item Im Hauptmenü wählt man den Punkt \enquote{Einstellungen}
 		\item Dort kann man mithilfe eines stufenlosen Reglers die Lautstärke einstellen sowie den Button \enquote{Profil bearbeiten} (\ref{szenarien:ProfilBearbeiten}) drücken
@@ -695,20 +705,20 @@ Die folgende Grafik enthält die möglichkeiten des benutzers auf die App einzuw
 	\item Nach erfolgreichem löschen des Profils landet man automatisch im Profilmenü.
 \end{enumerate}
 
-\subsection{Informationen aufrufen}
+\subsection{Informationen aufrufen} \label{szenarien:infomartionen_aufrufen}
 \begin{enumerate}
 	\item Im Hauptmenü wählt man den Punkt \enquote{Einstellungen}
 	\item Dort klickt man auf den Button \enquote{Infos}.
 	\item Es erscheint ein vereinfachte Erklärung des Lambda-Kalküls, sowie ein Erläuterung zu den Zusammenhängen des Lambda-Kalküls und des Spiels.
 \end{enumerate}
 
-\subsection{Statistiken}
+\subsection{Statistiken} \label{szenarien:statistik}
 	\begin{enumerate}
 		\item Im Hauptmenü wählt man den Punkt \enquote{Statistiken}
 		\item Dort können sowohl die Achievements, sowie verschiedene Statistiken zu Spieldauer etc. eingesehen werden.
 	\end{enumerate}
 
-\subsection{Achievements}
+\subsection{Achievements} \label{szenarien:achievements}
  \begin{enumerate}
  	\item Freischalten
  		\begin{enumerate}
@@ -717,11 +727,14 @@ Die folgende Grafik enthält die möglichkeiten des benutzers auf die App einzuw
  		\end{enumerate}
  	\item Anzeige
  	 	\begin{enumerate}
- 	 		\item Im
+ 	 		\item Im Hauptmenü wählt man den Punkt \enquote{Einstellungen}
+ 	 		\item Dort wählt man \enquote{Achievments}
+ 	 		\item Es wird eine Liste aller Achievements angezeigt.
+ 	 		\item Freigespielte Achievements sind farbig markiert. 
  		\end{enumerate}
  \end{enumerate}
 
-\subsection{Spiel verlassen}
+\subsection{Spiel verlassen} \label{szenarien:quit_game}
 	\begin{enumerate}
 		\item Spiel beenden
 			\begin{enumerate}
@@ -732,10 +745,7 @@ Die folgende Grafik enthält die möglichkeiten des benutzers auf die App einzuw
 			\end{enumerate}
 		\item Spiel über das Betriebssystem verlassen
 			\begin{enumerate}
-				\item Im Hauptmenü wählt man den Punkt \enquote{Einstellungen}
-				\item Dort wählt man \enquote{Achievments}
-				\item Es wird eine Liste aller Achievements angezeigt.
-				\item Freigespielte Achievements sind farbig markiert. 
+				\item Der Benutzer berührt den Homebutton auf seinem Gerät zum zurück zu Android zu gelangen.
 			\end{enumerate}
 	\end{enumerate}
 
