@@ -14,11 +14,11 @@
 \begin{document}
 
 
-\title{Pflichtenheft: Lambda - Das Spiel, \\ Lost Here Too}
+\title{Pflichtenheft: Lambda - Das Spiel, \\ Die Entwickler}
 \author{Luca Becker, Henrike Hardt,\\Larissa Schmid, Adrian Schulte,\\Maik Wiesner}
 \date{\today}
-
 \maketitle
+\includegraphics[width=\textwidth]{assets/Lambdolino}
 \thispagestyle{empty}
 
 \clearpage
@@ -95,7 +95,7 @@ durch Eltern oder Lehrkräfte einsehbar ist.
 
 Die Kinder sollen durch das Spiel in die Lage versetzt werden, sich die Prinzipien des Lambda Kalküls spielerisch zu erarbeiten ohne über Vorkenntnisse zu verfügen.
 
-\subsection{Musskritieren}
+\subsection{Musskriterien}
 
 \begin{enumerate}
 	\item \label{muss:vermittelnlamba}Spielerisches Vermitteln des Lambda Kalküls für Kinder ab acht Jahren
@@ -113,10 +113,10 @@ Die Kinder sollen durch das Spiel in die Lage versetzt werden, sich die Prinzipi
 	\item \label{wunsch:highscore}Highscore-Tabelle
 	\item \label{wunsch:challengemode}Challengemode mit Zeitdruck
 	\item \label{wunsch:multilang}Auslieferung in mehreren Sprachen
-	\item \label{wunsch:8bit}Pixelgrafik / Retroloook / 8-Bit Grafik
+	\item \label{wunsch:8bit}Pixelgrafik / Retroloook / reduzierter Farbraum
 	\item \label{wunsch:multiplechar}Mehrere Spielcharaktere (männlich, weiblich)
 	\item \label{wunsch:multiplemode}Mehrere Spielmodi (siehe Aufgabentyp \ref{aufgabentyp:fehlerfindung})
-    \item \label{wunsch:story}Begleitende Story
+    \item \label{wunsch:story}Begleitende Story %link zu eintrag
     \item \label{wunsch:erweiterndeLevelelemente}Erweiternde Levelelement, z.B. Leitern, Aufzüge usw.
 \end{enumerate}
 
@@ -204,14 +204,15 @@ Zu Beginn eines Levels wird die Spielerfigur angezeigt und bewegt zweidimensiona
 \end{description}
 
 \subsection{Aufgabentypen}
-
+In jedem Spieltyp läuft im Hintergrund ein Timer mit, der die Spielzeit des Levels misst. Dadurch können Timer-Achievements freigeschaltet werden.
 \begin{enumerate}
-	\item \label{aufgabentyp:puzzle} Puzzle: Aufgabentyp bei dem an die vorgegebenen stellen Maschinen, Metallobjekte oder Maschinen-Cluster eingefügt werden müssen um einen \enquote{Lambdaausdruck} zu bauen der ein gewünschtes Ergebnis liefert oder einen gewünschten Endzustand hat.\\
+	\item \label{aufgabentyp:puzzle} Puzzle: Aufgabentyp bei dem an die vorgegebenen stellen Maschinen, Metallobjekte oder Maschinen-Cluster eingefügt werden müssen um einen $\lambda$-Ausdruck zu bauen der ein gewünschtes Ergebnis liefert oder einen gewünschten Endzustand hat.\\
 	Die benötigten Teile sind in der Spielwelt verstreut und müssen an den passenden Stellen eingefügt werden.\\
 	Der Spieler kann dabei immer nur ein Objekt tragen.\\
 	Es sind auch falsche Konstellationen möglich die zu einem falschen Ergebnis führen.\\
-	\item \label{aufgabentyp:fehlerfindung} Fehlerfindung: Aufgabentyp bei dem der Lambdaausdruck schon fertig zusammengesetzt ist, jedoch nicht in der richtigen Konstellation.\\
+	\item \label{aufgabentyp:fehlerfindung} Fehlerfindung: Aufgabentyp bei dem der $\lambda$-Ausdruck schon fertig zusammengesetzt ist, jedoch nicht in der richtigen Konstellation.\\
 	Der Spieler muss die Fehler finden und die entsprechenden Objekte austauschen.\\
+	\item \label{aufgabentyp: ergebnis} Ergebnisbestimmung: Die Maschinenkonstruktion ist gegeben, der Spieler muss mit einer gegebenen Menge an Elementen die Endkonstellation bestimmen und angeben. ($\beta$ - Reduktion durchführen) 
 \end{enumerate}
 
 \clearpage
@@ -356,7 +357,7 @@ Das Produkt muss Daten speichern und verwalten, insbesondere:
     \begin{pdlist}
         \item Spieldauer
         \item Anzahl gelöste Level
-        \item Anzahl Achievments
+        \item Anzahl Achievements
     \end{pdlist}
 \end{pdlist}
 
@@ -380,7 +381,12 @@ Das Produkt muss Daten speichern und verwalten, insbesondere:
 \subsection{Allgemeine Ziele}
 
 \begin{nflist}
-    \item
+    \item Die Navigation durch das Spiel ist für den Spieler intuitiv, unabhängig von seinem Alter
+    \item Das Spiel ist insgesamt kindgerecht entworfen, d.h
+    \begin{itemize}
+    \item Weitestgehend werden Piktogramme verwendet
+    \item Textuelle Erklärung (insbesondere das $\lambda$-Symbol) wird nach Möglichkeit vermieden. Falls Text nötig ist, wird einfache, kindgerechte Sprache verwendet
+    \end{itemize}
 \end{nflist}
 
 \subsection{Benutzbarkeit, Performance, Stabilität}
@@ -534,14 +540,15 @@ Allgemein gilt jedoch, das so viel wie möglich ohne Text, sondern durch Symboli
 		\item \subsection*{Profilbearbeitungsmenü:}
 		Dieses Menü ist identisch mit dem Menü zum Anlegen eines neuen Spielerprofils.\\
 		Beendet man dieses Menü kommt man automatisch zurück ins Einstellungsmenü.\\
-		Außerdem kann hier ein bestehendes Profil gelöscht werden, sollte man ein Profil löschen so landet man anschließend im Profilmenü um ein anderes Profil zu wählen.
+		Außerdem kann hier ein bestehendes Profil gelöscht werden. Sollte man ein Profil löschen, so landet man anschließend im Profilmenü um ein anderes Profil zu wählen.
 		\includegraphics[width=\textwidth]{assets/CreateProfile2}
 	\end{minipage}
 
 	\begin{minipage}{1\textwidth}
-		\item \subsection*{Achievments:}
-		Hier sind alle Achievments zu sehen, die die man schon erlangt hat sind durch ein Bild gekennzeichnet, ansonsten ist dort ein Platzhalter zu sehen. Ein Abbruch führt zurück in die Einstellungen.\\
+		\item \subsection*{Achievements:}
+		Hier sind alle Achievements zu sehen. Schon erreichte sind durch ein Bild gekennzeichnet, ansonsten ist dort ein Platzhalter zu sehen. Ein Abbruch führt zurück in die Einstellungen.\\
 		\includegraphics[width=\textwidth]{assets/Achievments}
+		
 	\end{minipage}
 	
 	\begin{minipage}{1\textwidth}
@@ -646,7 +653,6 @@ Die folgende Grafik enthält die möglichkeiten des benutzers auf die App einzuw
 		\item Nach dem Öffnen des Levels, wird angezeigt, was die Maschine(n) produzieren müssen
 		\item Möchte der Spieler erneut das gewünschte Produkt ansehen, kann er dies durch einen Knopf wählen
 		\item Er spielt nach den Spielregeln (\ref{spielaufbau:Spielregeln})
-		\item 
 	\end{enumerate}
 	
 \subsection{Einstellungen}
@@ -698,11 +704,6 @@ Die folgende Grafik enthält die möglichkeiten des benutzers auf die App einzuw
  		\end{enumerate}
  \end{enumerate}
 
-\subsection{Hauptmenü}
-	\begin{enumerate}
-		\item 
-	\end{enumerate}	
-
 \subsection{Spiel verlassen}
 	\begin{enumerate}
 		\item Spiel beenden
@@ -716,8 +717,8 @@ Die folgende Grafik enthält die möglichkeiten des benutzers auf die App einzuw
 			\begin{enumerate}
 				\item Im Hauptmenü wählt man den Punkt \enquote{Einstellungen}
 				\item Dort wählt man \enquote{Achievments}
-				\item Es wird eine Liste aller Achievments angezeigt.
-				\item Freigespielte Achievments sind farbig markiert. 
+				\item Es wird eine Liste aller Achievements angezeigt.
+				\item Freigespielte Achievements sind farbig markiert. 
 			\end{enumerate}
 	\end{enumerate}
 
