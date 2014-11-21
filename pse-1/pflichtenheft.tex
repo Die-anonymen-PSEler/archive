@@ -7,6 +7,7 @@
 \usepackage{enumitem}
 \usepackage{hyperref}
 \usepackage{graphicx}
+\usepackage{cleveref}
 \usepackage[autostyle=true,german=quotes]{csquotes}
 \renewcommand{\familydefault}{\sfdefault}
 \input{commands}
@@ -288,30 +289,28 @@ Die Zielgruppe besteht überwiegend aus Kindern im Alter von acht bis zwölf Jah
 	\item \label{fa:tutorial}Tutorial Modus (Musskriterium \ref{muss:tutorial}) findet nach dem ersten Starten des Spiels statt
 	\begin{falist} 
         \item \label{fa:tutorial_01}Der Tutorial Modus basiert auf einem Minimum an textuellen Erklärungen
-        \item \label{fa: tutorial_02}Erklärt die Funktionsweise des Spiels
-		\item \label{fa: tutorial_03}Ein wiederholtes Starten des Tutorial Modus ist möglich
+        \item \label{fa:tutorial_02}Erklärt die Funktionsweise des Spiels
+		\item \label{fa:tutorial_03}Ein wiederholtes Starten des Tutorial Modus ist möglich
 	\end{falist}
-	\item Spielerprofile
+	\item \label{fa:spielerprofile} Spielerprofile
 	\begin{falist}
-		\item Anlegen von Spielerprofilen
-		\item Bearbeiten von Spielerprofilen
-		\item Löschen von Spielerprofilen
-		\item Wechseln zu Spielerprofilen
+		\item \label{fa:spielerprofile_anlegen} Anlegen von Spielerprofilen
+		\item \label{fa:spielerprofile_bearbeiten} Bearbeiten von Spielerprofilen
+		\item \label{fa:spielerprofile_loeschen} Löschen von Spielerprofilen
+		\item \label{fa:spielerprofile_wechseln} Wechseln zu Spielerprofilen
 	\end{falist}
-	\item Levelmenü bietet eine Übersicht über alle Level des Spiels (Musskriterium \ref{muss:5indilevel}). Diese sind unterteilt in abgeschlossene und nicht abgeschlossene Level.
+	\item \label{fa:levelmenue}Levelmenü bietet eine Übersicht über alle Level des Spiels (Musskriterium \ref{muss:5indilevel}). Diese sind unterteilt in abgeschlossene und nicht abgeschlossene Level.
     \begin{falist}
         \item Das erste Level ist automatisch freigeschaltet
         \item Die restlichen Level werden durch das Beenden des vorherigen Levels freigeschaltet
     \end{falist}
-	\item Spieleinstellungen
+    \item \label{fa:spielen} Level spielen
+	\item \label{fa:spieleinstellungen} Spieleinstellungen
 	\begin{falist}
 		\item Einstellen der Lautstärke
 		\item An/Aus für Lautstärke
 	\end{falist}
-	\item Spielestatistiken
-	\begin{falist}
-		\item
-	\end{falist}
+	\item \label{fa:spielestatistiken} Spielestatistiken
 	\item Interaktion mit den Spielelementen aus Nr. \ref{elemente:collectable}
 	\begin{falist}
 		\item Aufnehmen von Spielelementen
@@ -432,30 +431,51 @@ Das Produkt muss Daten speichern und verwalten, insbesondere:
 \subsection{Funktionssequenzen}
 
 \begin{telist}
-	\item Basierend auf \ref{fa:tutorial}
-	\item Ein Benutzerprofil anlegen
+	\item Tutorial basierend auf \ref{fa:tutorial} - \ref{fa:tutorial_03}
 	\begin{itemize}
-		\item Der Anwender befindet sich im Startfenster und drückt auf den \enquote{Benutzerverwaltungsbutton}. Diese Aktion führt den Benutzer zu einer neuen Anzeige, die seine bisherigen Profile beinhaltet.
-		\item Durch Wischgewesen gelangt der Benutzer an das Ende der Liste, wo sich ein \enquote{+}-Zeichen befindet. Durch Drücken dieses Symbols wird ein neuer Dialog gestartet.
-		\item In diesem Dialogfenster kann der Benutzer einen neuen Profilnamen angeben. Durch drücken des \enquote{Weiter}-Buttons gelangt der zu einem weitern Dialog.
+		\item Der Anwender startet den Tutorial-Modus über das Level-Menü (Systemmodell \ref{appaufbau:Levelauswahl}) oder gelangt automatisch in diesen beim ersten Starten des Spiels mit einem neuen Profil.
+		\item Der Anwender wird durch die Tutorial-Level geleitet, in denen ihm erklärt wird, wie er die Steuerung benutzen, die Elemente an die gewünschte Position bringen kann und wie genau die Maschinen die Elemente verarbeiten.
+	\end{itemize}
+
+	\item Ein Benutzerprofil anlegen (\ref{fa:spielerprofile_anlegen})
+	\begin{itemize}
+		\item Der Anwender befindet sich im Einstellungsmenü und drückt auf den \enquote{Benutzerverwaltungsbutton}. Diese Aktion führt den Benutzer zu einer neuen Anzeige, die seine bisherigen Profile beinhaltet.
+		\item Durch Wischgesten gelangt der Benutzer an das Ende der Liste, wo sich ein \enquote{+}-Zeichen befindet. Durch Drücken dieses Symbols wird ein neuer Dialog gestartet.
+		\item In diesem Dialogfenster kann der Benutzer einen neuen Profilnamen angeben. Durch drücken des \enquote{Weiter}-Buttons gelangt der zu einem weiteren Dialog.
 		\item In diesem Dialog kann er einen Charakter auswählen und sowie auswählen, ob dieses Profil im Rechts- oder Linkshänder Modus gespielt werden soll. Der Dialog wird durch Betätigen des \enquote{OK}-Buttons beendet.
 	\end{itemize}
-	\item Ein Benutzerprofil auswählen
+	\item Ein Benutzerprofil auswählen (\ref{fa:spielerprofile_wechseln})
 	\begin{itemize}
-		\item Der Anweder befindet sich im Startfenster und drückt auf den \enquote{Benutzerverwaltungsbutton}. Diese Aktion führt den Benutzer zu einer neuen Anzeige, die seine bisherigen Profile beinhaltet.
+		\item Der Anwender befindet sich im Einstellungsmenü und drückt auf den \enquote{Benutzerverwaltungsbutton}. Diese Aktion führt den Benutzer zu einer neuen Anzeige, die seine bisherigen Profile beinhaltet.
 		\item Durch Scrollen kann der Benutzer seine Profile einsehen. Bei Erreichen des gewünschten Profils wählt er dieses durch Berühren aus.
 	\end{itemize}
-	\item Ein Benutzerprofil löschen
+	\item Ein Benutzerprofil löschen (\ref{fa:spielerprofile_loeschen})
 	\begin{itemize}
-		\item Der Anweder befindet sich im Startfenster und drückt auf den \enquote{Benutzerverwaltungsbutton}. Diese Aktion führt den Benutzer zu einer neuen Anzeige, die seine bisherigen Profile beinhaltet.
-		\item Durch Scrollen kann der Benutzer seine Profile einsehen. 
+		\item Der Anwender befindet sich im Einstellungsmenü und drückt auf den \enquote{Benutzerverwaltungsbutton}. Diese Aktion führt den Benutzer zu einer neuen Anzeige, die seine bisherigen Profile beinhaltet.
+		\item Durch Scrollen kann der Anwender seine Profile einsehen. Er wählt dieses durch Berühren aus. 
 	\end{itemize}
-	\item Ein Benutzerprofil bearbeiten
-	\item Ein Level starten
+	\item Ein Benutzerprofil bearbeiten (\ref{fa:spielerprofile_bearbeiten})
+	\begin{itemize}
+		\item Der Anwender befindet sich im Einstellungsmenü und drückt auf den \enquote{Benutzerverwaltungsbutton}. Diese Aktion führt den Benutzer zu einer neuen Anzeige, die seine bisherigen Profile beinhaltet.
+		\item Der Anwender wählt den \enquote{Bearbeitungs-Button} neben dem Profil, welches er bearbeiten möchte, aus.
+		\item Im Bearbeitungsbereich kann der Anwender den Namen, den Avatar und die Steuerungseinstellung (Rechts- oder Linkshänder) verändern.
+	\end{itemize}
+	\item Level-Menü (\ref{fa:levelmenue})
+	\begin{itemize}
+		\item Der Anwender kann nur jene Level öffnen, die bereits freigeschaltet wurden, die anderen Level sind sichtbar, aber sie können nicht ausgewählt werden.
+	\end{itemize}
+	\item Level spielen (\ref{fa:spielen})
+	\begin{itemize}
+		\item Die Figur reagiert korrekt auf die Steuerung.
+		\item Die Steuerung befindet sich auf der Seite, die der Anwender im Profil ausgewählt hat (\ref{szenarien:ProfilBearbeiten}).
+		\item Die alle Elemente, die für das Lösen des Levels benötigt werden, sind vorhanden.
+		\item Die Elemente sind alle für die Figur erreichbar.
+		\item Die Positionen für die Elemente sind vorhanden.
+		\item Die Tür öffnet sich wenn alle Elemente korrekt platziert sind.
+	\end{itemize}
+	\item Spieleinstellungen ()
 	\item Speicher / Laden von Applikationszustandes
 	\item Speichern / Laden von Spielzuständen
-	
-	\item 
 \end{telist}
 
 \subsection{Datenkonsistenz}
@@ -555,7 +575,7 @@ Allgemein gilt jedoch, das so viel wie möglich ohne Text, sondern durch Symboli
 	\end{minipage}
 	
 	\begin{minipage}{1\textwidth}
-		\item \subsection*{Levelauswahl:}
+		\item \subsection*{Levelauswahl:} \label{appaufbau:Levelauswahl}
 		Hier kann ein Level der Stage in der man sich aktuell befindet gestartet werden.(auch diese müssen nach und nach freigeschaltet werden).\\
 		\includegraphics[width=\textwidth]{assets/Levelmenu}
 	\end{minipage}
