@@ -311,8 +311,8 @@ Die Zielgruppe besteht überwiegend aus Kindern im Alter von acht bis zwölf Jah
 	\begin{falist}
 		\item \label{fa:spielerprofile_anlegen} \textbf{Anlegen von Spielerprofilen} Spielerprofile können einzeln hinzugefügt werden.
 		\item \label{fa:spielerprofile_bearbeiten} \textbf{Bearbeiten von Spielerprofilen} Spielerprofile können bearbeitet werden. Das Ändern des Namens sowie der Spielerfigur sind möglich.
-		\item \label{fa:spielerprofile_loeschen} \textbf{Löschen von Spielerprofilen} Das Löschen eines Spielerprofils erfolgt über die Benutzerverwaltung.
-		\item \label{fa:spielerprofile_wechseln} \textbf{Wechseln zu Spielerprofilen} Das Wechseln eines Spielerprofils ist möglich über die Benutzerverwaltung.
+		\item \label{fa:spielerprofile_loeschen} \textbf{Löschen von Spielerprofilen} Das Löschen eines Spielerprofils erfolgt über das Profilmneü.
+		\item \label{fa:spielerprofile_wechseln} \textbf{Wechseln zu Spielerprofilen} Das Wechseln eines Spielerprofils ist möglich über das Profilmenü.
 		\item \label{fa:spielerprofile_separiert} \textbf{Eigenständigkeit von Spierprofilen} Spielerprofile sind eigenständig. Fortschritte die in einem Spielerprofil gemacht wurden sind an dieses Profil gebunden.
 	\end{falist}
 \end{falist}
@@ -492,24 +492,24 @@ Das Produkt muss Daten speichern und verwalten, insbesondere:
 
 	\item Ein Benutzerprofil anlegen (\ref{fa:spielerprofile_anlegen})
 	\begin{itemize}
-		\item Der Anwender befindet sich im Einstellungsmenü und drückt auf den \enquote{Benutzerverwaltungsbutton}. Diese Aktion führt den Benutzer zu einer neuen Anzeige, die seine bisherigen Profile beinhaltet.
+		\item Der Anwender befindet sich im Hauptmenü und drückt auf den \enquote{Benutzerverwaltungsbutton}. Diese Aktion führt den Benutzer zum Profilmenü.
 		\item Durch Wischgesten gelangt der Benutzer an das Ende der Liste, wo sich ein \enquote{+}-Zeichen befindet. Durch Drücken dieses Symbols wird ein neuer Dialog gestartet.
 		\item In diesem Dialogfenster kann der Benutzer einen neuen Profilnamen angeben. Durch drücken des \enquote{Weiter}-Buttons gelangt der zu einem weiteren Dialog.
 		\item In diesem Dialog kann er einen Charakter auswählen und sowie auswählen, ob dieses Profil im Rechts- oder Linkshänder Modus gespielt werden soll. Der Dialog wird durch Betätigen des \enquote{OK}-Buttons beendet.
 	\end{itemize}
 	\item Ein Benutzerprofil auswählen (\ref{fa:spielerprofile_wechseln})
 	\begin{itemize}
-		\item Der Anwender befindet sich im Einstellungsmenü und drückt auf den \enquote{Benutzerverwaltungsbutton}. Diese Aktion führt den Benutzer zu einer neuen Anzeige, die seine bisherigen Profile beinhaltet.
+		\item Der Anwender befindet sich im Hauptmenü und drückt auf den \enquote{Benutzerverwaltungsbutton}. Diese Aktion führt den Benutzer zum Profilmenü.
 		\item Durch Scrollen kann der Benutzer seine Profile einsehen. Bei Erreichen des gewünschten Profils wählt er dieses durch Berühren aus.
 	\end{itemize}
 	\item Ein Benutzerprofil löschen (\ref{fa:spielerprofile_loeschen})
 	\begin{itemize}
-		\item Der Anwender befindet sich im Einstellungsmenü und drückt auf den \enquote{Benutzerverwaltungsbutton}. Diese Aktion führt den Benutzer zu einer neuen Anzeige, die seine bisherigen Profile beinhaltet.
+		\item Der Anwender befindet sich im Hauptmenü und drückt auf den \enquote{Benutzerverwaltungsbutton}. Diese Aktion führt den Benutzer zum Profilmenü.
 		\item Durch Scrollen kann der Anwender seine Profile einsehen. Er wählt dieses durch Berühren aus. 
 	\end{itemize}
 	\item Ein Benutzerprofil bearbeiten (\ref{fa:spielerprofile_bearbeiten})
 	\begin{itemize}
-		\item Der Anwender befindet sich im Einstellungsmenü und drückt auf den \enquote{Benutzerverwaltungsbutton}. Diese Aktion führt den Benutzer zu einer neuen Anzeige, die seine bisherigen Profile beinhaltet.
+		\item Der Anwender befindet sich im Hauptmenü und drückt auf den \enquote{Benutzerverwaltungsbutton}. Diese Aktion führt den Benutzer zum Profilmenü.
 		\item Der Anwender wählt den \enquote{Bearbeitungs-Button} neben dem Profil, welches er bearbeiten möchte, aus.
 		\item Im Bearbeitungsbereich kann der Anwender den Namen, den Avatar und die Steuerungseinstellung (Rechts- oder Linkshänder) verändern.
 	\end{itemize}
@@ -579,8 +579,8 @@ Allgemein gilt jedoch, das so viel wie möglich ohne Text, sondern durch Symboli
 	
 	\begin{minipage}{1\textwidth}
 		
-		\item \subsection*{Profilmenü:}
-		Das Profilmenü öffnet sich unmittelbar nach erfolgreicher Beendigung des Ladevorgangs(Nähere Informationen zum Ablauf und Ausnahmen folgen im Kapitel Szenarien).\\
+		\item \subsection*{Profilmenü:} \label{appaufbau:Profilmenue}
+		Das Profilmenü öffnet sich unmittelbar nach erfolgreicher Beendigung des Ladevorgangs(Nähere Informationen zum Ablauf und Ausnahmen folgen im Kapitel Szenarien) und kann jederzeit über den \enquote{Benutzerverwaltungsbutton} im Hauptmenü aufgerufen werden.\\
 		Die einzelenn Spielerprofile werden durch anzeige des Avatar / Spielecharakters sowie den zugehörigen Profilnamen bestimmt.\\
 		Es gibt eine maximale Anzahl an Spielerprofilen, sollte diese erreicht sein so verschwindet der Button zum erzeugen eines neuen Profils.\\
 		Gleichzeitig muss immer ein Spielerprofil vorhanden sein, sollte es nur noch ein Spielerprofil geben , so kann dieses nicht gelöscht werden , bis ein weiteres Profil angelegt wurde.\\
@@ -594,7 +594,7 @@ Allgemein gilt jedoch, das so viel wie möglich ohne Text, sondern durch Symboli
 		Der Spieler kann einen Namen für das Profil eingeben und aus einer gegebenen Menge an Avataren bzw. Avatarteilen einen als Identifikationsmerkmal aussuchen bzw zusammen setzen.\\
 		Der gewählte Avatar dient im weiteren Verlauf auch als Spielfigur, wobei jedoch keine Unterschiede außer dem aussehen zwischen den einzelnen Figuren besteht(Alle sind gleich groß, schnell...).\\
 		Auch die Wahl ob man als Linkshänder oder Rechtshänder spielen will kann hier Profil spezifisch gewählt werden.\\
-		Man kann jederzeit über das Einstellungsmenü hierhin gelangen um Änderungen am Profil vorzunehmen.\\
+		Man kann jederzeit über das Benutzerverwaltungsmenü hierhin gelangen um Änderungen am Profil vorzunehmen.\\
 		Sollte der Spieler hier abbrechen, so gelangt er zurück ins Profilmenü, ansonsten landet er entweder im Tutorial oder im Hauptmenü(Mehr dazu im Kapitel Szenarien)\\
 		\includegraphics[width=\textwidth]{assets/CreateProfile2}
 	\end{minipage}
@@ -609,15 +609,15 @@ Allgemein gilt jedoch, das so viel wie möglich ohne Text, sondern durch Symboli
 	\begin{minipage}{1\textwidth}
 		\item \subsection*{Einstellungen:}
 		Hier können verschiedene grundlegende Einstellungen vorgenommen werden.\\
-		Von hier gelangt man ins Profilbearbeitungsmenü und zur Ansicht aller Achievments (Achievmentmenu).\\
-		Der Zurück-Button führt ins Hauptmenü, beim verlassen werden sämtliche Änderungen automatisch gespeichert.\\
+		Von hier gelangt man zur Ansicht aller Achievements (Achievementmenu).\\
+		Der Zurück-Button führt ins Hauptmenü, beim Verlassen werden sämtliche Änderungen automatisch gespeichert.\\
 		\includegraphics[width=\textwidth]{assets/Einstellungen}
 	\end{minipage}
 
 	\begin{minipage}{1\textwidth}
 		\item \subsection*{Profilbearbeitungsmenü:}
-		Dieses Menü ist identisch mit dem Menü zum Anlegen eines neuen Spielerprofils.\\
-		Beendet man dieses Menü kommt man automatisch zurück ins Einstellungsmenü.\\
+		Dieses Menü ist identisch mit dem Menü zum Anlegen eines neuen Spielerprofils und erreichbar über das Profilmenü.\\
+		Beendet man dieses Menü kommt man automatisch zurück ins Hauptmenü.\\
 		Außerdem kann hier ein bestehendes Profil gelöscht werden. Sollte man ein Profil löschen, so landet man anschließend im Profilmenü um ein anderes Profil zu wählen.
 		\includegraphics[width=\textwidth]{assets/CreateProfile2}
 	\end{minipage}
@@ -742,8 +742,8 @@ Die folgende Grafik enthält die möglichkeiten des benutzers auf die App einzuw
 
 \subsection{Benutzer-Profil bearbeiten} \label{szenarien:ProfilBearbeiten}
 	\begin{enumerate}
-		\item Im Hauptmenü wählt man den Punkt \enquote{Einstellungen}
-		\item Dort drückt man auf den Button \enquote{Profil bearbeiten}
+		\item Im Hauptmenü wählt man den \enquote{Benutzerverwaltungsbutton}, um ins Profilmenü zu gelangen.
+		\item Dort drückt man auf den Button \enquote{Profil bearbeiten}, gekennzeichnet durch das Bild eines Stiftes
 		\item Hier kann man, wie schon beim Anlegen des Profils (\ref{szenarien:ProfilAnlegen}), den ausgewählten Avatar, seinen Namen und auch, ob Rechts- oder Linkshändersteuerung gewünscht wird, editieren.
 	\end{enumerate}
 	
