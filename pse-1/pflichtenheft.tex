@@ -34,7 +34,7 @@
 
 
 
-
+    
 
 % ---------------
 % Einleitung
@@ -237,7 +237,7 @@ Das Produkt soll auf jedem Android Gerät ab Android 4.2 einsatzfähig sein. Ein
 
 \begin{enumerate}
 	\item Freizeitgestaltung von Kindern ab 8 Jahren
-	\item Einsatz an Vor- und Grundschulen
+	\item Einsatz an Vor- und Grundschulen im Rahmen eines Unterrichtprojekts
 \end{enumerate}
 
 \subsection{Zielgruppen}
@@ -287,44 +287,77 @@ Die Zielgruppe besteht überwiegend aus Kindern im Alter von acht bis zwölf Jah
 
 \section{Funktionale Anforderungen}
 
+
+\subsection{Tutorial} % (fold)
+\label{sub:fa:tutorial}
+
+% subsection fa:tutorial (end)
+
 \begin{falist}
-	\item \label{fa:tutorial}Tutorial Modus (Musskriterium \ref{muss:tutorial}) findet nach dem ersten Starten des Spiels statt
+	\item \label{fa:tutorial} \textbf{Tutorial Modus} findet nach dem ersten Starten des Spiels statt (Musskriterium \ref{muss:tutorial}).
 	\begin{falist} 
-        \item \label{fa:tutorial_01}Der Tutorial Modus basiert auf einem Minimum an textuellen Erklärungen
-        \item \label{fa:tutorial_02}Erklärt die Funktionsweise des Spiels
-		\item \label{fa:tutorial_03}Ein wiederholtes Starten des Tutorial Modus ist möglich
+        \item \label{fa:tutorial_01}Der Tutorial Modus basiert auf einem Minimum an textuellen Erklärungen.
+        \item \label{fa:tutorial_02}Erklärt die Funktionsweise des Spiels,
+		\item \label{fa:tutorial_03}Ein wiederholtes Starten des Tutorial Modus ist möglich.
 	\end{falist}
-	\item \label{fa:spielerprofile} Spielerprofile
+\end{falist}
+
+\subsection{Profile}
+\begin{falist}[resume]
+	\item \label{fa:spielerprofile} \textbf{Spielerprofile}
 	\begin{falist}
-		\item \label{fa:spielerprofile_anlegen} Anlegen von Spielerprofilen
-		\item \label{fa:spielerprofile_bearbeiten} Bearbeiten von Spielerprofilen
-		\item \label{fa:spielerprofile_loeschen} Löschen von Spielerprofilen
-		\item \label{fa:spielerprofile_wechseln} Wechseln zu Spielerprofilen
+		\item \label{fa:spielerprofile_anlegen} \textbf{Anlegen von Spielerprofilen} Spielerprofile können einzeln hinzugefügt werden.
+		\item \label{fa:spielerprofile_bearbeiten} \textbf{Bearbeiten von Spielerprofilen} Spielerprofile können bearbeitet werden. Das Ändern des Namens sowie der Spielerfigur sind möglich.
+		\item \label{fa:spielerprofile_loeschen} \textbf{Löschen von Spielerprofilen} Das Löschen eines Spielerprofils erfolgt über die Benutzerverwaltung.
+		\item \label{fa:spielerprofile_wechseln} \textbf{Wechseln zu Spielerprofilen} Das Wechseln eines Spielerprofils ist möglich über die Benutzerverwaltung.
+		\item \label{fa:spielerprofile_separiert} \textbf{Eigenständigkeit von Spierprofilen} Spielerprofile sind eigenständig. Fortschritte die in einem Spielerprofil gemacht wurden sind an dieses Profil gebunden.
 	\end{falist}
-	\item \label{fa:levelmenue}Levelmenü bietet eine Übersicht über alle Level des Spiels (Musskriterium \ref{muss:5indilevel}). Diese sind unterteilt in abgeschlossene und nicht abgeschlossene Level.
+\end{falist}
+
+\subsection{Spieldesign}
+
+\begin{falist}[resume]
+	\item \label{fa:level} \textbf{Level} Ein Level (fill me in)
+	\item \label{fa:levelmenue} \textbf{Levelmenü} bietet eine Übersicht über alle Level des Spiels (Musskriterium \ref{muss:5indilevel}). Diese sind unterteilt in abgeschlossene und nicht abgeschlossene Level.
     \begin{falist}
-        \item Das erste Level ist automatisch freigeschaltet
-        \item Die restlichen Level werden durch das Beenden des vorherigen Levels freigeschaltet
+        \item \textbf{Erstes Level} Das erste Level ist automatisch freigeschaltet.
+        \item \textbf{Freischalten weiterer Level} Das Freischalten weiterer Leve erfolgt durch Freispielen. Beendigung eines Levels führt zum Freischalten des nächsten.
     \end{falist}
-    \item \label{fa:spielen} Level spielen
-	\item \label{fa:spieleinstellungen} Spieleinstellungen
-	\item \label{fa:spielestatistiken} Spielestatistiken
-	\item Interaktion mit den Spielelementen aus Nr. \ref{elemente:collectable}
+    \item \label{fa:spielen} \textbf{Level spielen}
+	\item Interaktion mit den Spielelementen aus Nr. \ref{elemente:collectable}.
 	\begin{falist}
-		\item Aufnehmen von Spielelementen
-		\item Abgabe für die Levelquests
+		\item \textbf{Aufnehmen von Spielelementen}
+		\item \textbf{Abgabe für die Levelquests}
 	\end{falist}
-	\item Infobereich, der weiterführende Informationen zum Thema $\lambda$-Kalkül enthält
-    \item Achievements, unter anderem
-    \begin{falist}
+\end{falist}
+
+\subsection{Achievements}
+
+\begin{falist}[resume]
+    \item \label{fa:achievements} \textbf{Achievements} sind Ziele die von dem Spiel vorgegeben werden und gutes Spielen des Benutzers auszeichnen. Angedacht dafür sind folgende:
+    \begin{itemize}
     	\item Abschließen des Tutorial-Modus
     	\item Abschließen eines Kapitels
-    	\item Spielzeit unterhalb einer gegebenen Schranke
-    	\item Spielzeit oberhalb einer gegebenen Schranke
+    	\item Spielzeit unterhalb einer gegebenen Schranke (Wunsch)
+    	\item Spielzeit oberhalb einer gegebenen Schranke (Wunsch)
     	\item Fun-Achievements (Nicht-Schwimmer, Nachtsschwärmer)
     	\item First-Try
-    \end{falist}
-    \item Animierte Auswertung der Maschinenkonstellation
+    \end{itemize}
+\end{falist}
+
+\subsection{Ladeverhalten}
+
+\begin{falist}[resume]
+	\item \label{fa:tipps} \textbf{Anzeigen von Tipps} Während das Spiel ein Level (\ref{fa:level}) geladen wird, werden Tipps angezeigt.
+\end{falist}
+
+\subsection{Sonstiges}
+
+\begin{falist}[resume]
+	\item \label{fa:infobereich} \textbf{Infobereich} Das Spiel verfügt über einen Infobereich, der weiterführende Informationen zum Thema $\lambda$-Kalkül enthält.
+	\item \label{fa:spieleinstellungen} \textbf{Spieleinstellungen}
+	\item \label{fa:spielestatistiken} \textbf{Spielestatistiken}
+	\item \textbf{Animierte Auswertung der Maschinenkonstellation}
 \end{falist}
 
 \clearpage
@@ -346,19 +379,21 @@ Das Produkt muss Daten speichern und verwalten, insbesondere:
 \subsection{Profildaten}
 
 \begin{pdlist}
-    \item Profile, bestehend aus 
+    \item \label{produktdaten:profile} Profile, bestehend aus 
     \begin{pdlist}
-        \item Name des Spielers
-        \item Avatar
-        \item profilbezogene Einstellungen(Hintergrund, Musik etc.) 
-        \item profilbezogener Spielfortschritt(gelöste Level, Achievements, etc.)
+        \item \label{produktdaten:profile:name}Name des Spielers
+        \item \label{produktdaten:profile:avatar}Avatar
+        \item \label{produktdaten:profile:einstellungen}profilbezogene Einstellungen(Hintergrund, Musik etc.) 
+        \item \label{produktdaten:profile:spielfortschritt}profilbezogener Spielfortschritt(gelöste Level, Achievements, etc.)
     \end{pdlist}
-    \item Spielstatistiken
-    \begin{pdlist}
-        \item Spieldauer
-        \item Anzahl gelöste Level
-        \item Anzahl Achievements
-    \end{pdlist}
+\end{pdlist}
+
+\subsection{Spielstatistiken}
+
+\begin{pdlist}[resume]
+    \item Spieldauer
+    \item Anzahl gelöste Level
+    \item Anzahl Achievements
 \end{pdlist}
 
 \subsection{Einstellungen}
@@ -387,26 +422,23 @@ Das Produkt muss Daten speichern und verwalten, insbesondere:
 \subsection{Allgemeine Ziele}
 
 \begin{nflist}
-    \item Die Navigation durch das Spiel ist für den Spieler intuitiv, unabhängig von seinem Alter
-    \item Das Spiel ist insgesamt kindgerecht entworfen, d.h
+    \item Die Navigation durch das Spiel ist für den Spieler intuitiv, unabhängig von seinem Alter.
+    \item Das Spiel ist insgesamt kindgerecht entworfen, d.h.:
     \begin{itemize}
-    \item Weitestgehend werden Piktogramme verwendet
-    \item Textuelle Erklärung (insbesondere das $\lambda$-Symbol) wird nach Möglichkeit vermieden. Falls Text nötig ist, wird einfache, kindgerechte Sprache verwendet
+    \item Weitestgehend werden Piktogramme verwendet.
+    \item Textuelle Erklärung (insbesondere das $\lambda$-Symbol) wird nach Möglichkeit vermieden. Falls Text nötig ist, wird einfache, kindgerechte Sprache verwendet.
     \end{itemize}
 \end{nflist}
 
 \subsection{Benutzbarkeit, Performance, Stabilität}
 \begin{nflist}[resume]
-	\item Das Starten eines Levels beträgt höchstens 10s 
+	\item Das Starten eines Levels beträgt höchstens 10s. 
 	\item Das Programm läuft stabil: 
 	\begin{nflist}
-		\item Es treten keine Abstürze der Software auf 
+		\item Es tritt kein Fehlverhalten der Software auf.
 		\item Ladezeiten befinden sich in einem akzeptablen Rahmen. 
 	\end{nflist}
-	\item Die Auswertung eines Levels(Sieg oder Niederlage) dauert max. 5 Sekunden. 
-	\item mind. 75\% Testüberdeckung 
-	\item Es wird nur die Berechtigung für den Speicherzugriff(Lesen
-	und Schreiben) benötigt. 
+	\item Die Auswertung eines Levels(Sieg oder Niederlage) dauert max. 5 Sekunden.
 	\item Der benötigte Speicherverbrauch reduziert sich auf ein Minimum. 
 	\item Nach Beendigung eines Levels wird der Spielstand automatisch gespeichert.
 \end{nflist}
@@ -414,16 +446,22 @@ Das Produkt muss Daten speichern und verwalten, insbesondere:
 \subsection{Qualität und Rechtliches}
 
 \begin{nflist}[resume]
+	\item Die bei diesem Projekt entstehenden Daten haben folgende Eigenschaften:
+	\begin{itemize}
+		\item leicht zu warten
+		\item dokumentiert (JavaDoc)
+		\item getestet (EclEMMA, JUnit)
+		\item erweiterbar
+	\end{itemize}
 	\item Das Programm verwendet für Dateien folgende Standards: 
 	\begin{itemize}
 		\item WAV, OGG, MP3 für Audio Dateien 
-		\item SVG für Vektorgrafiken 
-		\item PNG, JPG für pixelbasierte Grafiken 
-		\item JSON für strukturierte Textdateien.
+		\item SVG für Vektorgrafiken
+		\item PNG, JPG für pixelbasierte Grafiken
+		\item JSON für strukturierte Textdateien
 	\end{itemize}
 	\item Die Auslieferung der finalen Version erfolgt in Form einer .apk-Datei.
-	\item Impressum und ausschließliche Verwendung von frei verfügbare Bibliotheken
-	für den Fall der Veröffentlichung
+	\item Es werden nur ein Minimum an Berechtigung eingefordert. Dieses sind Lese- und Schreibzugriff.
 \end{nflist}
 
 \clearpage
@@ -474,7 +512,7 @@ Das Produkt muss Daten speichern und verwalten, insbesondere:
 	\end{itemize}
 	\item Level-Menü (\ref{fa:levelmenue})
 	\begin{itemize}
-		\item Der Anwender kann nur jene Level öffnen, die bereits freigeschaltet wurden, die anderen Level sind sichtbar, aber sie können nicht ausgewählt werden.
+		\item Der Anwender kann nur jene Level öffnen, die bereits freigeschaltet wurden. Die anderen Level sind sichtbar, können jedoch nicht ausgewählt werden.
 	\end{itemize}
 	\item Level spielen (\ref{fa:spielen})
 	\begin{itemize}
