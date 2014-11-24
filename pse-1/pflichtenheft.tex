@@ -183,7 +183,8 @@ Zu Beginn eines Levels wird die Spielerfigur angezeigt und bewegt zweidimensiona
 \begin{description}
 
 \begin{minipage}{1\textwidth}
-	\item[Spielregeln] \label{spielaufbau:Spielregeln} Die Spielfigur beginnt an der unteren, linken Ecke der Spielwelt und muss es schaffen die Tür an der rechten unteren Ecke zu öffnen. Dies gelingt ihm in dem er diverse Objekte (Maschinen, Metallobjekte und Maschinen-Cluster)auf dem Spielfeld in Position bringt, sodass diese nach den Prinzipien des Lambda Kalküls einen Lambdaausdruck bilden  welcher zu einem gewünschten Ergebnis zusammengefasst oder gelöst werden kann.\\
+	\item[Spielregeln] \label{spielaufbau:Spielregeln} 
+	Die Spielfigur beginnt an der unteren, linken Ecke der Spielwelt und muss es schaffen die Tür an der rechten unteren Ecke zu öffnen. Dies gelingt ihm in dem er diverse Objekte (Maschinen, Metallobjekte und Maschinen-Cluster)auf dem Spielfeld in Position bringt, sodass diese nach den Prinzipien des Lambda Kalküls einen Lambdaausdruck bilden  welcher zu einem gewünschten Ergebnis zusammengefasst oder gelöst werden kann.\\
 	Der Spieler muss neben einem Objekt stehen, um dieses aufheben zu können.\\
 	Der Spieler kann immer nur ein Objekt tragen. Um ein anderes Objekt aufzuheben muss er erst das Objekt das er trägt ablegen.\\
 	Um auf die oberen Ebenen der Spielwelt zu gelangen, kann die Spielfigur springen, dabei ist zu beachten, dass die Figur nur eine feste Höhe hochspringen kann und er somit auf Ebenen außerhalb seiner Reichweite, nicht durch einfaches Springen gelangen kann. Die Figur kann auch springen wenn sie etwas in den Händen trägt (dabei kann es zu einer geringen Trägheit kommen, z.B. ungenauere Spielsteuerung(diese ist gewollt und soll das Spiel ein wenig schwieriger gestalten)).\\
@@ -210,19 +211,36 @@ Zu Beginn eines Levels wird die Spielerfigur angezeigt und bewegt zweidimensiona
 
 \end{description}
 
-\subsection{Lambda-Kalkül}
+\subsection{Lambda-Kalkül}  \label{subsection:LambdaKalkül}
 
 
 
 \begin{description}
-	
-	\item[Allgemeine Erklärung:] \label{LambdaKalkül:AlgemeineErklärung} Der $\lambda$-Kalkül ist eine formale Sprache, die im Allgemeinen dazu dient Funktionen formal zu beschreiben.\\
-	Das Spiel soll dem Spieler die beiden wichtigsten $\lambda$-Kalkül auf seine beiden wichtigsten Regew
 
+	\begin{minipage}{1\textwidth}
+	\item[Allgemeine Erklärung:] \label{LambdaKalkül:AlgemeineErklärung} Der $\lambda$-Kalkül ist eine formale Sprache, die im Allgemeinen dazu dient Funktionen zu definieren bzw. beschreiben.\\
+	In unserem Fall beschränken wir uns hier jedoch auf die beiden grundlegenden Regeln des $\lambda$-Kalkül, die $\alpha$-Regel und die $\beta$-Regel. Das Spiel soll dem Spieler diese beiden wichtigen Regeln des $\lambda$-Kalkül anschaulich erklären.\\
+	$\alpha$-Regel: Die Alpha Regel besagt im $\lambda$-Kalkül das die Variablen eines $\lambda$-Terms jederzeit umbenannt werden dürfen um die eindeutigkeit dieser terme zu waren. Bsp.:\\
+	$\lambda$x.x [x <- y] => $\lambda$y.y.\\
+	Wichtig ist hierbei keine Doppelverwendung von Variablen Benennung in unterschiedlichen $\lambda$-Termen entsteht. Vielmehr ist diese Regel dazu gedacht, beim auftreten einer Doppelbelegung eine der beieden Variablen umzutaufen um die Eindeutige $\lambda$-Terme zu formen.
+	$\beta$-Regel: Die $\beta$-Regel dient der Vereinfachung, Auflösung oder Umformung von $\lambda$-Termen.\\
+	Sie besagt das ein $\lambda$-Term   der Form zb. ($\lambda$x.x+2)(z) umgeformt werden kann, indem der Ausdruck ``z'' in den Term hinter dem ``.'' eingesetzt werden kann und zwar für genau die Variable die zwischen ``$\lambda$'' und dem ``.'' steht um es anschaulich zu erklären. Bsp.:\\
+	($\lambda$x.x+2)(z) = (x+2)[x <- z] = z + 2\\
+	Wichtig ist das hierbei sowohl z als auch x für alles stehen können. Also x kann auch eine funktion sein und z kann auch z.b ein weiterer kompletter $\lambda$-Term sein.
+ 	Bsp.:\\
+ 	($\lambda$f.f(f(2)))($\lambda$x.x+2)\\
+ 	= (f(f(2)))[f <- $\lambda$x.x+2]\\
+ 	= ($\lambda$x.x+2)(($\lambda$x.x+2)(2))\\
+ 	= ($\lambda$x.x+2)((x+2)[x <- 2])\\
+ 	= ($\lambda$x.x+2)(2 + 2)\\
+ 	= ($\lambda$x.x+2)(4)\\
+ 	= (x+2)[x <- 4]\\
+ 	= 4 + 2 = 6 \\
+	\end{minipage}
 							
 \end{description}
 
-\subsection{Beispiele}
+\subsection{Beispiele}  \label{subsection:Beispiele}
 
 
 
