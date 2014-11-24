@@ -174,6 +174,7 @@ Zu Beginn eines Levels wird die Spielerfigur angezeigt und bewegt zweidimensiona
 		\item Metallstücke (entspricht der Variablen)
 		\item Maschinen-Cluster (entspricht der Applikation)
 	\end{enumerate}
+	\item[Ablage] sind die markierte Stellen an denen Spielobjekte abgelegt werden können.
 	\item[Levelquest] sind gegebene Aufgaben die zum Abschließen des Levels erfüllt werden müssen
 	\item[Leveltür] bildet den Abschluss eines Levels. Sobald alle Quests in dem Level gelöst wurden wird die Tür freigeschaltet
 \end{description}
@@ -211,9 +212,12 @@ Zu Beginn eines Levels wird die Spielerfigur angezeigt und bewegt zweidimensiona
 
 \end{description}
 
+\subsection{Steuerung}  \label{subsection:Steuerung}
+
+
+
+
 \subsection{Lambda-Kalkül}  \label{subsection:LambdaKalkül}
-
-
 
 \begin{description}
 
@@ -240,9 +244,123 @@ Zu Beginn eines Levels wird die Spielerfigur angezeigt und bewegt zweidimensiona
 							
 \end{description}
 
-\subsection{Beispiele}  \label{subsection:Beispiele}
+\subsection{Levelaufbau}  \label{subsection:Levelaufbau}
 
 
+\begin{description}
+	
+	\begin{minipage}{1\textwidth}
+		\item[Tutorial:] \label{Levelaufbau:Tutorial}  Das Tutorial umfasst die ersten Level des Spiels. Der Spieler soll hier Das Spielprinzip im Spielmodi Puzzle  schritt für schritt verstehen.
+		Umgesetzt wird dies dies durch sehr einfache Level, wobei in jedem Level ein weiterer Faktor hinzukommt.\\
+		Im ersten Level liegt der Fokus darauf dem Spieler die Steuerung und die Levelelement zu erklären. 
+		In den darauffolgenden Leveln wird die Spielmechanik mit Maschinen und Metallobjekten erklärt.\\
+		Zwischen den Leveln wird die Story erzählt durch. eventuell durch kleine Zwischensequenzen.\\		 
+	\end{minipage}
+		
+
+	\item[Levelbeispiel:] \label{Levelaufbau:Levelbeispiel} Als Level-Beispiel dient das erste Tutorial Level. Es wird in mehreren Bilder aufgeteilt um die möglichen Aktionen des Spieler zu erklären,sowie den grundlegenden Ablauf eines Levels darzustellen.\\
+	
+	\begin{enumerate}
+		\begin{minipage}{1\textwidth}
+			\item \label{Levelaufbau:Levelstart	} Zum Level Start befindet sich die Spielfigur am rechten Rand der Spielwelt,\\
+			außerdem ist das Level-ziel eingeblendet.\\
+			Das Level-ziel gibt die Zielkonstellation an, die das zusammengesetzte Konstrukt aus Maschinen und Metallobjekten nach Verarbeitung nach den Regeln des $\lambda$-Kalküls haben soll.\\
+			Das Level-ziel kann der Spieler durch einen Klick auf den Hacken unten rechts ausblenden und jederzeit durch einen Klick auf den Button mit dem ``Fahnen-Symbol'' unten in der Mitte des Schirms wieder anzeigen.\\ Solange Hinweise oder das Level-ziel eingeblendet sind kann der Spieler keine anderen Aktionen ausführen.\\
+			\includegraphics[width=\textwidth]{assets/Levelziel}
+		\end{minipage}
+		
+		\begin{minipage}{1\textwidth}
+			\item \label{Levelaufbau:ErsteSchritte} Nach Ausblendung der Level-ziel kann der Spieler mit dem Lösen des Level beginnen, hierzu muss er die Spielfigur zum Metallobjekt bewegen , dieses per Button-druck aufheben und anschließend in die freie Ablage daneben platzieren.\\
+			Die über den Objekten angezeigten Namen dienen lediglich zur Erklärung welches Objekt was darstellen soll und wird im eigentliche Spiel nicht angezeigt.\\
+			\includegraphics[width=\textwidth]{assets/Level1mA}
+		\end{minipage}
+		
+		\begin{minipage}{1\textwidth}
+			\item \label{Levelaufbau:Levelende} Sind alle Ablagen gefüllt so beginnt die Auswertung des Konstrukts.\\ Führt das Konstrukt zum gewünschten Ergebnis, so öffnet sich die Leveltür  und der Spieler kann durch erreichen dieser Tür das Level beenden und gelangt dadurch ins Auswertungsmenü.\\
+			\includegraphics[width=\textwidth]{assets/LevelEnde}
+		\end{minipage}
+		
+		\begin{minipage}{1\textwidth}
+			\item \label{Levelaufbau:Levelhinweis} Während des spielen eines Levels kann der Spieler zu jederzeit das Hinweisfenster öffnen, diese liefert durch ein Bild dargestellt Level spezifisch einen Hinweis auf die Zielkonfiguration des jeweiligen Levels.\\
+			\includegraphics[width=\textwidth]{assets/LevelHinweis}
+		\end{minipage}
+	\end{enumerate}
+	
+\clearpage
+
+	\item[Konstrukte:] \label{Levelaufbau:Konstrukte} Im folgenden sehen sie einige Konstrukte die in Leveln möglich sind, jeweils mit einer kurzen Erklärung.\\
+	
+		\begin{minipage}{1\textwidth}
+			Einfacher Aufbau einer Maschine(grün) mit einem rechts daneben befindlichen Metallobjekt(Blau) als Input.\\
+			In diesem Fall würde bei der Abarbeitung kein Ergebnis übrig bleiben da die Maschine keine Metallobjekte besitzt die es zu dem Inputobjekt verarbeiten könnte. Das heißt das Resultat wäre nichts, sowohl das Metallobjekt als auch die Maschine verschwinden bei der Verarbeitung.\\
+			\includegraphics[width=\textwidth]{assets/LevelBsp1}
+		\end{minipage}
+		
+		\begin{minipage}{1\textwidth}
+			Einfacher Aufbau einer Maschine(grün) mit einem zugehörigen Output Metallobjekt (grün) darüber und einem rechts daneben befindlichen Metallobjekt(Blau) als Input.\\
+			In diesem Fall würde bei der Abarbeitung als Ergebnis ein blaues Metallobjekt übrig bleiben. Die Maschine würde ihr grünes Outputobjekt zu einem Duplikat des Inputobjekts verarbeiten, dabei Verschwinden sowohl die Maschine als auch das Inputobjekt.\\
+			\includegraphics[width=\textwidth]{assets/LevelBsp1Out}\\
+		\end{minipage}
+		
+		\begin{minipage}{1\textwidth}
+			Einfacher Aufbau einer Maschine(grün) mit zwei zugehörigen Output Metallobjekten (grün) darüber und einem rechts daneben befindlichen Metallobjekt(Blau) als Input.\\
+			In diesem Fall würde bei der Abarbeitung als Ergebnis zwei blaue Metallobjekte übrig bleiben. Die Maschine würde ihre grünen Outputobjekte zu Duplikaten des Inputobjekts verarbeiten, dabei Verschwinden sowohl die Maschine als auch das Inputobjekt.\\
+			\includegraphics[width=\textwidth]{assets/LevelBsp2Out}\\
+		\end{minipage}
+		
+		\begin{minipage}{1\textwidth}
+			Wie im oberen Bild zu erkennen ist , sind die Ablagen in einer Art Raster unterteilt.\\
+			Dabei gilt das die unterste Ebene die Primäre Verarbeitungsebene darstellt. Jede Maschine kann zusätzlich über sich eine reihe von weiteren Ebenen haben, die eine Art Verschachtelung darstellen sollen. In dieser Verschachtlung können Metallobjekte der gleichen Farbe wie die darunterliegende Maschine sein, diese dienen der Maschine als Outputobjekte die sie bearbeitet, oder Metallobjekte anderer Farbe sowie weitere Maschinen mit dazugehörigen Verschachtelungsebenen. Welche Ablage zu welcher Ebene oder zu welcher Maschine gehört wird durch geschickte Positionierung der Ablagen oder Verdeutlichung durch Röhren oder ähnliches bewerkstelligt.\\
+			Maschine mit einem Metallobjekt gleicher Farbe in darüberlegender Verschachtelungsebene.\\ 
+			\includegraphics[width=\textwidth]{assets/LevelVerarbeitungBsp}\\
+			Maschine mit zwei Metallobjekten gleicher Farbe in darüberlegender Verschachtelungsebene.\\
+			\includegraphics[width=\textwidth]{assets/LevelBsp2Out}\\
+		\end{minipage}
+		
+		\begin{minipage}{1\textwidth}
+			Maschine mit einem Metallobjekt gleicher Farbe und einem Metallobjekt anderer Farbe in darüberlegender Verschachtelungsebene.\\
+			\includegraphics[width=\textwidth]{assets/LevelBsp2Out1OC}\\
+		\end{minipage}
+
+	\item[Auswertungsbeispiele:] \label{Levelaufbau:Asuwertungsbeispiele} Hier sehen sie ein Beispiel für den Ablauf einer Auswertung sowie Beispiel für einige andere Auswertungen.\\
+	
+		\begin{minipage}{1\textwidth}
+			Start der Auswertung eines Konstrukts bestehend aus einer grünen Maschine mit einem zugehörigen Output-Metallobjekt und einem roten Metallobjekt rechts daneben.\\ 
+			\includegraphics[width=\textwidth]{assets/AuswertungAnimPic1}
+		\end{minipage}
+		
+		\begin{minipage}{1\textwidth}
+			Zuerst zieht die Maschine das Inputobjekt zur Analyse ein.\\ 
+			\includegraphics[width=\textwidth]{assets/AuswertungAnimPic2}
+		\end{minipage}
+		
+		\begin{minipage}{1\textwidth}
+			Nach Beendigung des Einlesevorgangs beginnt die Maschine mit der Verarbeitung der Outputobjekte.\\ 
+			\includegraphics[width=\textwidth]{assets/AuswertungAnimPic3}
+		\end{minipage}
+		
+		\begin{minipage}{1\textwidth}
+			Ist die Bearbeitung abgeschlossen verschwindet die Maschine (ist kaputt) und übrig bleibt das bearbeitete Metallobjekt.\\ 
+			\includegraphics[width=\textwidth]{assets/AuswertungAnimPic5}
+		\end{minipage}
+		
+			Nun gilt bei der Auswertung noch zu beachten wie ein Ampel-Konstrukt arbeitet\\
+			
+		\begin{minipage}{1\textwidth}
+			Ist ein Ampel-Konstrukt an der Reihe zu arbeiten, so gibt es zwei Möglichkeiten:\\
+			Die Ampel ist rot, was bedeutet das in der darüber liegenden Verschachtlung mindestens zwei Maschinen vorhanden sind. D.h. der normale Auswertungsablauf hält und die Verschachtlung oberhalb der roten Ampel wird ausgewertet , solange bis nur noch eine Maschine darin vorhanden ist. Dann schaltet die Ampel auf grün um und verschwindet anschließend. Die darüber liegende Verschachtlung rutscht m eine ebene nach unten und setzt die normale Verarbeitung fort.\\ 
+			\includegraphics[width=\textwidth]{assets/AuswertungAmpelRot}
+		\end{minipage}
+		
+		\begin{minipage}{1\textwidth}
+			Ist die Ampel Grün, so heißt das es ist nur eine Maschine oder weniger in der darüber liegenden Verschachtlung, die Ampel verschwindet und die darüber liegende Verschachtlung rutscht m eine ebene nach unten und setzt die normale Verarbeitung fort.\\  
+			\includegraphics[width=\textwidth]{assets/AsuwertungAmpelGrun}
+		\end{minipage}
+
+
+\end{description}
+
+\clearpage
 
 
 \subsection{Aufgabentypen} \label{subsection:Aufgabentypen}
