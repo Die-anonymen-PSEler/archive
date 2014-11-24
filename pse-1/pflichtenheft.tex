@@ -196,17 +196,34 @@ Zu Beginn eines Levels wird die Spielerfigur angezeigt und bewegt zweidimensiona
 	Wie das Objekt verarbeitet wird bestimmt die jeweilige Maschine.\\
 	Was die Maschine verarbeiten soll befindet sich immer rechts neben dieser Maschine.\\
 	Die Maschinen werden in fester Reihenfolge angeordnet und verarbeiten nacheinander die gegebenen Metallobjekte.\\
-	Dabei kann jede Maschine nur ein Objekt verarbeiten, nachdem sie dieses Objekt verarbeitet hat verschwindet sie.\\
+	Dabei kann jede Maschine nur einmal etwas verarbeiten, nach der Verarbeitung verschwindet sie.\\
 	Jede Maschine kann die Anzahl des zu verarbeitenden Objekts und ggf. dessen Farbe/Muster verändern. Hierbei ist zu beachten das eine Maschine auch ein Objekt komplett entfernen kann. Was eine Maschine genau am zu verarbeitenden Objekt verändert ist durch ihr aussehen eindeutig bestimmt.\\
-	Das verarbeitete Objekt landet im Bereich unterhalb der Maschine an vorgegebenen Stellen.\\
+	Das verarbeitete Objekt landet im Bereich oberhalb der Maschine an vorgegebenen Stellen, die durch Metallobjekte die die selbe Farbe wie die Maschine besitzen gekennzeichnet werden (Die Maschine verarbeitet quasi diese gleichfarbigen Blöcke zu Duplikaten des Input-Objekts).\\
 	Nachdem die Maschine verschwunden ist rücken die Objekte unter ihr alle um eine Position nach oben, und die in der obersten Ebene am weitesten links liegende Maschine beginnt die Verarbeitung.\\
 \end{minipage}	
 	
 \begin{minipage}{1\textwidth}
 	\item[Sonderfälle/regeln:] Maschinencluster: Ein Maschinencluster ist eine besonderer Form der Maschinen, sie verarbeitet keinen Input sondern dient als eine Art \enquote{Klammerung}. Ist ein Maschinencluster an der Reihe zu arbeiten, so verarbeitet sie keinen Input. Stattdessen werden alle Objekte in diesem Cluster nach den normalen Verarbeitungsregeln zuerst verarbeitet, bis nur noch eine Maschine und eine Menge an Metallobjekten darin vorhanden sind. Danach verschwindet der Cluster und sein Inhalt übernimmt seinen Platz in der aktuellen Verarbeitung.\\
+	$\alpha$-Regel: Diese Regel besagt, das falls eine Maschine eine andere Maschine oder ein anderes Metallobjekt verarbeitet jedoch oberhalb (in der Verschachtlung) der arbeitenden Maschine bereits mindestens ein Objekt der selben Farbe wie das Input Objekt vorhanden ist, das das Input-Objekt und alle dazugehörigen Objekte eine andere Farbe die noch nicht vergeben ist erhalten.\\
 \end{minipage}
 
 \end{description}
+
+\subsection{Lambda-Kalkül}
+
+
+
+\begin{description}
+	
+	\item[Allgemeine Erklärung:] \label{LambdaKalkül:AlgemeineErklärung} Der $\lambda$-Kalkül ist eine formale Sprache, die im Allgemeinen dazu dient Funktionen formal zu beschreiben.\\
+	Das Spiel soll dem Spieler die beiden wichtigsten $\lambda$-Kalkül auf seine beiden wichtigsten Regew
+
+							
+\end{description}
+
+\subsection{Beispiele}
+
+
 
 \subsection{Aufgabentypen}
 In jedem Spieltyp läuft im Hintergrund ein Timer mit, der die Spielzeit des Levels misst. Dadurch können Timer-Achievements freigeschaltet werden.
