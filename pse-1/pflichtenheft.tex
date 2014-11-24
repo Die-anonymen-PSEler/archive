@@ -265,7 +265,7 @@ Die Zielgruppe besteht überwiegend aus Kindern im Alter von acht bis zwölf Jah
 \subsection{Software}
 
 \begin{itemize}
-	\item Die Software ist für die Unterstützung der API 17+ (Android 4.2) von Android ausgelegt
+	\item Die Software ist für die Unterstützung der API 17+ (Android 4.2) von Android ausgelegt.
 \end{itemize}
 
 \subsection{Hardware}
@@ -346,6 +346,7 @@ Die Zielgruppe besteht überwiegend aus Kindern im Alter von acht bis zwölf Jah
     	\item \label{fa:wunsch_button_unten} \textbf{Wischgeste nach Unten} Der Spieler wischt mit seinem Finger über den Bildschirm nach unten. Dadurch beginnt die Spielfigur sich zu ducken. Sie verharrt in diesem \enquote{Modus} bis der Benutzer \ref{fa:wunsch_button_oben} ausführt.
     \end{falist}
 	\item \textbf{Interaktion mit den Spielelementen aus Nr. \ref{elemente:collectable}} Collectable Items die abgelegt sind können nicht durch den Spieler passiert werden und müssen übersprungen werden (siehe \ref{fa:button_jump} bzw. \ref{fa:wunsch_button_oben}).
+	\item \textbf{Interaktion mit den Boxen} Die Boxen sind in einer weiteren Ebene und können von der Spielfigur zur Ablage der (Metallstücke und Maschinen benutzt werden).
 	\item \label{fa:auswertung_animiert} \textbf{Animierte Auswertung der Maschinenkonstellation}
 	\begin{falist}
 		\item 
@@ -463,6 +464,7 @@ Das Produkt muss Daten speichern und verwalten, insbesondere:
 	\item Die Auswertung eines Levels(Sieg oder Niederlage) dauert max. 5 Sekunden.
 	\item Der benötigte Speicherverbrauch reduziert sich auf ein Minimum. 
 	\item Nach Beendigung eines Levels wird der Spielstand automatisch gespeichert.
+	\item Die maximale Anzahl an Spielerprofilen ist begrenzt. Sie beträgt 5.
 \end{nflist}
 
 \subsection{Qualität und Rechtliches}
@@ -480,7 +482,7 @@ Das Produkt muss Daten speichern und verwalten, insbesondere:
 		\item WAV, OGG, MP3 für Audio Dateien 
 		\item SVG für Vektorgrafiken
 		\item PNG, JPG für pixelbasierte Grafiken
-		\item JSON für strukturierte Textdateien
+		\item JSON, XML für strukturierte Textdateien
 	\end{itemize}
 	\item Die Auslieferung der finalen Version erfolgt in Form einer .apk-Datei.
 	\item Es werden nur ein Minimum an Berechtigung eingefordert. Dieses sind Lese- und Schreibzugriff.
@@ -503,10 +505,11 @@ Das Produkt muss Daten speichern und verwalten, insbesondere:
 \subsection{Funktionssequenzen}
 
 \begin{telist}
-	\item Tutorial basierend auf \ref{fa:tutorial} - \ref{fa:tutorial_03}
+	\item Tutorial basierend auf (\ref{fa:tutorial} - \ref{fa:tutorial_03})
 	\begin{itemize}
 		\item Der Anwender startet den Tutorial-Modus über das Level-Menü (Systemmodell \ref{appaufbau:Levelauswahl}) oder gelangt automatisch in diesen beim ersten Starten des Spiels mit einem neuen Profil.
 		\item Der Anwender wird durch die Tutorial-Level geleitet, in denen ihm erklärt wird, wie er die Steuerung benutzen, die Elemente an die gewünschte Position bringen kann und wie genau die Maschinen die Elemente verarbeiten.
+		\item Wenn der Tutorial-Modus beendet wurde, gelangt der Anwender in den Hauptbildschirm.
 	\end{itemize}
 
 	\item Ein Benutzerprofil anlegen (\ref{fa:spielerprofile_anlegen})
@@ -545,6 +548,11 @@ Das Produkt muss Daten speichern und verwalten, insbesondere:
 		\item Die Positionen für die Elemente sind vorhanden.
 		\item Die Tür öffnet sich wenn alle Elemente korrekt platziert sind.
 	\end{itemize}
+	\item Buttons (\ref{fa:button_rechts_kreuz} - \ref{fa:button_ducken})
+	\begin{itemize}
+		\item Nachdem der Benutzer das Spiel gestartet hat, werden die Buttons, spezifiziert in den Funktionalen Anforderungen, angezeigt.
+		\item Alle Buttons haben die Funktionsweise, die jeweils spezifiziert wurde.
+	\end{itemize}
 	\item Spieleinstellungen (\ref{produktdaten:einstellungen})
 	\begin{itemize}
 		\item Der Anwender kann die Lautstärke verändern. Die Hintergrundmusik wird dem entsprechend lauter oder leiser.
@@ -555,7 +563,15 @@ Das Produkt muss Daten speichern und verwalten, insbesondere:
 		\item Der Anwender kann in den Spielestatistiken sehen, wie lange er gespielt, wie viele Level er gelöst und welche Achievements er bereits erreicht hat.
 	\end{itemize}
 	\item Speicher / Laden von Applikationszustandes
+	\begin{itemize}
+		\item Beim Verlassen des Spiels durch Hardware Tasten oder ähnliches begibt sich das Spiel in den Pause Menü.
+		\item Wenn der Anwender die Anwendung erneut aufruft, findet er dieses Pause Menü wieder vor.
+	\end{itemize}
 	\item Speichern / Laden von Spielzuständen
+	\begin{itemize}
+		\item Spielzustände werden automatisch vom Spiel bei Beendigung eines Levels gespeichert.
+		\item Spielzustände werden beim Auswählen eines Levels geladen und sind identisch mit den gespeicherten.
+	\end{itemize}
 \end{telist}
 
 \subsection{Datenkonsistenz}
