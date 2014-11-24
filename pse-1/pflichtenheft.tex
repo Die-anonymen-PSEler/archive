@@ -119,6 +119,7 @@ Die Kinder sollen durch das Spiel in die Lage versetzt werden, sich die Prinzipi
 	\item \label{wunsch:multiplemode}Mehrere Spielmodi (siehe Aufgabentyp \ref{aufgabentyp:fehlerfindung})
     \item \label{wunsch:story}Begleitende Story %link zu eintrag
     \item \label{wunsch:erweiterndeLevelelemente}Erweiternde Levelelement, z.B. Leitern, Aufzüge usw.
+    \item \label{wunsch:wischgesten} Steuerung durch Wischgesten anstelle von Steuerkreuzen (Wählbar durch Benutzer)
 \end{enumerate}
 
 \subsection{Abgrenzungskritieren}
@@ -255,7 +256,7 @@ Die Zielgruppe besteht überwiegend aus Kindern im Alter von acht bis zwölf Jah
 
 
 
-% ---------------
+% --------------
 % Produktumgebung
 % ---------------
 
@@ -320,17 +321,34 @@ Die Zielgruppe besteht überwiegend aus Kindern im Alter von acht bis zwölf Jah
 \subsection{Spieldesign}
 
 \begin{falist}[resume]
-	\item \label{fa:level} \textbf{Level} Ein Level (fill me in)
+	\item \label{fa:level} \textbf{Level} Ein Level eine Aufgabe mit gegebenem Ziel und einer Menge an Spielobjekten, die der Spieler an vorgegebenen Stellen platzieren muss.
 	\item \label{fa:levelmenue} \textbf{Levelmenü} bietet eine Übersicht über alle Level des Spiels (Musskriterium \ref{muss:5indilevel}). Diese sind unterteilt in abgeschlossene und nicht abgeschlossene Level.
     \begin{falist}
         \item \textbf{Erstes Level} Das erste Level ist automatisch freigeschaltet.
         \item \textbf{Freischalten weiterer Level} Das Freischalten weiterer Leve erfolgt durch Freispielen. Beendigung eines Levels führt zum Freischalten des nächsten.
     \end{falist}
     \item \label{fa:spielen} \textbf{Level spielen}
-	\item Interaktion mit den Spielelementen aus Nr. \ref{elemente:collectable}.
+    \item \label{fa:buttons_muss} \textbf{Button / Steuerung (Muss)}
+    \begin{falist}
+    	\item \label{fa:button_rechts_kreuz} \textbf{Drücken der rechten Pfeiltaste} Bewegt die Spielfigur in der Spielwelt nach Rechts.
+    	\item \label{fa:button_links_kreuz} \textbf{Drücken der linken Pfeiltaste} Bewegt die Spielfigur in der Spielwelt nach Links.
+    	\item \label{fa:button_lampe} \textbf{Drücken des Hinweis Buttons} Zeigt einen neuen Dialog an, der dem Spieler einen Ausblick auf die Lösung des Levels bietet.
+    	\item \label{fa:button_flagge} \textbf{Drücken des Flaggen Buttons} Zeigt einen Dialog, der die Zielkonstellation des Levels enthält.
+    	\item \label{fa:button_aufnehmen_ablegen} \textbf{Drücken des Aufnahme-/Ablegen Buttons} Wenn die Spielfigur keine Maschine trägt, nimmt Sie die Maschine, die sich vor der Spielfigur (Blickrichtung) befindet, auf. Sollte dort keine Maschine sein, wird keine Handlung ausgeführt. Analog für das Ablegen einer Maschine.
+    	\item \label{fa:button_jump} \textbf{Drücken des Sprungbuttons} Durch das Drücken des Sprungbuttons springt die Spielerfigur. In Kombination mit \ref{fa:button_rechts_kreuz} und \ref{fa:button_links_kreuz} kann ein Sprung in die entsprechende Richtung erfolgen.
+    	\item \label{fa:button_ducken} \textbf{Drücken des Ducken Buttons} Durch das Drücken des Duckenbuttons wird die Größe der Spielerfigur verringert. Sobald der Spieler den Button los lässt kehrt die Figur zu ihrer ursprünglichen Größe zurück.
+    \end{falist}
+    \item \label{fa:button_wunsch} \textbf{Button / Steuerung (Wunsch)}
+    \begin{falist}
+    	\item \label{fa:wunsch_button_rechts} \textbf{Wischgeste nach Rechts} Der Spieler wischt mit seinem Finger über den Bildschirm nach rechts. Dadurch bewegt sich die Spielfigur um einen Schritt nach rechts.
+    	\item \label{fa:wunsch_button_links} \textbf{Wischgeste nach Links} Der Spieler wischt mit seinem Finger über den Bildschirm nach links. Dadurch bewegt sich die Spielfigur um einen Schritt nach links.
+    	\item \label{fa:wunsch_button_oben} \textbf{Wischgeste nach Oben} Der Spieler wischt mit seinem Finger über den Bildschirm nach oben. Dadurch führt die Spielfigur einen Sprung aus. Diese fuktionale Anforderung ist kombinierbar mit \ref{fa:wunsch_button_rechts} und \ref{fa:wunsch_button_links}. Sollte der Spieler geduckt sein, richtet sich die Spielfigur wieder auf.
+    	\item \label{fa:wunsch_button_unten} \textbf{Wischgeste nach Unten} Der Spieler wischt mit seinem Finger über den Bildschirm nach unten. Dadurch beginnt die Spielfigur sich zu ducken. Sie verharrt in diesem \enquote{Modus} bis der Benutzer \ref{fa:wunsch_button_oben} ausführt.
+    \end{falist}
+	\item \textbf{Interaktion mit den Spielelementen aus Nr. \ref{elemente:collectable}} Collectable Items die abgelegt sind können nicht durch den Spieler passiert werden und müssen übersprungen werden (siehe \ref{fa:button_jump} bzw. \ref{fa:wunsch_button_oben}).
+	\item \label{fa:auswertung_animiert} \textbf{Animierte Auswertung der Maschinenkonstellation}
 	\begin{falist}
-		\item \textbf{Aufnehmen von Spielelementen}
-		\item \textbf{Abgabe für die Levelquests}
+		\item 
 	\end{falist}
 \end{falist}
 
@@ -360,7 +378,7 @@ Die Zielgruppe besteht überwiegend aus Kindern im Alter von acht bis zwölf Jah
 	\item \label{fa:infobereich} \textbf{Infobereich} Das Spiel verfügt über einen Infobereich, der weiterführende Informationen zum Thema $\lambda$-Kalkül enthält.
 	\item \label{fa:spieleinstellungen} \textbf{Spieleinstellungen}
 	\item \label{fa:spielestatistiken} \textbf{Spielestatistiken}
-	\item \textbf{Animierte Auswertung der Maschinenkonstellation}
+	
 \end{falist}
 
 \clearpage
@@ -392,6 +410,7 @@ Das Produkt muss Daten speichern und verwalten, insbesondere:
 \end{pdlist}
 
 \subsection{Spielstatistiken}
+\label{produktdaten:spielestatistiken}
 
 \begin{pdlist}[resume]
     \item Spieldauer
