@@ -688,9 +688,29 @@ Das Produkt speichert und verwaltet Daten, insbesondere:
 \subsection{Funktionssequenzen}
 
 \begin{telist}
+	\item{Erstes Ausführen des Spieles} \label{szenarien:first_run}
+	\begin{itemize}
+		\item Starten der Applikation durch Anklicken der App-Verknüpfung
+		\item Der Ladebildschirm(\ref{appaufbau:Ladebildschirm}) wird sichtbar und informiert über den Ladezustand des Spieles.
+		\item Der \gls{gls:anwender} wird direkt zum "`Benutzer-Anlegen"'  weitergeleitet
+		\item Wurde ein Benutzer angelegt, öffnet sich die Einstellung
+		\item Geht der Anwender von den Einstellungen weiter, beginnt der Tutorial-Modus
+		\item Lamdbalino begrüßt den Anwender
+		\item Es wird in die Handlung des Spieles eingeführt
+		\item Nach dem Tutorial-Modus öffnet sich das Levelmenü und das erste Level ist freigeschaltet 
+	\end{itemize}
+	
+	\item{Allgemeiner Spielstart} \label{szenarien:allg_spielstart}
+	\begin{itemize}
+		\item Starten der Applikation durch Anklicken der App-Verknüpfung
+		\item Der Ladebildschirm(\ref{appaufbau:Ladebildschirm}) wird sichtbar und informiert über den Ladezustand des Spieles
+		\item Nach dem Laden kann man den Benutzer aus vorhandenen Profilen auswählen oder man legt ein neues Profil (\ref{szenarien:ProfilAnlegen}) an
+		\item Das Hauptmenü (\ref{appaufbau:Hauptmenü}) wird geöffnet		
+	\end{itemize}
+	
 	\item Tutorial basierend auf (\ref{fa:tutorial} - \ref{fa:tutorial_03})
 	\begin{itemize}
-		\item Der \gls{gls:anwender} startet den Tutorial-Modus über das Level-Menü (Systemmodell \ref{appaufbau:Levelauswahl}) oder gelangt automatisch in diesen beim ersten Starten des Spiels mit einem neuen Profil.
+		\item Der Anwender startet den Tutorial-Modus über das Level-Menü (Systemmodell \ref{appaufbau:Levelauswahl}) oder gelangt automatisch in diesen beim ersten Starten des Spiels mit einem neuen Profil.
 		\item Der Anwender wird durch die Tutorial-Level geleitet, in denen ihm erklärt wird, wie er die Steuerung benutzen, die Elemente an die gewünschte Position bringen kann und wie genau die Maschinen die Elemente verarbeiten.
 		\item Wenn der Tutorial-Modus beendet wurde, gelangt der Anwender in den Hauptbildschirm.
 	\end{itemize}
@@ -702,26 +722,38 @@ Das Produkt speichert und verwaltet Daten, insbesondere:
 		\item In diesem Dialogfenster kann der Benutzer einen neuen Profilnamen angeben. Durch drücken des \enquote{Weiter}-Buttons gelangt der zu einem weiteren Dialog.
 		\item In diesem Dialog kann er einen Charakter auswählen und sowie auswählen, ob dieses Profil im Rechts- oder Linkshänder Modus gespielt werden soll. Der Dialog wird durch Betätigen des \enquote{OK}-Buttons beendet.
 	\end{itemize}
+	
 	\item Ein Benutzerprofil auswählen (\ref{fa:spielerprofile_wechseln})
 	\begin{itemize}
 		\item Der Anwender befindet sich im Hauptmenü und drückt auf den \enquote{Benutzerverwaltungsbutton}. Diese Aktion führt den Benutzer zum Profilmenü.
 		\item Durch Scrollen kann der Benutzer seine Profile einsehen. Bei Erreichen des gewünschten Profils wählt er dieses durch Berühren aus.
 	\end{itemize}
+	
 	\item Ein Benutzerprofil löschen (\ref{fa:spielerprofile_loeschen})
 	\begin{itemize}
 		\item Der Anwender befindet sich im Hauptmenü und drückt auf den \enquote{Benutzerverwaltungsbutton}. Diese Aktion führt den Benutzer zum Profilmenü.
 		\item Durch Scrollen kann der Anwender seine Profile einsehen. Er wählt dieses durch Berühren aus. 
 	\end{itemize}
+	
 	\item Ein Benutzerprofil bearbeiten (\ref{fa:spielerprofile_bearbeiten})
 	\begin{itemize}
 		\item Der Anwender befindet sich im Hauptmenü und drückt auf den \enquote{Benutzerverwaltungsbutton}. Diese Aktion führt den Benutzer zum Profilmenü.
 		\item Der Anwender wählt den \enquote{Bearbeitungs-Button} neben dem Profil, welches er bearbeiten möchte, aus.
 		\item Im Bearbeitungsbereich kann der Anwender den Namen, den Avatar und die Steuerungseinstellung (Rechts- oder Linkshänder) verändern.
 	\end{itemize}
+	
+	\item{Informationen aufrufen} \label{szenarien:infomartionen_aufrufen}
+	\begin{itemize}
+		\item Im Hauptmenü wählt man den Punkt \enquote{Einstellungen}
+		\item Dort klickt man auf den Button \enquote{Infos}.
+		\item Es erscheint ein vereinfachte Erklärung des Lambda-Kalküls, sowie ein Erläuterung zu den Zusammenhängen des Lambda-Kalküls und des Spiels.
+	\end{itemize}
+	
 	\item Level-Menü (\ref{fa:levelmenue})
 	\begin{itemize}
 		\item Der Anwender kann nur jene Level öffnen, die bereits freigeschaltet wurden. Die anderen Level sind sichtbar, können jedoch nicht ausgewählt werden.
 	\end{itemize}
+	
 	\item Level spielen (\ref{fa:spielen})
 	\begin{itemize}
 		\item Die Figur reagiert korrekt auf die Steuerung.
@@ -731,25 +763,45 @@ Das Produkt speichert und verwaltet Daten, insbesondere:
 		\item Die Positionen für die Elemente sind vorhanden.
 		\item Die Tür öffnet sich wenn alle Elemente korrekt platziert sind.
 	\end{itemize}
+	
 	\item Buttons (\ref{fa:button_rechts_kreuz} - \ref{fa:button_ducken})
 	\begin{itemize}
 		\item Nachdem der Benutzer das Spiel gestartet hat, werden die Buttons, spezifiziert in den Funktionalen Anforderungen, angezeigt.
 		\item Alle Buttons haben die Funktionsweise, die jeweils spezifiziert wurde.
 	\end{itemize}
+	
 	\item Spieleinstellungen (\ref{produktdaten:einstellungen})
 	\begin{itemize}
 		\item Der Anwender kann die Lautstärke verändern. Die Hintergrundmusik wird dem entsprechend lauter oder leiser.
 		\item Der Anwender kann wählen, ob die Musik an oder aus sein soll.
 	\end{itemize}
+	
 	\item Spielestatistiken (\ref{produktdaten:spielestatistiken})
 	\begin{itemize}
 		\item Der Anwender kann in den Spielestatistiken sehen, wie lange er gespielt, wie viele Level er gelöst und welche Achievements er bereits erreicht hat.
 	\end{itemize}
+	
+	\item{Spiel verlassen} \label{szenarien:quit_game}
+	\begin{itemize}
+		\item Spiel beenden
+		\begin{enumerate}
+			\item Man klickt auf den Button links oben im Hauptmenü
+			\item Es erscheint ein Fenster \enquote{Wirklich verlassen?}
+			\item Beim betätigen des Button \enquote{Ja} wird das Spiel verlassen und die App beendet
+			\item Außerdem werden alle nicht gespeicherten Änderungen gespeichert
+		\end{enumerate}
+		\item Spiel über das Betriebssystem verlassen
+		\begin{enumerate}
+			\item Der Benutzer berührt den Homebutton auf seinem Gerät zum zurück zu \gls{gls:android} zu gelangen.
+		\end{enumerate}
+	\end{itemize}
+	
 	\item Speicher / Laden von Applikationszustandes
 	\begin{itemize}
 		\item Beim Verlassen des Spiels durch Hardware Tasten oder ähnliches begibt sich das Spiel in den Pause Menü.
 		\item Wenn der Anwender die Anwendung erneut aufruft, findet er dieses Pause Menü wieder vor.
 	\end{itemize}
+	
 	\item Speichern / Laden von Spielzuständen
 	\begin{itemize}
 		\item Spielzustände werden automatisch vom Spiel bei Beendigung eines Levels gespeichert.
@@ -890,137 +942,6 @@ Die folgende Grafik enthält die möglichkeiten des benutzers auf die App einzuw
 \end{minipage}
 
 \clearpage
-
-
-
-
-
-
-
-
-% ---------------
-% Szenarien
-% ---------------
-\section{Szenarien}
-
-\subsection{Erstes Ausführen des Spieles} \label{szenarien:first_run}
-	\begin{enumerate}
-		\item Starten der Applikation durch Anklicken der App-Verknüpfung
-		\item Der Ladebildschirm(\ref{appaufbau:Ladebildschirm}) wird sichtbar und informiert über den Ladezustand des Spieles.
-		\item Der Spieler wird direkt zum "`Benutzer-Anlegen"'  weitergeleitet
-		\item Wurde ein Benutzer angelegt, öffnet sich die Einstellung
-		\item Geht der Spieler von den Einstellungen weiter, beginnt der Tutorial-Modus
-		\item Lamdbalino begrüßt den Spieler
-		\item Es wird in die Handlung des Spieles eingeführt
-		\item Nach dem Tutorial-Modus öffnet sich das Levelmenü und das erste Level ist freigeschaltet 
-	\end{enumerate}
-	
-\subsection{Benutzer-Profil anlegen} \label{szenarien:ProfilAnlegen}
-	\begin{enumerate}
-		\item \enquote{Benutzer-Profil anlegen} wurde gewählt
-		\item Der Spieler wählt einen Avatar
-		\item Er gibt seinen Namen an
-		\item Er kann wählen, ob er Rechtshänder oder Linkshänder ist
-		\item Mit dem \enquote{Menü}-Knopf kommt der Benutzer ins Hauptmenü (\ref{appaufbau:Hauptmenü})
-	\end{enumerate}	
-	
-\subsection{Tutorial-Modus} \label{szenarien:tutorial_mode}
-	\begin{enumerate}
-		\item Das Auswählen des Levels wird animiert
-		\item Die Elemente des Spieles werden erklärt
-		\item Ein Level wird Schrittweise simuliert
-		\item Es öffnen sich kleine Felder um die nächste Handlung animiert zu erklären
-		\item Schließt man die Felder, geht das Tutorial weiter
-		\item Wie die Level, wird gezeigt wie die Maschinen funktionieren und wie sie angeordnet werden müssen
-	\end{enumerate}
-	
-\subsection{Allgemeiner Spielstart} \label{szenarien:allg_spielstart}
-	\begin{enumerate}
-		\item Starten der Applikation durch Anklicken der App-Verknüpfung
-		\item Der Ladebildschirm(\ref{appaufbau:Ladebildschirm}) wird sichtbar und informiert über den Ladezustand des Spieles
-		\item Nach dem Laden kann man den Benutzer aus vorhandenen Profilen auswählen oder man legt ein neues Profil (\ref{szenarien:ProfilAnlegen}) an
-		\item Das Hauptmenü (\ref{appaufbau:Hauptmenü}) wird geöffnet		
-	\end{enumerate}
-	
-\subsection{Spielen} \label{szenarien:spielen}
-	\begin{enumerate}
-		\item Im Hauptmenü wählt man die Stages
-		\item In den Stages wählt man das Level (\ref{appaufbau:Leveldesign})
-		\item Nach dem Öffnen des Levels, wird angezeigt, was die Maschine(n) produzieren müssen
-		\item Möchte der Spieler erneut das gewünschte Produkt ansehen, kann er dies durch einen Knopf wählen
-		\item Er spielt nach den Spielregeln (\ref{spielaufbau:Spielregeln})
-	\end{enumerate}
-	
-\subsection{Einstellungen} \label{szenarien:einstellungen}
-	\begin{enumerate}
-		\item Im Hauptmenü wählt man den Punkt \enquote{Einstellungen}
-		\item Dort kann man mithilfe eines stufenlosen Reglers die Lautstärke einstellen sowie den Button \enquote{Profil bearbeiten} (\ref{szenarien:ProfilBearbeiten}) drücken
-		\item Über die \enquote{Zurück}-Taste des Geräts gelangt man in das Hauptmenü (\ref{appaufbau:Hauptmenü})
-	\end{enumerate}
-
-\subsection{Benutzer-Profil bearbeiten} \label{szenarien:ProfilBearbeiten}
-	\begin{enumerate}
-		\item Im Hauptmenü wählt man den \enquote{Benutzerverwaltungsbutton}, um ins Profilmenü zu gelangen.
-		\item Dort drückt man auf den Button \enquote{Profil bearbeiten}, gekennzeichnet durch das Bild eines Stiftes
-		\item Hier kann man, wie schon beim Anlegen des Profils (\ref{szenarien:ProfilAnlegen}), den ausgewählten Avatar, seinen Namen und auch, ob Rechts- oder Linkshändersteuerung gewünscht wird, editieren.
-	\end{enumerate}
-	
-\subsection{Benutzer-Profil löschen} \label{szenarien:ProfilLoeschen}
-\begin{enumerate}
-	\item Im Hauptmenü wählt man den Punkt \enquote{Einstellungen}
-	\item Dort drückt man auf den Button \enquote{Profil bearbeiten}
-	\item Durch drücken des Button \enquote{Profil löschen} erscheint dort ein Frage Fenster ob man das Profil wirklich löschen will.
-	\item Mit einem Klick auf \enquote{Ja} wird das aktuelle Profil gelöscht, sofern noch mindestens ein anderes Profil existiert.
-	\item Nach erfolgreichem löschen des Profils landet man automatisch im Profilmenü.
-\end{enumerate}
-
-\subsection{Informationen aufrufen} \label{szenarien:infomartionen_aufrufen}
-\begin{enumerate}
-	\item Im Hauptmenü wählt man den Punkt \enquote{Einstellungen}
-	\item Dort klickt man auf den Button \enquote{Infos}.
-	\item Es erscheint ein vereinfachte Erklärung des Lambda-Kalküls, sowie ein Erläuterung zu den Zusammenhängen des Lambda-Kalküls und des Spiels.
-\end{enumerate}
-
-\subsection{Statistiken} \label{szenarien:statistik}
-	\begin{enumerate}
-		\item Im Hauptmenü wählt man den Punkt \enquote{Statistiken}
-		\item Dort können sowohl die Achievements, sowie verschiedene Statistiken zu Spieldauer etc. eingesehen werden.
-	\end{enumerate}
-
-\subsection{Achievements} \label{szenarien:achievements}
- \begin{enumerate}
- 	\item Freischalten
- 		\begin{enumerate}
- 			\item Achievments werden während des spielen eines Level freigeschaltet
- 			\item Über neu freigeschaltete Achievments wird der Spieler nach Abschluss eines Levels im Auswertungsmenü informiert
- 		\end{enumerate}
- 	\item Anzeige
- 	 	\begin{enumerate}
- 	 		\item Im Hauptmenü wählt man den Punkt \enquote{Einstellungen}
- 	 		\item Dort wählt man \enquote{Achievments}
- 	 		\item Es wird eine Liste aller Achievements angezeigt.
- 	 		\item Freigespielte Achievements sind farbig markiert. 
- 		\end{enumerate}
- \end{enumerate}
-
-\subsection{Spiel verlassen} \label{szenarien:quit_game}
-\begin{enumerate}
-	\item Spiel beenden
-		\begin{enumerate}
-			\item Man klickt auf den Button links oben im Hauptmenü
-			\item Es erscheint ein Fenster \enquote{Wirklich verlassen?}
-			\item Beim betätigen des Button \enquote{Ja} wird das Spiel verlassen und die App beendet
-			\item Außerdem werden alle nicht gespeicherten Änderungen gespeichert
-		\end{enumerate}
-	\item Spiel über das Betriebssystem verlassen
-		\begin{enumerate}
-			\item Der Benutzer berührt den Homebutton auf seinem Gerät zum zurück zu \gls{gls:android} zu gelangen.
-		\end{enumerate}
-\end{enumerate}
-\clearpage
-
-
-
 
 
 
