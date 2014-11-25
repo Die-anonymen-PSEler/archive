@@ -235,7 +235,7 @@ Zu Beginn eines Levels wird die Spielerfigur angezeigt und bewegt zweidimensiona
 	$\lambda x.x [x \leftarrow y] \Rightarrow \lambda y.y.$\\
 	Wichtig ist hierbei keine Doppelverwendung von Variablen Benennung in unterschiedlichen $\lambda$-Termen entsteht. Vielmehr ist diese Regel dazu gedacht, beim auftreten einer Doppelbelegung eine der beieden Variablen umzutaufen um die Eindeutige $\lambda$-Terme zu formen.
 	$\beta$-Regel: Die $\beta$-Regel dient der Vereinfachung, Auflösung oder Umformung von $\lambda$-Termen.\\
-	Sie besagt das ein $\lambda$-Term   der Form zb. ($\lambda$x.x+2)(z) umgeformt werden kann, indem der Ausdruck ``z'' in den Term hinter dem ``.'' eingesetzt werden kann und zwar für genau die Variable die zwischen ``$\lambda$'' und dem ``.'' steht um es anschaulich zu erklären. Bsp.:\\
+	Sie besagt das ein $\lambda$-Term   der Form zB. ($\lambda$x.x+2)(z) umgeformt werden kann, indem der Ausdruck ``z'' in den Term hinter dem ``.'' eingesetzt werden kann und zwar für genau die Variable die zwischen ``$\lambda$'' und dem ``.'' steht um es anschaulich zu erklären. Bsp.:\\
 	$(\lambda x.x+2)(z) = (x+2)[x \leftarrow z] = z + 2$ \\
 	Wichtig ist das hierbei sowohl z als auch x für alles stehen können. Also x kann auch eine funktion sein und z kann auch z.b ein weiterer kompletter $\lambda$-Term sein.
 	\[
@@ -284,23 +284,23 @@ Zu Beginn eines Levels wird die Spielerfigur angezeigt und bewegt zweidimensiona
 			außerdem ist das Level-ziel eingeblendet.\\
 			Das Level-ziel gibt die Zielkonstellation an, die das zusammengesetzte Konstrukt aus Maschinen und Metallobjekten nach Verarbeitung nach den Regeln des $\lambda$-Kalküls haben soll.\\
 			Das Level-ziel kann der Spieler durch einen Klick auf den Hacken unten rechts ausblenden und jederzeit durch einen Klick auf den Button mit dem ``Fahnen-Symbol'' unten in der Mitte des Schirms wieder anzeigen.\\ Solange Hinweise oder das Level-ziel eingeblendet sind kann der Spieler keine anderen Aktionen ausführen.\\
-			\includegraphics[width=\textwidth]{assets/Levelziel}
+			\includegraphics[scale=0.5]{assets/Levelziel}
 		\end{minipage}
 		
 		\begin{minipage}{1\textwidth}
 			\item \label{Levelaufbau:ErsteSchritte} Nach Ausblendung der Level-ziel kann der Spieler mit dem Lösen des Level beginnen, hierzu muss er die Spielfigur zum Metallobjekt bewegen , dieses per Button-druck aufheben und anschließend in die freie Ablage daneben platzieren.\\
 			Die über den Objekten angezeigten Namen dienen lediglich zur Erklärung welches Objekt was darstellen soll und wird im eigentliche Spiel nicht angezeigt.\\
-			\includegraphics[width=\textwidth]{assets/Level1mA}
+			\includegraphics[scale=0.5]{assets/Level1mA}
 		\end{minipage}
 		
 		\begin{minipage}{1\textwidth}
 			\item \label{Levelaufbau:Levelende} Sind alle Ablagen gefüllt so beginnt die Auswertung des Konstrukts.\\ Führt das Konstrukt zum gewünschten Ergebnis, so öffnet sich die Leveltür  und der Spieler kann durch erreichen dieser Tür das Level beenden und gelangt dadurch ins Auswertungsmenü.\\
-			\includegraphics[width=\textwidth]{assets/LevelEnde}
+			\includegraphics[scale=0.5]{assets/LevelEnde}
 		\end{minipage}
 		
 		\begin{minipage}{1\textwidth}
 			\item \label{Levelaufbau:Levelhinweis} Während des spielen eines Levels kann der Spieler zu jederzeit das Hinweisfenster öffnen, diese liefert durch ein Bild dargestellt Level spezifisch einen Hinweis auf die Zielkonfiguration des jeweiligen Levels.\\
-			\includegraphics[width=\textwidth]{assets/Levelhinweis}
+			\includegraphics[scale=0.5]{assets/Levelhinweis}
 		\end{minipage}
 	\end{enumerate}
 	
@@ -311,55 +311,55 @@ Zu Beginn eines Levels wird die Spielerfigur angezeigt und bewegt zweidimensiona
 		\begin{minipage}{1\textwidth}
 			Einfacher Aufbau einer Maschine(grün) mit einem rechts daneben befindlichen Metallobjekt(Blau) als Input.\\
 			In diesem Fall würde bei der Abarbeitung kein Ergebnis übrig bleiben da die Maschine keine Metallobjekte besitzt die es zu dem Inputobjekt verarbeiten könnte. Das heißt das Resultat wäre nichts, sowohl das Metallobjekt als auch die Maschine verschwinden bei der Verarbeitung.\\
-			\includegraphics[width=\textwidth]{assets/LevelBsp1}
+			\includegraphics[scale=0.5]{assets/LevelBsp1}
 		\end{minipage}
 		
 		\begin{minipage}{1\textwidth}
 			Einfacher Aufbau einer Maschine(grün) mit einem zugehörigen Output Metallobjekt (grün) darüber und einem rechts daneben befindlichen Metallobjekt(Blau) als Input.\\
 			In diesem Fall würde bei der Abarbeitung als Ergebnis ein blaues Metallobjekt übrig bleiben. Die Maschine würde ihr grünes Outputobjekt zu einem Duplikat des Inputobjekts verarbeiten, dabei Verschwinden sowohl die Maschine als auch das Inputobjekt.\\
-			\includegraphics[width=\textwidth]{assets/LevelBsp1Out}\\
+			\includegraphics[scale=0.5]{assets/LevelBsp1Out}\\
 		\end{minipage}
 		
 		\begin{minipage}{1\textwidth}
 			Einfacher Aufbau einer Maschine(grün) mit zwei zugehörigen Output Metallobjekten (grün) darüber und einem rechts daneben befindlichen Metallobjekt(Blau) als Input.\\
 			In diesem Fall würde bei der Abarbeitung als Ergebnis zwei blaue Metallobjekte übrig bleiben. Die Maschine würde ihre grünen Outputobjekte zu Duplikaten des Inputobjekts verarbeiten, dabei Verschwinden sowohl die Maschine als auch das Inputobjekt.\\
-			\includegraphics[width=\textwidth]{assets/LevelBsp2Out}\\
+			\includegraphics[scale=0.5]{assets/LevelBsp2Out}\\
 		\end{minipage}
 		
 		\begin{minipage}{1\textwidth}
 			Wie im oberen Bild zu erkennen ist , sind die Ablagen in einer Art Raster unterteilt.\\
 			Dabei gilt das die unterste Ebene die Primäre Verarbeitungsebene darstellt. Jede Maschine kann zusätzlich über sich eine reihe von weiteren Ebenen haben, die eine Art Verschachtelung darstellen sollen. In dieser Verschachtlung können Metallobjekte der gleichen Farbe wie die darunterliegende Maschine sein, diese dienen der Maschine als Outputobjekte die sie bearbeitet, oder Metallobjekte anderer Farbe sowie weitere Maschinen mit dazugehörigen Verschachtelungsebenen. Welche Ablage zu welcher Ebene oder zu welcher Maschine gehört wird durch geschickte Positionierung der Ablagen oder Verdeutlichung durch Röhren oder ähnliches bewerkstelligt.\\
 			Maschine mit einem Metallobjekt gleicher Farbe in darüberlegender Verschachtelungsebene.\\ 
-			\includegraphics[width=\textwidth]{assets/LevelVerarbeitungBsp}\\
+			\includegraphics[scale=0.5]{assets/LevelVerarbeitungBsp}\\
 			Maschine mit zwei Metallobjekten gleicher Farbe in darüberlegender Verschachtelungsebene.\\
-			\includegraphics[width=\textwidth]{assets/LevelBsp2Out}\\
+			\includegraphics[scale=0.5]{assets/LevelBsp2Out}\\
 		\end{minipage}
 		
 		\begin{minipage}{1\textwidth}
 			Maschine mit einem Metallobjekt gleicher Farbe und einem Metallobjekt anderer Farbe in darüberlegender Verschachtelungsebene.\\
-			\includegraphics[width=\textwidth]{assets/LevelBsp2Out1OC}\\
+			\includegraphics[scale=0.5]{assets/LevelBsp2Out1OC}\\
 		\end{minipage}
 
 	\item[Auswertungsbeispiele:] \label{Levelaufbau:Asuwertungsbeispiele} Hier sehen sie ein Beispiel für den Ablauf einer Auswertung sowie Beispiel für einige andere Auswertungen.\\
 	
 		\begin{minipage}{1\textwidth}
 			Start der Auswertung eines Konstrukts bestehend aus einer grünen Maschine mit einem zugehörigen Output-Metallobjekt und einem roten Metallobjekt rechts daneben.\\ 
-			\includegraphics[width=\textwidth]{assets/AuswertungAnimPic1}
+			\includegraphics[scale=0.5]{assets/AuswertungAnimPic1}
 		\end{minipage}
 		
 		\begin{minipage}{1\textwidth}
 			Zuerst zieht die Maschine das Inputobjekt zur Analyse ein.\\ 
-			\includegraphics[width=\textwidth]{assets/AuswertungAnimPic2}
+			\includegraphics[scale=0.5]{assets/AuswertungAnimPic2}
 		\end{minipage}
 		
 		\begin{minipage}{1\textwidth}
 			Nach Beendigung des Einlesevorgangs beginnt die Maschine mit der Verarbeitung der Outputobjekte.\\ 
-			\includegraphics[width=\textwidth]{assets/AuswertungAnimPic3}
+			\includegraphics[scale=0.5]{assets/AuswertungAnimPic3}
 		\end{minipage}
 		
 		\begin{minipage}{1\textwidth}
 			Ist die Bearbeitung abgeschlossen verschwindet die Maschine (ist kaputt) und übrig bleibt das bearbeitete Metallobjekt.\\ 
-			\includegraphics[width=\textwidth]{assets/AuswertungAnimPic5}
+			\includegraphics[scale=0.5]{assets/AuswertungAnimPic5}
 		\end{minipage}
 		
 			Nun gilt bei der Auswertung noch zu beachten wie ein Ampel-Konstrukt arbeitet\\
@@ -367,12 +367,12 @@ Zu Beginn eines Levels wird die Spielerfigur angezeigt und bewegt zweidimensiona
 		\begin{minipage}{1\textwidth}
 			Ist ein Ampel-Konstrukt an der Reihe zu arbeiten, so gibt es zwei Möglichkeiten:\\
 			Die Ampel ist rot, was bedeutet das in der darüber liegenden Verschachtlung mindestens zwei Maschinen vorhanden sind. D.h. der normale Auswertungsablauf hält und die Verschachtlung oberhalb der roten Ampel wird ausgewertet , solange bis nur noch eine Maschine darin vorhanden ist. Dann schaltet die Ampel auf grün um und verschwindet anschließend. Die darüber liegende Verschachtlung rutscht m eine ebene nach unten und setzt die normale Verarbeitung fort.\\ 
-			\includegraphics[width=\textwidth]{assets/AuswertungAmpelRot}
+			\includegraphics[scale=0.5]{assets/AuswertungAmpelRot}
 		\end{minipage}
 		
 		\begin{minipage}{1\textwidth}
 			Ist die Ampel Grün, so heißt das es ist nur eine Maschine oder weniger in der darüber liegenden Verschachtlung, die Ampel verschwindet und die darüber liegende Verschachtlung rutscht m eine ebene nach unten und setzt die normale Verarbeitung fort.\\  
-			\includegraphics[width=\textwidth]{assets/AsuwertungAmpelGrun}
+			\includegraphics[scale=0.5]{assets/AsuwertungAmpelGrun}
 		\end{minipage}
 
 
@@ -783,7 +783,7 @@ Allgemein gilt jedoch, das so viel wie möglich ohne Text, sondern durch Symboli
 	\begin{minipage}{1\textwidth}
 		\item \subsection*{Ladebildschirm:} \label{appaufbau:Ladebildschirm}
 		Nach dem Starten der App, öffnet diese im Ladebildschirm, hier werden für die App notwendige Daten geladen, um zu Garantieren das das Spiel flüssig und Fehlerfrei läuft. Benutzeingaben sind zu diesem Zeitpunkt nicht möglich.\\
-		\includegraphics[width=\textwidth]{assets/LoadScreen}
+		\includegraphics[scale=0.5]{assets/LoadScreen}
 	\end{minipage}
 	
 	\begin{minipage}{1\textwidth}
@@ -794,7 +794,7 @@ Allgemein gilt jedoch, das so viel wie möglich ohne Text, sondern durch Symboli
 		Es gibt eine maximale Anzahl an Spielerprofilen, sollte diese erreicht sein so verschwindet der Button zum erzeugen eines neuen Profils.\\
 		Gleichzeitig muss immer ein Spielerprofil vorhanden sein, sollte es nur noch ein Spielerprofil geben , so kann dieses nicht gelöscht werden , bis ein weiteres Profil angelegt wurde.\\
 		In diesem Menü kann der Spieler aus den bestehenden Spielerprofilen auswählen oder in das Menü zum anlegen eines neuen Spielers gelangen.\\
-		\includegraphics[width=\textwidth]{assets/PlayerScreen}
+		\includegraphics[scale=0.5]{assets/PlayerScreen}
 	\end{minipage}
 	
 	\begin{minipage}{1\textwidth}
@@ -805,14 +805,14 @@ Allgemein gilt jedoch, das so viel wie möglich ohne Text, sondern durch Symboli
 		Auch die Wahl ob man als Linkshänder oder Rechtshänder spielen will kann hier Profil spezifisch gewählt werden.\\
 		Man kann jederzeit über das Benutzerverwaltungsmenü hierhin gelangen um Änderungen am Profil vorzunehmen.\\
 		Sollte der Spieler hier abbrechen, so gelangt er zurück ins Profilmenü, ansonsten landet er entweder im Tutorial oder im Hauptmenü(Mehr dazu im Kapitel Szenarien)\\
-		\includegraphics[width=\textwidth]{assets/CreateProfile2}
+		\includegraphics[scale=0.5]{assets/CreateProfile2}
 	\end{minipage}
 	
 	\begin{minipage}{1\textwidth}
 		\item \subsection*{Hauptmenü:} \label{appaufbau:Hauptmenü}
 		Dies ist der Zentrale Knotenpunkt der App.\\
 		Von hier aus kann der Spieler zur Stageauswahl, den Einstellungen, seiner Statistik, zurück ins Profilmenü gelangen oder das Spiel komplett verlassen.\\
-		\includegraphics[width=\textwidth]{assets/Mainmenu}
+		\includegraphics[scale=0.5]{assets/Mainmenu}
 	\end{minipage}
 	
 	\begin{minipage}{1\textwidth}
@@ -820,7 +820,7 @@ Allgemein gilt jedoch, das so viel wie möglich ohne Text, sondern durch Symboli
 		Hier können verschiedene grundlegende Einstellungen vorgenommen werden.\\
 		Von hier gelangt man zur Ansicht aller Achievements (Achievementmenu).\\
 		Der Zurück-Button führt ins Hauptmenü, beim Verlassen werden sämtliche Änderungen automatisch gespeichert.\\
-		\includegraphics[width=\textwidth]{assets/Einstellungen}
+		\includegraphics[scale=0.5]{assets/Einstellungen}
 	\end{minipage}
 
 	\begin{minipage}{1\textwidth}
@@ -828,26 +828,26 @@ Allgemein gilt jedoch, das so viel wie möglich ohne Text, sondern durch Symboli
 		Dieses Menü ist identisch mit dem Menü zum Anlegen eines neuen Spielerprofils und erreichbar über das Profilmenü.\\
 		Beendet man dieses Menü kommt man automatisch zurück ins Hauptmenü.\\
 		Außerdem kann hier ein bestehendes Profil gelöscht werden. Sollte man ein Profil löschen, so landet man anschließend im Profilmenü um ein anderes Profil zu wählen.
-		\includegraphics[width=\textwidth]{assets/CreateProfile2}
+		\includegraphics[scale=0.5]{assets/CreateProfile2}
 	\end{minipage}
 
 	\begin{minipage}{1\textwidth}
 		\item \subsection*{Achievements:}
 		Hier sind alle Achievements zu sehen. Schon erreichte sind durch ein Bild gekennzeichnet, ansonsten ist dort ein Platzhalter zu sehen. Ein Abbruch führt zurück in die Einstellungen.\\
-		\includegraphics[width=\textwidth]{assets/Achievments}
+		\includegraphics[scale=0.5]{assets/Achievments}
 		
 	\end{minipage}
 	
 	\begin{minipage}{1\textwidth}
 		\item \subsection*{Stageauswahl:}
 		Hier kann man sich eine Stage zum spielen auswählen. Sie sind der Schwierigkeit nach geordnet und können im Spielverlauf freigeschaltet werden.\\
-		\includegraphics[width=\textwidth]{assets/Stagemenu}
+		\includegraphics[scale=0.5]{assets/Stagemenu}
 	\end{minipage}
 	
 	\begin{minipage}{1\textwidth}
 		\item \subsection*{Levelauswahl:} \label{appaufbau:Levelauswahl}
 		Hier kann ein Level der Stage in der man sich aktuell befindet gestartet werden.(auch diese müssen nach und nach freigeschaltet werden).\\
-		\includegraphics[width=\textwidth]{assets/Levelmenu}
+		\includegraphics[scale=0.5]{assets/Levelmenu}
 	\end{minipage}
 	
 	\begin{minipage}{1\textwidth}
@@ -855,13 +855,13 @@ Allgemein gilt jedoch, das so viel wie möglich ohne Text, sondern durch Symboli
 		Jedes Level  hat den selben Aufbau am unteren Rand sind die Button und das Steuerkreuz zum bedienen des Spielecharcters sowie ein Button um sich das aktuelle Level-ziel oder Hinweise zum Level geben zu lassen.\\ Die Anordnung der Buttons wird gespiegelt falls man als Linkshänder spielen will. Der komplette Buttonbereich ist transparent, sodass der Spieler mehr vom Spielfeld sieht.\\
 		In der Linken Oberen Ecke ist ein Button der ins Levelmenü führt. Das Spiel wird dann pausiert und es erscheinen Buttons zum Neustart des Levels, dem verlassen ins Levelmenü, dem Verlassen ins Hauptmenü und Einstellungen(Lautstärke).\\
 		Das eigentliche Spielfeld nimmt den Rest des Bildschirms ein.\\
-		\includegraphics[width=\textwidth]{assets/LevelDesign2}
+		\includegraphics[scale=0.5]{assets/LevelDesign2}
 	\end{minipage}
 	
 	\begin{minipage}{1\textwidth}
 		\item \subsection*{Auswertungsmenü:}
 		Sollte der Spieler ein Level erfolgreich gelöst haben so kommt er ins Auswertungsmenü, hier werden ihm Informationen zu seinem Erfolg , sowie errungene Achievments mitgeteilt. Er hat die Wahl das nächste Level zu starten oder zurück zum Hauptmenü zu kommen. 
-		\includegraphics[width=\textwidth]{assets/Auswertungsmenu}
+		\includegraphics[scale=0.5]{assets/Auswertungsmenu}
 	\end{minipage}
 
 \end{enumerate}
