@@ -81,7 +81,7 @@ dargelegte Visualisierung der Funktionsweise des Kalküls mithilfe
 von einfachen Formen und sie ineinander umwandelnden Maschinen ist
 dabei besonders kindgerecht, wodurch der Kalkül anhand von einfachen
 Lambda-Ausdrücken einfacher verstanden und verinnerlicht werden kann.
-Diese Idee soll nun als Android-App umgesetzt werden, sodass Kinder
+Diese Idee soll nun als \gls{gls:androidapp} umgesetzt werden, sodass Kinder
 selbständig spielen können, der Fortschritt im Spiel aber auch jederzeit
 durch Eltern oder Lehrkräfte einsehbar ist. 
 
@@ -101,16 +101,16 @@ durch Eltern oder Lehrkräfte einsehbar ist.
 \section{Zielbestimmungen}
 
 
-Die Kinder sollen durch das Spiel in die Lage versetzt werden, sich die Prinzipien des Lambda Kalküls spielerisch zu erarbeiten ohne über Vorkenntnisse zu verfügen.
+Die Kinder sollen durch das Spiel in die Lage versetzt werden, sich die Prinzipien des \gls{gls:lambdakalkuel}s spielerisch zu erarbeiten ohne über Vorkenntnisse zu verfügen.
 
 \subsection{Musskriterien}
 
 \begin{enumerate}
 	\item \label{muss:vermittelnlamba}Spielerisches Vermitteln des Lambda Kalküls für Kinder ab acht Jahren
-	\item \label{muss:simulationandroid}Das Spiel muss in der Simulationsumgebung von Android laufen
-	\item \label{muss:touchinterface}komplett über das simulierte Touchinterface bedienbar sein
-	\item \label{muss:mvc}eine modulare Architektur besitzen (z.B. Model-View-Controller-Prinzip)
-	\item \label{muss:5indilevel}mindestens fünf individuelle Level
+	\item \label{muss:simulationandroid}Das Spiel muss in der \gls{gls:simulationsumgebung} von \gls{gls:android} laufen
+	\item \label{muss:touchinterface}komplett über das simulierte \gls{gls:touchinterface} bedienbar sein
+	\item \label{muss:mvc}eine modulare Architektur besitzen (z.B. \gls{gls:mvc}-Prinzip)
+	\item \label{muss:5indilevel}mindestens fünf individuelle \gls{gls:level}
 	\item \label{muss:tutorial}Tutorial Level
 \end{enumerate}
 
@@ -133,7 +133,7 @@ Wunschkriterien seien von nun an im restlichen Pflichtenheft mit einem * markier
 \subsection{Abgrenzungskritieren}
 
 \begin{enumerate}
-	\item \label{abgrenz:online}Kein Onlinemodus
+	\item \label{abgrenz:online}Kein \gls{gls:onlinemodus} Modus
 	\item \label{abgrenz:multiplayer}Kein Multiplayer Modus
 	\item \label{abgrenz:emu}Keine vorgesehene Kompatiblität mit anderen Geräten/Betriebssystem ohne Emulation
 \end{enumerate}
@@ -248,16 +248,7 @@ Zu Beginn eines Levels wird die Spielerfigur angezeigt und bewegt zweidimensiona
 			&= (x+2)[x \leftarrow 4] \\
 			&= 4 + 2 = 6
 		\end{aligned}
-	\]	
- 	% Bsp.:\\
- 	% ($\lambda$f.f(f(2)))($\lambda$x.x+2)\\
- 	% = (f(f(2)))[f <- $\lambda$x.x+2]\\
- 	% = ($\lambda$x.x+2)(($\lambda$x.x+2)(2))\\
- 	% = ($\lambda$x.x+2)((x+2)[x <- 2])\\
- 	% = ($\lambda$x.x+2)(2 + 2)\\
- 	% = ($\lambda$x.x+2)(4)\\
- 	% = (x+2)[x <- 4]\\
- 	% = 4 + 2 = 6 \\
+	\]
 	\end{minipage}
 							
 \end{description}
@@ -409,7 +400,7 @@ In jedem Spieltyp läuft im Hintergrund ein Timer mit, der die Spielzeit des Lev
 
 \section{Produkteinsatz}
 
-Das Produkt soll auf jedem Android Gerät ab Android 4.2 einsatzfähig sein. Ein Einsatz auf Emulatoren der Android Plattform ist ebenfalls vorgesehen.
+Das Produkt soll auf jedem \gls{gls:android} Gerät ab Android 4.2 einsatzfähig sein. Ein Einsatz auf Emulatoren der Android Plattform ist ebenfalls vorgesehen.
 
 \subsection{Anwendungsbereich}
 
@@ -439,7 +430,7 @@ Die Zielgruppe besteht überwiegend aus Kindern im Alter von acht bis zwölf Jah
 \subsection{Software}
 
 \begin{itemize}
-	\item Die Software ist für die Unterstützung der API 17+ (Android 4.2) von Android ausgelegt.
+	\item Die Software ist für die Unterstützung der API 17+ (Android 4.2) von \gls{gls:android} ausgelegt.
 \end{itemize}
 
 \subsection{Hardware}
@@ -570,7 +561,7 @@ Die Zielgruppe besteht überwiegend aus Kindern im Alter von acht bis zwölf Jah
 % ---------------
 
 \section{Produktdaten}
-Das Produkt muss Daten speichern und verwalten, insbesondere: 
+Das Produkt speichert und verwaltet Daten, insbesondere: 
 
 \subsection{Profildaten}
 
@@ -1005,7 +996,7 @@ Die folgende Grafik enthält die möglichkeiten des benutzers auf die App einzuw
 		\end{enumerate}
 	\item Spiel über das Betriebssystem verlassen
 		\begin{enumerate}
-			\item Der Benutzer berührt den Homebutton auf seinem Gerät zum zurück zu Android zu gelangen.
+			\item Der Benutzer berührt den Homebutton auf seinem Gerät zum zurück zu \gls{gls:android} zu gelangen.
 		\end{enumerate}
 \end{enumerate}
 \clearpage
