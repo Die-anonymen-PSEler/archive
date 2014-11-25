@@ -13,3 +13,9 @@
 *.glsdefs
 *.xdy
 *.glo
+*.acn
+*.acr
+*.alg
+*.idx
+*.ilg
+*.ind

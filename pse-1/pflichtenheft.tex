@@ -4,15 +4,19 @@
 \usepackage[T1]{fontenc}
 \usepackage[ngerman]{babel}
 \usepackage[utf8]{inputenc}
-\usepackage[xindy,toc]{glossaries}
-\makeglossaries
-\usepackage{enumitem}
 \usepackage{hyperref}
+\usepackage[xindy,toc,section,nopostdot,acronym]{glossaries}
+\makeglossaries
+\usepackage[xindy]{imakeidx}
+\makeindex
+\usepackage{enumitem}
 \usepackage{graphicx}
 \usepackage{cleveref}
 \usepackage[autostyle=true,german=quotes]{csquotes}
 \renewcommand{\familydefault}{\sfdefault}
 \input{commands}
+
+\loadglsentries[main]{glossar}
 
 \begin{document}
 
@@ -665,11 +669,7 @@ Das Produkt muss Daten speichern und verwalten, insbesondere:
 \begin{telist}
 	\item Tutorial basierend auf (\ref{fa:tutorial} - \ref{fa:tutorial_03})
 	\begin{itemize}
-		\item Der Anwender \newglossaryentry{anwender}
-{
-  name=Anwender,
-  description={Beschreibt die Person die das Gerät in der Hand hält und bedient}
-} startet den Tutorial-Modus über das Level-Menü (Systemmodell \ref{appaufbau:Levelauswahl}) oder gelangt automatisch in diesen beim ersten Starten des Spiels mit einem neuen Profil.
+		\item Der \gls{gls:anwender} startet den Tutorial-Modus über das Level-Menü (Systemmodell \ref{appaufbau:Levelauswahl}) oder gelangt automatisch in diesen beim ersten Starten des Spiels mit einem neuen Profil.
 		\item Der Anwender wird durch die Tutorial-Level geleitet, in denen ihm erklärt wird, wie er die Steuerung benutzen, die Elemente an die gewünschte Position bringen kann und wie genau die Maschinen die Elemente verarbeiten.
 		\item Wenn der Tutorial-Modus beendet wurde, gelangt der Anwender in den Hauptbildschirm.
 	\end{itemize}
@@ -1005,10 +1005,8 @@ Die folgende Grafik enthält die möglichkeiten des benutzers auf die App einzuw
 
 
 
-\section{Glossar}
-
-\glsaddall
-\printglossary
+% \glsaddall
+\printglossary[title=Glossar]
     
 
 \end{document}
