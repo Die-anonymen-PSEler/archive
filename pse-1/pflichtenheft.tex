@@ -101,17 +101,17 @@ durch Eltern oder Lehrkräfte einsehbar ist.
 \section{Zielbestimmungen}
 
 
-Die Kinder sollen durch das Spiel in die Lage versetzt werden, sich die Prinzipien des \gls{gls:lambdakalkuel}s spielerisch zu erarbeiten ohne über Vorkenntnisse zu verfügen.
+Die Kinder sollen durch das Spiel in die Lage versetzt werden, sich die Prinzipien des \gls{gls:lambdakalkuel}s spielerisch zu erarbeiten, ohne über Vorkenntnisse zu verfügen.
 
 \subsection{Musskriterien}
 
 \begin{enumerate}
-	\item \label{muss:vermittelnlamba}Spielerisches Vermitteln des Lambda Kalküls für Kinder ab acht Jahren
+	\item \label{muss:vermittelnlamba}Spielerisches Vermitteln des Lambda-Kalküls für Kinder ab acht Jahren
 	\item \label{muss:simulationandroid}Das Spiel muss in der \gls{gls:simulationsumgebung} von \gls{gls:android} laufen
 	\item \label{muss:touchinterface}komplett über das simulierte \gls{gls:touchinterface} bedienbar sein
 	\item \label{muss:mvc}eine modulare Architektur besitzen (z.B. \gls{gls:mvc}-Prinzip)
 	\item \label{muss:5indilevel}mindestens fünf individuelle \gls{gls:level}
-	\item \label{muss:tutorial}Tutorial Level
+	\item \label{muss:tutorial}Tutorial-Level
 \end{enumerate}
 
 \subsection{Wunschkriterien}
@@ -126,16 +126,16 @@ Wunschkriterien seien von nun an im restlichen Pflichtenheft mit einem * markier
 	\item \label{wunsch:multiplechar}Mehrere Spielcharaktere (männlich, weiblich)
 	\item \label{wunsch:multiplemode}Mehrere Spielmodi (siehe Aufgabentypen \ref{subsection:Aufgabentypen})
     \item \label{wunsch:story}Begleitende Story (siehe Handlung des Spieles \ref{subsection:Story})
-    \item \label{wunsch:erweiterndeLevelelemente}Erweiternde Levelelement, z.B. Leitern, Aufzüge usw.
-    \item \label{wunsch:wischgesten} Steuerung durch Wischgesten anstelle von Steuerkreuzen (Wählbar durch Benutzer)
+    \item \label{wunsch:erweiterndeLevelelemente}Erweiternde Levelelemente, z.B. Leitern, Aufzüge usw.
+    \item \label{wunsch:wischgesten} Steuerung durch Wischgesten anstelle von Steuerkreuzen (wählbar durch Benutzer)
 \end{enumerate}
 
-\subsection{Abgrenzungskritieren}
+\subsection{Abgrenzungskriterien}
 
 \begin{enumerate}
 	\item \label{abgrenz:online}Kein \gls{gls:onlinemodus} Modus
-	\item \label{abgrenz:multiplayer}Kein Multiplayer Modus
-	\item \label{abgrenz:emu}Keine vorgesehene Kompatiblität mit anderen Geräten/Betriebssystem ohne Emulation
+	\item \label{abgrenz:multiplayer}Kein Multiplayer-Modus
+	\item \label{abgrenz:emu}Keine vorgesehene Kompatibilität mit anderen Geräten/Betriebssystemen ohne Emulation
 \end{enumerate}
 
 \clearpage
@@ -156,34 +156,34 @@ Wunschkriterien seien von nun an im restlichen Pflichtenheft mit einem * markier
 \section{Spielaufbau}
 
 \subsection{Spielprinzip}
-Das Spielprinzip beruht auf dem Bewegen von Blöcken, indem der Spieler die Blöcke hochhebt und wieder absetzt. Der Spieler muss die verschiedenen Teile des Spieles, die Maschinen(), die Maschinen-Cluster() und die Metallstücke, in die dafür vorgesehenen Positionen bringen. Hat er alle Teile in die richtigen Positionen gebracht, öffnet sich die Tür zum nächsten Level.
+Das Spielprinzip beruht auf dem Bewegen von Blöcken, indem der Spieler die Blöcke hochhebt und wieder absetzt. Der Spieler muss die verschiedenen Teile des Spieles, die Maschinen(), die Maschinen-Cluster() und die Metallstücke, in die dafür vorgesehenen Positionen bringen. Hat er alle Teile in die jeweils richtige Position gebracht, öffnet sich die Tür zum nächsten Level.
 
 \subsection{Handlung des Spiels*} \label{subsection:Story}
-Lambdor, der Vollstrecker, hat den Spieler entführt und in ein Haus mit vielen magischen Räumen gesperrt, deren Türen verschlossen sind. Um entkommen zu können muss der Spieler die Türen öffnen, dafür braucht er besondere Metallstücke, diese hat Lambdor jedoch zerstört. Der Spieler kann sie wieder herstellen, dafür muss er zunächst die Maschinen zusammenbauen, mit denen sie herstellen werden können. Glücklicherweise hilft Lambdalino, der kleine Bruder von Lambdor, dem Spieler dabei. Er zeigt ihm wie er die Maschinen zusammenbauen muss und wie er die Metallstücke herstellen kann. So kann der Spieler es schaffen, aus dem Wirrwarr der Räume zu entkommen.
+Lambdor, der Vollstrecker, hat den Spieler entführt und in ein Haus mit vielen magischen Räumen gesperrt, deren Türen verschlossen sind. Um entkommen zu können, muss der Spieler die Türen öffnen. Dafür braucht er besondere Metallstücke, diese hat Lambdor jedoch zerstört. Der Spieler kann sie wieder herstellen, dafür muss er zunächst die Maschinen zusammenbauen, mit denen sie hergestellt werden können. Glücklicherweise hilft Lambdalino, der kleine Bruder von Lambdor, dem Spieler dabei. Er zeigt ihm, wie er die Maschinen zusammenbauen muss und wie er die Metallstücke herstellen kann. So kann der Spieler es schaffen, aus dem Wirrwarr der Räume zu entkommen.
 
 
 \subsection{Spielelemente}
 
-Zu Beginn eines Levels wird die Spielerfigur angezeigt und bewegt zweidimensional durch die Welt und wird vom Spieler gesteuert.
+Zu Beginn eines Levels wird die Spielfigur angezeigt. Diese bewegt sich zweidimensional durch die Welt und wird vom Spieler gesteuert.
 
 \begin{description}
-	\item[Spielerfigur] bewegt sich durch die Welt, sammelt Gegenstände um mit diesen die Levelquest zu lösen
+	\item[Spielfigur] bewegt sich durch die Welt, sammelt Gegenstände, um mit diesen die Levelquest zu lösen
 	\item[Leben] Jeder Spieler hat je Level drei Leben, die er verlieren kann, wenn er ins Wasser fällt
 	\item[Spielwelt] zweidimensionale Spielwelt auf einem Raster basierend, in der sich der Spieler bewegt
-	\item[Spielebenen] verschiedene Ebenen in der Spielwelt auf die der Spieler springen kann, sie sind auf einem Raster angeordnet
+	\item[Spielebenen] verschiedene Ebenen in der Spielwelt, auf die der Spieler springen kann. Sie sind auf einem Raster angeordnet
 		\begin{enumerate}[label=\arabic*]
 			\item Landebenen: Auf diesen Ebenen liegen die Collectable Items
-			\item Wasserebenen: Fällt der Spieler in das Wasser, muss er wieder am linken unteren Rand anfangen und er verliert ein Leben, hat er kein Leben mehr, so muss er das Level neu beginnen
+			\item Wasserebenen: Fällt der Spieler in das Wasser, muss er wieder am linken unteren Rand anfangen und er verliert ein Leben. Hat er kein Leben mehr, so muss er das Level neu beginnen
 		\end{enumerate}
-	\item[Collectable Items] \label{elemente:collectable}sind in der Spielwelt verteilt und müssen von der Spielfigur eingesammelt werden um im Rätselteil eingesetzt zu werden. Diese bestehen aus:
+	\item[Collectable Items] \label{elemente:collectable}sind in der Spielwelt verteilt und müssen von der Spielfigur eingesammelt werden, um im Rätselteil eingesetzt zu werden. Diese bestehen aus:
 	\begin{enumerate}[label=\arabic*]
 		\item Maschinen (entspricht der Abstraktion)
 		\item Metallstücke (entspricht der Variablen)
 		\item Maschinen-Cluster (entspricht der Applikation)
 	\end{enumerate}
-	\item[Ablage] sind die markierte Stellen an denen Spielobjekte abgelegt werden können.
-	\item[Levelquest] sind gegebene Aufgaben die zum Abschließen des Levels erfüllt werden müssen
-	\item[Leveltür] bildet den Abschluss eines Levels. Sobald alle Quests in dem Level gelöst wurden wird die Tür freigeschaltet
+	\item[Ablage] sind die markierten Stellen, an denen Spielobjekte abgelegt werden können.
+	\item[Levelquest] sind gegebene Aufgaben, die zum Abschließen des Levels erfüllt werden müssen
+	\item[Leveltür] bildet den Abschluss eines Levels. Sobald alle Quests in dem Level gelöst wurden, wird die Tür freigeschaltet
 \end{description}
 
 \subsection{Regeln}
@@ -192,52 +192,52 @@ Zu Beginn eines Levels wird die Spielerfigur angezeigt und bewegt zweidimensiona
 
 \begin{minipage}{1\textwidth}
 	\item[Spielregeln] \label{spielaufbau:Spielregeln} 
-	Die Spielfigur beginnt an der unteren, linken Ecke der Spielwelt und muss es schaffen die Tür an der rechten unteren Ecke zu öffnen. Dies gelingt ihm in dem er diverse Objekte (Maschinen, Metallobjekte und Maschinen-Cluster)auf dem Spielfeld in Position bringt, sodass diese nach den Prinzipien des Lambda Kalküls einen Lambdaausdruck bilden  welcher zu einem gewünschten Ergebnis zusammengefasst oder gelöst werden kann.\\
+	Die Spielfigur beginnt an der unteren, linken Ecke der Spielwelt und muss es schaffen die Tür an der rechten unteren Ecke zu öffnen. Dies gelingt, indem diverse Objekte (Maschinen, Metallobjekte und Maschinen-Cluster) auf dem Spielfeld in Position gebracht werden, sodass diese nach den Prinzipien des Lambda-Kalküls einen Lambda-Ausdruck bilden, welcher zum gewünschten Ergebnis zusammengefasst oder gelöst werden kann.\\
 	Der Spieler muss neben einem Objekt stehen, um dieses aufheben zu können.\\
-	Der Spieler kann immer nur ein Objekt tragen. Um ein anderes Objekt aufzuheben muss er erst das Objekt das er trägt ablegen.\\
-	Um auf die oberen Ebenen der Spielwelt zu gelangen, kann die Spielfigur springen, dabei ist zu beachten, dass die Figur nur eine feste Höhe hochspringen kann und er somit auf Ebenen außerhalb seiner Reichweite, nicht durch einfaches Springen gelangen kann. Die Figur kann auch springen wenn sie etwas in den Händen trägt (dabei kann es zu einer geringen Trägheit kommen, z.B. ungenauere Spielsteuerung(diese ist gewollt und soll das Spiel ein wenig schwieriger gestalten)).\\
-	Befindet sich in jedem freien Feld ein Objekt, wird der daraus resultierende Lambdaausdruck ausgewertet. Falls die Maschinen und Metallstücke an den richtigen Positionen stehen und der $\lambda$-Kalkül erfüllt ist, wird dem Spieler das Ergebnis und die spezifische Abarbeitung des Maschinenkonstrukts nach den regeln des $\lambda$-Kalküls gezeigt. Anschließend öffnet sich die Tür am Level ende und das Level gilt als geschafft sobald diese erreicht ist.\\
+	Der Spieler kann immer nur ein Objekt tragen. Um ein anderes Objekt aufzuheben muss er erst das Objekt, das er trägt, ablegen.\\
+	Um auf die oberen Ebenen der Spielwelt zu gelangen, kann die Spielfigur springen, dabei ist zu beachten, dass die Figur nur eine feste Höhe hochspringen kann und der Spieler somit auf Ebenen außerhalb seiner Reichweite nicht durch einfaches Springen gelangen kann. Die Figur kann auch springen, wenn sie etwas in den Händen trägt (dabei kann es zu einer geringen Trägheit kommen, z.B. ungenauere Spielsteuerung (diese ist gewollt und soll das Spiel ein wenig schwieriger gestalten)).\\
+	Befindet sich in jedem freien Feld ein Objekt, wird der daraus resultierende Lambda-Ausdruck ausgewertet. Falls die Maschinen und Metallstücke an den richtigen Positionen stehen und der $\lambda$-Kalkül erfüllt ist, wird dem Spieler das Ergebnis und die spezifische Abarbeitung des Maschinenkonstrukts nach den Regeln des $\lambda$-Kalküls gezeigt. Anschließend öffnet sich die Tür am Level-Ende. Das Level gilt als geschafft, sobald diese erreicht ist.\\
 	
 \end{minipage}
 
 \begin{minipage}{1\textwidth}
 	\item[Die Verarbeitungsregel der Maschinen] Die Verarbeitung der einzelnen Metallstücke erfolgt in fester Reihenfolge.\\
 	Es wird immer nur ein Metallstück zu einem bestimmten Zeitpunkt verarbeitet.\\
-	Wie das Objekt verarbeitet wird bestimmt die jeweilige Maschine.\\
-	Was die Maschine verarbeiten soll befindet sich immer rechts neben dieser Maschine.\\
+	Wie das Objekt verarbeitet wird, bestimmt die jeweilige Maschine.\\
+	Was die Maschine verarbeiten soll, befindet sich immer rechts neben dieser Maschine.\\
 	Die Maschinen werden in fester Reihenfolge angeordnet und verarbeiten nacheinander die gegebenen Metallobjekte.\\
 	Dabei kann jede Maschine nur einmal etwas verarbeiten, nach der Verarbeitung verschwindet sie.\\
-	Jede Maschine kann die Anzahl des zu verarbeitenden Objekts und ggf. dessen Farbe/Muster verändern. Hierbei ist zu beachten das eine Maschine auch ein Objekt komplett entfernen kann. Was eine Maschine genau am zu verarbeitenden Objekt verändert ist durch ihr aussehen eindeutig bestimmt.\\
-	Das verarbeitete Objekt landet im Bereich oberhalb der Maschine an vorgegebenen Stellen, die durch Metallobjekte die die selbe Farbe wie die Maschine besitzen gekennzeichnet werden (Die Maschine verarbeitet quasi diese gleichfarbigen Blöcke zu Duplikaten des Input-Objekts).\\
-	Nachdem die Maschine verschwunden ist rücken die Objekte unter ihr alle um eine Position nach oben, und die in der obersten Ebene am weitesten links liegende Maschine beginnt die Verarbeitung.\\
+	Jede Maschine kann die Anzahl des zu verarbeitenden Objekts und ggf. dessen Farbe/Muster verändern. Hierbei ist zu beachten, dass eine Maschine auch ein Objekt komplett entfernen kann. Was eine Maschine genau am zu verarbeitenden Objekt verändert, ist durch ihr Aussehen eindeutig bestimmt.\\
+	Das verarbeitete Objekt landet im Bereich oberhalb der Maschine an vorgegebenen Stellen, die durch Metallobjekte, die dieselbe Farbe wie die Maschine besitzen, gekennzeichnet werden (Die Maschine verarbeitet quasi diese gleichfarbigen Blöcke zu Duplikaten des Input-Objekts).\\
+	Nachdem die Maschine verschwunden ist, rücken die Objekte unter ihr alle um eine Position nach oben und die in der obersten Ebene am weitesten links liegende Maschine beginnt die Verarbeitung.\\
 \end{minipage}	
 	
 \begin{minipage}{1\textwidth}
-	\item[Sonderfälle/regeln:] Maschinencluster: Ein Maschinencluster ist eine besonderer Form der Maschinen, sie verarbeitet keinen Input sondern dient als eine Art \enquote{Klammerung}. Ist ein Maschinencluster an der Reihe zu arbeiten, so verarbeitet sie keinen Input. Stattdessen werden alle Objekte in diesem Cluster nach den normalen Verarbeitungsregeln zuerst verarbeitet, bis nur noch eine Maschine und eine Menge an Metallobjekten darin vorhanden sind. Danach verschwindet der Cluster und sein Inhalt übernimmt seinen Platz in der aktuellen Verarbeitung.\\
-	$\alpha$-Regel: Diese Regel besagt, das falls eine Maschine eine andere Maschine oder ein anderes Metallobjekt verarbeitet jedoch oberhalb (in der Verschachtlung) der arbeitenden Maschine bereits mindestens ein Objekt der selben Farbe wie das Input Objekt vorhanden ist, das das Input-Objekt und alle dazugehörigen Objekte eine andere Farbe die noch nicht vergeben ist erhalten.\\
+	\item[Sonderfälle/regeln:] Maschinencluster: Ein Maschinencluster ist eine besondere Form der Anordnung von Maschinen, er verarbeitet keinen Input, sondern dient als eine Art \enquote{Klammerung}. Ist ein Maschinencluster an der Reihe zu arbeiten, so werden alle Objekte in diesem Cluster nach den normalen Verarbeitungsregeln zuerst verarbeitet, bis nur noch eine Maschine und eine Menge an Metallobjekten darin vorhanden sind. Danach verschwindet der Cluster und sein Inhalt übernimmt seinen Platz in der aktuellen Verarbeitung.\\
+	$\alpha$-Regel: Diese Regel besagt, dass, falls eine Maschine eine andere Maschine oder ein anderes Metallobjekt verarbeitet, jedoch oberhalb (in der Verschachtelung) der arbeitenden Maschine bereits mindestens ein Objekt der selben Farbe wie das Input-Objekt vorhanden ist, das Input-Objekt und alle dazugehörigen Objekte eine andere Farbe, die noch nicht vergeben ist, erhalten.\\
 \end{minipage}
 
 \end{description}
 
 \subsection{Steuerung}  \label{subsection:Steuerung}
 
-Zur Steuerung der Spielfigur in den einzelnen Leveln werden im unteren Teil des Bildschirms insgesamt 5 Buttons eingeblendet , die sich in 2 Gruppen aufteilen.\\
-Die Positionierung dieser Buttons kann Profil spezifisch geändert werden, dabei gibt es jedoch nur 2 Wahlmöglichkeiten.\\
+Zur Steuerung der Spielfigur in den einzelnen Levels werden im unteren Teil des Bildschirms insgesamt 5 Buttons eingeblendet, die sich in 2 Gruppen aufteilen.\\
+Die Positionierung dieser Buttons kann profilspezifisch geändert werden, dabei gibt es jedoch nur 2 Wahlmöglichkeiten.\\
 
 \begin{enumerate}
 	\item Gruppe 1:\\
-	Die erste Gruppe an Buttons besteht aus 2 Buttons, durch diese kann der Spieler die Spielfigur nach Rechts und Links bewegen.\\
-	Die Spielfigur bewegt sich dabei solange in die jeweilige Richtung wie der Spieler den Button drückt.\\
-	Diese Buttongruppe ist standardmäßig in der linken unteren Ecke des Bildschirms.\\
-	Der Spieler kann immer nur einender beiden Buttons , aber nie beide zur selben Zeit drücken.\\
+	Die erste Gruppe an Buttons besteht aus zwei Buttons, durch welche der Spieler die Spielfigur nach Rechts und Links bewegen kann.\\
+	Die Spielfigur bewegt sich dabei solange in die jeweilige Richtung, wie der Spieler den Button drückt.\\
+	Diese Button-Gruppe ist standardmäßig in der linken unteren Ecke des Bildschirms.\\
+	Der Spieler kann immer nur einen der beiden Buttons, nie beide zur selben Zeit drücken.\\
 	
 	\item Gruppe 2:\\
-	Die zweite Gruppe an Buttons besteht aus 3 Buttons, diese dienen zum einen der Interaktion der Spielfigur mit den Spielobjekten die es platzieren muss und zum anderen der Funktion zu Springen und die Spielfigur sich ducken zu lassen.\\
-	Der Button zur Interaktion mit den Spielobjekten hat 2 Funktionen, zum einen kann der Spieler ein Spielobjekt das in blick Richtung direkt neben der Spielfigur liegt aufheben, und trägt es somit, zum anderen kann  die Spielfigur falls sie ein Spielobjekt trägt, dieses in Blickrichtung in ein benachbartes Feld ablegen. Diese Aktionen können nicht parallel zu einer der anderen drei Aktionen (Bewegen, Springen, Ducken) ausgeführt werden, die Spielfigur muss stehen.\\
-	Der Springen-Button lässt die Spielfigur eine feste Höhe hochspringen , durch paralleles drücken der Bewegungstasten kann zusätzlich ein Sprung nach links oder rechts ausgeführt werden.Andere Buttons können nicht parallel betätigt werden.\\
-	Der Ducken-Button lässt die Spielfigur ducken, dies führt zu einer Verringerung ihrer Größe , was insbesondere wenn sie ein Objekt trägt hilfreich sein kann. Die Spielfigur kann parallel zum ducken sich nur bewegen, nicht aber springen oder ein Objekt aufnehmen oder ablegen.\\
+	Die zweite Gruppe an Buttons besteht aus drei Buttons, diese dienen zum Einen der Interaktion der Spielfigur mit den Spielobjekten, die es platzieren muss, und zum Anderen der Funktion des Springens und Duckens der Spielfigur.\\
+	Der Button zur Interaktion mit den Spielobjekten hat zwei Funktionen: Der Spieler kann ein Spielobjekt, das in Blickrichtung direkt neben der Spielfigur liegt, aufheben (und trägt es somit) sowie, falls sie Spielfigur bereits ein Objekt trägt, dieses in Blickrichtung in ein benachbartes Feld ablegen. Diese Aktionen können nicht parallel zu einer der anderen drei Aktionen (Bewegen, Springen, Ducken) ausgeführt werden, die Spielfigur muss stehen.\\
+	Der Springen-Button lässt die Spielfigur eine feste Höhe hochspringen, durch paralleles Drücken der Bewegungstasten kann zusätzlich ein Sprung nach links oder rechts ausgeführt werden.Andere Buttons können nicht parallel betätigt werden.\\
+	Der Ducken-Button lässt die Spielfigur sich ducken. Dies führt zu einer Verringerung ihrer Größe, was insbesondere, wenn sie ein Objekt trägt, hilfreich sein kann. Die Spielfigur kann sich parallel zum Ducken nur bewegen, nicht springen oder ein Objekt aufnehmen oder ablegen.\\
 	
-	\item Im folgenden sehen sie eine ungefähre Darstellung der Steuerung. Dia alternative die Profil spezifisch gewählt werden kann, sieht eine Vertauschung der beiden Button Gruppen vor , wobei Die Buttongruppe 2 zusätzlich gespiegelt wird.\\
+	\item Im Folgenden sehen sie eine ungefähre Darstellung der Steuerung. Die Alternative, die profilspezifisch gewählt werden kann, sieht eine Vertauschung der beiden Button-Gruppen vor, wobei die Button-Gruppe 2 zusätzlich gespiegelt wird.\\
 	\includegraphics[scale=0.5]{assets/Steuerung}
 \end{enumerate}
 
@@ -247,15 +247,15 @@ Die Positionierung dieser Buttons kann Profil spezifisch geändert werden, dabei
 \begin{description}
 
 	\begin{minipage}{1\textwidth}
-	\item[Allgemeine Erklärung:] \label{LambdaKalkül:AlgemeineErklärung} Der $\lambda$-Kalkül ist eine formale Sprache, die im Allgemeinen dazu dient Funktionen zu definieren bzw. beschreiben.\\
-	In unserem Fall beschränken wir uns hier jedoch auf die beiden grundlegenden Regeln des $\lambda$-Kalkül, die $\alpha$-Regel und die $\beta$-Regel. Das Spiel soll dem Spieler diese beiden wichtigen Regeln des $\lambda$-Kalkül anschaulich erklären.\\
-	$\alpha$-Regel: Die Alpha Regel besagt im $\lambda$-Kalkül das die Variablen eines $\lambda$-Terms jederzeit umbenannt werden dürfen um die eindeutigkeit dieser terme zu waren. Bsp.:\\
+	\item[Allgemeine Erklärung:] \label{LambdaKalkül:AlgemeineErklärung} Der $\lambda$-Kalkül ist eine formale Sprache, die im Allgemeinen dazu dient, Funktionen zu definieren bzw. beschreiben.\\
+	In unserem Fall beschränken wir uns jedoch auf die beiden grundlegenden Regeln des $\lambda$-Kalkül, die $\alpha$-Regel und die $\beta$-Regel. Das Spiel soll dem Spieler diese beiden wichtigen Regeln des $\lambda$-Kalkül anschaulich erklären.\\
+	$\alpha$-Regel: Die Alpha-Regel besagt im $\lambda$-Kalkül, dass die Variablen eines $\lambda$-Terms jederzeit umbenannt werden dürfen, um die Eindeutigkeit dieser Terme zu waren. Bsp.:\\
 	$\lambda x.x [x \leftarrow y] \Rightarrow \lambda y.y.$\\
-	Wichtig ist hierbei keine Doppelverwendung von Variablen Benennung in unterschiedlichen $\lambda$-Termen entsteht. Vielmehr ist diese Regel dazu gedacht, beim auftreten einer Doppelbelegung eine der beieden Variablen umzutaufen um die Eindeutige $\lambda$-Terme zu formen.
+	Wichtig ist hierbei, dass keine Doppelverwendung von Variablennamen in unterschiedlichen $\lambda$-Termen entsteht. Vielmehr ist diese Regel dazu gedacht, beim Auftreten einer Doppelbelegung eine der beiden Variablen umzutaufen, um eindeutige $\lambda$-Terme zu formen.
 	$\beta$-Regel: Die $\beta$-Regel dient der Vereinfachung, Auflösung oder Umformung von $\lambda$-Termen.\\
-	Sie besagt das ein $\lambda$-Term   der Form zB. ($\lambda$x.x+2)(z) umgeformt werden kann, indem der Ausdruck ``z'' in den Term hinter dem ``.'' eingesetzt werden kann und zwar für genau die Variable die zwischen ``$\lambda$'' und dem ``.'' steht um es anschaulich zu erklären. Bsp.:\\
+	Sie besagt, dass ein $\lambda$-Term, von zum Beispiel dieser Form ($\lambda$x.x+2)(z), umgeformt werden kann, indem der Ausdruck ``z'' in den Term hinter dem ``.'' eingesetzt wird und zwar für genau die Variable, die zwischen ``$\lambda$'' und dem ``.'' steht, um es anschaulich zu erklären. Bsp.:\\
 	$(\lambda x.x+2)(z) = (x+2)[x \leftarrow z] = z + 2$ \\
-	Wichtig ist das hierbei sowohl z als auch x für alles stehen können. Also x kann auch eine funktion sein und z kann auch z.b ein weiterer kompletter $\lambda$-Term sein.
+	Wichtig ist, dass hierbei sowohl z als auch x für alles stehen können. Also kann x insbesondere auch eine Funktion sein und z zum Beispiel ein weiterer kompletter $\lambda$-Term.
 	\[
 		\begin{aligned}
 			\lambda f.f(f(2))(\lambda x.x+2)&= (f(f(2)))[f \leftarrow \lambda x.x+2] \\
@@ -277,68 +277,68 @@ Die Positionierung dieser Buttons kann Profil spezifisch geändert werden, dabei
 \begin{description}
 	
 	\begin{minipage}{1\textwidth}
-		\item[Tutorial:] \label{Levelaufbau:Tutorial}  Das Tutorial umfasst die ersten Level des Spiels. Der Spieler soll hier Das Spielprinzip im Spielmodi Puzzle  schritt für schritt verstehen.
-		Umgesetzt wird dies dies durch sehr einfache Level, wobei in jedem Level ein weiterer Faktor hinzukommt.\\
-		Im ersten Level liegt der Fokus darauf dem Spieler die Steuerung und die Levelelement zu erklären. 
-		In den darauffolgenden Leveln wird die Spielmechanik mit Maschinen und Metallobjekten erklärt.\\
-		Zwischen den Leveln wird die Story erzählt durch. eventuell durch kleine Zwischensequenzen.\\		 
+		\item[Tutorial:] \label{Levelaufbau:Tutorial}  Das Tutorial umfasst die ersten Level des Spiels. Der Spieler soll hier das Spielprinzip im Spielmodus Puzzle Schritt für Schritt verstehen.
+		Umgesetzt wird dies durch sehr einfache Level, wobei in jedem Level ein neuer Faktor hinzukommt.\\
+		Im ersten Level liegt der Fokus darauf, dem Spieler die Steuerung und die Level-Elemente zu erklären. 
+		In den darauffolgenden Levels wird die Spielmechanik mit Maschinen und Metallobjekten erklärt.\\
+		Zwischen den Levels wird die Story eventuell durch kleine, animierte Zwischenszenen erklärt.\\		 
 	\end{minipage}
 		
 
-	\item[Levelbeispiel:] \label{Levelaufbau:Levelbeispiel} Als Level-Beispiel dient das erste Tutorial Level. Es wird in mehreren Bilder aufgeteilt um die möglichen Aktionen des Spieler zu erklären,sowie den grundlegenden Ablauf eines Levels darzustellen.\\
+	\item[Levelbeispiel:] \label{Levelaufbau:Levelbeispiel} Als Level-Beispiel dient das erste Tutorial-Level. Es wird in mehrere Bilder aufgeteilt, um die möglichen Aktionen des Spieler zu erklären, sowie den grundlegenden Ablauf eines Levels darzustellen.\\
 	
 	\begin{enumerate}
 		\begin{minipage}{1\textwidth}
-			\item \label{Levelaufbau:Levelstart	} Zum Level Start befindet sich die Spielfigur am rechten Rand der Spielwelt,\\
-			außerdem ist das Level-ziel eingeblendet.\\
-			Das Level-ziel gibt die Zielkonstellation an, die das zusammengesetzte Konstrukt aus Maschinen und Metallobjekten nach Verarbeitung nach den Regeln des $\lambda$-Kalküls haben soll.\\
-			Das Level-ziel kann der Spieler durch einen Klick auf den Hacken unten rechts ausblenden und jederzeit durch einen Klick auf den Button mit dem ``Fahnen-Symbol'' unten in der Mitte des Schirms wieder anzeigen.\\ Solange Hinweise oder das Level-ziel eingeblendet sind kann der Spieler keine anderen Aktionen ausführen.\\
+			\item \label{Levelaufbau:Levelstart	} Zum Level-Start befindet sich die Spielfigur am rechten Rand der Spielwelt,\\
+			außerdem ist das Level-Ziel eingeblendet.\\
+			Das Level-Ziel gibt die Zielkonstellation an, die das zusammengesetzte Konstrukt aus Maschinen und Metallobjekten nach Verarbeitung nach den Regeln des $\lambda$-Kalküls haben soll.\\
+			Das Level-Ziel kann der Spieler durch einen Klick auf den Hacken unten rechts ausblenden und sich jederzeit durch einen Klick auf den Button mit dem ``Fahnen-Symbol'' unten in der Mitte des Schirms anzeigen lassen.\\ Solange Hinweise oder das Level-Ziel eingeblendet sind, kann der Spieler keine anderen Aktionen ausführen.\\
 			\includegraphics[scale=0.5]{assets/Levelziel}
 		\end{minipage}
 		
 		\begin{minipage}{1\textwidth}
-			\item \label{Levelaufbau:ErsteSchritte} Nach Ausblendung der Level-ziel kann der Spieler mit dem Lösen des Level beginnen, hierzu muss er die Spielfigur zum Metallobjekt bewegen , dieses per Button-druck aufheben und anschließend in die freie Ablage daneben platzieren.\\
-			Die über den Objekten angezeigten Namen dienen lediglich zur Erklärung welches Objekt was darstellen soll und wird im eigentliche Spiel nicht angezeigt.\\
+			\item \label{Levelaufbau:ErsteSchritte} Nach Ausblenden des Level-Ziels kann der Spieler mit dem Lösen des Levels beginnen. Hierzu muss er die Spielfigur zum Metallobjekt bewegen, dieses per Button-Druck aufheben und anschließend in die freie Ablage daneben platzieren.\\
+			Die über den Objekten angezeigten Namen dienen lediglich zur Erklärung, welches Objekt was darstellen soll und wird im eigentlichen Spiel nicht angezeigt.\\
 			\includegraphics[scale=0.5]{assets/Level1mA}
 		\end{minipage}
 		
 		\begin{minipage}{1\textwidth}
-			\item \label{Levelaufbau:Levelende} Sind alle Ablagen gefüllt so beginnt die Auswertung des Konstrukts.\\ Führt das Konstrukt zum gewünschten Ergebnis, so öffnet sich die Leveltür  und der Spieler kann durch erreichen dieser Tür das Level beenden und gelangt dadurch ins Auswertungsmenü.\\
+			\item \label{Levelaufbau:Levelende} Sind alle Ablagen gefüllt, so beginnt die Auswertung des Konstrukts.\\ Führt das Konstrukt zum gewünschten Ergebnis, so öffnet sich die Level-Tür  und der Spieler kann durch Erreichen dieser Tür das Level beenden. Dadurch gelangt er ins Auswertungsmenü.\\
 			\includegraphics[scale=0.5]{assets/LevelEnde}
 		\end{minipage}
 		
 		\begin{minipage}{1\textwidth}
-			\item \label{Levelaufbau:Levelhinweis} Während des spielen eines Levels kann der Spieler zu jederzeit das Hinweisfenster öffnen, diese liefert durch ein Bild dargestellt Level spezifisch einen Hinweis auf die Zielkonfiguration des jeweiligen Levels.\\
+			\item \label{Levelaufbau:Levelhinweis} Während des Spielens eines Levels kann der Spieler jederzeit das Hinweisfenster öffnen. Dieses liefert, durch ein Bild dargestellt, levelspezifisch einen Hinweis auf die Zielkonfiguration des jeweiligen Levels.\\
 			\includegraphics[scale=0.5]{assets/Levelhinweis}
 		\end{minipage}
 	\end{enumerate}
 	
 \clearpage
 
-	\item[Konstrukte:] \label{Levelaufbau:Konstrukte} Im folgenden sehen sie einige Konstrukte die in Leveln möglich sind, jeweils mit einer kurzen Erklärung.\\
+	\item[Konstrukte:] \label{Levelaufbau:Konstrukte} Im Folgenden sind einige Konstrukte, die in Leveln möglich sind, jeweils mit einer kurzen Erklärung aufgeführt.\\
 	
 		\begin{minipage}{1\textwidth}
-			Einfacher Aufbau einer Maschine(grün) mit einem rechts daneben befindlichen Metallobjekt(Blau) als Input.\\
-			In diesem Fall würde bei der Abarbeitung kein Ergebnis übrig bleiben da die Maschine keine Metallobjekte besitzt die es zu dem Inputobjekt verarbeiten könnte. Das heißt das Resultat wäre nichts, sowohl das Metallobjekt als auch die Maschine verschwinden bei der Verarbeitung.\\
+			Einfacher Aufbau einer  (grün) mit einem rechts daneben befindlichen Metallobjekt(Blau) als Input.\\
+			In diesem Fall würde bei der Abarbeitung kein Ergebnis übrig bleiben, da die Maschine keine Metallobjekte besitzt, die es zu dem Input-Objekt verarbeiten könnte. Das heißt, das Resultat wäre nichts: sowohl das Metallobjekt als auch die Maschine verschwinden bei der Verarbeitung.\\
 			\includegraphics[scale=0.5]{assets/LevelBsp1}
 		\end{minipage}
 		
 		\begin{minipage}{1\textwidth}
-			Einfacher Aufbau einer Maschine(grün) mit einem zugehörigen Output Metallobjekt (grün) darüber und einem rechts daneben befindlichen Metallobjekt(Blau) als Input.\\
-			In diesem Fall würde bei der Abarbeitung als Ergebnis ein blaues Metallobjekt übrig bleiben. Die Maschine würde ihr grünes Outputobjekt zu einem Duplikat des Inputobjekts verarbeiten, dabei Verschwinden sowohl die Maschine als auch das Inputobjekt.\\
+			Einfacher Aufbau einer Maschine (grün) mit einem zugehörigen Output-Metallobjekt (grün) darüber und einem rechts daneben befindlichen Metallobjekt (blau) als Input.\\
+			In diesem Fall würde bei der Abarbeitung als Ergebnis ein blaues Metallobjekt übrig bleiben. Die Maschine würde ihr grünes Output-Objekt zu einem Duplikat des Input-Objekts verarbeiten, dabei verschwinden sowohl die Maschine als auch das Input-Objekt.\\
 			\includegraphics[scale=0.5]{assets/LevelBsp1Out}\\
 		\end{minipage}
 		
 		\begin{minipage}{1\textwidth}
-			Einfacher Aufbau einer Maschine(grün) mit zwei zugehörigen Output Metallobjekten (grün) darüber und einem rechts daneben befindlichen Metallobjekt(Blau) als Input.\\
-			In diesem Fall würde bei der Abarbeitung als Ergebnis zwei blaue Metallobjekte übrig bleiben. Die Maschine würde ihre grünen Outputobjekte zu Duplikaten des Inputobjekts verarbeiten, dabei Verschwinden sowohl die Maschine als auch das Inputobjekt.\\
+			Einfacher Aufbau einer Maschine (grün) mit zwei zugehörigen Output-Metallobjekten (grün) darüber und einem rechts daneben befindlichen Metallobjekt(Blau) als Input.\\
+			In diesem Fall würden bei der Abarbeitung als Ergebnis zwei blaue Metallobjekte übrig bleiben. Die Maschine würde ihre grünen Output-Objekte zu Duplikaten des Input-Objekts verarbeiten. Dabei verschwinden sowohl die Maschine als auch das Input-Objekt.\\
 			\includegraphics[scale=0.5]{assets/LevelBsp2Out}\\
 		\end{minipage}
 		
 		\begin{minipage}{1\textwidth}
-			Wie im oberen Bild zu erkennen ist , sind die Ablagen in einer Art Raster unterteilt.\\
-			Dabei gilt das die unterste Ebene die Primäre Verarbeitungsebene darstellt. Jede Maschine kann zusätzlich über sich eine reihe von weiteren Ebenen haben, die eine Art Verschachtelung darstellen sollen. In dieser Verschachtlung können Metallobjekte der gleichen Farbe wie die darunterliegende Maschine sein, diese dienen der Maschine als Outputobjekte die sie bearbeitet, oder Metallobjekte anderer Farbe sowie weitere Maschinen mit dazugehörigen Verschachtelungsebenen. Welche Ablage zu welcher Ebene oder zu welcher Maschine gehört wird durch geschickte Positionierung der Ablagen oder Verdeutlichung durch Röhren oder ähnliches bewerkstelligt.\\
-			Maschine mit einem Metallobjekt gleicher Farbe in darüberlegender Verschachtelungsebene.\\ 
+			Wie im oberen Bild zu erkennen ist, sind die Ablagen in eine Art Raster unterteilt.\\
+			Dabei gilt, dass die unterste Ebene die primäre Verarbeitungsebene darstellt. Jede Maschine kann zusätzlich über sich eine Reihe von weiteren Ebenen haben, die eine Verschachtelung darstellen sollen. In dieser Verschachtelung können Metallobjekte der gleichen Farbe wie die darunterliegende Maschine sein, welche der Maschine als Output-Objekte, die sie bearbeitet, dienen, oder Metallobjekte anderer Farbe sowie weitere Maschinen mit dazugehörigen Verschachtelungsebenen. Welche Ablage zu welcher Ebene oder zu welcher Maschine gehört, wird durch geschickte Positionierung der Ablagen oder Verdeutlichung durch Röhren oder Ähnliches bewerkstelligt.\\
+			Maschine mit einem Metallobjekt gleicher Farbe in darüberliegender Verschachtelungsebene.\\ 
 			\includegraphics[scale=0.5]{assets/LevelVerarbeitungBsp}\\
 			Maschine mit zwei Metallobjekten gleicher Farbe in darüberlegender Verschachtelungsebene.\\
 			\includegraphics[scale=0.5]{assets/LevelBsp2Out}\\
@@ -349,38 +349,38 @@ Die Positionierung dieser Buttons kann Profil spezifisch geändert werden, dabei
 			\includegraphics[scale=0.5]{assets/LevelBsp2Out1OC}\\
 		\end{minipage}
 
-	\item[Auswertungsbeispiele:] \label{Levelaufbau:Asuwertungsbeispiele} Hier sehen sie ein Beispiel für den Ablauf einer Auswertung sowie Beispiel für einige andere Auswertungen.\\
+	\item[Auswertungsbeispiele:] \label{Levelaufbau:Asuwertungsbeispiele} Hier sehen Sie ein Beispiel für den Ablauf einer Auswertung sowie Beispiele für einige andere Auswertungen.\\
 	
 		\begin{minipage}{1\textwidth}
-			Start der Auswertung eines Konstrukts bestehend aus einer grünen Maschine mit einem zugehörigen Output-Metallobjekt und einem roten Metallobjekt rechts daneben.\\ 
+			Start der Auswertung eines Konstrukts, bestehend aus einer grünen Maschine mit einem zugehörigen Output-Metallobjekt und einem roten Metallobjekt rechts daneben.\\ 
 			\includegraphics[scale=0.5]{assets/AuswertungAnimPic1}
 		\end{minipage}
 		
 		\begin{minipage}{1\textwidth}
-			Zuerst zieht die Maschine das Inputobjekt zur Analyse ein.\\ 
+			Zuerst zieht die Maschine das Input-Objekt zur Analyse ein.\\ 
 			\includegraphics[scale=0.5]{assets/AuswertungAnimPic2}
 		\end{minipage}
 		
 		\begin{minipage}{1\textwidth}
-			Nach Beendigung des Einlesevorgangs beginnt die Maschine mit der Verarbeitung der Outputobjekte.\\ 
+			Nach Beendigung des Einlesevorgangs beginnt die Maschine mit der Verarbeitung der Output-Objekte.\\ 
 			\includegraphics[scale=0.5]{assets/AuswertungAnimPic3}
 		\end{minipage}
 		
 		\begin{minipage}{1\textwidth}
-			Ist die Bearbeitung abgeschlossen verschwindet die Maschine (ist kaputt) und übrig bleibt das bearbeitete Metallobjekt.\\ 
+			Ist die Bearbeitung abgeschlossen, verschwindet die Maschine (ist kaputt) und übrig bleibt das bearbeitete Metallobjekt.\\ 
 			\includegraphics[scale=0.5]{assets/AuswertungAnimPic5}
 		\end{minipage}
 		
-			Nun gilt bei der Auswertung noch zu beachten wie ein Ampel-Konstrukt arbeitet\\
+			Nun gilt bei der Auswertung noch zu beachten wie ein Ampel-Konstrukt arbeitet.\\
 			
 		\begin{minipage}{1\textwidth}
 			Ist ein Ampel-Konstrukt an der Reihe zu arbeiten, so gibt es zwei Möglichkeiten:\\
-			Die Ampel ist rot, was bedeutet das in der darüber liegenden Verschachtlung mindestens zwei Maschinen vorhanden sind. D.h. der normale Auswertungsablauf hält und die Verschachtlung oberhalb der roten Ampel wird ausgewertet , solange bis nur noch eine Maschine darin vorhanden ist. Dann schaltet die Ampel auf grün um und verschwindet anschließend. Die darüber liegende Verschachtlung rutscht m eine ebene nach unten und setzt die normale Verarbeitung fort.\\ 
+			Die Ampel ist rot, was bedeutet, dass in der darüber liegenden Verschachtelung mindestens zwei Maschinen vorhanden sind. Das heißt, der normale Auswertungsablauf hält und die Verschachtelung oberhalb der roten Ampel wird ausgewertet, bis nur noch eine Maschine darin vorhanden ist. Dann schaltet die Ampel auf grün um und verschwindet anschließend. Die darüberliegende Verschachtelung rutscht um eine Ebene nach unten und setzt die normale Verarbeitung fort.\\ 
 			\includegraphics[scale=0.5]{assets/AuswertungAmpelRot}
 		\end{minipage}
 		
 		\begin{minipage}{1\textwidth}
-			Ist die Ampel Grün, so heißt das es ist nur eine Maschine oder weniger in der darüber liegenden Verschachtlung, die Ampel verschwindet und die darüber liegende Verschachtlung rutscht m eine ebene nach unten und setzt die normale Verarbeitung fort.\\  
+			Ist die Ampel grün, so heißt das, dassnur eine Maschine oder weniger in der darüber liegenden Verschachtelung ist. Die Ampel verschwindet und die darüberliegende Verschachtlung rutscht um eine Ebene nach unten und setzt die normale Verarbeitung fort.\\  
 			\includegraphics[scale=0.5]{assets/AsuwertungAmpelGrun}
 		\end{minipage}
 
@@ -394,11 +394,11 @@ Die Positionierung dieser Buttons kann Profil spezifisch geändert werden, dabei
 
 In jedem Spieltyp läuft im Hintergrund ein Timer mit, der die Spielzeit des Levels misst. Dadurch können Timer-Achievements freigeschaltet werden.
 \begin{enumerate}
-	\item \label{aufgabentyp:puzzle} Puzzle: Aufgabentyp bei dem an die vorgegebenen stellen Maschinen, Metallobjekte oder Maschinen-Cluster eingefügt werden müssen um einen $\lambda$-Ausdruck zu bauen der ein gewünschtes Ergebnis liefert oder einen gewünschten Endzustand hat.\\
+	\item \label{aufgabentyp:puzzle} Puzzle: Aufgabentyp, bei dem an die vorgegebenen Stellen Maschinen, Metallobjekte oder Maschinen-Cluster eingefügt werden müssen, um einen $\lambda$-Ausdruck zu bauen, der ein gewünschtes Ergebnis liefert oder einen gewünschten Endzustand hat.\\
 	Die benötigten Teile sind in der Spielwelt verstreut und müssen an den passenden Stellen eingefügt werden.\\
 	Der Spieler kann dabei immer nur ein Objekt tragen.\\
-	Es sind auch falsche Konstellationen möglich die zu einem falschen Ergebnis führen.\\
-	\item \label{aufgabentyp:fehlerfindung} Fehlerfindung: Aufgabentyp bei dem der $\lambda$-Ausdruck schon fertig zusammengesetzt ist, jedoch nicht in der richtigen Konstellation.\\
+	Es sind auch falsche Konstellationen möglich, die zu einem falschen Ergebnis führen.\\
+	\item \label{aufgabentyp:fehlerfindung} Fehlerfindung: Aufgabentyp, bei dem der $\lambda$-Ausdruck schon fertig zusammengesetzt ist, jedoch nicht in der richtigen Konstellation.\\
 	Der Spieler muss die Fehler finden und die entsprechenden Objekte austauschen.\\
 	\item \label{aufgabentyp:ergebnis} Ergebnisbestimmung: Die Maschinenkonstruktion ist gegeben, der Spieler muss mit einer gegebenen Menge an Elementen die Endkonstellation bestimmen und angeben. ($\beta$ - Reduktion durchführen) 
 \end{enumerate}
