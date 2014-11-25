@@ -6,3 +6,10 @@
 *.synctex.gz
 *.toc
 *.out
+*.dvi
+*.fls
+*.glg
+*.gls
+*.glsdefs
+*.xdy
+*.glo
