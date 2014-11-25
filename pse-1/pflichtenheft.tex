@@ -4,6 +4,8 @@
 \usepackage[T1]{fontenc}
 \usepackage[ngerman]{babel}
 \usepackage[utf8]{inputenc}
+\usepackage[xindy,toc]{glossaries}
+\makeglossaries
 \usepackage{enumitem}
 \usepackage{hyperref}
 \usepackage{graphicx}
@@ -151,7 +153,7 @@ Wunschkriterien seien von nun an im restlichen Pflichtenheft mit einem * markier
 \subsection{Spielprinzip}
 Das Spielprinzip beruht auf dem Bewegen von Blöcken, indem der Spieler die Blöcke hochhebt und wieder absetzt. Der Spieler muss die verschiedenen Teile des Spieles, die Maschinen(), die Maschinen-Cluster() und die Metallstücke, in die dafür vorgesehenen Positionen bringen. Hat er alle Teile in die richtigen Positionen gebracht, öffnet sich die Tür zum nächsten Level.
 
-\subsection{Handlung des Spiels}* \label{subsection:Story}
+\subsection{Handlung des Spiels*} \label{subsection:Story}
 Lambdor, der Vollstrecker, hat den Spieler entführt und in ein Haus mit vielen magischen Räumen gesperrt, deren Türen verschlossen sind. Um entkommen zu können muss der Spieler die Türen öffnen, dafür braucht er besondere Metallstücke, diese hat Lambdor jedoch zerstört. Der Spieler kann sie wieder herstellen, dafür muss er zunächst die Maschinen zusammenbauen, mit denen sie herstellen werden können. Glücklicherweise hilft Lambdalino, der kleine Bruder von Lambdor, dem Spieler dabei. Er zeigt ihm wie er die Maschinen zusammenbauen muss und wie er die Metallstücke herstellen kann. So kann der Spieler es schaffen, aus dem Wirrwarr der Räume zu entkommen.
 
 
@@ -663,7 +665,11 @@ Das Produkt muss Daten speichern und verwalten, insbesondere:
 \begin{telist}
 	\item Tutorial basierend auf (\ref{fa:tutorial} - \ref{fa:tutorial_03})
 	\begin{itemize}
-		\item Der Anwender startet den Tutorial-Modus über das Level-Menü (Systemmodell \ref{appaufbau:Levelauswahl}) oder gelangt automatisch in diesen beim ersten Starten des Spiels mit einem neuen Profil.
+		\item Der Anwender \newglossaryentry{anwender}
+{
+  name=Anwender,
+  description={Beschreibt die Person die das Gerät in der Hand hält und bedient}
+} startet den Tutorial-Modus über das Level-Menü (Systemmodell \ref{appaufbau:Levelauswahl}) oder gelangt automatisch in diesen beim ersten Starten des Spiels mit einem neuen Profil.
 		\item Der Anwender wird durch die Tutorial-Level geleitet, in denen ihm erklärt wird, wie er die Steuerung benutzen, die Elemente an die gewünschte Position bringen kann und wie genau die Maschinen die Elemente verarbeiten.
 		\item Wenn der Tutorial-Modus beendet wurde, gelangt der Anwender in den Hauptbildschirm.
 	\end{itemize}
@@ -977,19 +983,32 @@ Die folgende Grafik enthält die möglichkeiten des benutzers auf die App einzuw
  \end{enumerate}
 
 \subsection{Spiel verlassen} \label{szenarien:quit_game}
-	\begin{enumerate}
-		\item Spiel beenden
-			\begin{enumerate}
-				\item Man klickt auf den Button links oben im Hauptmenü
-				\item Es erscheint ein Fenster \enquote{Wirklich verlassen?}
-				\item Beim betätigen des Button \enquote{Ja} wird das Spiel verlassen und die App beendet
-				\item Außerdem werden alle nicht gespeicherten Änderungen gespeichert
-			\end{enumerate}
-		\item Spiel über das Betriebssystem verlassen
-			\begin{enumerate}
-				\item Der Benutzer berührt den Homebutton auf seinem Gerät zum zurück zu Android zu gelangen.
-			\end{enumerate}
-	\end{enumerate}
+\begin{enumerate}
+	\item Spiel beenden
+		\begin{enumerate}
+			\item Man klickt auf den Button links oben im Hauptmenü
+			\item Es erscheint ein Fenster \enquote{Wirklich verlassen?}
+			\item Beim betätigen des Button \enquote{Ja} wird das Spiel verlassen und die App beendet
+			\item Außerdem werden alle nicht gespeicherten Änderungen gespeichert
+		\end{enumerate}
+	\item Spiel über das Betriebssystem verlassen
+		\begin{enumerate}
+			\item Der Benutzer berührt den Homebutton auf seinem Gerät zum zurück zu Android zu gelangen.
+		\end{enumerate}
+\end{enumerate}
+\clearpage
 
+
+
+
+
+
+
+
+\section{Glossar}
+
+\glsaddall
+\printglossary
+    
 
 \end{document}
