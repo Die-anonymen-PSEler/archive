@@ -847,42 +847,42 @@ Das Produkt speichert und verwaltet Daten, insbesondere:
 \subsection{Allgemeine Appaufteilung}
 
 Der hier gezeigte Systemaufbau ist lediglich eine grobe \enquote{Skizze},
-die die Zusammenhänge zwischen den einzelnen Menüs sowie
+die die Zusammenhänge zwischen den einzelnen Menüs, sowie
 die Gestaltung und Aufteilung der App verdeutlichen soll.\\
-Allgemein gilt jedoch, das so viel wie möglich ohne Text, sondern durch Symbolik erklärt bzw. dargestellt werden soll, da die Zielgruppe nicht zwangsläufig lesen und schreiben kann.\\
+Allgemein gilt jedoch, dass so viel wie möglich ohne Text, sondern durch Symbolik erklärt bzw. dargestellt werden soll, da die Zielgruppe nicht zwangsläufig lesen und schreiben kann.\\
 
 \begin{enumerate}
 	\begin{minipage}{1\textwidth}
 		\item \subsection*{Ladebildschirm:} \label{appaufbau:Ladebildschirm}
-		Nach dem Starten der App, öffnet diese im Ladebildschirm. Hier werden für die App notwendige Daten geladen, um zu garantieren, dass das Spiel flüssig und fehlerfrei läuft. Benutzereingaben sind zu diesem Zeitpunkt nicht möglich.\\
+		Nach dem Starten der App öffnet diese im Ladebildschirm. Hier werden für die App notwendige Daten geladen, um zu garantieren, dass das Spiel flüssig und fehlerfrei läuft. Benutzereingaben sind zu diesem Zeitpunkt nicht möglich.\\
 		\includegraphics[scale=0.5]{assets/LoadScreen}
 	\end{minipage}
 	
 	\begin{minipage}{1\textwidth}
 		
 		\item \subsection*{Profilmenü:} \label{appaufbau:Profilmenue}
-		Das Profilmenü öffnet sich unmittelbar nach erfolgreicher Beendigung des Ladevorgangs(Nähere Informationen zum Ablauf und Ausnahmen folgen im Kapitel Szenarien) und kann jederzeit über den \enquote{Benutzerverwaltungsbutton} im Hauptmenü aufgerufen werden.\\
-		Die einzelenn Spielerprofile werden durch anzeige des Avatar / Spielecharakters sowie den zugehörigen Profilnamen bestimmt.\\
-		Es gibt eine maximale Anzahl an Spielerprofilen, sollte diese erreicht sein so verschwindet der Button zum erzeugen eines neuen Profils.\\
-		Gleichzeitig muss immer ein Spielerprofil vorhanden sein, sollte es nur noch ein Spielerprofil geben , so kann dieses nicht gelöscht werden , bis ein weiteres Profil angelegt wurde.\\
-		In diesem Menü kann der Spieler aus den bestehenden Spielerprofilen auswählen oder in das Menü zum anlegen eines neuen Spielers gelangen.\\
+		Das Profilmenü öffnet sich unmittelbar nach erfolgreicher Beendigung des Ladevorgangs (nähere Informationen zum Ablauf und Ausnahmen folgen im Kapitel Szenarien) und kann jederzeit über den \enquote{Benutzerverwaltungsbutton} im Hauptmenü aufgerufen werden.\\
+		Die einzelnen Spielerprofile werden durch Anzeige des Avatars / der Spielfigur sowie den zugehörigen Profilnamen bestimmt.\\
+		Es gibt eine maximale Anzahl an Spielerprofilen, sollte diese erreicht sein, so verschwindet der Button zum Erzeugen eines neuen Profils.\\
+		Gleichzeitig muss immer mindestens ein Spielerprofil vorhanden sein. Sollte es nur noch ein Spielerprofil geben, so kann dieses nicht gelöscht werden, bis ein weiteres Profil angelegt wurde.\\
+		In diesem Menü kann der Spieler aus den bestehenden Spielerprofilen auswählen oder in das Menü zum Anlegen eines neuen Spielers gelangen.\\
 		\includegraphics[scale=0.5]{assets/PlayerScreen}
 	\end{minipage}
 	
 	\begin{minipage}{1\textwidth}
 		\item \subsection*{\gls{gls:benutzerprofil} anlegen:}
 		In diesem Menü kann ein neues Spielerprofil vom Spieler angelegt werden.\\
-		Der Spieler kann einen Namen für das \gls{gls:benutzerprofil} eingeben und aus einer gegebenen Menge an Avataren bzw. Avatarteilen einen als Identifikationsmerkmal aussuchen bzw zusammen setzen.\\
-		Der gewählte Avatar dient im weiteren Verlauf auch als Spielfigur, wobei jedoch keine Unterschiede außer dem aussehen zwischen den einzelnen Figuren besteht(Alle sind gleich groß, schnell...).\\
-		Auch die Wahl ob man als Linkshänder oder Rechtshänder spielen will kann hier \gls{gls:benutzerprofil} spezifisch gewählt werden.\\
-		Man kann jederzeit über das Benutzerverwaltungsmenü hierhin gelangen um Änderungen am \gls{gls:benutzerprofil} vorzunehmen.\\
-		Sollte der Spieler hier abbrechen, so gelangt er zurück ins Profilmenü, ansonsten landet er entweder im Tutorial oder im Hauptmenü(Mehr dazu im Kapitel Szenarien)\\
+		Der Spieler kann einen Namen für das \gls{gls:benutzerprofil} eingeben und aus einer gegebenen Menge an Avataren bzw. Avatarteilen einen als Identifikationsmerkmal aussuchen beziehungsweise zusammensetzen.\\
+		Der gewählte Avatar dient im weiteren Verlauf auch als Spielfigur, wobei jedoch bis auf das Aussehen keine Unterschiede zwischen den einzelnen Figuren bestehen: Alle sind gleich groß, schnell etc.\\
+		Auch die Wahl, ob man als Links- oder Rechtshänder spielen will, kann hier \gls{gls:benutzerprofil}spezifisch gewählt werden.\\
+		Man kann jederzeit über das Benutzerverwaltungsmenü hierhin gelangen, um Änderungen am \gls{gls:benutzerprofil} vorzunehmen.\\
+		Sollte der Spieler hier abbrechen, so gelangt er zurück ins Profilmenü. Ansonsten landet er entweder im Tutorial oder im Hauptmenü(Mehr dazu im Kapitel Szenarien)\\
 		\includegraphics[scale=0.5]{assets/CreateProfile2}
 	\end{minipage}
 	
 	\begin{minipage}{1\textwidth}
 		\item \subsection*{Hauptmenü:} \label{appaufbau:Hauptmenü}
-		Dies ist der Zentrale Knotenpunkt der App.\\
+		Dies ist der zentrale Knotenpunkt der App.\\
 		Von hier aus kann der Spieler zur Stageauswahl, den Einstellungen, seiner Statistik, zurück ins Profilmenü gelangen oder das Spiel komplett verlassen.\\
 		\includegraphics[scale=0.5]{assets/Mainmenu}
 	\end{minipage}
@@ -890,7 +890,7 @@ Allgemein gilt jedoch, das so viel wie möglich ohne Text, sondern durch Symboli
 	\begin{minipage}{1\textwidth}
 		\item \subsection*{Einstellungen:}
 		Hier können verschiedene grundlegende Einstellungen vorgenommen werden.\\
-		Von hier gelangt man zur Ansicht aller Achievements (Achievementmenu).\\
+		Von hier gelangt man zur Ansicht aller Achievements (Achievementmenü).\\
 		Der Zurück-Button führt ins Hauptmenü, beim Verlassen werden sämtliche Änderungen automatisch gespeichert.\\
 		\includegraphics[scale=0.5]{assets/Einstellungen}
 	\end{minipage}
@@ -898,7 +898,7 @@ Allgemein gilt jedoch, das so viel wie möglich ohne Text, sondern durch Symboli
 	\begin{minipage}{1\textwidth}
 		\item \subsection*{Profilbearbeitungsmenü:}
 		Dieses Menü ist identisch mit dem Menü zum Anlegen eines neuen Spielerprofils und erreichbar über das Profilmenü.\\
-		Beendet man dieses Menü kommt man automatisch zurück ins Hauptmenü.\\
+		Beendet man dieses Menü, kommt man automatisch zurück ins Hauptmenü.\\
 		Außerdem kann hier ein bestehendes \gls{gls:benutzerprofil} gelöscht werden. Sollte man ein \gls{gls:benutzerprofil} löschen, so landet man anschließend im Profilmenü um ein anderes \gls{gls:benutzerprofil} zu wählen.
 		\includegraphics[scale=0.5]{assets/CreateProfile2}
 	\end{minipage}
@@ -912,27 +912,27 @@ Allgemein gilt jedoch, das so viel wie möglich ohne Text, sondern durch Symboli
 	
 	\begin{minipage}{1\textwidth}
 		\item \subsection*{Stageauswahl:}
-		Hier kann man sich eine Stage zum spielen auswählen. Sie sind der Schwierigkeit nach geordnet und können im Spielverlauf freigeschaltet werden.\\
+		Hier kann man der Anwender eine Stage zum Spielen auswählen. Sie sind der Schwierigkeit nach geordnet und können im Spielverlauf freigeschaltet werden.\\
 		\includegraphics[scale=0.5]{assets/Stagemenu}
 	\end{minipage}
 	
 	\begin{minipage}{1\textwidth}
 		\item \subsection*{Levelauswahl:} \label{appaufbau:Levelauswahl}
-		Hier kann ein \gls{gls:level} der Stage in der man sich aktuell befindet gestartet werden.(auch diese müssen nach und nach freigeschaltet werden).\\
+		Hier kann ein \gls{gls:level} der Stage, in der man sich aktuell befindet, gestartet werden (auch diese müssen nach und nach freigeschaltet werden).\\
 		\includegraphics[scale=0.5]{assets/Levelmenu}
 	\end{minipage}
 	
 	\begin{minipage}{1\textwidth}
 		\item \subsection*{Leveldesign:} \label{appaufbau:Leveldesign}
-		Jedes \gls{gls:level}  hat den selben Aufbau am unteren Rand sind die Button und das Steuerkreuz zum bedienen des Spielecharcters sowie ein Button um sich das aktuelle Level-ziel oder Hinweise zum \gls{gls:level} geben zu lassen.\\ Die Anordnung der Buttons wird gespiegelt falls man als Linkshänder spielen will. Der komplette Buttonbereich ist transparent, sodass der Spieler mehr vom Spielfeld sieht.\\
-		In der Linken Oberen Ecke ist ein Button der ins Levelmenü führt. Das Spiel wird dann pausiert und es erscheinen Buttons zum Neustart des Levels, dem verlassen ins Levelmenü, dem Verlassen ins Hauptmenü und Einstellungen(Lautstärke).\\
+		Jedes \gls{gls:level}  hat den selben Aufbau: Am unteren Rand sind die Buttons und das Steuerkreuz zum Bedienen der Spielfigur sowie ein Button, um sich das aktuelle Level-Ziel anzeigen oder Hinweise zum \gls{gls:level} geben zu lassen.\\ Die Anordnung der Buttons wird gespiegelt, falls man als Linkshänder spielen will. Der komplette Buttonbereich ist transparent, sodass der Spieler mehr vom Spielfeld sieht.\\
+		In der linken, oberen Ecke ist ein Button, der ins Level-Menü führt. Das Spiel wird dann pausiert und es erscheinen Buttons zum Neustart des Levels, dem Verlassen ins Level-Menü, dem Verlassen ins Hauptmenü und zu den Einstellungen (Lautstärke).\\
 		Das eigentliche Spielfeld nimmt den Rest des Bildschirms ein.\\
 		\includegraphics[scale=0.5]{assets/LevelDesign2}
 	\end{minipage}
 	
 	\begin{minipage}{1\textwidth}
 		\item \subsection*{Auswertungsmenü:}
-		Sollte der Spieler ein \gls{gls:level} erfolgreich gelöst haben so kommt er ins Auswertungsmenü, hier werden ihm Informationen zu seinem Erfolg , sowie errungene Achievments mitgeteilt. Er hat die Wahl das nächste \gls{gls:level} zu starten oder zurück zum Hauptmenü zu kommen. 
+		Sollte der Spieler ein \gls{gls:level} erfolgreich gelöst haben, so kommt er ins Auswertungsmenü. Hier werden ihm Informationen zu seinem Erfolg , sowie errungene Achievements mitgeteilt. Er hat die Wahl, das nächste \gls{gls:level} zu starten oder zurück zum Hauptmenü zu gelangen. 
 		\includegraphics[scale=0.5]{assets/Auswertungsmenu}
 	\end{minipage}
 
@@ -948,7 +948,7 @@ Allgemein gilt jedoch, das so viel wie möglich ohne Text, sondern durch Symboli
 
 \begin{minipage}{1\textwidth}
 \subsection{Benutzer Interaktionen}
-Die folgende Grafik enthält die möglichkeiten des benutzers auf die App einzuwirken.\\
+Die folgende Grafik enthält die Möglichkeiten des Anwenders, auf die App einzuwirken.\\
 \includegraphics[width=\textwidth]{assets/Benutzerdiagramm}
 \end{minipage}
 
