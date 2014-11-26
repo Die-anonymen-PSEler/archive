@@ -126,7 +126,7 @@ Wunschkriterien seien von nun an im restlichen Pflichtenheft mit einem * markier
 	\item \label{wunsch:multiplechar}Mehrere Spielcharaktere (männlich, weiblich)
 	\item \label{wunsch:multiplemode}Mehrere Spielmodi (siehe Aufgabentypen \ref{subsection:Aufgabentypen})
     \item \label{wunsch:story}Begleitende Story (siehe Handlung des Spieles \ref{subsection:Story})
-    \item \label{wunsch:erweiterndeLevelelemente}Erweiternde Levelelemente, z.B. Leitern, Aufzüge usw.
+    \item \label{wunsch:erweiterndeLevelelemente}Erweiternde Spielelemente und Levelelmente, z.B. Leitern, Wasserebenen, Leben, Rechts- und Linkshänder-Modi usw.
     \item \label{wunsch:wischgesten} Steuerung durch Wischgesten anstelle von Steuerkreuzen (wählbar durch Benutzer)
 \end{enumerate}
 
@@ -134,7 +134,7 @@ Wunschkriterien seien von nun an im restlichen Pflichtenheft mit einem * markier
 
 \begin{enumerate}
 	\item \label{abgrenz:online}Kein \gls{gls:onlinemodus} Modus
-	\item \label{abgrenz:multiplayer}Kein Multiplayer-Modus
+	\item \label{abgrenz:multiplayer}Keine online-Anbindung
 	\item \label{abgrenz:emu}Keine vorgesehene Kompatibilität mit anderen Geräten/Betriebssystemen ohne Emulation
 \end{enumerate}
 
@@ -156,10 +156,10 @@ Wunschkriterien seien von nun an im restlichen Pflichtenheft mit einem * markier
 \section{Spielaufbau}
 
 \subsection{Spielprinzip}
-Das Spielprinzip beruht auf dem Bewegen von Blöcken, indem der Spieler die Blöcke hochhebt und wieder absetzt. Der Spieler muss die verschiedenen Teile des Spieles, die Maschinen(), die Maschinen-Cluster() und die Metallstücke, in die dafür vorgesehenen Positionen bringen. Hat er alle Teile in die jeweils richtige Position gebracht, öffnet sich die Tür zum nächsten Level.
+Das Spielprinzip beruht auf dem Bewegen von Blöcken, indem der Anwender die Blöcke hochhebt und wieder absetzt. Der Anwender muss die verschiedenen Elemente des Spieles, die Maschinen, die Maschinen-Cluster und die Metallstücke, in den dafür vorgesehenen Ablagen positionieren. Hat er alle Elemente in die jeweils richtige Ablage gesetzt, erfolgt die Auswertung, anschließend öffnet sich die Tür zum nächsten Level.
 
 \subsection{Handlung des Spiels*} \label{subsection:Story}
-Lambdor, der Vollstrecker, hat den Spieler entführt und in ein Haus mit vielen magischen Räumen gesperrt, deren Türen verschlossen sind. Um entkommen zu können, muss der Spieler die Türen öffnen. Dafür braucht er besondere Metallstücke, diese hat Lambdor jedoch zerstört. Der Spieler kann sie wieder herstellen, dafür muss er zunächst die Maschinen zusammenbauen, mit denen sie hergestellt werden können. Glücklicherweise hilft Lambdalino, der kleine Bruder von Lambdor, dem Spieler dabei. Er zeigt ihm, wie er die Maschinen zusammenbauen muss und wie er die Metallstücke herstellen kann. So kann der Spieler es schaffen, aus dem Wirrwarr der Räume zu entkommen.
+Lambdor, der Vollstrecker, hat den Anwender entführt und in ein Haus mit vielen magischen Räumen gesperrt, deren Türen verschlossen sind. Um entkommen zu können, muss der Anwender die Türen öffnen. Dafür braucht er besondere Metallstücke, diese hat Lambdor jedoch zerstört. Der Anwender kann sie wieder herstellen, dafür muss er zunächst die Maschinen zusammenbauen, mit denen sie hergestellt werden können. Glücklicherweise hilft Lambdalino, der kleine Bruder von Lambdor, dem Anwender dabei. Er zeigt ihm, wie er die Maschinen zusammenbauen muss und wie er die Metallstücke herstellen kann. So kann der Anwender es schaffen, aus dem Wirrwarr der Räume zu entkommen.
 
 
 \subsection{Spielelemente}
@@ -168,22 +168,22 @@ Zu Beginn eines Levels wird die Spielfigur angezeigt. Diese bewegt sich zweidime
 
 \begin{description}
 	\item[Spielfigur] bewegt sich durch die Welt, sammelt Gegenstände, um mit diesen die Levelquest zu lösen
-	\item[Leben] Jeder Spieler hat je Level drei Leben, die er verlieren kann, wenn er ins Wasser fällt
-	\item[Spielwelt] zweidimensionale Spielwelt auf einem Raster basierend, in der sich der Spieler bewegt
-	\item[Spielebenen] verschiedene Ebenen in der Spielwelt, auf die der Spieler springen kann. Sie sind auf einem Raster angeordnet
+	\item[Leben*] Jeder Anwender hat je Level drei Leben, die er verlieren kann, z.B. wenn er ins Wasser fällt
+	\item[Spielwelt] zweidimensionale Spielwelt auf einem Raster basierend, in der sich die Spielfigur bewegt
+	\item[Spielebenen] verschiedene Ebenen in der Spielwelt, auf die, die Spielfigur springen kann. Sie sind auf einem Raster angeordnet:
 		\begin{enumerate}[label=\arabic*]
 			\item Landebenen: Auf diesen Ebenen liegen die Sammelgegenstände
-			\item Wasserebenen: Fällt der Spieler in das Wasser, muss er wieder am linken unteren Rand anfangen und er verliert ein Leben. Hat er kein Leben mehr, so muss er das Level neu beginnen
+			\item Wasserebenen*: Fällt die Spielfigur in das Wasser, muss er wieder am linken unteren Rand anfangen und er verliert ein Leben. Hat er kein Leben mehr, so muss er das Level neu beginnen
 		\end{enumerate}
-	\item[Sammelgegenstände] \label{elemente:collectable}sind in der Spielwelt verteilt und müssen von der Spielfigur eingesammelt werden, um im Rätselteil eingesetzt zu werden. Diese bestehen aus:
+	\item[Sammelgegenstände] \label{elemente:collectable}sind in der Spielwelt verteilt und müssen von der Spielfigur eingesammelt werden, um in den Ablagen platziert zu werden. Diese bestehen aus:
 	\begin{enumerate}[label=\arabic*]
 		\item Maschinen (entspricht der Abstraktion)
 		\item Metallstücke (entspricht der Variablen)
 		\item Maschinen-Cluster (entspricht der Applikation)
 	\end{enumerate}
-	\item[Ablage] sind die markierten Stellen, an denen Spielobjekte abgelegt werden können.
-	\item[Levelquest] sind gegebene Aufgaben, die zum Abschließen des Levels erfüllt werden müssen.
-	\item[Leveltür] bildet den Abschluss eines Levels. Sobald alle Quests in dem Level gelöst wurden, wird die Tür freigeschaltet.
+	\item[Ablage] sind die markierten Stellen, an denen Spielobjekte abgelegt werden können
+	\item[Levelquest] sind gegebene Aufgaben, die zum Abschließen des Levels erfüllt werden müssen
+	\item[Leveltür] bildet den Abschluss eines Levels. Sobald alle Quests in dem Level gelöst wurden, wird die Tür freigeschaltet
 \end{description}
 
 \subsection{Regeln}
@@ -193,23 +193,23 @@ Zu Beginn eines Levels wird die Spielfigur angezeigt. Diese bewegt sich zweidime
 \begin{minipage}{1\textwidth}
 	\item[Spielregeln] \label{spielaufbau:Spielregeln} 
 	Die Spielfigur beginnt an der unteren, linken Ecke der Spielwelt und muss es schaffen die Tür an der rechten unteren Ecke zu öffnen. Dies gelingt, indem diverse Objekte (Maschinen, Metallobjekte und Maschinen-Cluster) auf dem Spielfeld in Position gebracht werden, sodass diese nach den Prinzipien des Lambda-Kalküls einen Lambda-Ausdruck bilden, welcher zum gewünschten Ergebnis zusammengefasst oder gelöst werden kann.\\
-	Der Spieler muss neben einem Objekt stehen, um dieses aufheben zu können.\\
-	Der Spieler kann immer nur ein Objekt tragen. Um ein anderes Objekt aufzuheben muss er erst das Objekt, das er trägt, ablegen.\\
-	Um auf die oberen Ebenen der Spielwelt zu gelangen, kann die Spielfigur springen, dabei ist zu beachten, dass die Figur nur eine feste Höhe hochspringen kann und der Spieler somit auf Ebenen außerhalb seiner Reichweite nicht durch einfaches Springen gelangen kann. Die Figur kann auch springen, wenn sie etwas in den Händen trägt (dabei kann es zu einer geringen Trägheit kommen, z.B. ungenauere Spielsteuerung (diese ist gewollt und soll das Spiel ein wenig schwieriger gestalten)).\\
-	Befindet sich in jedem freien Feld ein Objekt, wird der daraus resultierende Lambda-Ausdruck ausgewertet. Falls die Maschinen und Metallstücke an den richtigen Positionen stehen und der $\lambda$-Kalkül erfüllt ist, wird dem Spieler das Ergebnis und die spezifische Abarbeitung des Maschinenkonstrukts nach den Regeln des $\lambda$-Kalküls gezeigt. Anschließend öffnet sich die Tür am Level-Ende. Das Level gilt als geschafft, sobald diese erreicht ist.\\
+	Die Spielfigur muss neben einem Objekt stehen, um dieses aufheben zu können.\\
+	Der Spielfigur kann immer nur ein Objekt tragen. Um ein anderes Objekt aufzuheben muss er erst das Objekt, das er trägt, ablegen.\\
+	Um auf die oberen Ebenen der Spielwelt zu gelangen, kann die Spielfigur springen, dabei ist zu beachten, dass die Figur nur eine feste Höhe hochspringen kann und der Anwender somit auf Ebenen außerhalb seiner Reichweite nicht durch einfaches Springen gelangen kann. Die Figur kann auch springen, wenn sie etwas in den Händen trägt (dabei kann es zu einer geringen Trägheit kommen, z.B. ungenauere Spielsteuerung (diese ist gewollt und soll das Spiel ein wenig schwieriger gestalten))*.\\
+	Befindet sich in jeder freien Ablage ein Objekt, wird der daraus resultierende Lambda-Ausdruck ausgewertet. Falls die Maschinen und Metallstücke in den richtigen Ablagen liegen und der $\lambda$-Kalkül erfüllt ist, wird dem Anwender das Ergebnis und die spezifische Abarbeitung des Maschinenkonstrukts nach den Regeln des $\lambda$-Kalküls gezeigt. Anschließend öffnet sich die Tür am Level-Ende. Das Level gilt als geschafft, sobald diese erreicht ist.\\
 	
 \end{minipage}
 
 \begin{minipage}{1\textwidth}
-	\item[Die Verarbeitungsregel der Maschinen] Die Verarbeitung der einzelnen Metallstücke erfolgt in fester Reihenfolge.\\
-	Es wird immer nur ein Metallstück zu einem bestimmten Zeitpunkt verarbeitet.\\
+	\item[Die Verarbeitungsregel der Maschinen] Die Verarbeitung der einzelnen Objekte erfolgt in fester Reihenfolge.\\
+	Es wird immer nur ein Objekt zu einem bestimmten Zeitpunkt verarbeitet.\\
 	Wie das Objekt verarbeitet wird, bestimmt die jeweilige Maschine.\\
 	Was die Maschine verarbeiten soll, befindet sich immer rechts neben dieser Maschine.\\
-	Die Maschinen werden in fester Reihenfolge angeordnet und verarbeiten nacheinander die gegebenen Metallobjekte.\\
+	Die Maschinen werden in fester Reihenfolge angeordnet und verarbeiten nacheinander die gegebenen Objekte.\\
 	Dabei kann jede Maschine nur einmal etwas verarbeiten, nach der Verarbeitung verschwindet sie.\\
 	Jede Maschine kann die Anzahl des zu verarbeitenden Objekts und ggf. dessen Farbe/Muster verändern. Hierbei ist zu beachten, dass eine Maschine auch ein Objekt komplett entfernen kann. Was eine Maschine genau am zu verarbeitenden Objekt verändert, ist durch ihr Aussehen eindeutig bestimmt.\\
 	Das verarbeitete Objekt landet im Bereich oberhalb der Maschine an vorgegebenen Stellen, die durch Metallobjekte, die dieselbe Farbe wie die Maschine besitzen, gekennzeichnet werden (Die Maschine verarbeitet quasi diese gleichfarbigen Blöcke zu Duplikaten des Input-Objekts).\\
-	Nachdem die Maschine verschwunden ist, rücken die Objekte unter ihr alle um eine Position nach oben und die in der obersten Ebene am weitesten links liegende Maschine beginnt die Verarbeitung.\\
+	Nachdem die Maschine verschwunden ist, rücken die Objekte über ihr alle um eine Position nach unten und die in der untersten Ebene am weitesten links liegende Maschine beginnt die Verarbeitung.\\
 \end{minipage}	
 	
 \begin{minipage}{1\textwidth}
@@ -222,26 +222,26 @@ Zu Beginn eines Levels wird die Spielfigur angezeigt. Diese bewegt sich zweidime
 \subsection{Steuerung}  \label{subsection:Steuerung}
 
 Zur Steuerung der Spielfigur in den einzelnen Levels werden im unteren Teil des Bildschirms insgesamt 5 Buttons eingeblendet, die sich in 2 Gruppen aufteilen.\\
-Die Positionierung dieser Buttons kann profilspezifisch geändert werden, dabei gibt es jedoch nur 2 Wahlmöglichkeiten.\\
+Die Positionierung dieser Buttons kann profilspezifisch geändert werden, dabei gibt es jedoch nur 2 Wahlmöglichkeiten*.\\
 
 \begin{enumerate}
 	\begin{minipage}{1\textwidth}
 			\item Gruppe 1:\\
-			Die erste Gruppe an Buttons besteht aus zwei Buttons, durch welche der Spieler die Spielfigur nach Rechts und Links bewegen kann.\\
-			Die Spielfigur bewegt sich dabei solange in die jeweilige Richtung, wie der Spieler den Button drückt.\\
+			Die erste Gruppe an Buttons besteht aus zwei Buttons, durch welche der Anwender die Spielfigur nach Rechts und Links bewegen kann.\\
+			Die Spielfigur bewegt sich dabei solange in die jeweilige Richtung, wie der Anwender den Button drückt.\\
 			Diese Button-Gruppe ist standardmäßig in der linken unteren Ecke des Bildschirms.\\
-			Der Spieler kann immer nur einen der beiden Buttons, nie beide zur selben Zeit drücken.\\
+			Der Anwender kann immer nur einen der beiden Buttons, nie beide zur selben Zeit drücken.\\
 	\end{minipage}
 	
 	\begin{minipage}{1\textwidth}
 			\item Gruppe 2:\\
-			Die zweite Gruppe an Buttons besteht aus drei Buttons, diese dienen zum Einen der Interaktion der Spielfigur mit den Spielobjekten, die es platzieren muss, und zum Anderen der Funktion des Springens und Duckens der Spielfigur.\\
-			Der Button zur Interaktion mit den Spielobjekten hat zwei Funktionen: Der Spieler kann ein Spielobjekt, das in Blickrichtung direkt neben der Spielfigur liegt, aufheben (und trägt es somit) sowie, falls sie Spielfigur bereits ein Objekt trägt, dieses in Blickrichtung in ein benachbartes Feld ablegen. Diese Aktionen können nicht parallel zu einer der anderen drei Aktionen (Bewegen, Springen, Ducken) ausgeführt werden, die Spielfigur muss stehen.\\
-			Der Springen-Button lässt die Spielfigur eine feste Höhe hochspringen, durch paralleles Drücken der Bewegungstasten kann zusätzlich ein Sprung nach links oder rechts ausgeführt werden.Andere Buttons können nicht parallel betätigt werden.\\
-			Der Ducken-Button lässt die Spielfigur sich ducken. Dies führt zu einer Verringerung ihrer Größe, was insbesondere, wenn sie ein Objekt trägt, hilfreich sein kann. Die Spielfigur kann sich parallel zum Ducken nur bewegen, nicht springen oder ein Objekt aufnehmen oder ablegen.\\
+			Die zweite Gruppe an Buttons besteht aus drei Buttons, diese dienen zum Einen der Interaktion der Spielfigur mit den Spielobjekten, die es platzieren muss, und zum Anderen der Funktion des Springens und Duckens* der Spielfigur.\\
+			Der Button zur Interaktion mit den Spielobjekten hat zwei Funktionen: Der Anwender kann ein Spielobjekt, das in Blickrichtung direkt neben der Spielfigur liegt, aufheben (und trägt es somit), falls die Spielfigur bereits ein Objekt trägt, dieses in Blickrichtung in das benachbartes Feld ablegen. Diese Aktionen können nicht parallel zu einer der anderen drei Aktionen (Bewegen, Springen, Ducken) ausgeführt werden, die Spielfigur muss stehen.\\
+			Der Springen-Button lässt die Spielfigur eine feste Höhe hochspringen, durch paralleles Drücken der Bewegungstasten kann zusätzlich ein Sprung nach links oder rechts ausgeführt werden. Andere Buttons können nicht parallel betätigt werden.\\
+			Der Ducken-Button* lässt die Spielfigur sich ducken. Dies führt zu einer Verringerung ihrer Größe, was insbesondere, wenn sie ein Objekt trägt, hilfreich sein kann. Die Spielfigur kann sich parallel zum Ducken nur bewegen, nicht springen oder ein Objekt aufnehmen oder ablegen.\\
 	\end{minipage}
 
-	\item Im Folgenden sehen sie eine ungefähre Darstellung der Steuerung. Die Alternative, die profilspezifisch gewählt werden kann, sieht eine Vertauschung der beiden Button-Gruppen vor, wobei die Button-Gruppe 2 zusätzlich gespiegelt wird.\\
+	\item Im Folgenden sehen sie eine ungefähre Darstellung der Steuerung. Die Alternative, die profilspezifisch gewählt werden kann*, sieht eine Vertauschung der beiden Button-Gruppen vor, wobei die Button-Gruppe 2 zusätzlich gespiegelt wird.\\
 	\includegraphics[scale=0.5]{assets/Steuerung}
 \end{enumerate}
 
@@ -252,10 +252,10 @@ Die Positionierung dieser Buttons kann profilspezifisch geändert werden, dabei 
 
 	\begin{minipage}{1\textwidth}
 	\item[Allgemeine Erklärung:] \label{LambdaKalkül:AlgemeineErklärung} Der $\lambda$-Kalkül ist eine formale Sprache, die im Allgemeinen dazu dient, Funktionen zu definieren bzw. beschreiben.\\
-	In unserem Fall beschränken wir uns jedoch auf die beiden grundlegenden Regeln des $\lambda$-Kalkül, die $\alpha$-Regel und die $\beta$-Regel. Das Spiel soll dem Spieler diese beiden wichtigen Regeln des $\lambda$-Kalkül anschaulich erklären.\\
+	In unserem Fall beschränken wir uns jedoch auf die beiden grundlegenden Regeln des $\lambda$-Kalkül, die $\alpha$-Regel und die $\beta$-Regel. Das Spiel soll dem Anwender diese beiden wichtigen Regeln des $\lambda$-Kalkül anschaulich erklären.\\
 	$\alpha$-Regel: Die Alpha-Regel besagt im $\lambda$-Kalkül, dass die Variablen eines $\lambda$-Terms jederzeit umbenannt werden dürfen, um die Eindeutigkeit dieser Terme zu waren. Bsp.:\\
 	$\lambda x.x [x \leftarrow y] \Rightarrow \lambda y.y.$\\
-	Wichtig ist hierbei, dass keine Doppelverwendung von Variablennamen in unterschiedlichen $\lambda$-Termen entsteht. Vielmehr ist diese Regel dazu gedacht, beim Auftreten einer Doppelbelegung eine der beiden Variablen umzutaufen, um eindeutige $\lambda$-Terme zu formen.
+	Wichtig ist hierbei, dass keine Doppelverwendung von Variablennamen in unterschiedlichen $\lambda$-Termen entsteht. Vielmehr ist diese Regel dazu gedacht, beim Auftreten einer Doppelbelegung eine der beiden Variablen umzutaufen, um eindeutige $\lambda$-Terme zu formen.\\
 	$\beta$-Regel: Die $\beta$-Regel dient der Vereinfachung, Auflösung oder Umformung von $\lambda$-Termen.\\
 	Sie besagt, dass ein $\lambda$-Term, von zum Beispiel dieser Form ($\lambda$x.x+2)(z), umgeformt werden kann, indem der Ausdruck ``z'' in den Term hinter dem ``.'' eingesetzt wird und zwar für genau die Variable, die zwischen ``$\lambda$'' und dem ``.'' steht, um es anschaulich zu erklären. Bsp.:\\
 	$(\lambda x.x+2)(z) = (x+2)[x \leftarrow z] = z + 2$ \\
@@ -281,38 +281,38 @@ Die Positionierung dieser Buttons kann profilspezifisch geändert werden, dabei 
 \begin{description}
 	
 	\begin{minipage}{1\textwidth}
-		\item[Tutorial:] \label{Levelaufbau:Tutorial}  Das Tutorial umfasst die ersten Level des Spiels. Der Spieler soll hier das Spielprinzip im Spielmodus Puzzle Schritt für Schritt verstehen.
+		\item[Tutorial:] \label{Levelaufbau:Tutorial}  Das Tutorial umfasst die ersten Level des Spiels. Der Anwender soll hier das Spielprinzip im Spielmodus Puzzle Schritt für Schritt verstehen.
 		Umgesetzt wird dies durch sehr einfache Level, wobei in jedem Level ein neuer Faktor hinzukommt.\\
-		Im ersten Level liegt der Fokus darauf, dem Spieler die Steuerung und die Level-Elemente zu erklären. 
+		Im ersten Level liegt der Fokus darauf, dem Anwender die Steuerung und die Level-Elemente zu erklären. 
 		In den darauffolgenden Levels wird die Spielmechanik mit Maschinen und Metallobjekten erklärt.\\
-		Zwischen den Levels wird die Story eventuell durch kleine, animierte Zwischenszenen erklärt.\\		 
+		Zwischen den Levels wird die Story* eventuell durch kleine, animierte Zwischenszenen erklärt.\\		 
 	\end{minipage}
 		
 
-	\item[Levelbeispiel:] \label{Levelaufbau:Levelbeispiel} Als Level-Beispiel dient das erste Tutorial-Level. Es wird in mehrere Bilder aufgeteilt, um die möglichen Aktionen des Spieler zu erklären, sowie den grundlegenden Ablauf eines Levels darzustellen.\\
+	\item[Levelbeispiel:] \label{Levelaufbau:Levelbeispiel} Als Level-Beispiel dient das erste Tutorial-Level. Es wird in mehrere Bilder aufgeteilt, um die möglichen Aktionen des Anwender zu erklären, sowie den grundlegenden Ablauf eines Levels darzustellen.\\
 	
 	\begin{enumerate}
 		\begin{minipage}{1\textwidth}
 			\item \label{Levelaufbau:Levelstart	} Zum Level-Start befindet sich die Spielfigur am rechten Rand der Spielwelt,\\
 			außerdem ist das Level-Ziel eingeblendet.\\
 			Das Level-Ziel gibt die Zielkonstellation an, die das zusammengesetzte Konstrukt aus Maschinen und Metallobjekten nach Verarbeitung nach den Regeln des $\lambda$-Kalküls haben soll.\\
-			Das Level-Ziel kann der Spieler durch einen Klick auf den Hacken unten rechts ausblenden und sich jederzeit durch einen Klick auf den Button mit dem ``Fahnen-Symbol'' unten in der Mitte des Schirms anzeigen lassen.\\ Solange Hinweise oder das Level-Ziel eingeblendet sind, kann der Spieler keine anderen Aktionen ausführen.\\
+			Das Level-Ziel kann der Anwender durch einen Klick auf den Hacken unten rechts ausblenden und sich jederzeit durch einen Klick auf den Button mit dem ``Fahnen-Symbol'' unten in der Mitte des Bildschirms anzeigen lassen.\\ Solange Hinweise oder das Level-Ziel eingeblendet sind, kann der Anwender keine anderen Aktionen ausführen.\\
 			\includegraphics[scale=0.5]{assets/Levelziel}
 		\end{minipage}
 		
 		\begin{minipage}{1\textwidth}
-			\item \label{Levelaufbau:ErsteSchritte} Nach Ausblenden des Level-Ziels kann der Spieler mit dem Lösen des Levels beginnen. Hierzu muss er die Spielfigur zum Metallobjekt bewegen, dieses per Button-Druck aufheben und anschließend in die freie Ablage daneben platzieren.\\
+			\item \label{Levelaufbau:ErsteSchritte} Nach Ausblenden des Level-Ziels kann der Anwender mit dem Lösen des Levels beginnen. Hierzu muss er die Spielfigur zum Metallobjekt bewegen, dieses per Button-Druck aufheben und anschließend in die freie Ablage daneben platzieren.\\
 			Die über den Objekten angezeigten Namen dienen lediglich zur Erklärung, welches Objekt was darstellen soll und wird im eigentlichen Spiel nicht angezeigt.\\
 			\includegraphics[scale=0.5]{assets/Level1mA}
 		\end{minipage}
 		
 		\begin{minipage}{1\textwidth}
-			\item \label{Levelaufbau:Levelende} Sind alle Ablagen gefüllt, so beginnt die Auswertung des Konstrukts.\\ Führt das Konstrukt zum gewünschten Ergebnis, so öffnet sich die Level-Tür  und der Spieler kann durch Erreichen dieser Tür das Level beenden. Dadurch gelangt er ins Auswertungsmenü.\\
+			\item \label{Levelaufbau:Levelende} Sind alle Ablagen gefüllt, so beginnt die Auswertung des Konstrukts.\\ Führt das Konstrukt zum gewünschten Ergebnis, so öffnet sich die Level-Tür  und der Anwender kann durch Erreichen dieser Tür das Level beenden. Dadurch gelangt er ins Auswertungsmenü.\\
 			\includegraphics[scale=0.5]{assets/LevelEnde}
 		\end{minipage}
 		
 		\begin{minipage}{1\textwidth}
-			\item \label{Levelaufbau:Levelhinweis} Während des Spielens eines Levels kann der Spieler jederzeit das Hinweisfenster öffnen. Dieses liefert, durch ein Bild dargestellt, levelspezifisch einen Hinweis auf die Zielkonfiguration des jeweiligen Levels.\\
+			\item \label{Levelaufbau:Levelhinweis} Während des Spielens eines Levels kann der Anwender jederzeit das Hinweisfenste*r öffnen. Dieses liefert, durch ein Bild dargestellt, levelspezifisch einen Hinweis auf die Zielkonfiguration des jeweiligen Levels.\\
 			\includegraphics[scale=0.5]{assets/Levelhinweis}
 		\end{minipage}
 	\end{enumerate}
@@ -322,7 +322,7 @@ Die Positionierung dieser Buttons kann profilspezifisch geändert werden, dabei 
 	\item[Konstrukte:] \label{Levelaufbau:Konstrukte} Im Folgenden sind einige Konstrukte, die in Leveln möglich sind, jeweils mit einer kurzen Erklärung aufgeführt.\\
 	
 		\begin{minipage}{1\textwidth}
-			Einfacher Aufbau einer  (grün) mit einem rechts daneben befindlichen Metallobjekt(Blau) als Input.\\
+			Einfacher Aufbau einer Maschine (grün) mit einem rechts daneben befindlichen Metallobjekt(Blau) als Input.\\
 			In diesem Fall würde bei der Abarbeitung kein Ergebnis übrig bleiben, da die Maschine keine Metallobjekte besitzt, die es zu dem Input-Objekt verarbeiten könnte. Das heißt, das Resultat wäre nichts: sowohl das Metallobjekt als auch die Maschine verschwinden bei der Verarbeitung.\\
 			\includegraphics[scale=0.5]{assets/LevelBsp1}
 		\end{minipage}
@@ -341,8 +341,8 @@ Die Positionierung dieser Buttons kann profilspezifisch geändert werden, dabei 
 		
 		\begin{minipage}{1\textwidth}
 			Wie im oberen Bild zu erkennen ist, sind die Ablagen in eine Art Raster unterteilt.\\
-			Dabei gilt, dass die unterste Ebene die primäre Verarbeitungsebene darstellt. Jede Maschine kann zusätzlich über sich eine Reihe von weiteren Ebenen haben, die eine Verschachtelung darstellen sollen. In dieser Verschachtelung können Metallobjekte der gleichen Farbe wie die darunterliegende Maschine sein, welche der Maschine als Output-Objekte, die sie bearbeitet, dienen, oder Metallobjekte anderer Farbe sowie weitere Maschinen mit dazugehörigen Verschachtelungsebenen. Welche Ablage zu welcher Ebene oder zu welcher Maschine gehört, wird durch geschickte Positionierung der Ablagen oder Verdeutlichung durch Röhren oder Ähnliches bewerkstelligt.\\
-			Maschine mit einem Metallobjekt gleicher Farbe in darüberliegender Verschachtelungsebene.\\ 
+			Dabei gilt, dass die unterste Ebene die primäre Verarbeitungsebene darstellt. Jede Maschine kann zusätzlich über sich eine Reihe von weiteren Ebenen haben, die eine Verschachtelung darstellen sollen. In dieser Verschachtelung können Metallobjekte der gleichen Farbe wie die darunterliegende Maschine sein, welche der Maschine als Output-Objekte, die sie bearbeiten soll, dienen, oder Metallobjekte anderer Farbe sowie weitere Maschinen mit dazugehörigen Verschachtelungsebenen. Welche Ablage zu welcher Ebene oder zu welcher Maschine gehört, wird durch geschickte Positionierung der Ablagen oder Verdeutlichung durch Röhren oder Ähnliches* bewerkstelligt.\\
+			Maschine mit einem Metallobjekt gleicher Farbe in darüber liegender Verschachtelungsebene.\\ 
 			\includegraphics[scale=0.5]{assets/LevelVerarbeitungBsp}\\
 			Maschine mit zwei Metallobjekten gleicher Farbe in darüberlegender Verschachtelungsebene.\\
 			\includegraphics[scale=0.5]{assets/LevelBsp2Out}\\
@@ -379,12 +379,12 @@ Die Positionierung dieser Buttons kann profilspezifisch geändert werden, dabei 
 			
 		\begin{minipage}{1\textwidth}
 			Ist ein Ampel-Konstrukt an der Reihe zu arbeiten, so gibt es zwei Möglichkeiten:\\
-			Die Ampel ist rot, was bedeutet, dass in der darüber liegenden Verschachtelung mindestens zwei Maschinen vorhanden sind. Das heißt, der normale Auswertungsablauf hält und die Verschachtelung oberhalb der roten Ampel wird ausgewertet, bis nur noch eine Maschine darin vorhanden ist. Dann schaltet die Ampel auf grün um und verschwindet anschließend. Die darüberliegende Verschachtelung rutscht um eine Ebene nach unten und setzt die normale Verarbeitung fort.\\ 
+			Die Ampel ist rot, was bedeutet, dass in der darüber liegenden Verschachtelung mindestens zwei Maschinen vorhanden sind. Das heißt, der normale Auswertungsablauf hält und die Verschachtelung oberhalb der roten Ampel wird ausgewertet, bis nur noch eine Maschine darin vorhanden ist. Dann schaltet die Ampel auf grün um und verschwindet anschließend. Die darüber liegende Verschachtelung rutscht um eine Ebene nach unten und setzt die normale Verarbeitung fort.\\ 
 			\includegraphics[scale=0.5]{assets/AuswertungAmpelRot}
 		\end{minipage}
 		
 		\begin{minipage}{1\textwidth}
-			Ist die Ampel grün, so heißt das, dassnur eine Maschine oder weniger in der darüber liegenden Verschachtelung ist. Die Ampel verschwindet und die darüberliegende Verschachtlung rutscht um eine Ebene nach unten und setzt die normale Verarbeitung fort.\\  
+			Ist die Ampel grün, so heißt das, dass nur eine Maschine oder weniger in der darüber liegenden Verschachtelung ist. Die Ampel verschwindet und die darüber liegende Verschachtlung rutscht um eine Ebene nach unten und setzt die normale Verarbeitung fort.\\  
 			\includegraphics[scale=0.5]{assets/AsuwertungAmpelGrun}
 		\end{minipage}
 
@@ -396,15 +396,15 @@ Die Positionierung dieser Buttons kann profilspezifisch geändert werden, dabei 
 
 \subsection{Aufgabentypen} \label{subsection:Aufgabentypen}
 
-In jedem Spieltyp läuft im Hintergrund ein Timer mit, der die Spielzeit des Levels misst. Dadurch können Timer-Achievements freigeschaltet werden.
+In jedem Spieltyp läuft im Hintergrund ein Timer* mit, der die Spielzeit des Levels misst. Dadurch können Timer-Achievements* freigeschaltet werden.
 \begin{enumerate}
 	\item \label{aufgabentyp:puzzle} Puzzle: Aufgabentyp, bei dem an die vorgegebenen Stellen Maschinen, Metallobjekte oder Maschinen-Cluster eingefügt werden müssen, um einen $\lambda$-Ausdruck zu bauen, der ein gewünschtes Ergebnis liefert oder einen gewünschten Endzustand hat.\\
 	Die benötigten Teile sind in der Spielwelt verstreut und müssen an den passenden Stellen eingefügt werden.\\
-	Der Spieler kann dabei immer nur ein Objekt tragen.\\
+	Der Anwender kann dabei immer nur ein Objekt tragen.\\
 	Es sind auch falsche Konstellationen möglich, die zu einem falschen Ergebnis führen.\\
-	\item \label{aufgabentyp:fehlerfindung} Fehlerfindung: Aufgabentyp, bei dem der $\lambda$-Ausdruck schon fertig zusammengesetzt ist, jedoch nicht in der richtigen Konstellation.\\
-	Der Spieler muss die Fehler finden und die entsprechenden Objekte austauschen.\\
-	\item \label{aufgabentyp:ergebnis} Ergebnisbestimmung: Die Maschinenkonstruktion ist gegeben, der Spieler muss mit einer gegebenen Menge an Elementen die Endkonstellation bestimmen und angeben. ($\beta$ - Reduktion durchführen) 
+	\item \label{aufgabentyp:fehlerfindung} Fehlerfindung*: Aufgabentyp, bei dem der $\lambda$-Ausdruck schon fertig zusammengesetzt ist, jedoch nicht in der richtigen Konstellation.\\
+	Der Anwender muss die Fehler finden und die entsprechenden Objekte austauschen.\\
+	\item \label{aufgabentyp:ergebnis} Ergebnisbestimmung*: Die Maschinenkonstruktion ist gegeben, der Anwender muss mit einer gegebenen Menge an Elementen die Endkonstellation bestimmen und angeben. ($\beta$ - Reduktion durchführen) 
 \end{enumerate}
 
 \clearpage
@@ -508,14 +508,14 @@ Die Zielgruppe besteht überwiegend aus Kindern im Alter von acht bis zwölf Jah
 \subsection{Spieldesign}
 
 \begin{falist}[resume]
-	\item \label{fa:level} \textbf{Level} Ein Level eine Aufgabe mit gegebenem Ziel und einer Menge an Spielobjekten, die der Spieler an vorgegebenen Stellen platzieren muss.
+	\item \label{fa:level} \textbf{Level} Ein Level eine Aufgabe, mit gegebenem Ziel und einer Menge an Spielobjekten, die der Anwender an vorgegebenen Stellen platzieren muss.
 	\item \label{fa:levelmenue} \textbf{Levelmenü} bietet eine Übersicht über alle Level des Spiels (Musskriterium \ref{muss:5indilevel}). Diese sind unterteilt in abgeschlossene und nicht abgeschlossene Level.
     \begin{falist}
         \item \textbf{Erstes Level} Das erste Level ist automatisch freigeschaltet.
         \item \textbf{Freischalten weiterer Level} Das Freischalten weiterer Leve erfolgt durch Freispielen. Beendigung eines Levels führt zum Freischalten des nächsten.
     \end{falist}
     \item \label{fa:spielen} \textbf{Level spielen}
-    \item \label{fa:buttons_muss} \textbf{Button / Steuerung (Muss)}
+    \item \label{fa:buttons_muss} \textbf{Button / Steuerung}
     \begin{falist}
     	\item \label{fa:button_rechts_kreuz} \textbf{Drücken der rechten Pfeiltaste} Bewegt die Spielfigur in der Spielwelt nach Rechts.
     	\item \label{fa:button_links_kreuz} \textbf{Drücken der linken Pfeiltaste} Bewegt die Spielfigur in der Spielwelt nach Links.
@@ -523,29 +523,29 @@ Die Zielgruppe besteht überwiegend aus Kindern im Alter von acht bis zwölf Jah
     	\item \label{fa:button_flagge} \textbf{Drücken des Flaggen Buttons} Zeigt einen Dialog, der die Zielkonstellation des Levels enthält.
     	\item \label{fa:button_aufnehmen_ablegen} \textbf{Drücken des Aufnahme-/Ablegen Buttons} Wenn die Spielfigur keine Maschine trägt, nimmt Sie die Maschine, die sich vor der Spielfigur (Blickrichtung) befindet, auf. Sollte dort keine Maschine sein, wird keine Handlung ausgeführt. Analog für das Ablegen einer Maschine.
     	\item \label{fa:button_jump} \textbf{Drücken des Sprungbuttons} Durch das Drücken des Sprungbuttons springt die Spielerfigur. In Kombination mit \ref{fa:button_rechts_kreuz} und \ref{fa:button_links_kreuz} kann ein Sprung in die entsprechende Richtung erfolgen.
-    	\item \label{fa:button_ducken} \textbf{Drücken des Ducken Buttons} Durch das Drücken des Duckenbuttons wird die Größe der Spielerfigur verringert. Sobald der Spieler den Button los lässt kehrt die Figur zu ihrer ursprünglichen Größe zurück.
+    	\item \label{fa:button_ducken} \textbf{Drücken des Ducken Buttons} Durch das Drücken des Duckenbuttons wird die Größe der Spielerfigur verringert. Sobald der Anwender den Button los lässt kehrt die Figur zu ihrer ursprünglichen Größe zurück.
     \end{falist}
-    \item \label{fa:button_wunsch} \textbf{Button / Steuerung (Wunsch)}
+    \item \label{fa:button_wunsch} \textbf{Button / Steuerung *}
     \begin{falist}
-    	\item \label{fa:wunsch_button_rechts} \textbf{Wischgeste nach Rechts} Der Spieler wischt mit seinem Finger über den Bildschirm nach rechts. Dadurch bewegt sich die Spielfigur um einen Schritt nach rechts.
-    	\item \label{fa:wunsch_button_links} \textbf{Wischgeste nach Links} Der Spieler wischt mit seinem Finger über den Bildschirm nach links. Dadurch bewegt sich die Spielfigur um einen Schritt nach links.
-    	\item \label{fa:wunsch_button_oben} \textbf{Wischgeste nach Oben} Der Spieler wischt mit seinem Finger über den Bildschirm nach oben. Dadurch führt die Spielfigur einen Sprung aus. Diese fuktionale Anforderung ist kombinierbar mit \ref{fa:wunsch_button_rechts} und \ref{fa:wunsch_button_links}. Sollte der Spieler geduckt sein, richtet sich die Spielfigur wieder auf.
-    	\item \label{fa:wunsch_button_unten} \textbf{Wischgeste nach Unten} Der Spieler wischt mit seinem Finger über den Bildschirm nach unten. Dadurch beginnt die Spielfigur sich zu ducken. Sie verharrt in diesem \enquote{Modus} bis der Benutzer \ref{fa:wunsch_button_oben} ausführt.
+    	\item \label{fa:wunsch_button_rechts} \textbf{Wischgeste nach Rechts} Der Anwender wischt mit seinem Finger über den Bildschirm nach rechts. Dadurch bewegt sich die Spielfigur um einen Schritt nach rechts.
+    	\item \label{fa:wunsch_button_links} \textbf{Wischgeste nach Links} Der Anwender wischt mit seinem Finger über den Bildschirm nach links. Dadurch bewegt sich die Spielfigur um einen Schritt nach links.
+    	\item \label{fa:wunsch_button_oben} \textbf{Wischgeste nach Oben} Der Anwender wischt mit seinem Finger über den Bildschirm nach oben. Dadurch führt die Spielfigur einen Sprung aus. Diese funktionale Anforderung ist kombinierbar mit \ref{fa:wunsch_button_rechts} und \ref{fa:wunsch_button_links}. Sollte der Anwender geduckt sein, richtet sich die Spielfigur wieder auf.
+    	\item \label{fa:wunsch_button_unten} \textbf{Wischgeste nach Unten} Der Anwender wischt mit seinem Finger über den Bildschirm nach unten. Dadurch beginnt die Spielfigur sich zu ducken. Sie verharrt in diesem \enquote{Modus} bis der Benutzer \ref{fa:wunsch_button_oben} ausführt.
     \end{falist}
-	\item \textbf{Interaktion mit den Spielelementen aus Nr. \ref{elemente:collectable}} Sammelgegenstände die abgelegt sind können nicht durch den Spieler passiert werden und müssen übersprungen werden (siehe \ref{fa:button_jump} bzw. \ref{fa:wunsch_button_oben}).
-	\item \textbf{Interaktion mit den Boxen} Die Boxen sind in einer weiteren Ebene und können von der Spielfigur zur Ablage der (Metallstücke und Maschinen benutzt werden).
+	\item \textbf{Interaktion mit den Spielelementen aus Nr. \ref{elemente:collectable}} Sammelgegenstände die abgelegt sind können nicht durch den Anwender passiert werden und müssen übersprungen werden (siehe \ref{fa:button_jump} bzw. \ref{fa:wunsch_button_oben}).
+	\item \textbf{Interaktion mit den Boxen} Die Boxen sind in einer weiteren Ebene und können von der Spielfigur zur Ablage der Metallstücke und Maschinen benutzt werden.
 	\item \label{fa:auswertung_animiert} \textbf{Animierte Auswertung der Maschinenkonstellation} Durch eine Animation wird gezeigt wie die Verarbeitung der Maschinen stattfindet (Auswertungsbeispiel siehe \ref{Levelaufbau:Auswertungsbeispiele}).
 \end{falist}
 
-\subsection{Achievements}
+\subsection{Achievements*}
 
 \begin{falist}[resume]
-    \item \label{fa:achievements} \textbf{Achievements} sind Ziele die von dem Spiel vorgegeben werden und gutes Spielen des Benutzers auszeichnen. Angedacht dafür sind folgende:
+    \item \label{fa:achievements} \textbf{Achievements} sind Ziele die von dem Spiel vorgegeben werden und gutes Spielen des Anwenders auszeichnen. Angedacht dafür sind folgende:
     \begin{itemize}
     	\item Abschließen des Tutorial-Modus
     	\item Abschließen eines Kapitels
-    	\item Spielzeit unterhalb einer gegebenen Schranke (Wunsch)
-    	\item Spielzeit oberhalb einer gegebenen Schranke (Wunsch)
+    	\item Spielzeit unterhalb einer gegebenen Schranke
+    	\item Spielzeit oberhalb einer gegebenen Schranke
     	\item Fun-Achievements (Nicht-Schwimmer, Nachtsschwärmer)
     	\item First-Try
     \end{itemize}
@@ -554,7 +554,7 @@ Die Zielgruppe besteht überwiegend aus Kindern im Alter von acht bis zwölf Jah
 \subsection{Ladeverhalten}
 
 \begin{falist}[resume]
-	\item \label{fa:tipps} \textbf{Anzeigen von Tipps} Während das Spiel ein Level (\ref{fa:level}) geladen wird, werden Tipps angezeigt.
+	\item \label{fa:tipps} \textbf{Anzeigen von Tipps} Während das Spiel ein Level (\ref{fa:level}) lädt, werden Tipps angezeigt.
 \end{falist}
 
 \subsection{Sonstiges}
@@ -600,7 +600,7 @@ Das Produkt speichert und verwaltet Daten, insbesondere:
 \begin{pdlist}[resume]
     \item Spieldauer
     \item Anzahl gelöste Level
-    \item Anzahl Achievements
+    \item Anzahl Achievements*
 \end{pdlist}
 
 \subsection{Einstellungen}
@@ -608,7 +608,7 @@ Das Produkt speichert und verwaltet Daten, insbesondere:
 
 \begin{pdlist}[resume]
 	\item Einstellen der Lautstärke
-	\item An/Aus für Lautstärke
+	\item Rechts- oder Linkshänder-Modus*
 \end{pdlist}
 
 \clearpage
@@ -629,7 +629,7 @@ Das Produkt speichert und verwaltet Daten, insbesondere:
 \subsection{Allgemeine Ziele}
 
 \begin{nflist}
-    \item Die Navigation durch das Spiel ist für den Spieler intuitiv, unabhängig von seinem Alter.
+    \item Die Navigation durch das Spiel ist für den Anwender intuitiv, unabhängig von seinem Alter.
     \item Das Spiel ist insgesamt kindgerecht entworfen, d.h.:
     \begin{itemize}
     \item Weitestgehend werden Piktogramme verwendet.
@@ -639,7 +639,7 @@ Das Produkt speichert und verwaltet Daten, insbesondere:
 
 \subsection{Benutzbarkeit, Performance, Stabilität}
 \begin{nflist}[resume]
-	\item Das Starten eines Levels beträgt höchstens 10s. 
+	\item Das Starten eines Levels beträgt höchstens 10 Sekunden. 
 	\item Das Programm läuft stabil: 
 	\begin{nflist}
 		\item Es tritt kein Fehlverhalten der Software auf.
@@ -648,7 +648,7 @@ Das Produkt speichert und verwaltet Daten, insbesondere:
 	\item Die Auswertung eines Levels(Sieg oder Niederlage) dauert max. 5 Sekunden.
 	\item Der benötigte Speicherverbrauch reduziert sich auf ein Minimum. 
 	\item Nach Beendigung eines Levels wird der Spielstand automatisch gespeichert.
-	\item Die maximale Anzahl an Spielerprofilen ist begrenzt. Sie beträgt 5.
+	\item Die maximale Anzahl an Spielerprofilen ist auf 5 begrenzt.
 \end{nflist}
 
 \subsection{Qualität und Rechtliches}
@@ -689,22 +689,22 @@ Das Produkt speichert und verwaltet Daten, insbesondere:
 \subsection{Funktionssequenzen}
 
 \begin{telist}
-	\item{Erstes Ausführen des Spieles} \label{szenarien:first_run}
+	\item{Erstes Ausführen des Spiels} \label{szenarien:first_run}
 	\begin{itemize}
 		\item Starten der Applikation durch Anklicken der App-Verknüpfung
-		\item Der Ladebildschirm(\ref{appaufbau:Ladebildschirm}) wird sichtbar und informiert über den Ladezustand des Spieles.
-		\item Der \gls{gls:anwender} wird direkt zum "`Benutzer-Anlegen"'  weitergeleitet
-		\item Wurde ein Benutzer angelegt, öffnet sich die Einstellung
+		\item Der Ladebildschirm(\ref{appaufbau:Ladebildschirm}) wird sichtbar und informiert über den Ladezustand des Spiels.
+		\item Der \gls{gls:anwender} wird direkt zum "`Benutzer-Anlegen"- Bereich weitergeleitet
+		\item Wurde ein Profil angelegt, öffnet sich die Einstellung
 		\item Geht der Anwender von den Einstellungen weiter, beginnt der Tutorial-Modus
 		\item Lamdbalino begrüßt den Anwender
-		\item Es wird in die Handlung des Spieles eingeführt
+		\item Es wird in die Handlung des Spiels eingeführt
 		\item Nach dem Tutorial-Modus öffnet sich das Levelmenü und das erste Level ist freigeschaltet 
 	\end{itemize}
 	
 	\item{Allgemeiner Spielstart} \label{szenarien:allg_spielstart}
 	\begin{itemize}
 		\item Starten der Applikation durch Anklicken der App-Verknüpfung
-		\item Der Ladebildschirm(\ref{appaufbau:Ladebildschirm}) wird sichtbar und informiert über den Ladezustand des Spieles
+		\item Der Ladebildschirm(\ref{appaufbau:Ladebildschirm}) wird sichtbar und informiert über den Ladezustand des Spiels
 		\item Nach dem Laden kann man den Benutzer aus vorhandenen Profilen auswählen oder man legt ein neues Profil (\ref{szenarien:ProfilAnlegen}) an
 		\item Das Hauptmenü (\ref{appaufbau:Hauptmenü}) wird geöffnet		
 	\end{itemize}
@@ -712,7 +712,7 @@ Das Produkt speichert und verwaltet Daten, insbesondere:
 	\item Tutorial basierend auf (\ref{fa:tutorial} - \ref{fa:tutorial_03})
 	\begin{itemize}
 		\item Der Anwender startet den Tutorial-Modus über das Level-Menü (Systemmodell \ref{appaufbau:Levelauswahl}) oder gelangt automatisch in diesen beim ersten Starten des Spiels mit einem neuen Profil.
-		\item Der Anwender wird durch die Tutorial-Level geleitet, in denen ihm erklärt wird, wie er die Steuerung benutzen, die Elemente an die gewünschte Position bringen kann und wie genau die Maschinen die Elemente verarbeiten.
+		\item Der Anwender wird durch die Tutorial-Level geleitet, in denen ihm erklärt wird, wie er die Steuerung benutzen, die Elemente in die gewünschte Ablage bringen kann und wie genau die Maschinen die Elemente verarbeiten.
 		\item Wenn der Tutorial-Modus beendet wurde, gelangt der Anwender in den Hauptbildschirm.
 	\end{itemize}
 
@@ -720,8 +720,8 @@ Das Produkt speichert und verwaltet Daten, insbesondere:
 	\begin{itemize}
 		\item Der Anwender befindet sich im Hauptmenü und drückt auf den \enquote{Benutzerverwaltungsbutton}. Diese Aktion führt den Benutzer zum Profilmenü.
 		\item Durch Wischgesten gelangt der Benutzer an das Ende der Liste, wo sich ein \enquote{+}-Zeichen befindet. Durch Drücken dieses Symbols wird ein neuer Dialog gestartet.
-		\item In diesem Dialogfenster kann der Benutzer einen neuen Profilnamen angeben. Durch drücken des \enquote{Weiter}-Buttons gelangt der zu einem weiteren Dialog.
-		\item In diesem Dialog kann er einen Charakter auswählen und sowie auswählen, ob dieses Profil im Rechts- oder Linkshänder Modus gespielt werden soll. Der Dialog wird durch Betätigen des \enquote{OK}-Buttons beendet.
+		\item In diesem Dialogfenster kann der Benutzer einen neuen Profilnamen angeben. Durch drücken des \enquote{Weiter}-Buttons gelangt er zu einem weiteren Dialog.
+		\item In diesem Dialog kann er einen Charakter auswählen und auswählen, ob dieses Profil im Rechts- oder Linkshänder Modus* gespielt werden soll. Der Dialog wird durch Betätigen des \enquote{OK}-Buttons beendet.
 	\end{itemize}
 	
 	\item Ein Benutzerprofil auswählen (\ref{fa:spielerprofile_wechseln})
@@ -740,14 +740,14 @@ Das Produkt speichert und verwaltet Daten, insbesondere:
 	\begin{itemize}
 		\item Der Anwender befindet sich im Hauptmenü und drückt auf den \enquote{Benutzerverwaltungsbutton}. Diese Aktion führt den Benutzer zum Profilmenü.
 		\item Der Anwender wählt den \enquote{Bearbeitungs-Button} neben dem Profil, welches er bearbeiten möchte, aus.
-		\item Im Bearbeitungsbereich kann der Anwender den Namen, den Avatar und die Steuerungseinstellung (Rechts- oder Linkshänder) verändern.
+		\item Im Bearbeitungsbereich kann der Anwender den Namen, den Avatar und die Position der Steuerung (Rechts-oder Linkshänder- Modus)*  verändern.
 	\end{itemize}
 	
 	\item{Informationen aufrufen} \label{szenarien:infomartionen_aufrufen} (\ref{fa:infobereich})
 	\begin{itemize}
 		\item Im Hauptmenü wählt man den Punkt \enquote{Einstellungen}
 		\item Dort klickt man auf den Button \enquote{Infos}.
-		\item Es erscheint ein vereinfachte Erklärung des Lambda-Kalküls, sowie ein Erläuterung zu den Zusammenhängen des Lambda-Kalküls und des Spiels.
+		\item Es erscheint eine vereinfachte Erklärung des Lambda-Kalküls, sowie eine Erläuterung zu den Zusammenhängen des Lambda-Kalküls und des Spiels.
 	\end{itemize}
 	
 	\item Level-Menü (\ref{fa:levelmenue})
@@ -759,10 +759,10 @@ Das Produkt speichert und verwaltet Daten, insbesondere:
 	\begin{itemize}
 		\item Die Figur reagiert korrekt auf die Steuerung.
 		\item Die Steuerung befindet sich auf der Seite, die der Anwender im Profil ausgewählt hat (\ref{test:profilBeartbeiten}).
-		\item Die alle Elemente, die für das Lösen des Levels benötigt werden, sind vorhanden.
-		\item Die Elemente sind alle für die Figur erreichbar.
-		\item Die Positionen für die Elemente sind vorhanden.
-		\item Die Tür öffnet sich wenn alle Elemente korrekt platziert sind.
+		\item Alle Elemente, die für das Lösen des Levels benötigt werden, sind vorhanden.
+		\item Alle Elemente sind für die Figur erreichbar.
+		\item Die Ablagen für die Elemente sind vorhanden.
+		\item Die Tür öffnet sich wenn alle Elemente korrekt platziert wurden.
 	\end{itemize}
 	
 	\item Buttons (\ref{fa:button_rechts_kreuz} - \ref{fa:button_ducken})
@@ -779,7 +779,7 @@ Das Produkt speichert und verwaltet Daten, insbesondere:
 	
 	\item Spielestatistiken (\ref{produktdaten:spielestatistiken})
 	\begin{itemize}
-		\item Der Anwender kann in den Spielestatistiken sehen, wie lange er gespielt, wie viele Level er gelöst und welche Achievements er bereits erreicht hat.
+		\item Der Anwender kann in den Spielestatistiken sehen, wie lange er gespielt, wie viele Level er gelöst und welche Achievements* er bereits erreicht hat.
 	\end{itemize}
 	
 	\item{Spiel verlassen} \label{szenarien:quit_game}
@@ -813,8 +813,8 @@ Das Produkt speichert und verwaltet Daten, insbesondere:
 \subsection{Datenkonsistenz}
 
 \begin{telist}[resume]
-	\item Der Spielfortschritt eines jeden Profils wird unabhängig von den anderen Profilen gespeichert und verwaltet. Im Spielfortschritt eingeschlossen sind die Achievements des jeweiligen Nutzers.
-	\item Das Anlegen zweier Profile, die über den selben Namen verügen, ist nicht gestattet. Sollte der Benutzer sich dazu entschließen ein Profil zu löschen, wird der Name wieder freigegeben und kann für ein neues Profil verwendet werden.
+	\item Der Spielfortschritt eines jeden Profils wird unabhängig von den anderen Profilen gespeichert und verwaltet. Im Spielfortschritt eingeschlossen sind die Achievements* des jeweiligen Nutzers.
+	\item Das Anlegen zweier Profile, die über den selben Namen verfügen, ist nicht gestattet. Sollte der Benutzer sich dazu entschließen ein Profil zu löschen, wird der Name wieder freigegeben und kann für ein neues Profil verwendet werden.
 \end{telist}
 
 \clearpage
