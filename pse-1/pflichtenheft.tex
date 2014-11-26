@@ -247,33 +247,43 @@ Die Positionierung dieser Buttons kann profilspezifisch geändert werden, dabei 
 
 
 \subsection{Lambda-Kalkül}  \label{subsection:LambdaKalkül}
+\label{LambdaKalkül:AlgemeineErklärung}
+\begin{minipage}{1\textwidth}
+ Der $\lambda$-Kalkül ist eine formale Sprache, die im Allgemeinen dazu dient, Funktionen zu definieren bzw. beschreiben.\\
+In unserem Fall beschränken wir uns jedoch auf die beiden grundlegenden Regeln des $\lambda$-Kalkül, die $\alpha$-Regel und die $\beta$-Regel. Das Spiel soll dem Anwender diese beiden wichtigen Regeln des $\lambda$-Kalkül anschaulich erklären.
 
-\begin{description}
+\subsubsection{\texorpdfstring{$\alpha$}{Alpha}-Regel}
 
-	\begin{minipage}{1\textwidth}
-	\item[Allgemeine Erklärung:] \label{LambdaKalkül:AlgemeineErklärung} Der $\lambda$-Kalkül ist eine formale Sprache, die im Allgemeinen dazu dient, Funktionen zu definieren bzw. beschreiben.\\
-	In unserem Fall beschränken wir uns jedoch auf die beiden grundlegenden Regeln des $\lambda$-Kalkül, die $\alpha$-Regel und die $\beta$-Regel. Das Spiel soll dem Anwender diese beiden wichtigen Regeln des $\lambda$-Kalkül anschaulich erklären.\\
-	$\alpha$-Regel: Die Alpha-Regel besagt im $\lambda$-Kalkül, dass die Variablen eines $\lambda$-Terms jederzeit umbenannt werden dürfen, um die Eindeutigkeit dieser Terme zu waren. Bsp.:\\
-	$\lambda x.x [x \leftarrow y] \Rightarrow \lambda y.y.$\\
-	Wichtig ist hierbei, dass keine Doppelverwendung von Variablennamen in unterschiedlichen $\lambda$-Termen entsteht. Vielmehr ist diese Regel dazu gedacht, beim Auftreten einer Doppelbelegung eine der beiden Variablen umzutaufen, um eindeutige $\lambda$-Terme zu formen.\\
-	$\beta$-Regel: Die $\beta$-Regel dient der Vereinfachung, Auflösung oder Umformung von $\lambda$-Termen.\\
-	Sie besagt, dass ein $\lambda$-Term, von zum Beispiel dieser Form ($\lambda$x.x+2)(z), umgeformt werden kann, indem der Ausdruck ``z'' in den Term hinter dem ``.'' eingesetzt wird und zwar für genau die Variable, die zwischen ``$\lambda$'' und dem ``.'' steht, um es anschaulich zu erklären. Bsp.:\\
-	$(\lambda x.x+2)(z) = (x+2)[x \leftarrow z] = z + 2$ \\
-	Wichtig ist, dass hierbei sowohl z als auch x für alles stehen können. Also kann x insbesondere auch eine Funktion sein und z zum Beispiel ein weiterer kompletter $\lambda$-Term.
-	\[
-		\begin{aligned}
-			\lambda f.f(f(2))(\lambda x.x+2)&= (f(f(2)))[f \leftarrow \lambda x.x+2] \\
-			&= (\lambda x.x+2)((\lambda x.x+2)(2)) \\
-			&= (\lambda x.x+2)((x+2)[x \leftarrow 2]) \\
-			&= (\lambda x.x+2)(2 + 2) \\
-			&= (\lambda x.x+2)(4) \\
-			&= (x+2)[x \leftarrow 4] \\
-			&= 4 + 2 = 6
-		\end{aligned}
-	\]
-	\end{minipage}
-							
-\end{description}
+Die Alpha-Regel besagt im $\lambda$-Kalkül, dass die Variablen eines $\lambda$-Terms jederzeit umbenannt werden dürfen, um die Eindeutigkeit dieser Terme zu waren. Beispielsweise:
+\[
+	\lambda x.x [x \leftarrow y] \Rightarrow \lambda y.y.
+\]
+
+Wichtig ist hierbei, dass keine Doppelverwendung von Variablennamen in unterschiedlichen $\lambda$-Termen entsteht. Vielmehr ist diese Regel dazu gedacht, beim Auftreten einer Doppelbelegung eine der beiden Variablen umzutaufen, um eindeutige $\lambda$-Terme zu formen.
+
+\subsubsection{\texorpdfstring{$\beta$}{Beta}-Regel}
+
+Die $\beta$-Regel dient der Vereinfachung, Auflösung oder Umformung von $\lambda$-Termen.\\
+Sie besagt, dass ein $\lambda$-Term, von zum Beispiel dieser Form ($\lambda$x.x+2)(z), umgeformt werden kann, indem der Ausdruck ``z'' in den Term hinter dem ``.'' eingesetzt wird und zwar für genau die Variable, die zwischen ``$\lambda$'' und dem ``.'' steht, um es anschaulich zu erklären. Beispielsweise:
+\[
+	(\lambda x.x+2)(z) = (x+2)[x \leftarrow z] = z + 2
+\]
+Wichtig ist, dass hierbei sowohl z als auch x für alles stehen können. Also kann x insbesondere auch eine Funktion sein und z zum Beispiel ein weiterer kompletter $\lambda$-Term.
+
+\subsubsection{Beispiel für der \texorpdfstring{$\lambda$}{Lambda}-Kalkül}
+\[
+	\begin{aligned}
+		\lambda f.f(f(2))(\lambda x.x+2)&= (f(f(2)))[f \leftarrow \lambda x.x+2] \\
+		&= (\lambda x.x+2)((\lambda x.x+2)(2)) \\
+		&= (\lambda x.x+2)((x+2)[x \leftarrow 2]) \\
+		&= (\lambda x.x+2)(2 + 2) \\
+		&= (\lambda x.x+2)(4) \\
+		&= (x+2)[x \leftarrow 4] \\
+		&= 4 + 2 = 6
+	\end{aligned}
+\]
+\end{minipage}
+
 
 \subsection{Levelaufbau}  \label{subsection:Levelaufbau}
 
@@ -561,8 +571,8 @@ Die Zielgruppe besteht überwiegend aus Kindern im Alter von acht bis zwölf Jah
 
 \begin{falist}[resume]
 	\item \label{fa:infobereich} \textbf{Infobereich} Das Spiel verfügt über einen Infobereich, der weiterführende Informationen zum Thema $\lambda$-Kalkül enthält.
-	\item \label{fa:spieleinstellungen} \textbf{Spieleinstellungen}
-	\item \label{fa:spielestatistiken} \textbf{Spielestatistiken}
+	\item \label{fa:spieleinstellungen} \textbf{Spieleinstellungen} Das Spiel verfügt über Einstellungen, die das Verhalten des Programms beeinflussen. \ref{produktdaten:einstellungen}
+	\item \label{fa:spielestatistiken} \textbf{Spielestatistiken} Das Spiel verfügt über Spielstatistiken, die Auskunft geben über das Verhalten des Spielers. \ref{produktdaten:spielestatistiken}
 	
 \end{falist}
 
@@ -693,7 +703,7 @@ Das Produkt speichert und verwaltet Daten, insbesondere:
 	\begin{itemize}
 		\item Starten der Applikation durch Anklicken der App-Verknüpfung
 		\item Der Ladebildschirm(\ref{appaufbau:Ladebildschirm}) wird sichtbar und informiert über den Ladezustand des Spiels.
-		\item Der \gls{gls:anwender} wird direkt zum "`Benutzer-Anlegen"- Bereich weitergeleitet
+		\item Der \gls{gls:anwender} wird direkt zum "`Benutzer-Anlegen"'- Bereich weitergeleitet
 		\item Wurde ein Profil angelegt, öffnet sich die Einstellung
 		\item Geht der Anwender von den Einstellungen weiter, beginnt der Tutorial-Modus
 		\item Lamdbalino begrüßt den Anwender
@@ -705,7 +715,7 @@ Das Produkt speichert und verwaltet Daten, insbesondere:
 	\begin{itemize}
 		\item Starten der Applikation durch Anklicken der App-Verknüpfung
 		\item Der Ladebildschirm(\ref{appaufbau:Ladebildschirm}) wird sichtbar und informiert über den Ladezustand des Spiels
-		\item Nach dem Laden kann man den Benutzer aus vorhandenen Profilen auswählen oder man legt ein neues Profil (\ref{szenarien:ProfilAnlegen}) an
+		\item Nach dem Laden kann man den Benutzer aus vorhandenen Profilen auswählen oder man legt ein neues Profil an
 		\item Das Hauptmenü (\ref{appaufbau:Hauptmenü}) wird geöffnet		
 	\end{itemize}
 	
