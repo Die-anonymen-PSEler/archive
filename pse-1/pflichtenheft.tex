@@ -111,7 +111,7 @@ Die Kinder sollen durch das Spiel in die Lage versetzt werden, sich die Prinzipi
 	\item \label{muss:touchinterface}komplett über das simulierte \gls{gls:touchinterface} bedienbar sein
 	\item \label{muss:mvc}eine modulare Architektur besitzen (z.B. \gls{gls:mvc}-Prinzip)
 	\item \label{muss:5indilevel}mindestens fünf individuelle \gls{gls:level}
-	\item \label{muss:tutorial}Tutorial-Level
+	\item \label{muss:tutorial}\gls{gls:tutorial}-Level
 \end{enumerate}
 
 \subsection{Wunschkriterien}
@@ -134,7 +134,7 @@ Wunschkriterien seien von nun an im restlichen Pflichtenheft mit einem * markier
 
 \begin{enumerate}
 	\item \label{abgrenz:online}Kein \gls{gls:onlinemodus} Modus
-	\item \label{abgrenz:multiplayer}Keine online-Anbindung
+	\item \label{abgrenz:multiplayer}Keine Online-Anbindung
 	\item \label{abgrenz:emu}Keine vorgesehene Kompatibilität mit anderen Geräten/Betriebssystemen ohne Emulation
 \end{enumerate}
 
@@ -156,7 +156,7 @@ Wunschkriterien seien von nun an im restlichen Pflichtenheft mit einem * markier
 \section{Spielaufbau}
 
 \subsection{Spielprinzip}
-Das Spielprinzip beruht auf dem Bewegen von Blöcken, indem der Anwender die Blöcke hochhebt und wieder absetzt. Der Anwender muss die verschiedenen Elemente des Spieles, die Maschinen, die Maschinen-Cluster und die Metallstücke, in den dafür vorgesehenen Ablagen positionieren. Hat er alle Elemente in die jeweils richtige Ablage gesetzt, erfolgt die Auswertung, anschließend öffnet sich die Tür zum nächsten Level.
+Das Spielprinzip beruht auf dem Bewegen von Blöcken, indem der Anwender die Blöcke hochhebt und wieder absetzt. Der Anwender muss die verschiedenen Elemente des Spieles, die Maschinen, die Maschinen-Cluster und die Metallstücke, in den dafür vorgesehenen Ablagen positionieren. Hat er alle Elemente in die jeweils richtige Ablage gesetzt, erfolgt die Auswertung, anschließend öffnet sich die Tür zum nächsten \gls{gls:level}.
 
 \subsection{Handlung des Spiels*} \label{subsection:Story}
 Lambdor, der Vollstrecker, hat den Anwender entführt und in ein Haus mit vielen magischen Räumen gesperrt, deren Türen verschlossen sind. Um entkommen zu können, muss der Anwender die Türen öffnen. Dafür braucht er besondere Metallstücke, diese hat Lambdor jedoch zerstört. Der Anwender kann sie wieder herstellen, dafür muss er zunächst die Maschinen zusammenbauen, mit denen sie hergestellt werden können. Glücklicherweise hilft Lambdalino, der kleine Bruder von Lambdor, dem Anwender dabei. Er zeigt ihm, wie er die Maschinen zusammenbauen muss und wie er die Metallstücke herstellen kann. So kann der Anwender es schaffen, aus dem Wirrwarr der Räume zu entkommen.
@@ -164,16 +164,16 @@ Lambdor, der Vollstrecker, hat den Anwender entführt und in ein Haus mit vielen
 
 \subsection{Spielelemente}
 
-Zu Beginn eines Levels wird die Spielfigur angezeigt. Diese bewegt sich zweidimensional durch die Welt und wird vom Spieler gesteuert.
+Zu Beginn eines \glspl{gls:level} wird die Spielfigur angezeigt. Diese bewegt sich zweidimensional durch die Welt und wird vom \gls{gls:spieler} gesteuert.
 
 \begin{description}
 	\item[Spielfigur] bewegt sich durch die Welt, sammelt Gegenstände, um mit diesen die Levelquest zu lösen
-	\item[Leben*] Jeder Anwender hat je Level drei Leben, die er verlieren kann, z.B. wenn er ins Wasser fällt
+	\item[Leben*] Jeder Anwender hat je \gls{gls:level} drei Leben, die er verlieren kann, z.B. wenn er ins Wasser fällt
 	\item[Spielwelt] zweidimensionale Spielwelt auf einem Raster basierend, in der sich die Spielfigur bewegt
 	\item[Spielebenen] verschiedene Ebenen in der Spielwelt, auf die, die Spielfigur springen kann. Sie sind auf einem Raster angeordnet:
 		\begin{enumerate}[label=\arabic*]
 			\item Landebenen: Auf diesen Ebenen liegen die Sammelgegenstände
-			\item Wasserebenen*: Fällt die Spielfigur in das Wasser, muss er wieder am linken unteren Rand anfangen und er verliert ein Leben. Hat er kein Leben mehr, so muss er das Level neu beginnen
+			\item Wasserebenen*: Fällt die Spielfigur in das Wasser, muss er wieder am linken unteren Rand anfangen und er verliert ein Leben. Hat er kein Leben mehr, so muss er das \gls{gls:level} neu beginnen
 		\end{enumerate}
 	\item[Sammelgegenstände] \label{elemente:collectable}sind in der Spielwelt verteilt und müssen von der Spielfigur eingesammelt werden, um in den Ablagen platziert zu werden. Diese bestehen aus:
 	\begin{enumerate}[label=\arabic*]
@@ -183,7 +183,7 @@ Zu Beginn eines Levels wird die Spielfigur angezeigt. Diese bewegt sich zweidime
 	\end{enumerate}
 	\item[Ablage] sind die markierten Stellen, an denen Spielobjekte abgelegt werden können
 	\item[Levelquest] sind gegebene Aufgaben, die zum Abschließen des Levels erfüllt werden müssen
-	\item[Leveltür] bildet den Abschluss eines Levels. Sobald alle Quests in dem Level gelöst wurden, wird die Tür freigeschaltet
+	\item[Leveltür] bildet den Abschluss eines Levels. Sobald alle Quests in dem \gls{gls:level} gelöst wurden, wird die Tür freigeschaltet
 \end{description}
 
 \subsection{Regeln}
@@ -196,7 +196,7 @@ Zu Beginn eines Levels wird die Spielfigur angezeigt. Diese bewegt sich zweidime
 	Die Spielfigur muss neben einem Objekt stehen, um dieses aufheben zu können.\\
 	Der Spielfigur kann immer nur ein Objekt tragen. Um ein anderes Objekt aufzuheben muss er erst das Objekt, das er trägt, ablegen.\\
 	Um auf die oberen Ebenen der Spielwelt zu gelangen, kann die Spielfigur springen, dabei ist zu beachten, dass die Figur nur eine feste Höhe hochspringen kann und der Anwender somit auf Ebenen außerhalb seiner Reichweite nicht durch einfaches Springen gelangen kann. Die Figur kann auch springen, wenn sie etwas in den Händen trägt (dabei kann es zu einer geringen Trägheit kommen, z.B. ungenauere Spielsteuerung (diese ist gewollt und soll das Spiel ein wenig schwieriger gestalten))*.\\
-	Befindet sich in jeder freien Ablage ein Objekt, wird der daraus resultierende Lambda-Ausdruck ausgewertet. Falls die Maschinen und Metallstücke in den richtigen Ablagen liegen und der $\lambda$-Kalkül erfüllt ist, wird dem Anwender das Ergebnis und die spezifische Abarbeitung des Maschinenkonstrukts nach den Regeln des $\lambda$-Kalküls gezeigt. Anschließend öffnet sich die Tür am Level-Ende. Das Level gilt als geschafft, sobald diese erreicht ist.\\
+	Befindet sich in jeder freien Ablage ein Objekt, wird der daraus resultierende Lambda-Ausdruck ausgewertet. Falls die Maschinen und Metallstücke in den richtigen Ablagen liegen und der $\lambda$-Kalkül erfüllt ist, wird dem Anwender das Ergebnis und die spezifische Abarbeitung des Maschinenkonstrukts nach den Regeln des $\lambda$-Kalküls gezeigt. Anschließend öffnet sich die Tür am Level-Ende. Das \gls{gls:level} gilt als geschafft, sobald diese erreicht ist.\\
 	
 \end{minipage}
 
@@ -291,15 +291,15 @@ Wichtig ist, dass hierbei sowohl z als auch x für alles stehen können. Also ka
 \begin{description}
 	
 	\begin{minipage}{1\textwidth}
-		\item[Tutorial:] \label{Levelaufbau:Tutorial}  Das Tutorial umfasst die ersten Level des Spiels. Der Anwender soll hier das Spielprinzip im Spielmodus Puzzle Schritt für Schritt verstehen.
-		Umgesetzt wird dies durch sehr einfache Level, wobei in jedem Level ein neuer Faktor hinzukommt.\\
-		Im ersten Level liegt der Fokus darauf, dem Anwender die Steuerung und die Level-Elemente zu erklären. 
+		\item[Tutorial:] \label{Levelaufbau:Tutorial}  Das \gls{gls:tutorial} umfasst die ersten \gls{gls:level} des Spiels. Der Anwender soll hier das Spielprinzip im Spielmodus Puzzle Schritt für Schritt verstehen.
+		Umgesetzt wird dies durch sehr einfache Level, wobei in jedem \gls{gls:level} ein neuer Faktor hinzukommt.\\
+		Im ersten \gls{gls:level} liegt der Fokus darauf, dem Anwender die Steuerung und die Level-Elemente zu erklären. 
 		In den darauffolgenden Levels wird die Spielmechanik mit Maschinen und Metallobjekten erklärt.\\
 		Zwischen den Levels wird die Story* eventuell durch kleine, animierte Zwischenszenen erklärt.\\		 
 	\end{minipage}
 		
 
-	\item[Levelbeispiel:] \label{Levelaufbau:Levelbeispiel} Als Level-Beispiel dient das erste Tutorial-Level. Es wird in mehrere Bilder aufgeteilt, um die möglichen Aktionen des Anwender zu erklären, sowie den grundlegenden Ablauf eines Levels darzustellen.\\
+	\item[Levelbeispiel:] \label{Levelaufbau:Levelbeispiel} Als Level-Beispiel dient das erste \gls{gls:tutorial}-Level. Es wird in mehrere Bilder aufgeteilt, um die möglichen Aktionen des Anwender zu erklären, sowie den grundlegenden Ablauf eines Levels darzustellen.\\
 	
 	\begin{enumerate}
 		\begin{minipage}{1\textwidth}
@@ -317,7 +317,7 @@ Wichtig ist, dass hierbei sowohl z als auch x für alles stehen können. Also ka
 		\end{minipage}
 		
 		\begin{minipage}{1\textwidth}
-			\item \label{Levelaufbau:Levelende} Sind alle Ablagen gefüllt, so beginnt die Auswertung des Konstrukts.\\ Führt das Konstrukt zum gewünschten Ergebnis, so öffnet sich die Level-Tür  und der Anwender kann durch Erreichen dieser Tür das Level beenden. Dadurch gelangt er ins Auswertungsmenü.\\
+			\item \label{Levelaufbau:Levelende} Sind alle Ablagen gefüllt, so beginnt die Auswertung des Konstrukts.\\ Führt das Konstrukt zum gewünschten Ergebnis, so öffnet sich die Level-Tür  und der Anwender kann durch Erreichen dieser Tür das \gls{gls:level} beenden. Dadurch gelangt er ins Auswertungsmenü.\\
 			\includegraphics[scale=0.5]{assets/LevelEnde}
 		\end{minipage}
 		
@@ -518,13 +518,13 @@ Die Zielgruppe besteht überwiegend aus Kindern im Alter von acht bis zwölf Jah
 \subsection{Spieldesign}
 
 \begin{falist}[resume]
-	\item \label{fa:level} \textbf{Level} Ein Level eine Aufgabe, mit gegebenem Ziel und einer Menge an Spielobjekten, die der Anwender an vorgegebenen Stellen platzieren muss.
-	\item \label{fa:levelmenue} \textbf{Levelmenü} bietet eine Übersicht über alle Level des Spiels (Musskriterium \ref{muss:5indilevel}). Diese sind unterteilt in abgeschlossene und nicht abgeschlossene Level.
+	\item \label{fa:level} \textbf{Level} Ein \gls{gls:level} eine Aufgabe, mit gegebenem Ziel und einer Menge an Spielobjekten, die der Anwender an vorgegebenen Stellen platzieren muss.
+	\item \label{fa:levelmenue} \textbf{Levelmenü} bietet eine Übersicht über alle \gls{gls:level} des Spiels (Musskriterium \ref{muss:5indilevel}). Diese sind unterteilt in abgeschlossene und nicht abgeschlossene Level.
     \begin{falist}
-        \item \textbf{Erstes Level} Das erste Level ist automatisch freigeschaltet.
+        \item \textbf{Erstes Level} Das erste \gls{gls:level} ist automatisch freigeschaltet.
         \item \textbf{Freischalten weiterer Level} Das Freischalten weiterer Leve erfolgt durch Freispielen. Beendigung eines Levels führt zum Freischalten des nächsten.
     \end{falist}
-    \item \label{fa:spielen} \textbf{Level spielen}
+    \item \label{fa:spielen} \textbf{\gls{gls:level} spielen}
     \item \label{fa:buttons_muss} \textbf{Button / Steuerung}
     \begin{falist}
     	\item \label{fa:button_rechts_kreuz} \textbf{Drücken der rechten Pfeiltaste} Bewegt die Spielfigur in der Spielwelt nach Rechts.
@@ -564,7 +564,7 @@ Die Zielgruppe besteht überwiegend aus Kindern im Alter von acht bis zwölf Jah
 \subsection{Ladeverhalten}
 
 \begin{falist}[resume]
-	\item \label{fa:tipps} \textbf{Anzeigen von Tipps} Während das Spiel ein Level (\ref{fa:level}) lädt, werden Tipps angezeigt.
+	\item \label{fa:tipps} \textbf{Anzeigen von Tipps} Während das Spiel ein \gls{gls:level} (\ref{fa:level}) lädt, werden Tipps angezeigt.
 \end{falist}
 
 \subsection{Sonstiges}
@@ -667,8 +667,8 @@ Das Produkt speichert und verwaltet Daten, insbesondere:
 	\item Die bei diesem Projekt entstehenden Daten haben folgende Eigenschaften:
 	\begin{itemize}
 		\item leicht zu warten
-		\item dokumentiert (JavaDoc)
-		\item getestet (EclEMMA, JUnit)
+		\item dokumentiert (\gls{gls:javadoc})
+		\item getestet (EclEMMA, \gls{gls:junit})
 		\item erweiterbar
 	\end{itemize}
 	\item Das Programm verwendet für Dateien folgende Standards: 
@@ -708,7 +708,7 @@ Das Produkt speichert und verwaltet Daten, insbesondere:
 		\item Geht der Anwender von den Einstellungen weiter, beginnt der Tutorial-Modus
 		\item Lamdbalino begrüßt den Anwender
 		\item Es wird in die Handlung des Spiels eingeführt
-		\item Nach dem Tutorial-Modus öffnet sich das Levelmenü und das erste Level ist freigeschaltet 
+		\item Nach dem Tutorial-Modus öffnet sich das Levelmenü und das erste \gls{gls:level} ist freigeschaltet 
 	\end{itemize}
 	
 	\item{Allgemeiner Spielstart} \label{szenarien:allg_spielstart}
@@ -722,7 +722,7 @@ Das Produkt speichert und verwaltet Daten, insbesondere:
 	\item Tutorial basierend auf (\ref{fa:tutorial} - \ref{fa:tutorial_03})
 	\begin{itemize}
 		\item Der Anwender startet den Tutorial-Modus über das Level-Menü (Systemmodell \ref{appaufbau:Levelauswahl}) oder gelangt automatisch in diesen beim ersten Starten des Spiels mit einem neuen Profil.
-		\item Der Anwender wird durch die Tutorial-Level geleitet, in denen ihm erklärt wird, wie er die Steuerung benutzen, die Elemente in die gewünschte Ablage bringen kann und wie genau die Maschinen die Elemente verarbeiten.
+		\item Der Anwender wird durch die Tutorial-\gls{gls:level} geleitet, in denen ihm erklärt wird, wie er die Steuerung benutzen, die Elemente in die gewünschte Ablage bringen kann und wie genau die Maschinen die Elemente verarbeiten.
 		\item Wenn der Tutorial-Modus beendet wurde, gelangt der Anwender in den Hauptbildschirm.
 	\end{itemize}
 
@@ -762,10 +762,10 @@ Das Produkt speichert und verwaltet Daten, insbesondere:
 	
 	\item Level-Menü (\ref{fa:levelmenue})
 	\begin{itemize}
-		\item Der Anwender kann nur jene Level öffnen, die bereits freigeschaltet wurden. Die anderen Level sind sichtbar, können jedoch nicht ausgewählt werden.
+		\item Der Anwender kann nur jene \gls{gls:level} öffnen, die bereits freigeschaltet wurden. Die anderen \gls{gls:level} sind sichtbar, können jedoch nicht ausgewählt werden.
 	\end{itemize}
 	
-	\item Level spielen (\ref{fa:spielen})
+	\item \gls{gls:level} spielen (\ref{fa:spielen})
 	\begin{itemize}
 		\item Die Figur reagiert korrekt auf die Steuerung.
 		\item Die Steuerung befindet sich auf der Seite, die der Anwender im Profil ausgewählt hat (\ref{test:profilBeartbeiten}).
@@ -789,7 +789,7 @@ Das Produkt speichert und verwaltet Daten, insbesondere:
 	
 	\item Spielestatistiken (\ref{produktdaten:spielestatistiken})
 	\begin{itemize}
-		\item Der Anwender kann in den Spielestatistiken sehen, wie lange er gespielt, wie viele Level er gelöst und welche Achievements* er bereits erreicht hat.
+		\item Der Anwender kann in den Spielestatistiken sehen, wie lange er gespielt, wie viele \gls{gls:level} er gelöst und welche Achievements* er bereits erreicht hat.
 	\end{itemize}
 	
 	\item{Spiel verlassen} \label{szenarien:quit_game}
@@ -918,13 +918,13 @@ Allgemein gilt jedoch, das so viel wie möglich ohne Text, sondern durch Symboli
 	
 	\begin{minipage}{1\textwidth}
 		\item \subsection*{Levelauswahl:} \label{appaufbau:Levelauswahl}
-		Hier kann ein Level der Stage in der man sich aktuell befindet gestartet werden.(auch diese müssen nach und nach freigeschaltet werden).\\
+		Hier kann ein \gls{gls:level} der Stage in der man sich aktuell befindet gestartet werden.(auch diese müssen nach und nach freigeschaltet werden).\\
 		\includegraphics[scale=0.5]{assets/Levelmenu}
 	\end{minipage}
 	
 	\begin{minipage}{1\textwidth}
 		\item \subsection*{Leveldesign:} \label{appaufbau:Leveldesign}
-		Jedes Level  hat den selben Aufbau am unteren Rand sind die Button und das Steuerkreuz zum bedienen des Spielecharcters sowie ein Button um sich das aktuelle Level-ziel oder Hinweise zum Level geben zu lassen.\\ Die Anordnung der Buttons wird gespiegelt falls man als Linkshänder spielen will. Der komplette Buttonbereich ist transparent, sodass der Spieler mehr vom Spielfeld sieht.\\
+		Jedes \gls{gls:level}  hat den selben Aufbau am unteren Rand sind die Button und das Steuerkreuz zum bedienen des Spielecharcters sowie ein Button um sich das aktuelle Level-ziel oder Hinweise zum \gls{gls:level} geben zu lassen.\\ Die Anordnung der Buttons wird gespiegelt falls man als Linkshänder spielen will. Der komplette Buttonbereich ist transparent, sodass der Spieler mehr vom Spielfeld sieht.\\
 		In der Linken Oberen Ecke ist ein Button der ins Levelmenü führt. Das Spiel wird dann pausiert und es erscheinen Buttons zum Neustart des Levels, dem verlassen ins Levelmenü, dem Verlassen ins Hauptmenü und Einstellungen(Lautstärke).\\
 		Das eigentliche Spielfeld nimmt den Rest des Bildschirms ein.\\
 		\includegraphics[scale=0.5]{assets/LevelDesign2}
@@ -932,7 +932,7 @@ Allgemein gilt jedoch, das so viel wie möglich ohne Text, sondern durch Symboli
 	
 	\begin{minipage}{1\textwidth}
 		\item \subsection*{Auswertungsmenü:}
-		Sollte der Spieler ein Level erfolgreich gelöst haben so kommt er ins Auswertungsmenü, hier werden ihm Informationen zu seinem Erfolg , sowie errungene Achievments mitgeteilt. Er hat die Wahl das nächste Level zu starten oder zurück zum Hauptmenü zu kommen. 
+		Sollte der Spieler ein \gls{gls:level} erfolgreich gelöst haben so kommt er ins Auswertungsmenü, hier werden ihm Informationen zu seinem Erfolg , sowie errungene Achievments mitgeteilt. Er hat die Wahl das nächste \gls{gls:level} zu starten oder zurück zum Hauptmenü zu kommen. 
 		\includegraphics[scale=0.5]{assets/Auswertungsmenu}
 	\end{minipage}
 
@@ -953,6 +953,7 @@ Die folgende Grafik enthält die möglichkeiten des benutzers auf die App einzuw
 \end{minipage}
 
 \clearpage
+
 
 
 
