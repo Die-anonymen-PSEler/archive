@@ -172,18 +172,18 @@ Zu Beginn eines Levels wird die Spielfigur angezeigt. Diese bewegt sich zweidime
 	\item[Spielwelt] zweidimensionale Spielwelt auf einem Raster basierend, in der sich der Spieler bewegt
 	\item[Spielebenen] verschiedene Ebenen in der Spielwelt, auf die der Spieler springen kann. Sie sind auf einem Raster angeordnet
 		\begin{enumerate}[label=\arabic*]
-			\item Landebenen: Auf diesen Ebenen liegen die Collectable Items
+			\item Landebenen: Auf diesen Ebenen liegen die Sammelgegenstände
 			\item Wasserebenen: Fällt der Spieler in das Wasser, muss er wieder am linken unteren Rand anfangen und er verliert ein Leben. Hat er kein Leben mehr, so muss er das Level neu beginnen
 		\end{enumerate}
-	\item[Collectable Items] \label{elemente:collectable}sind in der Spielwelt verteilt und müssen von der Spielfigur eingesammelt werden, um im Rätselteil eingesetzt zu werden. Diese bestehen aus:
+	\item[Sammelgegenstände] \label{elemente:collectable}sind in der Spielwelt verteilt und müssen von der Spielfigur eingesammelt werden, um im Rätselteil eingesetzt zu werden. Diese bestehen aus:
 	\begin{enumerate}[label=\arabic*]
 		\item Maschinen (entspricht der Abstraktion)
 		\item Metallstücke (entspricht der Variablen)
 		\item Maschinen-Cluster (entspricht der Applikation)
 	\end{enumerate}
 	\item[Ablage] sind die markierten Stellen, an denen Spielobjekte abgelegt werden können.
-	\item[Levelquest] sind gegebene Aufgaben, die zum Abschließen des Levels erfüllt werden müssen
-	\item[Leveltür] bildet den Abschluss eines Levels. Sobald alle Quests in dem Level gelöst wurden, wird die Tür freigeschaltet
+	\item[Levelquest] sind gegebene Aufgaben, die zum Abschließen des Levels erfüllt werden müssen.
+	\item[Leveltür] bildet den Abschluss eines Levels. Sobald alle Quests in dem Level gelöst wurden, wird die Tür freigeschaltet.
 \end{description}
 
 \subsection{Regeln}
@@ -225,18 +225,22 @@ Zur Steuerung der Spielfigur in den einzelnen Levels werden im unteren Teil des 
 Die Positionierung dieser Buttons kann profilspezifisch geändert werden, dabei gibt es jedoch nur 2 Wahlmöglichkeiten.\\
 
 \begin{enumerate}
-	\item Gruppe 1:\\
-	Die erste Gruppe an Buttons besteht aus zwei Buttons, durch welche der Spieler die Spielfigur nach Rechts und Links bewegen kann.\\
-	Die Spielfigur bewegt sich dabei solange in die jeweilige Richtung, wie der Spieler den Button drückt.\\
-	Diese Button-Gruppe ist standardmäßig in der linken unteren Ecke des Bildschirms.\\
-	Der Spieler kann immer nur einen der beiden Buttons, nie beide zur selben Zeit drücken.\\
+	\begin{minipage}{1\textwidth}
+			\item Gruppe 1:\\
+			Die erste Gruppe an Buttons besteht aus zwei Buttons, durch welche der Spieler die Spielfigur nach Rechts und Links bewegen kann.\\
+			Die Spielfigur bewegt sich dabei solange in die jeweilige Richtung, wie der Spieler den Button drückt.\\
+			Diese Button-Gruppe ist standardmäßig in der linken unteren Ecke des Bildschirms.\\
+			Der Spieler kann immer nur einen der beiden Buttons, nie beide zur selben Zeit drücken.\\
+	\end{minipage}
 	
-	\item Gruppe 2:\\
-	Die zweite Gruppe an Buttons besteht aus drei Buttons, diese dienen zum Einen der Interaktion der Spielfigur mit den Spielobjekten, die es platzieren muss, und zum Anderen der Funktion des Springens und Duckens der Spielfigur.\\
-	Der Button zur Interaktion mit den Spielobjekten hat zwei Funktionen: Der Spieler kann ein Spielobjekt, das in Blickrichtung direkt neben der Spielfigur liegt, aufheben (und trägt es somit) sowie, falls sie Spielfigur bereits ein Objekt trägt, dieses in Blickrichtung in ein benachbartes Feld ablegen. Diese Aktionen können nicht parallel zu einer der anderen drei Aktionen (Bewegen, Springen, Ducken) ausgeführt werden, die Spielfigur muss stehen.\\
-	Der Springen-Button lässt die Spielfigur eine feste Höhe hochspringen, durch paralleles Drücken der Bewegungstasten kann zusätzlich ein Sprung nach links oder rechts ausgeführt werden.Andere Buttons können nicht parallel betätigt werden.\\
-	Der Ducken-Button lässt die Spielfigur sich ducken. Dies führt zu einer Verringerung ihrer Größe, was insbesondere, wenn sie ein Objekt trägt, hilfreich sein kann. Die Spielfigur kann sich parallel zum Ducken nur bewegen, nicht springen oder ein Objekt aufnehmen oder ablegen.\\
-	
+	\begin{minipage}{1\textwidth}
+			\item Gruppe 2:\\
+			Die zweite Gruppe an Buttons besteht aus drei Buttons, diese dienen zum Einen der Interaktion der Spielfigur mit den Spielobjekten, die es platzieren muss, und zum Anderen der Funktion des Springens und Duckens der Spielfigur.\\
+			Der Button zur Interaktion mit den Spielobjekten hat zwei Funktionen: Der Spieler kann ein Spielobjekt, das in Blickrichtung direkt neben der Spielfigur liegt, aufheben (und trägt es somit) sowie, falls sie Spielfigur bereits ein Objekt trägt, dieses in Blickrichtung in ein benachbartes Feld ablegen. Diese Aktionen können nicht parallel zu einer der anderen drei Aktionen (Bewegen, Springen, Ducken) ausgeführt werden, die Spielfigur muss stehen.\\
+			Der Springen-Button lässt die Spielfigur eine feste Höhe hochspringen, durch paralleles Drücken der Bewegungstasten kann zusätzlich ein Sprung nach links oder rechts ausgeführt werden.Andere Buttons können nicht parallel betätigt werden.\\
+			Der Ducken-Button lässt die Spielfigur sich ducken. Dies führt zu einer Verringerung ihrer Größe, was insbesondere, wenn sie ein Objekt trägt, hilfreich sein kann. Die Spielfigur kann sich parallel zum Ducken nur bewegen, nicht springen oder ein Objekt aufnehmen oder ablegen.\\
+	\end{minipage}
+
 	\item Im Folgenden sehen sie eine ungefähre Darstellung der Steuerung. Die Alternative, die profilspezifisch gewählt werden kann, sieht eine Vertauschung der beiden Button-Gruppen vor, wobei die Button-Gruppe 2 zusätzlich gespiegelt wird.\\
 	\includegraphics[scale=0.5]{assets/Steuerung}
 \end{enumerate}
@@ -349,7 +353,7 @@ Die Positionierung dieser Buttons kann profilspezifisch geändert werden, dabei 
 			\includegraphics[scale=0.5]{assets/LevelBsp2Out1OC}\\
 		\end{minipage}
 
-	\item[Auswertungsbeispiele:] \label{Levelaufbau:Asuwertungsbeispiele} Hier sehen Sie ein Beispiel für den Ablauf einer Auswertung sowie Beispiele für einige andere Auswertungen.\\
+	\item[Auswertungsbeispiele:] \label{Levelaufbau:Auswertungsbeispiele} Hier sehen Sie ein Beispiel für den Ablauf einer Auswertung sowie Beispiele für einige andere Auswertungen.\\
 	
 		\begin{minipage}{1\textwidth}
 			Start der Auswertung eines Konstrukts, bestehend aus einer grünen Maschine mit einem zugehörigen Output-Metallobjekt und einem roten Metallobjekt rechts daneben.\\ 
@@ -528,12 +532,9 @@ Die Zielgruppe besteht überwiegend aus Kindern im Alter von acht bis zwölf Jah
     	\item \label{fa:wunsch_button_oben} \textbf{Wischgeste nach Oben} Der Spieler wischt mit seinem Finger über den Bildschirm nach oben. Dadurch führt die Spielfigur einen Sprung aus. Diese fuktionale Anforderung ist kombinierbar mit \ref{fa:wunsch_button_rechts} und \ref{fa:wunsch_button_links}. Sollte der Spieler geduckt sein, richtet sich die Spielfigur wieder auf.
     	\item \label{fa:wunsch_button_unten} \textbf{Wischgeste nach Unten} Der Spieler wischt mit seinem Finger über den Bildschirm nach unten. Dadurch beginnt die Spielfigur sich zu ducken. Sie verharrt in diesem \enquote{Modus} bis der Benutzer \ref{fa:wunsch_button_oben} ausführt.
     \end{falist}
-	\item \textbf{Interaktion mit den Spielelementen aus Nr. \ref{elemente:collectable}} Collectable Items die abgelegt sind können nicht durch den Spieler passiert werden und müssen übersprungen werden (siehe \ref{fa:button_jump} bzw. \ref{fa:wunsch_button_oben}).
+	\item \textbf{Interaktion mit den Spielelementen aus Nr. \ref{elemente:collectable}} Sammelgegenstände die abgelegt sind können nicht durch den Spieler passiert werden und müssen übersprungen werden (siehe \ref{fa:button_jump} bzw. \ref{fa:wunsch_button_oben}).
 	\item \textbf{Interaktion mit den Boxen} Die Boxen sind in einer weiteren Ebene und können von der Spielfigur zur Ablage der (Metallstücke und Maschinen benutzt werden).
-	\item \label{fa:auswertung_animiert} \textbf{Animierte Auswertung der Maschinenkonstellation}
-	\begin{falist}
-		\item 
-	\end{falist}
+	\item \label{fa:auswertung_animiert} \textbf{Animierte Auswertung der Maschinenkonstellation} Durch eine Animation wird gezeigt wie die Verarbeitung der Maschinen stattfindet (Auswertungsbeispiel siehe \ref{Levelaufbau:Auswertungsbeispiele}).
 \end{falist}
 
 \subsection{Achievements}
@@ -735,14 +736,14 @@ Das Produkt speichert und verwaltet Daten, insbesondere:
 		\item Durch Scrollen kann der Anwender seine Profile einsehen. Er wählt dieses durch Berühren aus. 
 	\end{itemize}
 	
-	\item Ein Benutzerprofil bearbeiten (\ref{fa:spielerprofile_bearbeiten})
+	\item Ein Benutzerprofil bearbeiten (\ref{fa:spielerprofile_bearbeiten}) \label{test:profilBeartbeiten}
 	\begin{itemize}
 		\item Der Anwender befindet sich im Hauptmenü und drückt auf den \enquote{Benutzerverwaltungsbutton}. Diese Aktion führt den Benutzer zum Profilmenü.
 		\item Der Anwender wählt den \enquote{Bearbeitungs-Button} neben dem Profil, welches er bearbeiten möchte, aus.
 		\item Im Bearbeitungsbereich kann der Anwender den Namen, den Avatar und die Steuerungseinstellung (Rechts- oder Linkshänder) verändern.
 	\end{itemize}
 	
-	\item{Informationen aufrufen} \label{szenarien:infomartionen_aufrufen}
+	\item{Informationen aufrufen} \label{szenarien:infomartionen_aufrufen} (\ref{fa:infobereich})
 	\begin{itemize}
 		\item Im Hauptmenü wählt man den Punkt \enquote{Einstellungen}
 		\item Dort klickt man auf den Button \enquote{Infos}.
@@ -757,7 +758,7 @@ Das Produkt speichert und verwaltet Daten, insbesondere:
 	\item Level spielen (\ref{fa:spielen})
 	\begin{itemize}
 		\item Die Figur reagiert korrekt auf die Steuerung.
-		\item Die Steuerung befindet sich auf der Seite, die der Anwender im Profil ausgewählt hat (\ref{szenarien:ProfilBearbeiten}).
+		\item Die Steuerung befindet sich auf der Seite, die der Anwender im Profil ausgewählt hat (\ref{test:profilBeartbeiten}).
 		\item Die alle Elemente, die für das Lösen des Levels benötigt werden, sind vorhanden.
 		\item Die Elemente sind alle für die Figur erreichbar.
 		\item Die Positionen für die Elemente sind vorhanden.
