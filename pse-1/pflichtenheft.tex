@@ -432,13 +432,13 @@ In jedem Spieltyp läuft im Hintergrund ein Timer* mit, der die Spielzeit des Le
 
 \section{Produkteinsatz}
 
-Das Produkt soll auf jedem \gls{gls:android} Gerät ab Android 4.2 einsatzfähig sein. Ein Einsatz auf Emulatoren der Android Plattform ist ebenfalls vorgesehen.
+Das Produkt soll auf jedem \gls{gls:android}-Gerät ab Android 4.2 einsatzfähig sein. Ein Einsatz auf Emulatoren der Android-Plattform ist ebenfalls vorgesehen.
 
 \subsection{Anwendungsbereich}
 
 \begin{enumerate}
 	\item Freizeitgestaltung von Kindern ab 8 Jahren
-	\item Einsatz an Vor- und Grundschulen im Rahmen eines Unterrichtprojekts
+	\item Einsatz an Vor- und Grundschulen im Rahmen von Unterrichtsprojekten
 \end{enumerate}
 
 \subsection{Zielgruppen}
@@ -495,11 +495,11 @@ Die Zielgruppe besteht überwiegend aus Kindern im Alter von acht bis zwölf Jah
 % subsection fa:tutorial (end)
 
 \begin{falist}
-	\item \label{fa:tutorial} \textbf{Tutorial Modus} findet nach dem ersten Starten des Spiels statt (Musskriterium \ref{muss:tutorial}).
+	\item \label{fa:tutorial} \textbf{Tutorial-Modus} findet nach dem ersten Starten des Spiels statt (Musskriterium \ref{muss:tutorial}).
 	\begin{falist} 
-        \item \label{fa:tutorial_01}Der Tutorial Modus basiert auf einem Minimum an textuellen Erklärungen.
+        \item \label{fa:tutorial_01}Der Tutorial-Modus basiert auf einem Minimum an textuellen Erklärungen.
         \item \label{fa:tutorial_02}Erklärt die Funktionsweise des Spiels,
-		\item \label{fa:tutorial_03}Ein wiederholtes Starten des Tutorial Modus ist möglich.
+		\item \label{fa:tutorial_03}Ein wiederholtes Starten des Tutorial-Modus ist möglich.
 	\end{falist}
 \end{falist}
 
@@ -508,55 +508,55 @@ Die Zielgruppe besteht überwiegend aus Kindern im Alter von acht bis zwölf Jah
 	\item \label{fa:spielerprofile} \textbf{Spielerprofile}
 	\begin{falist}
 		\item \label{fa:spielerprofile_anlegen} \textbf{Anlegen von Spielerprofilen} Spielerprofile können einzeln hinzugefügt werden.
-		\item \label{fa:spielerprofile_bearbeiten} \textbf{Bearbeiten von Spielerprofilen} Spielerprofile können bearbeitet werden. Das Ändern des Namens sowie der Spielerfigur sind möglich.
+		\item \label{fa:spielerprofile_bearbeiten} \textbf{Bearbeiten von Spielerprofilen} Spielerprofile können bearbeitet werden. Das Ändern des Namens sowie der Spielfigur sind möglich.
 		\item \label{fa:spielerprofile_loeschen} \textbf{Löschen von Spielerprofilen} Das Löschen eines Spielerprofils erfolgt über das Profilmneü.
 		\item \label{fa:spielerprofile_wechseln} \textbf{Wechseln zu Spielerprofilen} Das Wechseln eines Spielerprofils ist möglich über das Profilmenü.
-		\item \label{fa:spielerprofile_separiert} \textbf{Eigenständigkeit von Spierprofilen} Spielerprofile sind eigenständig. Fortschritte die in einem Spielerprofil gemacht wurden sind an dieses Profil gebunden.
+		\item \label{fa:spielerprofile_separiert} \textbf{Eigenständigkeit von Spielerprofilen} Spielerprofile sind eigenständig. Fortschritte, die in einem Spielerprofil gemacht wurden, sind an dieses Profil gebunden.
 	\end{falist}
 \end{falist}
 
 \subsection{Spieldesign}
 
 \begin{falist}[resume]
-	\item \label{fa:level} \textbf{Level} Ein \gls{gls:level} eine Aufgabe, mit gegebenem Ziel und einer Menge an Spielobjekten, die der Anwender an vorgegebenen Stellen platzieren muss.
-	\item \label{fa:levelmenue} \textbf{Levelmenü} bietet eine Übersicht über alle \gls{gls:level} des Spiels (Musskriterium \ref{muss:5indilevel}). Diese sind unterteilt in abgeschlossene und nicht abgeschlossene Level.
+	\item \label{fa:level} \textbf{Level} Ein \gls{gls:level} hat eine Aufgabe mit gegebenem Ziel und einer Menge an Spielobjekten, die der Anwender an vorgegebenen Stellen platzieren muss.
+	\item \label{fa:levelmenue} \textbf{Level-Menü} bietet eine Übersicht über alle \gls{gls:level} des Spiels (Musskriterium \ref{muss:5indilevel}). Diese sind unterteilt in abgeschlossene und nicht abgeschlossene Level.
     \begin{falist}
         \item \textbf{Erstes Level} Das erste \gls{gls:level} ist automatisch freigeschaltet.
-        \item \textbf{Freischalten weiterer Level} Das Freischalten weiterer Leve erfolgt durch Freispielen. Beendigung eines Levels führt zum Freischalten des nächsten.
+        \item \textbf{Freischalten weiterer Level} Das Freischalten weiterer Level erfolgt durch Freispielen. Beendigung eines Levels führt zum Freischalten des nächsten.
     \end{falist}
     \item \label{fa:spielen} \textbf{\gls{gls:level} spielen}
     \item \label{fa:buttons_muss} \textbf{Button / Steuerung}
     \begin{falist}
-    	\item \label{fa:button_rechts_kreuz} \textbf{Drücken der rechten Pfeiltaste} Bewegt die Spielfigur in der Spielwelt nach Rechts.
-    	\item \label{fa:button_links_kreuz} \textbf{Drücken der linken Pfeiltaste} Bewegt die Spielfigur in der Spielwelt nach Links.
-    	\item \label{fa:button_lampe} \textbf{Drücken des Hinweis Buttons} Zeigt einen neuen Dialog an, der dem Spieler einen Ausblick auf die Lösung des Levels bietet.
-    	\item \label{fa:button_flagge} \textbf{Drücken des Flaggen Buttons} Zeigt einen Dialog, der die Zielkonstellation des Levels enthält.
-    	\item \label{fa:button_aufnehmen_ablegen} \textbf{Drücken des Aufnahme-/Ablegen Buttons} Wenn die Spielfigur keine Maschine trägt, nimmt Sie die Maschine, die sich vor der Spielfigur (Blickrichtung) befindet, auf. Sollte dort keine Maschine sein, wird keine Handlung ausgeführt. Analog für das Ablegen einer Maschine.
-    	\item \label{fa:button_jump} \textbf{Drücken des Sprungbuttons} Durch das Drücken des Sprungbuttons springt die Spielerfigur. In Kombination mit \ref{fa:button_rechts_kreuz} und \ref{fa:button_links_kreuz} kann ein Sprung in die entsprechende Richtung erfolgen.
-    	\item \label{fa:button_ducken} \textbf{Drücken des Ducken Buttons} Durch das Drücken des Duckenbuttons wird die Größe der Spielerfigur verringert. Sobald der Anwender den Button los lässt kehrt die Figur zu ihrer ursprünglichen Größe zurück.
+    	\item \label{fa:button_rechts_kreuz} \textbf{Drücken der rechten Pfeiltaste} Bewegt die Spielfigur in der Spielwelt nach rechts.
+    	\item \label{fa:button_links_kreuz} \textbf{Drücken der linken Pfeiltaste} Bewegt die Spielfigur in der Spielwelt nach links.
+    	\item \label{fa:button_lampe} \textbf{Drücken des Hinweis-Buttons} Zeigt einen neuen Dialog an, der dem Spieler einen Ausblick auf die Lösung des Levels bietet.
+    	\item \label{fa:button_flagge} \textbf{Drücken des Flaggen-Buttons} Zeigt einen Dialog, der die Zielkonstellation des Levels enthält.
+    	\item \label{fa:button_aufnehmen_ablegen} \textbf{Drücken des Aufnahme-/Ablegen-Buttons} Wenn die Spielfigur keine Maschine trägt, nimmt Sie die Maschine, die sich vor der Spielfigur (Blickrichtung) befindet, auf. Sollte dort keine Maschine sein, wird keine Handlung ausgeführt. Analog für das Ablegen einer Maschine.
+    	\item \label{fa:button_jump} \textbf{Drücken des Sprungbuttons} Durch das Drücken des Sprungbuttons springt die Spielfigur. In Kombination mit \ref{fa:button_rechts_kreuz} und \ref{fa:button_links_kreuz} kann ein Sprung in die entsprechende Richtung erfolgen.
+    	\item \label{fa:button_ducken} \textbf{Drücken des Ducken-Buttons} Durch das Drücken des Ducken-Buttons wird die Größe der Spielfigur verringert. Sobald der Anwender den Button loslässt, kehrt die Figur zu ihrer ursprünglichen Größe zurück.
     \end{falist}
     \item \label{fa:button_wunsch} \textbf{Button / Steuerung *}
     \begin{falist}
-    	\item \label{fa:wunsch_button_rechts} \textbf{Wischgeste nach Rechts} Der Anwender wischt mit seinem Finger über den Bildschirm nach rechts. Dadurch bewegt sich die Spielfigur um einen Schritt nach rechts.
-    	\item \label{fa:wunsch_button_links} \textbf{Wischgeste nach Links} Der Anwender wischt mit seinem Finger über den Bildschirm nach links. Dadurch bewegt sich die Spielfigur um einen Schritt nach links.
-    	\item \label{fa:wunsch_button_oben} \textbf{Wischgeste nach Oben} Der Anwender wischt mit seinem Finger über den Bildschirm nach oben. Dadurch führt die Spielfigur einen Sprung aus. Diese funktionale Anforderung ist kombinierbar mit \ref{fa:wunsch_button_rechts} und \ref{fa:wunsch_button_links}. Sollte der Anwender geduckt sein, richtet sich die Spielfigur wieder auf.
-    	\item \label{fa:wunsch_button_unten} \textbf{Wischgeste nach Unten} Der Anwender wischt mit seinem Finger über den Bildschirm nach unten. Dadurch beginnt die Spielfigur sich zu ducken. Sie verharrt in diesem \enquote{Modus} bis der Benutzer \ref{fa:wunsch_button_oben} ausführt.
+    	\item \label{fa:wunsch_button_rechts} \textbf{Wischgeste nach rechts} Der Anwender wischt mit seinem Finger über den Bildschirm nach rechts. Dadurch bewegt sich die Spielfigur um einen Schritt nach rechts.
+    	\item \label{fa:wunsch_button_links} \textbf{Wischgeste nach links} Der Anwender wischt mit seinem Finger über den Bildschirm nach links. Dadurch bewegt sich die Spielfigur um einen Schritt nach links.
+    	\item \label{fa:wunsch_button_oben} \textbf{Wischgeste nach oben} Der Anwender wischt mit seinem Finger über den Bildschirm nach oben. Dadurch führt die Spielfigur einen Sprung aus. Diese funktionale Anforderung ist kombinierbar mit \ref{fa:wunsch_button_rechts} und \ref{fa:wunsch_button_links}. Sollte die Spielfigur geduckt sein, richtet sie sich wieder auf.
+    	\item \label{fa:wunsch_button_unten} \textbf{Wischgeste nach unten} Der Anwender wischt mit seinem Finger über den Bildschirm nach unten. Dadurch beginnt die Spielfigur sich zu ducken. Sie verharrt in diesem \enquote{Modus} bis der Benutzer \ref{fa:wunsch_button_oben} ausführt.
     \end{falist}
-	\item \textbf{Interaktion mit den Spielelementen aus Nr. \ref{elemente:collectable}} Sammelgegenstände die abgelegt sind können nicht durch den Anwender passiert werden und müssen übersprungen werden (siehe \ref{fa:button_jump} bzw. \ref{fa:wunsch_button_oben}).
+	\item \textbf{Interaktion mit den Spielelementen aus Nr. \ref{elemente:collectable}} Sammelgegenstände, die abgelegt sind, können nicht durch den Anwender passiert werden und müssen übersprungen werden (siehe \ref{fa:button_jump} bzw. \ref{fa:wunsch_button_oben}).
 	\item \textbf{Interaktion mit den Boxen} Die Boxen sind in einer weiteren Ebene und können von der Spielfigur zur Ablage der Metallstücke und Maschinen benutzt werden.
-	\item \label{fa:auswertung_animiert} \textbf{Animierte Auswertung der Maschinenkonstellation} Durch eine Animation wird gezeigt wie die Verarbeitung der Maschinen stattfindet (Auswertungsbeispiel siehe \ref{Levelaufbau:Auswertungsbeispiele}).
+	\item \label{fa:auswertung_animiert} \textbf{Animierte Auswertung der Maschinenkonstellation} Durch eine Animation wird gezeigt, wie die Verarbeitung der Maschinen stattfindet (Auswertungsbeispiel siehe \ref{Levelaufbau:Auswertungsbeispiele}).
 \end{falist}
 
 \subsection{Achievements*}
 
 \begin{falist}[resume]
-    \item \label{fa:achievements} \textbf{Achievements} sind Ziele die von dem Spiel vorgegeben werden und gutes Spielen des Anwenders auszeichnen. Angedacht dafür sind folgende:
+    \item \label{fa:achievements} \textbf{Achievements} sind Ziele, die von dem Spiel vorgegeben werden und gutes Spielen des Anwenders auszeichnen. Angedacht dafür sind folgende:
     \begin{itemize}
     	\item Abschließen des Tutorial-Modus
     	\item Abschließen eines Kapitels
     	\item Spielzeit unterhalb einer gegebenen Schranke
     	\item Spielzeit oberhalb einer gegebenen Schranke
-    	\item Fun-Achievements (Nicht-Schwimmer, Nachtsschwärmer)
+    	\item Fun-Achievements (Nichtschwimmer, Nachtschwärmer)
     	\item First-Try
     \end{itemize}
 \end{falist}
@@ -572,7 +572,7 @@ Die Zielgruppe besteht überwiegend aus Kindern im Alter von acht bis zwölf Jah
 \begin{falist}[resume]
 	\item \label{fa:infobereich} \textbf{Infobereich} Das Spiel verfügt über einen Infobereich, der weiterführende Informationen zum Thema $\lambda$-Kalkül enthält.
 	\item \label{fa:spieleinstellungen} \textbf{Spieleinstellungen} Das Spiel verfügt über Einstellungen, die das Verhalten des Programms beeinflussen. \ref{produktdaten:einstellungen}
-	\item \label{fa:spielestatistiken} \textbf{Spielestatistiken} Das Spiel verfügt über Spielstatistiken, die Auskunft geben über das Verhalten des Spielers. \ref{produktdaten:spielestatistiken}
+	\item \label{fa:spielestatistiken} \textbf{Spielstatistiken} Das Spiel verfügt über Spielstatistiken, die über das Verhalten des Spielers Auskunft geben. \ref{produktdaten:spielestatistiken}
 	
 \end{falist}
 
@@ -599,8 +599,8 @@ Das Produkt speichert und verwaltet Daten, insbesondere:
     \begin{pdlist}
         \item \label{produktdaten:profile:name}Name des Spielers
         \item \label{produktdaten:profile:avatar}Avatar
-        \item \label{produktdaten:profile:einstellungen}profilbezogene Einstellungen(Hintergrund, Musik etc.) 
-        \item \label{produktdaten:profile:spielfortschritt}profilbezogener Spielfortschritt(gelöste Level, Achievements, etc.)
+        \item \label{produktdaten:profile:einstellungen}profilbezogene Einstellungen (Hintergrund, Musik etc.) 
+        \item \label{produktdaten:profile:spielfortschritt}profilbezogener Spielfortschritt(gelöste Level, Achievements etc.)
     \end{pdlist}
 \end{pdlist}
 
@@ -679,7 +679,7 @@ Das Produkt speichert und verwaltet Daten, insbesondere:
 		\item JSON, XML für strukturierte Textdateien
 	\end{itemize}
 	\item Die Auslieferung der finalen Version erfolgt in Form einer .apk-Datei.
-	\item Es werden nur ein Minimum an Berechtigung eingefordert. Dieses sind Lese- und Schreibzugriff.
+	\item Es wird nur ein Minimum an Berechtigungen eingefordert. Diese sind Lese- und Schreibzugriff.
 \end{nflist}
 
 \clearpage
@@ -704,11 +704,11 @@ Das Produkt speichert und verwaltet Daten, insbesondere:
 		\item Starten der Applikation durch Anklicken der App-Verknüpfung
 		\item Der Ladebildschirm(\ref{appaufbau:Ladebildschirm}) wird sichtbar und informiert über den Ladezustand des Spiels.
 		\item Der \gls{gls:anwender} wird direkt zum "`Benutzer-Anlegen"'- Bereich weitergeleitet
-		\item Wurde ein Profil angelegt, öffnet sich die Einstellung
+		\item Wurde ein Profil angelegt, öffnen sich die Einstellungen
 		\item Geht der Anwender von den Einstellungen weiter, beginnt der Tutorial-Modus
-		\item Lamdbalino begrüßt den Anwender
+		\item Lambdalino begrüßt den Anwender
 		\item Es wird in die Handlung des Spiels eingeführt
-		\item Nach dem Tutorial-Modus öffnet sich das Levelmenü und das erste \gls{gls:level} ist freigeschaltet 
+		\item Nach dem Tutorial-Modus öffnet sich das Level-Menü und das erste \gls{gls:level} ist freigeschaltet 
 	\end{itemize}
 	
 	\item{Allgemeiner Spielstart} \label{szenarien:allg_spielstart}
@@ -722,42 +722,42 @@ Das Produkt speichert und verwaltet Daten, insbesondere:
 	\item Tutorial basierend auf (\ref{fa:tutorial} - \ref{fa:tutorial_03})
 	\begin{itemize}
 		\item Der Anwender startet den Tutorial-Modus über das Level-Menü (Systemmodell \ref{appaufbau:Levelauswahl}) oder gelangt automatisch in diesen beim ersten Starten des Spiels mit einem neuen Profil.
-		\item Der Anwender wird durch die Tutorial-\gls{gls:level} geleitet, in denen ihm erklärt wird, wie er die Steuerung benutzen, die Elemente in die gewünschte Ablage bringen kann und wie genau die Maschinen die Elemente verarbeiten.
-		\item Wenn der Tutorial-Modus beendet wurde, gelangt der Anwender in den Hauptbildschirm.
+		\item Der Anwender wird durch die Tutorial-\gls{gls:level} geleitet, in denen ihm erklärt wird, wie er die Steuerung benutzen muss, die Elemente in die gewünschte Ablage bringen kann und wie genau die Maschinen die Elemente verarbeiten.
+		\item Wenn der Tutorial-Modus beendet wurde, gelangt der Anwender zum Hauptbildschirm.
 	\end{itemize}
 
 	\item Ein Benutzerprofil anlegen (\ref{fa:spielerprofile_anlegen})
 	\begin{itemize}
-		\item Der Anwender befindet sich im Hauptmenü und drückt auf den \enquote{Benutzerverwaltungsbutton}. Diese Aktion führt den Benutzer zum Profilmenü.
-		\item Durch Wischgesten gelangt der Benutzer an das Ende der Liste, wo sich ein \enquote{+}-Zeichen befindet. Durch Drücken dieses Symbols wird ein neuer Dialog gestartet.
-		\item In diesem Dialogfenster kann der Benutzer einen neuen Profilnamen angeben. Durch drücken des \enquote{Weiter}-Buttons gelangt er zu einem weiteren Dialog.
-		\item In diesem Dialog kann er einen Charakter auswählen und auswählen, ob dieses Profil im Rechts- oder Linkshänder Modus* gespielt werden soll. Der Dialog wird durch Betätigen des \enquote{OK}-Buttons beendet.
+		\item Der Anwender befindet sich im Hauptmenü und drückt auf den \enquote{Benutzerverwaltungsbutton}. Diese Aktion führt den Anwender zum Profilmenü.
+		\item Durch Wischgesten gelangt der Anwender an das Ende der Liste, wo sich ein \enquote{+}-Zeichen befindet. Durch Drücken dieses Symbols wird ein neuer Dialog gestartet.
+		\item In diesem Dialogfenster kann der Anwender einen neuen Profilnamen angeben. Durch Drücken des \enquote{Weiter}-Buttons gelangt er zu einem weiteren Dialog.
+		\item In diesem Dialog kann er einen Charakter und ob dieses Profil im Rechts- oder Linkshänder Modus* gespielt werden soll auswählen. Der Dialog wird durch Betätigen des \enquote{OK}-Buttons beendet.
 	\end{itemize}
 	
 	\item Ein Benutzerprofil auswählen (\ref{fa:spielerprofile_wechseln})
 	\begin{itemize}
-		\item Der Anwender befindet sich im Hauptmenü und drückt auf den \enquote{Benutzerverwaltungsbutton}. Diese Aktion führt den Benutzer zum Profilmenü.
-		\item Durch Scrollen kann der Benutzer seine Profile einsehen. Bei Erreichen des gewünschten Profils wählt er dieses durch Berühren aus.
+		\item Der Anwender befindet sich im Hauptmenü und drückt auf den \enquote{Benutzerverwaltungsbutton}. Diese Aktion führt den Anwender zum Profilmenü.
+		\item Durch Scrollen kann der Anwender seine Profile einsehen. Bei Erreichen des gewünschten Profils wählt er dieses durch Berühren aus.
 	\end{itemize}
 	
 	\item Ein Benutzerprofil löschen (\ref{fa:spielerprofile_loeschen})
 	\begin{itemize}
-		\item Der Anwender befindet sich im Hauptmenü und drückt auf den \enquote{Benutzerverwaltungsbutton}. Diese Aktion führt den Benutzer zum Profilmenü.
-		\item Durch Scrollen kann der Anwender seine Profile einsehen. Er wählt dieses durch Berühren aus. 
+		\item Der Anwender befindet sich im Hauptmenü und drückt auf den \enquote{Benutzerverwaltungsbutton}. Diese Aktion führt den Anwender zum Profilmenü.
+		\item Durch Scrollen kann der Anwender seine Profile einsehen. Er wählt diese jeweils durch Berühren aus. 
 	\end{itemize}
 	
 	\item Ein Benutzerprofil bearbeiten (\ref{fa:spielerprofile_bearbeiten}) \label{test:profilBeartbeiten}
 	\begin{itemize}
-		\item Der Anwender befindet sich im Hauptmenü und drückt auf den \enquote{Benutzerverwaltungsbutton}. Diese Aktion führt den Benutzer zum Profilmenü.
+		\item Der Anwender befindet sich im Hauptmenü und drückt auf den \enquote{Benutzerverwaltungsbutton}. Diese Aktion führt den Anwender zum Profilmenü.
 		\item Der Anwender wählt den \enquote{Bearbeitungs-Button} neben dem Profil, welches er bearbeiten möchte, aus.
-		\item Im Bearbeitungsbereich kann der Anwender den Namen, den Avatar und die Position der Steuerung (Rechts-oder Linkshänder- Modus)*  verändern.
+		\item Im Bearbeitungsbereich kann der Anwender seinen Namen, Avatar und die Position der Steuerung (Rechts-oder Linkshänder- Modus)*  verändern.
 	\end{itemize}
 	
 	\item{Informationen aufrufen} \label{szenarien:infomartionen_aufrufen} (\ref{fa:infobereich})
 	\begin{itemize}
 		\item Im Hauptmenü wählt man den Punkt \enquote{Einstellungen}
 		\item Dort klickt man auf den Button \enquote{Infos}.
-		\item Es erscheint eine vereinfachte Erklärung des Lambda-Kalküls, sowie eine Erläuterung zu den Zusammenhängen des Lambda-Kalküls und des Spiels.
+		\item Es erscheint eine vereinfachte Erklärung des Lambda-Kalküls, sowie eine Erläuterung zu den Zusammenhängen des Lambda-Kalküls mit dem Spiels.
 	\end{itemize}
 	
 	\item Level-Menü (\ref{fa:levelmenue})
@@ -772,24 +772,24 @@ Das Produkt speichert und verwaltet Daten, insbesondere:
 		\item Alle Elemente, die für das Lösen des Levels benötigt werden, sind vorhanden.
 		\item Alle Elemente sind für die Figur erreichbar.
 		\item Die Ablagen für die Elemente sind vorhanden.
-		\item Die Tür öffnet sich wenn alle Elemente korrekt platziert wurden.
+		\item Die Tür öffnet sich, wenn alle Elemente korrekt platziert wurden.
 	\end{itemize}
 	
 	\item Buttons (\ref{fa:button_rechts_kreuz} - \ref{fa:button_ducken})
 	\begin{itemize}
-		\item Nachdem der Benutzer das Spiel gestartet hat, werden die Buttons, spezifiziert in den Funktionalen Anforderungen, angezeigt.
+		\item Nachdem der Anwender das Spiel gestartet hat, werden die Buttons, spezifiziert in den funktionalen Anforderungen, angezeigt.
 		\item Alle Buttons haben die Funktionsweise, die jeweils spezifiziert wurde.
 	\end{itemize}
 	
 	\item Spieleinstellungen (\ref{produktdaten:einstellungen})
 	\begin{itemize}
-		\item Der Anwender kann die Lautstärke verändern. Die Hintergrundmusik wird dem entsprechend lauter oder leiser.
+		\item Der Anwender kann die Lautstärke verändern. Die Hintergrundmusik wird dementsprechend lauter oder leiser.
 		\item Der Anwender kann wählen, ob die Musik an oder aus sein soll.
 	\end{itemize}
 	
 	\item Spielestatistiken (\ref{produktdaten:spielestatistiken})
 	\begin{itemize}
-		\item Der Anwender kann in den Spielestatistiken sehen, wie lange er gespielt, wie viele \gls{gls:level} er gelöst und welche Achievements* er bereits erreicht hat.
+		\item Der Anwender kann in den Spielestatistiken sehen, wie lange er bereits gespielt, wie viele \gls{gls:level} er gelöst und welche Achievements* er bereits erreicht hat.
 	\end{itemize}
 	
 	\item{Spiel verlassen} \label{szenarien:quit_game}
@@ -798,18 +798,18 @@ Das Produkt speichert und verwaltet Daten, insbesondere:
 		\begin{enumerate}
 			\item Man klickt auf den Button links oben im Hauptmenü
 			\item Es erscheint ein Fenster \enquote{Wirklich verlassen?}
-			\item Beim betätigen des Button \enquote{Ja} wird das Spiel verlassen und die App beendet
+			\item Beim Betätigen des Button \enquote{Ja} wird das Spiel verlassen und die App beendet
 			\item Außerdem werden alle nicht gespeicherten Änderungen gespeichert
 		\end{enumerate}
 		\item Spiel über das Betriebssystem verlassen
 		\begin{enumerate}
-			\item Der Benutzer berührt den Homebutton auf seinem Gerät zum zurück zu \gls{gls:android} zu gelangen.
+			\item Der Benutzer berührt den Home-Button auf seinem Gerät, um zurück zu \gls{gls:android} zu gelangen.
 		\end{enumerate}
 	\end{itemize}
 	
-	\item Speicher / Laden von Applikationszustandes
+	\item Speichern / Laden von Applikationszuständen
 	\begin{itemize}
-		\item Beim Verlassen des Spiels durch Hardware Tasten oder ähnliches begibt sich das Spiel in den Pausenmodus mit Buttons zum Neustart des Levels, dem Verlassen ins Levelmenü, dem Verlassen ins Hauptmenü und Einstellungen (Lautstärke) sowie der Option, weiterzuspielen.
+		\item Beim Verlassen des Spiels durch Hardware-Tasten oder ähnliches begibt sich das Spiel in den Pausenmodus mit Buttons zum Neustart des Levels, dem Verlassen ins Level-Menü, dem Verlassen ins Hauptmenü und zu den Einstellungen (Lautstärke) sowie der Option, weiterzuspielen.
 		\item Wenn der Anwender die Anwendung erneut aufruft, findet er dieses Pause Menü vor.
 	\end{itemize}
 	
@@ -824,7 +824,7 @@ Das Produkt speichert und verwaltet Daten, insbesondere:
 
 \begin{telist}[resume]
 	\item Der Spielfortschritt eines jeden Profils wird unabhängig von den anderen Profilen gespeichert und verwaltet. Im Spielfortschritt eingeschlossen sind die Achievements* des jeweiligen Nutzers.
-	\item Das Anlegen zweier Profile, die über den selben Namen verfügen, ist nicht gestattet. Sollte der Benutzer sich dazu entschließen ein Profil zu löschen, wird der Name wieder freigegeben und kann für ein neues Profil verwendet werden.
+	\item Das Anlegen zweier Profile, die über den selben Namen verfügen, ist nicht gestattet. Sollte der Anwender sich dazu entschließen, ein Profil zu löschen, wird der Name wieder freigegeben und kann für ein neues Profil verwendet werden.
 \end{telist}
 
 \clearpage
@@ -847,14 +847,14 @@ Das Produkt speichert und verwaltet Daten, insbesondere:
 \subsection{Allgemeine Appaufteilung}
 
 Der hier gezeigte Systemaufbau ist lediglich eine grobe \enquote{Skizze},
-die die zusammenhänge zwischen den einzelnen Menüs sowie, 
+die die Zusammenhänge zwischen den einzelnen Menüs sowie
 die Gestaltung und Aufteilung der App verdeutlichen soll.\\
-Allgemein gilt jedoch, das so viel wie möglich ohne Text, sondern durch Symbolik erklärt bzw. dargestellt werden soll. Da die Zielgruppe nicht zwangsläufig lesen und schreiben kann.\\
+Allgemein gilt jedoch, das so viel wie möglich ohne Text, sondern durch Symbolik erklärt bzw. dargestellt werden soll, da die Zielgruppe nicht zwangsläufig lesen und schreiben kann.\\
 
 \begin{enumerate}
 	\begin{minipage}{1\textwidth}
 		\item \subsection*{Ladebildschirm:} \label{appaufbau:Ladebildschirm}
-		Nach dem Starten der App, öffnet diese im Ladebildschirm, hier werden für die App notwendige Daten geladen, um zu Garantieren das das Spiel flüssig und Fehlerfrei läuft. Benutzeingaben sind zu diesem Zeitpunkt nicht möglich.\\
+		Nach dem Starten der App, öffnet diese im Ladebildschirm. Hier werden für die App notwendige Daten geladen, um zu garantieren, dass das Spiel flüssig und fehlerfrei läuft. Benutzereingaben sind zu diesem Zeitpunkt nicht möglich.\\
 		\includegraphics[scale=0.5]{assets/LoadScreen}
 	\end{minipage}
 	
