@@ -1,0 +1,177 @@
+\documentclass[ngerman,hyperref={pdfpagelabels=false}]{beamer}
+
+% -----------------------------------------------------------------------------
+
+\graphicspath{{images/}}
+
+% -----------------------------------------------------------------------------
+
+\usetheme{KIT}
+
+\setbeamercovered{transparent}
+%\setbeamertemplate{enumerate items}[ball]
+
+\newenvironment<>{KITtestblock}[2][]
+{\begin{KITcolblock}<#1>{#2}{KITblack15}{KITblack50}}
+{\end{KITcolblock}}
+
+\usepackage[ngerman,english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[TS1,T1]{fontenc}
+\usepackage{array}
+\usepackage{multicol}
+\usepackage[absolute,overlay]{textpos}
+\usepackage{beamerKITdefs}
+
+\pdfpageattr {/Group << /S /Transparency /I true /CS /DeviceRGB>>}	%required to prevent color shifting withd transparent images
+
+
+\title{Titel}
+\subtitle{Dennis Schieferdecker -- \textit{dennis.schieferdecker@kit.edu}}
+
+\author[Dennis Schieferdecker]{Dennis Schieferdecker}
+\institute{Institut für Theoretische Informatik - Algorithmik II}
+
+\TitleImage[width=\titleimagewd,height=\titleimageht]{titel}
+
+\KITinstitute{Institut f\"ur Theoretische Informatik}
+\KITfaculty{Fakult\"at f\"ur Informatik}
+
+% -----------------------------------------------------------------------------
+
+\begin{document}
+\setlength\textheight{7cm} %required for correct vertical alignment, if [t] is not used as documentclass parameter
+
+
+% title frame
+\begin{frame}
+  \maketitle
+\end{frame}
+
+
+% intro
+\section{Introduction}
+\begin{frame}
+  \frametitle{Titel}
+  \framesubtitle{Untertitel}
+
+  \heading{Heading}
+  \begin{itemize}
+  \item alerts: \emph{emph}, \galert{green}, \ralert{red}, \balert{blue}
+  \item wall of text to see an actual line break happen on this slide and on this line
+  \end{itemize}
+
+	\bigskip
+	\bigskip
+	\pause  
+
+  \heading{KITcolumns}
+  \begin{KITcolumns}
+  \column{0.49\textwidth}
+  column 1
+  \column{0.49\textwidth}
+  column 2
+  \end{KITcolumns}
+
+  \begin{textblock*}{0.5\linewidth}(8.5cm,5.2cm)
+  \KITbild[width=3cm]{questionmark}
+  \end{textblock*}
+  
+\end{frame}
+
+
+% blocks
+\begin{frame}
+	\frametitle{Blöcke}
+	\framesubtitle{in bunt}
+
+	\begin{KITalertblock}{alert}
+	\begin{itemize}
+	\item red
+	\end{itemize}
+	\end{KITalertblock}
+
+	\bigskip
+	\smallskip
+	\pause
+
+	\begin{KITinfoblock}{info}
+	\begin{itemize}
+		\item green
+	\end{itemize}
+	\end{KITinfoblock}
+	
+	\bigskip
+	\smallskip
+	\pause
+
+	\begin{KITexampleblock}{example}
+	\begin{itemize}
+		\item blue
+	\end{itemize}
+	\end{KITexampleblock}
+
+	\bigskip
+	\smallskip
+	\pause
+
+	\begin{KITblock}{normal}
+	\begin{itemize}
+		\item gray
+	\end{itemize}
+	\end{KITblock}
+
+\end{frame}
+
+
+% blocks continued
+\begin{frame}
+	\frametitle{Blöcke}
+	\framesubtitle{in bunt (2)}
+
+	\begin{KITcolblock}{arbitrarily colored block}{KITgreen50}{KITred15}
+	\begin{itemize}
+		\item colorful
+	\end{itemize}
+	\end{KITcolblock}
+
+	\bigskip
+	\smallskip
+	\pause
+
+	\setboolean{KITblockborder}{false}
+	\begin{KITblock}{no border}
+	\begin{itemize}
+		\item use \textbackslash setboolean\{KITblockborder\}\{true or false\} to switch block borders on or off
+	\end{itemize}
+	\end{KITblock}
+
+	\bigskip
+	\smallskip
+	\pause	
+
+	\heading{enumerate environment}
+	\begin{enumerate}
+		\item level 1
+		\begin{enumerate}
+			\item level 2
+			\item level 2
+			\begin{enumerate}
+				\item level 3
+				\item level 3
+			\end{enumerate}
+		\end{enumerate}
+	\end{enumerate}
+
+\end{frame}
+
+
+% drawing area
+\begin{frame}
+	\frametitle{Area for Text}
+	\framesubtitle{The big black box}
+
+	\rule{\textwidth}{\textheight}
+\end{frame}
+
+\end{document}
