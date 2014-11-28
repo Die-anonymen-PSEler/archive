@@ -252,7 +252,7 @@ Die Positionierung dieser Buttons kann profilspezifisch geändert werden, dabei 
  Der $\lambda$-Kalkül ist eine formale Sprache, die im Allgemeinen dazu dient, Funktionen zu definieren bzw. beschreiben.\\
 In unserem Fall beschränken wir uns jedoch auf die beiden grundlegenden Regeln des $\lambda$-Kalkül, die $\alpha$-Regel und die $\beta$-Regel. Das Spiel soll dem \gls{gls:anwender} diese beiden wichtigen Regeln des $\lambda$-Kalkül anschaulich erklären.
 
-\subsubsection{\texorpdfstring{$\alpha$}{Alpha}-Regel}
+\subsubsection{\texorpdfstring{$\alpha$}{Alpha}-Konversion}
 
 Die Alpha-Regel besagt im $\lambda$-Kalkül, dass die Variablen eines $\lambda$-Terms jederzeit umbenannt werden dürfen, um die Eindeutigkeit dieser Terme zu waren. Beispielsweise:
 \[
@@ -261,10 +261,10 @@ Die Alpha-Regel besagt im $\lambda$-Kalkül, dass die Variablen eines $\lambda$-
 
 Wichtig ist hierbei, dass keine Doppelverwendung von Variablennamen in unterschiedlichen $\lambda$-Termen entsteht. Vielmehr ist diese Regel dazu gedacht, beim Auftreten einer Doppelbelegung eine der beiden Variablen umzutaufen, um eindeutige $\lambda$-Terme zu formen.
 
-\subsubsection{\texorpdfstring{$\beta$}{Beta}-Regel}
+\subsubsection{\texorpdfstring{$\beta$}{Beta}-Reduktion}
 
 Die $\beta$-Regel dient der Vereinfachung, Auflösung oder Umformung von $\lambda$-Termen.\\
-Sie besagt, dass ein $\lambda$-Term, von zum Beispiel dieser Form ($\lambda$x.x+2)(z), umgeformt werden kann, indem der Ausdruck ``z'' in den Term hinter dem ``.'' eingesetzt wird und zwar für genau die Variable, die zwischen ``$\lambda$'' und dem ``.'' steht, um es anschaulich zu erklären. Beispielsweise:
+Sie besagt, dass ein $\lambda$-Term, von zum Beispiel dieser Form $(\lambda x.x+2)(z)$, umgeformt werden kann, indem der Ausdruck ``z'' in den Term hinter dem ``.'' eingesetzt wird und zwar für genau die Variable, die zwischen ``$\lambda$'' und dem ``.'' steht, um es anschaulich zu erklären. Beispielsweise:
 \[
 	(\lambda x.x+2)(z) = (x+2)[x \leftarrow z] = z + 2
 \]
@@ -277,9 +277,9 @@ Wichtig ist, dass hierbei sowohl z als auch x für alles stehen können. Also ka
 		&= (\lambda x.x+2)((\lambda x.x+2)(2)) \\
 		&= (\lambda x.x+2)((x+2)[x \leftarrow 2]) \\
 		&= (\lambda x.x+2)(2 + 2) \\
-		&= (\lambda x.x+2)(4) \\
-		&= (x+2)[x \leftarrow 4] \\
-		&= 4 + 2 = 6
+		&= (\lambda x.x+2)(2 + 2) \\
+		&= (x+2)[x \leftarrow 2 + 2] \\
+		&= 2 + 2 + 2
 	\end{aligned}
 \]
 \end{minipage}
