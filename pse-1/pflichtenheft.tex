@@ -5,7 +5,7 @@
 \usepackage[ngerman]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage{hyperref}
-\usepackage{amsmath}
+\usepackage{mathtools}
 \usepackage[xindy,toc,section,acronym]{glossaries}
 \makeglossaries
 \usepackage[xindy]{imakeidx}
@@ -248,7 +248,7 @@ Die Positionierung dieser Buttons kann profilspezifisch geändert werden, dabei 
 
 \subsection{Lambda-Kalkül}  \label{subsection:LambdaKalkül}
 \label{LambdaKalkül:AlgemeineErklärung}
-\begin{minipage}{1\textwidth}
+
  Der $\lambda$-Kalkül ist eine formale Sprache, die im Allgemeinen dazu dient, Funktionen zu definieren bzw. beschreiben.\\
 In unserem Fall beschränken wir uns jedoch auf die beiden grundlegenden Regeln des $\lambda$-Kalkül, die $\alpha$-Regel und die $\beta$-Regel. Das Spiel soll dem \gls{gls:anwender} diese beiden wichtigen Regeln des $\lambda$-Kalkül anschaulich erklären.
 
@@ -264,7 +264,13 @@ Wichtig ist hierbei, dass keine Doppelverwendung von Variablennamen in unterschi
 \subsubsection{\texorpdfstring{$\beta$}{Beta}-Reduktion}
 
 Die $\beta$-Regel dient der Vereinfachung, Auflösung oder Umformung von $\lambda$-Termen.\\
-Sie besagt, dass ein $\lambda$-Term, von zum Beispiel dieser Form $(\lambda x.x+2)(z)$, umgeformt werden kann, indem der Ausdruck ``z'' in den Term hinter dem ``.'' eingesetzt wird und zwar für genau die Variable, die zwischen ``$\lambda$'' und dem ``.'' steht, um es anschaulich zu erklären. Beispielsweise:
+Sie besagt, dass ein $\lambda$-Term, von zum Beispiel folgender Form:
+
+\[
+	(\lambda x.x+2)(z)
+\]
+
+umgeformt werden kann, indem der Ausdruck \enquote{$z$} in den Term hinter dem Punkt eingesetzt wird und zwar für genau die Variable, die zwischen \enquote{$\lambda$} und dem Punkt steht, um es anschaulich zu erklären. Beispielsweise:
 \[
 	(\lambda x.x+2)(z) = (x+2)[x \leftarrow z] = z + 2
 \]
@@ -273,16 +279,16 @@ Wichtig ist, dass hierbei sowohl z als auch x für alles stehen können. Also ka
 \subsubsection{Beispiel für der \texorpdfstring{$\lambda$}{Lambda}-Kalkül}
 \[
 	\begin{aligned}
-		\lambda f.f(f(2))(\lambda x.x+2)&= (f(f(2)))[f \leftarrow \lambda x.x+2] \\
-		&= (\lambda x.x+2)((\lambda x.x+2)(2)) \\
-		&= (\lambda x.x+2)((x+2)[x \leftarrow 2]) \\
-		&= (\lambda x.x+2)(2 + 2) \\
-		&= (\lambda x.x+2)(2 + 2) \\
-		&= (x+2)[x \leftarrow 2 + 2] \\
-		&= 2 + 2 + 2
+		\lambda f.f(f(2))(\lambda x.x+2)&\xRightarrow{\beta} (f(f(2)))[f \leftarrow \lambda x.x+2] \\
+		&\xRightarrow{\beta} (\lambda x.x+2)((\lambda x.x+2)(2)) \\
+		&\xRightarrow{\beta} (\lambda x.x+2)((x+2)[x \leftarrow 2]) \\
+		&\xRightarrow{\beta} (\lambda x.x+2)(2 + 2) \\
+		&\xRightarrow{\beta} (\lambda x.x+2)(2 + 2) \\
+		&\xRightarrow{\beta} (x+2)[x \leftarrow 2 + 2] \\
+		&\xRightarrow{\beta} 2 + 2 + 2 = 6
 	\end{aligned}
 \]
-\end{minipage}
+
 
 
 \subsection{Levelaufbau}  \label{subsection:Levelaufbau}
