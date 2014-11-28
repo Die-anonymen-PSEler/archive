@@ -160,7 +160,7 @@ Wunschkriterien seien von nun an im restlichen Pflichtenheft mit einem * markier
 Das Spielprinzip beruht auf dem Bewegen von Blöcken, indem der \gls{gls:anwender} die Blöcke hochhebt und wieder absetzt. Der \gls{gls:anwender} muss die verschiedenen Elemente des Spieles, die Maschinen, die Maschinen-Cluster und die Metallstücke, in den dafür vorgesehenen Ablagen positionieren. Hat er alle Elemente in die jeweils richtige Ablage gesetzt, erfolgt die Auswertung, anschließend öffnet sich die Tür zum nächsten \gls{gls:level}.
 
 \subsection{Handlung des Spiels*} \label{subsection:Story}
-Lambdor, der Vollstrecker, hat den \gls{gls:anwender} entführt und in ein Haus mit vielen magischen Räumen gesperrt, deren Türen verschlossen sind. Um entkommen zu können, muss der \gls{gls:anwender} die Türen öffnen. Dafür braucht er besondere Metallstücke, diese hat Lambdor jedoch zerstört. Der \gls{gls:anwender} kann sie wieder herstellen, dafür muss er zunächst die Maschinen zusammenbauen, mit denen sie hergestellt werden können. Glücklicherweise hilft Lambdalino, der kleine Bruder von Lambdor, dem \gls{gls:anwender} dabei. Er zeigt ihm, wie er die Maschinen zusammenbauen muss und wie er die Metallstücke herstellen kann. So kann der \gls{gls:anwender} es schaffen, aus dem Wirrwarr der Räume zu entkommen.
+Lambdor, der Vollstrecker, hat die Spielfigur entführt und in ein Haus mit vielen magischen Räumen gesperrt, deren Türen verschlossen sind. Um entkommen zu können, muss die Spielfigur die Türen öffnen. Dafür braucht sie besondere Metallstücke, diese hat Lambdor jedoch zerstört. Die Spielfigur kann sie wieder herstellen, dafür muss sie zunächst die Maschinen zusammenbauen, mit denen die Metallstücke hergestellt werden können. Glücklicherweise hilft Lambdalino, der kleine Bruder von Lambdor, der Spielfigur dabei. Er zeigt ihr, wie sie die Maschinen zusammenbauen muss und wie sie die Metallstücke herstellen kann. So kann die Spielfigur es schaffen, aus dem Wirrwarr der Räume zu entkommen.
 
 
 \subsection{Spielelemente}
@@ -779,6 +779,13 @@ Das Produkt speichert und verwaltet Daten, insbesondere:
 		\item Alle Elemente, die für das Lösen des Levels benötigt werden, sind vorhanden.
 		\item Alle Elemente sind für die Figur erreichbar.
 		\item Die Ablagen für die Elemente sind vorhanden.
+		\item Die Elemente können von der Figur aufgenommen werden.
+		\item Nachdem die Elemente aufgenommen wurden, werden sie von der Figur getragen.
+		\item Die Elemente können wieder abgesetzt werden.
+		\item Die Elemente können in die Ablagen platziert werden.
+		\item Ist im Level ein Ampel-Konstrukt vorhanden, so ist die Ampel rot solange mehr als eine Maschine oberhalb der Ampel in der Verschachtelung existieren.
+		\item Ist im Level ein Ampel-Konstrukt vorhanden, so wird die Ampel grün sobald nur noch eine Maschine oder keine oberhalb der Ampel in der Verschachtelung existieren.
+		\item Sind die Elemente falsch positioniert, öffnet sich die Tür nicht und die Figur muss sie umordnen, um sie richtig zu platzieren.
 		\item Die Tür öffnet sich, wenn alle Elemente korrekt platziert wurden.
 	\end{itemize}
 	
