@@ -116,105 +116,119 @@
 \section{Levelbeispiel}
 \begin{frame}
 	\frametitle{$\lambda$-Ausdruck in unserem Spiel}
-	%bilder von Level Jeder Schritt
-	%Bilder von Auswertung
-	
+	%bild von Anfang des Levels (alle Elemente verteilt)
 \end{frame}
 
-
-
-% blocks
+\section{Levelbeispiel}
 \begin{frame}
-	\frametitle{Blöcke}
-	\framesubtitle{in bunt}
-
-	\begin{KITalertblock}{alert}
-	\begin{itemize}
-	\item red
-	\end{itemize}
-	\end{KITalertblock}
-
-	\bigskip
-	\smallskip
-	\pause
-
-	\begin{KITinfoblock}{info}
-	\begin{itemize}
-		\item green
-	\end{itemize}
-	\end{KITinfoblock}
-	
-	\bigskip
-	\smallskip
-	\pause
-
-	\begin{KITexampleblock}{example}
-	\begin{itemize}
-		\item blue
-	\end{itemize}
-	\end{KITexampleblock}
-
-	\bigskip
-	\smallskip
-	\pause
-
-	\begin{KITblock}{normal}
-	\begin{itemize}
-		\item gray
-	\end{itemize}
-	\end{KITblock}
-
+	\frametitle{Elemente bewegen}
+	%bild von Figur die Element trägt/absetzt
 \end{frame}
 
-
-% blocks continued
-\begin{frame}
-	\frametitle{Blöcke}
-	\framesubtitle{in bunt (2)}
-
-	\begin{KITcolblock}{arbitrarily colored block}{KITgreen50}{KITred15}
-	\begin{itemize}
-		\item colorful
-	\end{itemize}
-	\end{KITcolblock}
-
-	\bigskip
-	\smallskip
-	\pause
-
-	\setboolean{KITblockborder}{false}
-	\begin{KITblock}{no border}
-	\begin{itemize}
-		\item use \textbackslash setboolean\{KITblockborder\}\{true or false\} to switch block borders on or off
-	\end{itemize}
-	\end{KITblock}
-
-	\bigskip
-	\smallskip
-	\pause	
-
-	\heading{enumerate environment}
-	\begin{enumerate}
-		\item level 1
-		\begin{enumerate}
-			\item level 2
-			\item level 2
-			\begin{enumerate}
-				\item level 3
-				\item level 3
-			\end{enumerate}
-		\end{enumerate}
-	\end{enumerate}
-
+\section{Levelbeispiel}
+\begin{frame}{Auswertung des $\lambda$-Ausdrucks}
+	%\frametitle{Auswertung des $\lambda$-Ausdrucks}
+	\begin{columns}[T]
+		\begin{column}[T]{5cm} 
+		     \[(\lambda f.f(f(x)))(\lambda y.y)[x \leftarrow 2]\]
+		\end{column}
+		\begin{column}[T]{5cm}
+			%Bild von erstem Schritt
+		\end{column}
+	\end{columns}
 \end{frame}
 
+\section{Levelbeispiel}
+\begin{frame}{Auswertung des $\lambda$-Ausdrucks}
+		\begin{columns}[T]
+			\begin{column}[T]{5cm} 
+				\[(\lambda f.f(f(2)))(\lambda y.y)\]
+			\end{column}
+			\begin{column}[T]{5cm}
+				%Bild von zweitem Schritt
+			\end{column}
+		\end{columns}	
+\end{frame}
 
-% drawing area
+\section{Levelbeispiel}
+\begin{frame}{Auswertung des $\lambda$-Ausdrucks}
+	\begin{columns}[T]
+		\begin{column}[T]{5cm} 
+			\[(\lambda f.f(f(2)))[f \leftarrow \lambda y.y]\]
+		\end{column}
+		\begin{column}[T]{5cm}
+			%Bild von drittem Schritt
+		\end{column}
+	\end{columns}
+\end{frame}
+
+\section{Levelbeispiel}
+\begin{frame}{Auswertung des $\lambda$-Ausdrucks}
+	\begin{columns}[T]
+		\begin{column}[T]{5cm} 
+			\[(\lambda y.y)((\lambda y.y)(2)\]
+		\end{column}
+		\begin{column}[T]{5cm}
+			%Bild von viertem Schritt
+		\end{column}
+	\end{columns}
+\end{frame}
+
+\section{Levelbeispiel}
+\begin{frame}{Auswertung des $\lambda$-Ausdrucks}
+	%\frametitle{Auswertung des $\lambda$-Ausdrucks}
+	\begin{columns}[T]
+		\begin{column}[T]{5cm} 
+			\[(\lambda y.y)[y \leftarrow 2]\]
+		\end{column}
+		\begin{column}[T]{5cm}
+			%Bild von fünftem Schritt
+		\end{column}
+	\end{columns}
+\end{frame}
+
+\section{Levelbeispiel}
+\begin{frame}{Auswertung des $\lambda$-Ausdrucks}
+	%\frametitle{Auswertung des $\lambda$-Ausdrucks}
+	\begin{columns}[T]
+		\begin{column}[T]{5cm} 
+			\[(\lambda y.y)(2)\]
+		\end{column}
+		\begin{column}[T]{5cm}
+			%Bild von sechstem Schritt
+		\end{column}
+	\end{columns}
+\end{frame}
+
+\section{Levelbeispiel}
+\begin{frame}{Auswertung des $\lambda$-Ausdrucks}
+	%\frametitle{Auswertung des $\lambda$-Ausdrucks}
+	\begin{columns}[T]
+		\begin{column}[T]{5cm} 
+			\[y[y \leftarrow 2]\]
+		\end{column}
+		\begin{column}[T]{5cm}
+			%Bild von siebtem Schritt
+		\end{column}
+	\end{columns}
+\end{frame}
+
+\section{Levelbeispiel}
+\begin{frame}{Auswertung des $\lambda$-Ausdrucks}
+	%\frametitle{Auswertung des $\lambda$-Ausdrucks}
+	\begin{columns}[T]
+		\begin{column}[T]{5cm} 
+			\[2\]
+		\end{column}
+		\begin{column}[T]{5cm}
+			%Bild von achtem Schritt
+		\end{column}
+	\end{columns}
+\end{frame}
+
 \begin{frame}
-	\frametitle{Area for Text}
-	\framesubtitle{The big black box}
-
-	\rule{\textwidth}{\textheight}
+	\huge
+	Vielen Dank für ihre Aufmerksamkeit!
 \end{frame}
 
 \end{document}
