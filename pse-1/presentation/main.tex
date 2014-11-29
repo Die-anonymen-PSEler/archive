@@ -49,6 +49,10 @@
 \end{frame}
 
 
+% ---------------
+% Vorstellung
+% ---------------
+
 \section{Vorstellung}
 \begin{frame}
 	\frametitle{Vorstellung Team B}
@@ -60,7 +64,14 @@
 \end{frame}
 
 
+
+% ---------------
+% Kriterien
+% ---------------
+
 \section{Kriterien}
+
+\subsection{Musskriterien}
 \begin{frame}
 	\frametitle{Kriterien}
 	\heading{Musskriterien}
@@ -72,7 +83,7 @@
 	\bigskip
 \end{frame}
 
-\section{Kriterien}
+\subsection{Wunschkriterien}
 \begin{frame}
 	\frametitle{Kriterien}
 	\heading{Wunschkriterien}
@@ -85,7 +96,7 @@
 	\end{itemize}
 \end{frame}
 
-\section{Kriterien}
+\subsection{Abgrenzngskriterien}
 \begin{frame}
 	\frametitle{Kriterien}
 	\heading{Abgrenzungskriterien}
@@ -96,6 +107,11 @@
 	\end{itemize}
 \end{frame}
 
+
+% ---------------
+% Spielidee
+% ---------------
+
 \section{Spielidee}
 \begin{frame}
 	\frametitle{Spielidee}
@@ -105,89 +121,181 @@
 	\end{itemize}	
 \end{frame}
 
+
+
+% ---------------
+% Levelbeispiel
+% ---------------
+
 \section{Levelbeispiel}
+
+\subsection{Lambda-Kalkül}
 \begin{frame}
 	\frametitle{Levelbeispiel}
 	\framesubtitle{$\lambda$-Kalkül}
 	
-	\[\lambda x.((\lambda f.f(f(x)))(\lambda y.y))(2)\]
+	\[\lambda x.((\lambda f.(f \circ f)(x))(\lambda y.y))(2)\]
 \end{frame}
 
-\section{Levelbeispiel}
+\subsection{Levelstart}
 \begin{frame}
 	\frametitle{$\lambda$-Ausdruck in unserem Spiel}
-	%bild von Anfang des Levels (alle Elemente verteilt)
+	
+	\begin{columns}[T]
+		\begin{column}[T]{5cm} 
+			Levelstart:\\
+		\end{column}
+		\begin{column}[T]{5cm}
+			%Bild von achtem Schritt
+		\end{column}
+		\end{columns}
+	\includegraphics[scale= 0.55]{images/Levelbeginn}
 \end{frame}
 
-\section{Levelbeispiel}
+\subsection{Objekte bewegen}
 \begin{frame}
 	\frametitle{Elemente bewegen}
-	%bild von Figur die Element trägt/absetzt
+	\includegraphics[scale= 0.55]{images/AufnehmenAblegenR}
 \end{frame}
 
-\section{Levelbeispiel}
+\subsection{Levelende}
+\begin{frame}
+	\frametitle{$\lambda$-Ausdruck in unserem Spiel}
+	
+	\begin{columns}[T]
+		\begin{column}[T]{5cm} 
+			Levelende:\\
+		\end{column}
+		\begin{column}[T]{5cm}
+			%Bild von achtem Schritt
+		\end{column}
+		\end{columns}
+	\includegraphics[scale= 0.55]{images/Levelende}
+\end{frame}
+
+\subsection{Auswertung}
+
+\begin{frame}
+	\frametitle{$\lambda$-Ausdruck in unserem Spiel}
+	\begin{columns}[T]
+		\begin{column}[T]{5cm} 
+			Beginn Auswertung:\\
+		\end{column}
+		\begin{column}[T]{5cm}
+			%Bild von achtem Schritt
+		\end{column}
+		\end{columns}
+	
+	\includegraphics[scale= 0.55]{images/Auswertung1mA}
+\end{frame}
+
 \begin{frame}{Auswertung des $\lambda$-Ausdrucks}
 	%\frametitle{Auswertung des $\lambda$-Ausdrucks}
 	\begin{columns}[T]
 		\begin{column}[T]{5cm} 
-		     \[(\lambda f.f(f(x)))(\lambda y.y)[x \leftarrow 2]\]
+		     \[(\lambda f.(f \circ f)(x))(\lambda y.y)[x \leftarrow 2]\]
 		\end{column}
 		\begin{column}[T]{5cm}
-			%Bild von erstem Schritt
+			
 		\end{column}
 	\end{columns}
+	\includegraphics[scale= 0.55]{images/Auswertung2}
 \end{frame}
 
-\section{Levelbeispiel}
+
+\begin{frame}{Auswertung des $\lambda$-Ausdrucks}
+	%\frametitle{Auswertung des $\lambda$-Ausdrucks}
+	\begin{columns}[T]
+		\begin{column}[T]{5cm} 
+			\[(\lambda f.(f \circ f)(x))(\lambda y.y)[x \leftarrow 2]\]
+		\end{column}
+		\begin{column}[T]{5cm}
+			
+		\end{column}
+	\end{columns}
+	\includegraphics[scale= 0.55]{images/Auswertung3}
+\end{frame}
+
+
+
 \begin{frame}{Auswertung des $\lambda$-Ausdrucks}
 		\begin{columns}[T]
 			\begin{column}[T]{5cm} 
-				\[(\lambda f.f(f(2)))(\lambda y.y)\]
+				\[(\lambda f.(f \circ f)(2))(\lambda y.y)\]
 			\end{column}
 			\begin{column}[T]{5cm}
 				%Bild von zweitem Schritt
 			\end{column}
 		\end{columns}	
+		\includegraphics[scale= 0.55]{images/Auswertung4}
 \end{frame}
 
-\section{Levelbeispiel}
+
 \begin{frame}{Auswertung des $\lambda$-Ausdrucks}
 	\begin{columns}[T]
 		\begin{column}[T]{5cm} 
-			\[(\lambda f.f(f(2)))[f \leftarrow \lambda y.y]\]
+			\[(\lambda f.(f \circ f)(2))[f \leftarrow \lambda y.y]\]
 		\end{column}
 		\begin{column}[T]{5cm}
 			%Bild von drittem Schritt
 		\end{column}
 	\end{columns}
+	\includegraphics[scale= 0.55]{images/Auswertung5}
 \end{frame}
 
-\section{Levelbeispiel}
 \begin{frame}{Auswertung des $\lambda$-Ausdrucks}
 	\begin{columns}[T]
 		\begin{column}[T]{5cm} 
-			\[(\lambda y.y)((\lambda y.y)(2)\]
+			\[(\lambda f.(f \circ f)(2))[f \leftarrow \lambda y.y]\]
+		\end{column}
+		\begin{column}[T]{5cm}
+			%Bild von drittem Schritt
+		\end{column}
+	\end{columns}
+	\includegraphics[scale= 0.55]{images/Auswertung6}
+\end{frame}
+
+
+\begin{frame}{Auswertung des $\lambda$-Ausdrucks}
+	\begin{columns}[T]
+		\begin{column}[T]{5cm} 
+			\[((\lambda y.y)(\lambda y.y))(2)\]
 		\end{column}
 		\begin{column}[T]{5cm}
 			%Bild von viertem Schritt
 		\end{column}
 	\end{columns}
+	\includegraphics[scale= 0.55]{images/Auswertung7}
 \end{frame}
 
-\section{Levelbeispiel}
+
 \begin{frame}{Auswertung des $\lambda$-Ausdrucks}
 	%\frametitle{Auswertung des $\lambda$-Ausdrucks}
 	\begin{columns}[T]
 		\begin{column}[T]{5cm} 
-			\[(\lambda y.y)[y \leftarrow 2]\]
+			\[(\lambda y.y)(2)[y \leftarrow (\lambda y.y)]\]
 		\end{column}
 		\begin{column}[T]{5cm}
 			%Bild von fünftem Schritt
 		\end{column}
 	\end{columns}
+	\includegraphics[scale= 0.55]{images/Auswertung8}
 \end{frame}
 
-\section{Levelbeispiel}
+\begin{frame}{Auswertung des $\lambda$-Ausdrucks}
+	%\frametitle{Auswertung des $\lambda$-Ausdrucks}
+	\begin{columns}[T]
+		\begin{column}[T]{5cm} 
+			\[(\lambda y.y)(2)[y \leftarrow (\lambda y.y)]\]
+		\end{column}
+		\begin{column}[T]{5cm}
+			%Bild von fünftem Schritt
+		\end{column}
+	\end{columns}
+	\includegraphics[scale= 0.55]{images/Auswertung9}
+\end{frame}
+
+
 \begin{frame}{Auswertung des $\lambda$-Ausdrucks}
 	%\frametitle{Auswertung des $\lambda$-Ausdrucks}
 	\begin{columns}[T]
@@ -198,9 +306,10 @@
 			%Bild von sechstem Schritt
 		\end{column}
 	\end{columns}
+	\includegraphics[scale= 0.55]{images/Auswertung10}
 \end{frame}
 
-\section{Levelbeispiel}
+
 \begin{frame}{Auswertung des $\lambda$-Ausdrucks}
 	%\frametitle{Auswertung des $\lambda$-Ausdrucks}
 	\begin{columns}[T]
@@ -211,9 +320,23 @@
 			%Bild von siebtem Schritt
 		\end{column}
 	\end{columns}
+	\includegraphics[scale= 0.55]{images/Auswertung11}
 \end{frame}
 
-\section{Levelbeispiel}
+\begin{frame}{Auswertung des $\lambda$-Ausdrucks}
+	%\frametitle{Auswertung des $\lambda$-Ausdrucks}
+	\begin{columns}[T]
+		\begin{column}[T]{5cm} 
+			\[y[y \leftarrow 2]\]
+		\end{column}
+		\begin{column}[T]{5cm}
+			%Bild von siebtem Schritt
+		\end{column}
+	\end{columns}
+	\includegraphics[scale= 0.55]{images/Auswertung12}
+\end{frame}
+
+
 \begin{frame}{Auswertung des $\lambda$-Ausdrucks}
 	%\frametitle{Auswertung des $\lambda$-Ausdrucks}
 	\begin{columns}[T]
@@ -224,6 +347,20 @@
 			%Bild von achtem Schritt
 		\end{column}
 	\end{columns}
+	\includegraphics[scale= 0.55]{images/Auswertung13}
+\end{frame}
+
+\begin{frame}{Auswertung des $\lambda$-Ausdrucks}
+	%\frametitle{Auswertung des $\lambda$-Ausdrucks}
+	\begin{columns}[T]
+		\begin{column}[T]{5cm} 
+			Levelausgang:
+		\end{column}
+		\begin{column}[T]{5cm}
+			%Bild von achtem Schritt
+		\end{column}
+	\end{columns}
+	\includegraphics[scale= 0.55]{images/Levelausgang}
 \end{frame}
 
 \begin{frame}
