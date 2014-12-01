@@ -58,53 +58,9 @@
 	\frametitle{Vorstellung Team B}
 	\begin{itemize}
 		\item Luca Becker, Henrike Hardt, Larissa Schmid, Adrian Schulte, Maik Wiesner
-		\item PSE-Projekt: Android-App
+		\item PSE-Projekt: Lambda - Das Spiel
 	\end{itemize}
 	\bigskip
-\end{frame}
-
-
-
-% ---------------
-% Kriterien
-% ---------------
-
-\section{Kriterien}
-
-\subsection{Musskriterien}
-\begin{frame}
-	\frametitle{Kriterien}
-	\heading{Musskriterien}
-	\begin{itemize}
-		\item Spielerisches Vermitteln des $\lambda$-Kalküls
-		\item Nach dem Wasserfall-Modell erarbeitetes Spiel
-		\item mindestens fünf individuelle Level
-	\end{itemize}
-	\bigskip
-\end{frame}
-
-\subsection{Wunschkriterien}
-\begin{frame}
-	\frametitle{Kriterien}
-	\heading{Wunschkriterien}
-	\begin{itemize}
-		\item Retrolook
-		\item Mehrere Spielmodi
-		\item Begleitende Story
-		\item Erweiternde Spiel- und Levelelemente
-		\item Challengemode mit Zeitdruck
-	\end{itemize}
-\end{frame}
-
-\subsection{Abgrenzngskriterien}
-\begin{frame}
-	\frametitle{Kriterien}
-	\heading{Abgrenzungskriterien}
-	\begin{itemize}
-		\item Kein Mehrspieler Modus
-		\item Keine Online-Anbindung
-		\item Keine Kompatibilität mit anderen Geräten/Betriebssystemen ohne Emulation
-	\end{itemize}
 \end{frame}
 
 
@@ -116,8 +72,9 @@
 \begin{frame}
 	\frametitle{Spielidee}
 	\begin{itemize}
-		\item Jump'N'Run-Stil
-		\item Spielerische Verdeutlichung $\lambda$-Kalküls durch Maschinen und Metallobjekt, die platziert werden müssen
+		\item Jump 'N' Run-Stil
+		\item Spielerische Verdeutlichung des $\lambda$-Kalküls durch Maschinen und Metallobjekte, die platziert werden müssen
+		\item Abstrakte Darstellung sorgt für mehr Spielspaß
 	\end{itemize}	
 \end{frame}
 
@@ -132,9 +89,8 @@
 \subsection{Lambda-Kalkül}
 \begin{frame}
 	\frametitle{Levelbeispiel}
-	\framesubtitle{$\lambda$-Kalkül}
-	
-	\[\lambda x.((\lambda f.(f \circ f)(x))(\lambda y.y))(2)\]
+	\framesubtitle{$\lambda$-Kalkül}	
+	\huge{\[(\lambda x.(\lambda f.(f \circ f))(\lambda y.y)(x))(2)\]}
 \end{frame}
 
 \subsection{Levelstart}
@@ -193,7 +149,7 @@
 	%\frametitle{Auswertung des $\lambda$-Ausdrucks}
 	\begin{columns}[T]
 		\begin{column}[T]{5cm} 
-		     \[(\lambda f.(f \circ f)(x))(\lambda y.y)[x \leftarrow 2]\]
+		     \[(\lambda f.(f \circ f)(\lambda y.y)(x))[x \leftarrow 2]\]
 		\end{column}
 		\begin{column}[T]{5cm}
 			
@@ -207,7 +163,7 @@
 	%\frametitle{Auswertung des $\lambda$-Ausdrucks}
 	\begin{columns}[T]
 		\begin{column}[T]{5cm} 
-			\[(\lambda f.(f \circ f)(x))(\lambda y.y)[x \leftarrow 2]\]
+			\[(\lambda f.(f \circ f)(\lambda y.y)(x))[x \leftarrow 2]\]
 		\end{column}
 		\begin{column}[T]{5cm}
 			
@@ -221,7 +177,7 @@
 \begin{frame}{Auswertung des $\lambda$-Ausdrucks}
 		\begin{columns}[T]
 			\begin{column}[T]{5cm} 
-				\[(\lambda f.(f \circ f)(2))(\lambda y.y)\]
+				\[(\lambda f.(f \circ f)(\lambda y.y)(2))\]
 			\end{column}
 			\begin{column}[T]{5cm}
 				%Bild von zweitem Schritt
@@ -234,7 +190,7 @@
 \begin{frame}{Auswertung des $\lambda$-Ausdrucks}
 	\begin{columns}[T]
 		\begin{column}[T]{5cm} 
-			\[(\lambda f.(f \circ f)(2))[f \leftarrow \lambda y.y]\]
+			\[((f \circ f)(2))[f \leftarrow \lambda y.y]\]
 		\end{column}
 		\begin{column}[T]{5cm}
 			%Bild von drittem Schritt
@@ -246,7 +202,7 @@
 \begin{frame}{Auswertung des $\lambda$-Ausdrucks}
 	\begin{columns}[T]
 		\begin{column}[T]{5cm} 
-			\[(\lambda f.(f \circ f)(2))[f \leftarrow \lambda y.y]\]
+			\[((f \circ f)(2))[f \leftarrow \lambda y.y]\]
 		\end{column}
 		\begin{column}[T]{5cm}
 			%Bild von drittem Schritt
@@ -363,9 +319,53 @@
 	\includegraphics[scale= 0.55]{images/Levelausgang}
 \end{frame}
 
+% ---------------
+% Kriterien
+% ---------------
+
+\section{Kriterien}
+
+\subsection{Musskriterien}
+\begin{frame}
+	\frametitle{Kriterien}
+	\framesubtitle{Musskriterien}
+	\begin{itemize}
+		\item Spielerisches Vermitteln des $\lambda$-Kalküls
+		\item Nach dem Wasserfall-Modell erarbeitetes Spiel
+		\item Touch-Bedienung
+		\item mindestens fünf individuelle Level
+	\end{itemize}
+\end{frame}
+
+\subsection{Wunschkriterien}
+\begin{frame}
+	\frametitle{Kriterien}
+	\framesubtitle{Wunschkriterien}
+	\begin{itemize}
+		\item Retrolook
+		\item Mehrere Spielmodi
+		\item Begleitende Story
+		\item Erweiternde Spiel- und Levelelemente
+		\item Challengemode mit Zeitdruck
+	\end{itemize}
+\end{frame}
+
+\subsection{Abgrenzngskriterien}
+\begin{frame}
+	\frametitle{Kriterien}
+	\framesubtitle{Abgrenzungskriterien}
+	\begin{itemize}
+		\item Kein Mehrspieler-Modus
+		\item Keine Online-Anbindung
+		\item Keine Kompatibilität mit anderen Geräten/Betriebssystemen ohne Emulation
+	\end{itemize}
+\end{frame}
+
+
+
 \begin{frame}
 	\huge
-	Vielen Dank für ihre Aufmerksamkeit!
+	Vielen Dank für Ihre Aufmerksamkeit!
 \end{frame}
 
 \end{document}
