@@ -149,7 +149,8 @@
 	%\frametitle{Auswertung des $\lambda$-Ausdrucks}
 	\begin{columns}[T]
 		\begin{column}[T]{5cm} 
-		     \[(\lambda f.(f \circ f)(\lambda y.y)(x))[x \leftarrow 2]\]
+		     \[(\lambda f.(f \circ f))(\lambda y.y)(x)
+		     [x \leftarrow 2]\]
 		\end{column}
 		\begin{column}[T]{5cm}
 			
@@ -163,7 +164,7 @@
 	%\frametitle{Auswertung des $\lambda$-Ausdrucks}
 	\begin{columns}[T]
 		\begin{column}[T]{5cm} 
-			\[(\lambda f.(f \circ f)(\lambda y.y)(x))[x \leftarrow 2]\]
+			\[(\lambda f.(f \circ f))(\lambda y.y)(x)[x \leftarrow 2]\]
 		\end{column}
 		\begin{column}[T]{5cm}
 			
@@ -177,7 +178,7 @@
 \begin{frame}{Auswertung des $\lambda$-Ausdrucks}
 		\begin{columns}[T]
 			\begin{column}[T]{5cm} 
-				\[(\lambda f.(f \circ f)(\lambda y.y)(2))\]
+				\[(\lambda f.(f \circ f))(\lambda y.y)(2)\]
 			\end{column}
 			\begin{column}[T]{5cm}
 				%Bild von zweitem Schritt
@@ -190,7 +191,7 @@
 \begin{frame}{Auswertung des $\lambda$-Ausdrucks}
 	\begin{columns}[T]
 		\begin{column}[T]{5cm} 
-			\[((f \circ f)(2))[f \leftarrow \lambda y.y]\]
+			\[(f \circ f)[f \leftarrow \lambda y.y](2)\]
 		\end{column}
 		\begin{column}[T]{5cm}
 			%Bild von drittem Schritt
@@ -202,7 +203,7 @@
 \begin{frame}{Auswertung des $\lambda$-Ausdrucks}
 	\begin{columns}[T]
 		\begin{column}[T]{5cm} 
-			\[((f \circ f)(2))[f \leftarrow \lambda y.y]\]
+			\[(f \circ f)[f \leftarrow \lambda y.y](2)\]
 		\end{column}
 		\begin{column}[T]{5cm}
 			%Bild von drittem Schritt
@@ -229,7 +230,7 @@
 	%\frametitle{Auswertung des $\lambda$-Ausdrucks}
 	\begin{columns}[T]
 		\begin{column}[T]{5cm} 
-			\[(\lambda y.y)(2)[y \leftarrow (\lambda y.y)]\]
+			\[(y[y \leftarrow (\lambda y.y)])(2)\]
 		\end{column}
 		\begin{column}[T]{5cm}
 			%Bild von fünftem Schritt
@@ -242,7 +243,7 @@
 	%\frametitle{Auswertung des $\lambda$-Ausdrucks}
 	\begin{columns}[T]
 		\begin{column}[T]{5cm} 
-			\[(\lambda y.y)(2)[y \leftarrow (\lambda y.y)]\]
+			\[(y[y \leftarrow (\lambda y.y)])(2)\]
 		\end{column}
 		\begin{column}[T]{5cm}
 			%Bild von fünftem Schritt
