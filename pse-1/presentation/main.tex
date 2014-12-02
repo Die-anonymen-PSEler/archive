@@ -57,7 +57,9 @@
 \begin{frame}
 	\frametitle{Vorstellung Team B}
 	\begin{itemize}
-		\item Luca Becker, Henrike Hardt, Larissa Schmid, Adrian Schulte, Maik Wiesner
+		\pause
+		\item Luca Becker, Henrike Hardt, Larissa Schmid, Adrian Schulte, \\ Maik Wiesner
+		\pause
 		\item PSE-Projekt: Lambda - Das Spiel
 	\end{itemize}
 	\bigskip
@@ -72,8 +74,23 @@
 \begin{frame}
 	\frametitle{Spielidee}
 	\begin{itemize}
+		\pause
 		\item Jump 'N' Run-Stil
-		\item Spielerische Verdeutlichung des $\lambda$-Kalküls durch Maschinen und Metallobjekte, die platziert werden müssen
+		\pause
+		\item Spielerische Verdeutlichung des $\lambda$-Kalküls durch folgende Spielelemente
+		\begin{itemize}
+			\smallskip
+			\pause
+			\item Maschinen (entspricht der Abstraktion)
+			\smallskip
+			\pause
+			\item Metallstücke (entspricht der Variablen)
+			\smallskip
+			\pause
+			\item Maschinen-Cluster (entspricht der Applikation)
+		\end{itemize}
+		\smallskip
+		\pause
 		\item Abstrakte Darstellung sorgt für mehr Spielspaß
 	\end{itemize}	
 \end{frame}
@@ -89,7 +106,9 @@
 \subsection{Lambda-Kalkül}
 \begin{frame}
 	\frametitle{Levelbeispiel}
-	\framesubtitle{$\lambda$-Kalkül}	
+	\framesubtitle{$\lambda$-Kalkül}
+	\LARGE{Im Folgenden betrachten wir diesen Ausdruck:}
+	\\
 	\huge{\[(\lambda x.(\lambda f.(f \circ f))(\lambda y.y)(x))(2)\]}
 \end{frame}
 
@@ -118,14 +137,7 @@
 \begin{frame}
 	\frametitle{$\lambda$-Ausdruck in unserem Spiel}
 	
-	\begin{columns}[T]
-		\begin{column}[T]{5cm} 
-			Levelende:\\
-		\end{column}
-		\begin{column}[T]{5cm}
-			%Bild von achtem Schritt
-		\end{column}
-		\end{columns}
+	Positionierung der Metallstücke und Maschinen:\\
 	\includegraphics[scale= 0.55]{images/Levelende}
 \end{frame}
 
@@ -147,176 +159,84 @@
 
 \begin{frame}{Auswertung des $\lambda$-Ausdrucks}
 	%\frametitle{Auswertung des $\lambda$-Ausdrucks}
-	\begin{columns}[T]
-		\begin{column}[T]{5cm} 
-		     \[(\lambda f.(f \circ f))(\lambda y.y)(x)
-		     [x \leftarrow 2]\]
-		\end{column}
-		\begin{column}[T]{5cm}
-			
-		\end{column}
-	\end{columns}
+	\large{\[(\lambda f.(f \circ f))(\lambda y.y)(x) [x \leftarrow 2]\]}
 	\includegraphics[scale= 0.55]{images/Auswertung2}
 \end{frame}
 
 
 \begin{frame}{Auswertung des $\lambda$-Ausdrucks}
 	%\frametitle{Auswertung des $\lambda$-Ausdrucks}
-	\begin{columns}[T]
-		\begin{column}[T]{5cm} 
-			\[(\lambda f.(f \circ f))(\lambda y.y)(x)[x \leftarrow 2]\]
-		\end{column}
-		\begin{column}[T]{5cm}
-			
-		\end{column}
-	\end{columns}
+	\large{\[(\lambda f.(f \circ f))(\lambda y.y)(x)[x \leftarrow 2]\]} 
 	\includegraphics[scale= 0.55]{images/Auswertung3}
 \end{frame}
 
 
 
 \begin{frame}{Auswertung des $\lambda$-Ausdrucks}
-		\begin{columns}[T]
-			\begin{column}[T]{5cm} 
-				\[(\lambda f.(f \circ f))(\lambda y.y)(2)\]
-			\end{column}
-			\begin{column}[T]{5cm}
-				%Bild von zweitem Schritt
-			\end{column}
-		\end{columns}	
+		\large{\[(\lambda f.(f \circ f))(\lambda y.y)(2)\]}
 		\includegraphics[scale= 0.55]{images/Auswertung4}
 \end{frame}
 
 
 \begin{frame}{Auswertung des $\lambda$-Ausdrucks}
-	\begin{columns}[T]
-		\begin{column}[T]{5cm} 
-			\[(f \circ f)[f \leftarrow \lambda y.y](2)\]
-		\end{column}
-		\begin{column}[T]{5cm}
-			%Bild von drittem Schritt
-		\end{column}
-	\end{columns}
+	\large{\[(f \circ f)[f \leftarrow \lambda y.y](2)\]}
 	\includegraphics[scale= 0.55]{images/Auswertung5}
 \end{frame}
 
 \begin{frame}{Auswertung des $\lambda$-Ausdrucks}
-	\begin{columns}[T]
-		\begin{column}[T]{5cm} 
-			\[(f \circ f)[f \leftarrow \lambda y.y](2)\]
-		\end{column}
-		\begin{column}[T]{5cm}
-			%Bild von drittem Schritt
-		\end{column}
-	\end{columns}
+	\large{\[(f \circ f)[f \leftarrow \lambda y.y](2)\]}
 	\includegraphics[scale= 0.55]{images/Auswertung6}
 \end{frame}
 
 
 \begin{frame}{Auswertung des $\lambda$-Ausdrucks}
-	\begin{columns}[T]
-		\begin{column}[T]{5cm} 
-			\[((\lambda y.y)(\lambda y.y))(2)\]
-		\end{column}
-		\begin{column}[T]{5cm}
-			%Bild von viertem Schritt
-		\end{column}
-	\end{columns}
+	\large{\[((\lambda y.y)(\lambda y.y))(2)\]}
 	\includegraphics[scale= 0.55]{images/Auswertung7}
 \end{frame}
 
 
 \begin{frame}{Auswertung des $\lambda$-Ausdrucks}
 	%\frametitle{Auswertung des $\lambda$-Ausdrucks}
-	\begin{columns}[T]
-		\begin{column}[T]{5cm} 
-			\[(y[y \leftarrow (\lambda y.y)])(2)\]
-		\end{column}
-		\begin{column}[T]{5cm}
-			%Bild von fünftem Schritt
-		\end{column}
-	\end{columns}
+	\large{\[(y[y \leftarrow (\lambda y.y)])(2)\]}
 	\includegraphics[scale= 0.55]{images/Auswertung8}
 \end{frame}
 
 \begin{frame}{Auswertung des $\lambda$-Ausdrucks}
 	%\frametitle{Auswertung des $\lambda$-Ausdrucks}
-	\begin{columns}[T]
-		\begin{column}[T]{5cm} 
-			\[(y[y \leftarrow (\lambda y.y)])(2)\]
-		\end{column}
-		\begin{column}[T]{5cm}
-			%Bild von fünftem Schritt
-		\end{column}
-	\end{columns}
+	\large{\[(y[y \leftarrow (\lambda y.y)])(2)\]}
 	\includegraphics[scale= 0.55]{images/Auswertung9}
 \end{frame}
 
 
 \begin{frame}{Auswertung des $\lambda$-Ausdrucks}
 	%\frametitle{Auswertung des $\lambda$-Ausdrucks}
-	\begin{columns}[T]
-		\begin{column}[T]{5cm} 
-			\[(\lambda y.y)(2)\]
-		\end{column}
-		\begin{column}[T]{5cm}
-			%Bild von sechstem Schritt
-		\end{column}
-	\end{columns}
+	\large{\[(\lambda y.y)(2)\]}
 	\includegraphics[scale= 0.55]{images/Auswertung10}
 \end{frame}
 
 
 \begin{frame}{Auswertung des $\lambda$-Ausdrucks}
 	%\frametitle{Auswertung des $\lambda$-Ausdrucks}
-	\begin{columns}[T]
-		\begin{column}[T]{5cm} 
-			\[y[y \leftarrow 2]\]
-		\end{column}
-		\begin{column}[T]{5cm}
-			%Bild von siebtem Schritt
-		\end{column}
-	\end{columns}
+	\large{\[y[y \leftarrow 2]\]}
 	\includegraphics[scale= 0.55]{images/Auswertung11}
 \end{frame}
 
 \begin{frame}{Auswertung des $\lambda$-Ausdrucks}
 	%\frametitle{Auswertung des $\lambda$-Ausdrucks}
-	\begin{columns}[T]
-		\begin{column}[T]{5cm} 
-			\[y[y \leftarrow 2]\]
-		\end{column}
-		\begin{column}[T]{5cm}
-			%Bild von siebtem Schritt
-		\end{column}
-	\end{columns}
+	\large{\[y[y \leftarrow 2]\]}
 	\includegraphics[scale= 0.55]{images/Auswertung12}
 \end{frame}
 
 
 \begin{frame}{Auswertung des $\lambda$-Ausdrucks}
 	%\frametitle{Auswertung des $\lambda$-Ausdrucks}
-	\begin{columns}[T]
-		\begin{column}[T]{5cm} 
-			\[2\]
-		\end{column}
-		\begin{column}[T]{5cm}
-			%Bild von achtem Schritt
-		\end{column}
-	\end{columns}
+	\large{\[2\]}
 	\includegraphics[scale= 0.55]{images/Auswertung13}
 \end{frame}
 
 \begin{frame}{Auswertung des $\lambda$-Ausdrucks}
 	%\frametitle{Auswertung des $\lambda$-Ausdrucks}
-	\begin{columns}[T]
-		\begin{column}[T]{5cm} 
-			Levelausgang:
-		\end{column}
-		\begin{column}[T]{5cm}
-			%Bild von achtem Schritt
-		\end{column}
-	\end{columns}
+	Levelausgang:
 	\includegraphics[scale= 0.55]{images/Levelausgang}
 \end{frame}
 
@@ -331,9 +251,13 @@
 	\frametitle{Kriterien}
 	\framesubtitle{Musskriterien}
 	\begin{itemize}
+		\pause
 		\item Spielerisches Vermitteln des $\lambda$-Kalküls
-		\item Nach dem Wasserfall-Modell erarbeitetes Spiel
+		\pause
+		\item Entwicklung basierend auf dem Wasserfall-Modell
+		\pause
 		\item Touch-Bedienung
+		\pause
 		\item mindestens fünf individuelle Level
 	\end{itemize}
 \end{frame}
@@ -343,11 +267,28 @@
 	\frametitle{Kriterien}
 	\framesubtitle{Wunschkriterien}
 	\begin{itemize}
+		\pause
 		\item Retrolook
-		\item Mehrere Spielmodi
+		\pause
 		\item Begleitende Story
+		\pause
 		\item Erweiternde Spiel- und Levelelemente
-		\item Challengemode mit Zeitdruck
+		\pause
+		\item Mehrere Spielmodi
+		\begin{itemize}
+			\smallskip
+			\pause
+			\item Normaler Modus (wie vorhin gesehen)
+			\smallskip
+			\pause
+			\item Challenge Modus (Zeitdruck)
+			\smallskip
+			\pause
+			\item Fehlerfindung
+		\end{itemize}
+		\smallskip
+		\pause
+		\item Achievements
 	\end{itemize}
 \end{frame}
 
@@ -356,9 +297,13 @@
 	\frametitle{Kriterien}
 	\framesubtitle{Abgrenzungskriterien}
 	\begin{itemize}
+		\smallskip
+		\pause
 		\item Kein Mehrspieler-Modus
+		\pause
 		\item Keine Online-Anbindung
-		\item Keine Kompatibilität mit anderen Geräten/Betriebssystemen ohne Emulation
+		\pause
+		\item Keine Unterstützung anderer Betriebssysteme
 	\end{itemize}
 \end{frame}
 
