@@ -1,1 +1,0 @@
-Alle Bilder mit Namensanhang "PF" sind die Projectfiles des zugehörigen Bildes .. diese werden benötigt um in späteren versionen die verschiedenen Layer bearbeiten zu können, nicht löschen!!

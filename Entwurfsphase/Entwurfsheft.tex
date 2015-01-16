@@ -1,0 +1,554 @@
+\clearpage
+\chapter{Designentscheidungen}
+
+\section{libGDX}
+libDGDX ist ein speziell zur Spieleentwicklung konzipiertes Framework und unterstützt die meisten benötigten Optionen so einfacher als die Standard Android-Schnittstelle. Es bietet zum Beispiel einfacheres Rendering sowie die Möglichkeit zur einfachen Umsetzung von Benutzerschnittstellen. Darüber hinaus wird die Laufzeit durch einzelne Komponenten in C/C++ optimiert. libGDX ist außerdem frei verfügbar und bietet eine gute Dokumentation zur Einarbeitung.
+
+\section{Model View Controller}
+
+Um eine gute Wartbarkeit und Wiederverwendbarkeit der einzelnen Komponenten zu gewährleisten, wird das Entwurfsmuster Model View Controller verwendet. Der Programmentwurf wird so flexibler und erleichtert auch Änderung und Erweiterbarkeit. 
+
+\section{Verwendete Entwurfsmuster}
+Entwurfsmuster bieten erprobte Konzepte für wiederkehrende Probleme und unterstützen so die effiziente Programmentwicklung mit modularer Architektur. Aus diesem Grund haben wir uns dazu entschieden, für unseren Entwurf verschiedene Entwurfsmuster zu verwenden.
+
+\subsection{Strategie}
+Die Strategie gehört zur Kategorie der Verhaltensmuster. Es definiert eine Familie von Algorithmen, kapselt sie und macht sie dadurch austauschbar, was wiederum die modulare Architektur unterstützt. Aus diesem Grund haben wir den Model-Teil unseres Programms, welcher zum Beispiel Profile und Einstellungen enthält, nach diesem Muster strukturiert. Es lassen sich so leicht Änderungen in diesen vornehmen beziehungsweise können einfach weitere Klassen in diesem Teil erstellt werden.
+
+\subsection{Einzelstück}
+Das Einzelstück gehört zur Kategorie der Erzeugungsmuster und stellt sicher, dass von einer Klasse nur ein Objekt instanziiert werden kann, welches dann global verfügbar ist. In unserem Entwurf haben wir die Datenbank und die Klasse der globalen Variablen als Einzelstück angelegt. Es ist klar, dass es durch mehrfache Existenz der Klasse der globalen Variablen zu Unstimmigkeiten im Programmablauf kommen kann, wenn die Variablen verschieden gesetzt sind und auf Grundlage derer Spielentscheidungen getroffen werden. Ebenso kann es zu Inkonsistenzen der Datenbank kommen, wenn mehrere Datenleitungen zu dieser existieren. Dies wird so vermieden und ein reibungsloser Programmablauf gewährleistet.
+
+\subsection{Beobachter}
+Der Beobachter gehört zur Kategorie der Verhaltensmuster und dient dazu, Änderungen an einem Objekt an von diesem Objekt abhängige Datenstrukturen weiterzugeben. Es bietet sich also an, den Beobachter für Benutzereingaben zu verwenden; in unserem Fall sind dies vor allem Klicks auf Buttons, die beispielsweise zu einer Bewegung der Spielfigur oder einem Wechsel des angezeigten Bildschirms führt. Außerdem verwenden wir den Beobachter, um auf einen Wechsel der Lautstärkeeinstellung oder des aktiven Profils zu reagieren und so allen betroffenen Klassen diese Änderung effizient mitzuteilen.
+
+\clearpage
+
+\chapter{Nicht umgesetzte Wunschkriterien}
+
+\section{Werkstatt zum Umbauen von Maschinen}
+
+Von der Erweiterung des Spiels, weitere Maschinen, welche die ursprünglichen Maschinen umbauen können, zu inkludieren, distanzieren wir uns. Dies tun wir zum Einen aufgrund der aufwändigen Umsetzung und zum Anderen, da damit der $\lambda$-Kalkül im Spiel verloren gehen könnte, weil die Kinder sich im Umbauen verrennen.
+
+\section{Highscore-Tabelle}
+
+Eine profilübergreifende Highscore-Tabelle wird nicht in unseren Entwurf aufgenommen, da diese zwar den Ehrgeiz der Kinder fördert, aber auch das Konkurrenz-Denken. Dieses kann zu negativen Emotionen führen, welche wir natürlich verhindern wollen.
+
+\section{Challenge-Modus mit Zeitdruck}
+
+Aus pädagogischen Gründen sind wir der Überzeugung, dass ein Challenge-Modus mit Zeitdruck den Lernerfolg bei Kindern mindert, da nicht abzusehen ist, wie viel Zeit diese für das Lösen eines Levels benötigen. Darüber hinaus hängt dies auch vom Alter des Anwenders ab und würde so wahrscheinlich ältere Anwender bevorzugen, was zu Frustration aufgrund fehlender Erfolgserlebnisse bei Jüngeren führen kann.
+
+\section{Auslieferung in mehreren Sprachen}
+
+Aus zeitlichen Gründen wird auf diesen Punkt verzichtet.
+
+\section{Begleitende Story}
+
+Aus zeitlichen Gründen und mangelndem Fachwissen über das Erstellen von Animationen wird auf diesen Punkt verzichtet.
+
+\section{Steuerung durch Wischgesten}
+
+Aus zeitlichen Gründen und mangelndem Mehrwert dieses Kriteriums im Spiel wird auf diesen Punkt verzichtet.
+
+\subsection{Änderungen zum Pflichtenheft im Entwurf}
+\begin{enumerate}
+	\item {\textbf{Entfernen des Kapitelmenüs}}\\
+		Wir haben uns dazu entschieden, das Kapitelmenü zu entfernen, da nicht abzusehen ist, dass die Anzahl an Levels, die wir in der gegebenen Zeit erstellen können, so groß ist, dass eine weitere Unterteilung der Level in einzelne Kapitel erforderlich wird.
+	\item {\textbf{Entfernen der Achievements}}\\
+		Die Entscheidung, die Achievements und alle dazugehörigen Menüs nicht umzusetzen, trafen wir aufgrund der Tatsache, dass der Aufwand zur Erstellung der nötigen Klassen im Verhältnis zum Nutzen im späteren Spiel zu groß ist. Die eingesparte Zeit möchten wir besser in die Erstellung weiterer Spielelemente und Level fließen lassen. 
+\end{enumerate}
+\clearpage
+
+\chapter{Levelaufbau}
+
+Jede Variable des Levels kann eindeutig einer Farbe zugeordnet werden. Falls sich Farben überschneiden, setzt die $\alpha$-Konversion ein und die Variable bekommt eine neue Farbe.\\
+\subsection{Tutorial-Levels}
+Die ersten sechs Level von \enquote{RetroMachines} stellen das Tutorial dar. In diesen Levels wird dem Anwender gezeigt, wie er sich im Spiel bewegen kann, mit den Elementen umgehen muss und welche Aufgabentypen es gibt. 
+\begin{itemize}
+	\item{Level 1.}
+	\begin{description}
+		\item[Typ:] Puzzle
+		\item[Lambda-Ausdruck:] $\lambda x.x$
+		\item[Ergebnis:] $x$
+		\item[Spielelemente:]\ \linebreak[1]
+		\begin{description}
+			\item[Ablagen: ] 1
+			\item[Metallstücke: ] 1
+			\item[Maschinen: ] 0
+			\item[Ampeln: ] 0
+		\end{description}		
+		\item[Endelement:] Ein Metallstück
+		\item[Beschreibung:] Das erste Level. Dem Anwender wird gezeigt, wie er Elemente tragen und platzieren kann und wie der grundsätzliche Ablauf eines Levels strukturiert ist.
+	\end{description}
+	
+	\item{Level 2.}
+	\begin{description}
+		\item[Typ:] Puzzle
+		\item[Lambda-Ausdruck:] $(\lambda x.x)(y)$
+		\item[Ergebnis:]$y$
+		\item[Spielelemente:]\ \linebreak[1]
+		\begin{description}
+			\item[Ablagen: ]3
+			\item[Metallstücke: ]2
+			\item[Maschinen: ]1
+			\item[Ampeln: ]0
+		\end{description}	
+		\item[Endelement:] Ein Metallstück
+		\item[Beschreibung:] In diesem Level lernt der Anwender das Spielelement der Maschine kennen. Er muss die Maschine und das zugehörige Metallstück so anordnen, dass die Auswertung reibungslos ablaufen kann.
+	\end{description}
+	
+	\item{Level 3.}
+	\begin{description}
+		\item[Typ:] Puzzle
+		\item[Lambda-Ausdruck:] $(\lambda x.x x)(y)$
+		\item[Ergebnis:]$yy$
+		\item[Spielelemente:]\ \linebreak[1]
+		\begin{description}
+			\item[Ablagen: ]4
+			\item[Metallstücke: ]3
+			\item[Maschinen: ]1
+			\item[Ampeln: ]0
+		\end{description}	
+		\item[Endelement:] Zwei Metallstücke
+		\item[Beschreibung:] In diesem Level wird dem Anwender gezeigt, dass eine Maschine auch mehr als eine Ausgabe haben kann.
+	\end{description}
+	
+	\item{Level 4.}
+	\begin{description}
+		\item[Typ:] Puzzle
+		\item[Lambda-Ausdruck:] $(\lambda x.(\lambda y.(yy)(x)))(z)$
+		\item[Ergebnis:]$zz$
+		\item[Spielelemente:]\ \linebreak[1]
+		\begin{description}
+			\item[Ablagen: ]6
+			\item[Metallstücke: ]4
+			\item[Maschinen: ]2
+			\item[Ampeln: ]0
+		\end{description}	
+		\item[Endelement:] Zwei Metallstücke
+		\item[Beschreibung:] In diesem Level muss der Anwender mit einer Maschine als Ausgabe einer anderen Maschine arbeiten. Es wird ihm gezeigt wie damit umgehen muss.
+	\end{description}
+	
+	\item{Level 5.}
+	\begin{description}
+		\item[Typ:] Puzzle
+		\item[Lambda-Ausdruck:] $(\lambda x.xx)((\lambda y.y)(\lambda z.z)(a))$
+		\item[Ergebnis:] $aa$
+		\item[Spielelemente:]\ \linebreak[1]
+		\begin{description}
+			\item[Ablagen: ]
+			\item[Metallstücke: ]5
+			\item[Maschinen: ]3
+			\item[Ampeln: ] 1
+		\end{description}	
+		\item[Endelement:] Zwei Metallstück
+		\item[Beschreibung:] In diesem Level wird das Spielelement der Ampel eingeführt und dem Anwender gezeigt, wie er diese verwenden muss.
+	\end{description}
+	
+	\item{Level 6.}
+	\begin{description}
+		\item[Typ:] Fehlerfinden
+		\item[Lambda-Ausdruck:] $(\lambda x.(\lambda f.(ff))(\lambda y.y)(x))(z)$
+		\item[Ergebnis:] $z$
+		\item[Spielelemente:]\ \linebreak[1]
+		\begin{description}
+			\item[Ablagen: ]9
+			\item[Metallstücke: ]5
+			\item[Maschinen: ]3
+			\item[Ampeln: ] 0
+		\end{description}	
+		\item[Endelement:] Ein Metallstück
+		\item[Beschreibung:] In diesem Level lernt der Spieler den anderen Aufgaben Typen kennen. Ihm werden die gefüllten Ablagen gegeben und er muss den Fehler finden und die Elemente so umlegen, damit die Auswertung durchlaufen kann. 
+	\end{description}
+\end{itemize}
+
+\chapter{Datenstruktur von RetroMachines}
+
+\section{SQLite}
+
+\subsection{Präambel}
+
+RetroMachines verfügt über eine persistente Datenstruktur, um unter anderem Profile, Statistiken oder Globale Variablen zu sichern. Hierfür kommt SQLite zum Einsatz, da es folgende Stärken aufweist:
+
+\begin{itemize}
+	\item Kein Datenbankserver, der im Hintergrund läuft
+	\item Einfache Wartbarkeit der Datenbankdatei
+	\item SQL-Befehle
+	\item Relationale Datenbanken
+\end{itemize}
+
+\subsection{Struktur der Tabellen}
+
+\subsubsection{Globale Variablen}
+
+libGDX wird verschiedene Globale Variablen benötigen; diese werden in Form von Key-Value-Paaren in der Tabelle \textit{globalVariables} gespeichert. \\ 
+Die Tabelle wird folgende Struktur aufweisen:
+
+{\center
+\subsubsection*{Die Tabelle globalVariables}
+\begin{tabular}{ccc}
+	\hline
+	id (int) & key (varchar) & value (varchar) \\
+	\hline
+	1 & LAST\_USED\_PROFILE & 3 \\
+	\hline
+\end{tabular}
+\par
+}
+
+\begin{description}
+	\item[id - int] beschreibt die ID der jeweiligen Globalen Variablen zur Identifikation.
+	\item[key - varchar] beschreibt die jeweiligen Keys der Key-Value-Paare.
+	\item[value - varchar] ist das Gegenstück und beschreibt den entsprechenden Wert des Key-Value-Paares.
+\end{description}
+
+\subsubsection{Profile}
+
+RetroMachines wird es dem Anwender erlauben, bis zu 6 Profile zu erstellen und zu benutzen. Diese werden ebenfalls in der Datenbank gespeichert. Der Name der Tabelle lautet \textit{profiles}\\
+Die Tabelle wird folgende Struktur aufweisen:
+
+{\center
+\subsubsection*{Die Tabelle profiles}
+\begin{tabular}{cccc}
+	\hline
+	id (int) & name (varchar) & statisticId (int) & settingsId (int) \\
+	\hline
+	1 & Adrian Schulte & 3 & 2 \\
+	2 & Maik Wiesner & 2 & 7 \\
+	\hline
+\end{tabular}
+\par
+}
+
+\begin{description}
+	\item[id - int] enthält die ID des jeweiligen Profils, worüber jedes Profil eindeutig innerhalb der Tabelle bestimmt werden kann.
+	\item[name - varchar] bezeichnet den Namen des Profils, welcher unter anderem im Spiel angezeigt werden wird um das Profil durch den Benutzer zu identifizieren.
+	\item[stisticsId - int] referenziert die ID der Statistik die dem Profil zugehörig ist.
+	\item[settingsId - int] referenziert die Einstellungen die mit dem entsprechenden Profil assoziiert ist.
+\end{description}
+
+
+\subsubsection{Statistiken}
+
+RetroMachines speichert profilbezogene Statistiken. Diese werden ebenfalls in der Datenbank gespeichert. Der Name der Tabelle lautet \textit{statistics}\\
+Die Tabelle wird folgende Struktur aufweisen:
+
+{\center
+\subsubsection*{Die Tabelle statistics}
+\begin{tabular}{cccc}
+	\hline
+	id (int) & playtime (int) & levelCompleted (int) & stepCounter \\
+	\hline
+	5 & 1337 & 3 & 9000 \\
+	\hline
+\end{tabular}
+\par
+}
+
+\begin{description}
+	\item[id - int] enthält die ID der jeweiligen Statistik, die sie eindeutig identifiziert und eine Zuordnung zu einem Profil erlaubt.
+	\item[playtime - int] beschreibt die Minuten, die mit der entsprechenden Statistik gespielt wurden.
+	\item[levelCompleted - int] beschreibt die Anzahl der fertig gestellten Level in der jeweiligen Statistik.
+	\item[stepCounter - int] beschreibt die Anzahl der Schritte, die der Anwender mit seinem Spielcharakter gemacht hat.
+\end{description}
+
+\subsubsection{Einstellungen}
+
+RetroMachines verfügt über Einstellungen, die es dem Benutzer erlauben, sein Spielerlebnis individuell zu gestalten. Zu diesen Einstellungen gehören die Regelung der Lautstärke sowie die Entscheidung, ob der Benutzer die Steuerung auf der linken Seite angezeigt bekommen möchte. Diese Einstellungen werden durch RetroMachines ebenfalls innerhalb einer SQL Tabelle gespeichert. Diese Tabelle wird folgende Struktur aufweisen:
+
+{\center
+\subsubsection*{Die Tabelle Settings}
+\begin{tabular}{cccc}
+	\hline
+	id (int) & volume (float) & soundOnOff (int) & leftControl (int) \\
+	\hline
+	2 & 0.7 & 1 & 0 \\
+	\hline
+\end{tabular}
+\par
+}
+
+\begin{description}
+	\item[id - int] beschreibt die ID der jeweiligen Spalte zur Identifikation einer speziellen Einstellung.
+	\item[volume - float] beschreibt die Lautstärke als Fließkommazahl im Intervall von [0, 1.0].
+	\item[soundOnOff - int] beschreibt, ob der Ton des Spiels aktiviert werden soll oder nicht.
+	\item[leftControl - int] beschreibt, ob die Steuerung auf der linken Seite aktiviert sein soll.
+\end{description}
+
+\clearpage
+
+\section{JSON}
+
+\subsection{Präambel}
+
+Die Auslieferung der Level des Spiels wird auf Basis des verbreiteten JSON-Formates (JavaScript Object Notation) und mittels Konventionen auf der Dateisystemhierarchie geschehen. Als Gründe für den Einsatz des JSON-Formates lassen sich folgende Argumente anführen:
+
+\begin{itemize}
+	\item Simple Schreib- und Editierbarkeit
+	\item Gute Les- und Nachvollziehbarkeit
+	\item Direktes Format ohne Overhead
+	\item Einfache Unterstützung des Formates durch GSON und libGDX
+\end{itemize}
+
+Eine genaue Spezifizierung des Dateiformats ist jedoch essentiell für den Einsatz des JSON Formats. Aus diesem Grund wird im folgenden die Struktur der Leveldateien im Detail erklärt.
+
+\subsection{Struktur der Leveldatei}
+
+\begin{minipage}{1\textwidth}
+
+\subsubsection{Aufbau der level.json Datei}
+
+Der grobe Aufbau der \textit{level.json} Datei wird wie folgt aussehen:
+
+\begin{lstlisting}[language=json, firstnumber=1]
+{
+	"gameElementTypes" : [
+		// Unterschiedlichen Leveltypen
+	],
+	"level" : [
+		// Einzelne Level
+	]
+}
+\end{lstlisting}
+
+\end{minipage}
+
+
+\begin{minipage}{1\textwidth}
+
+\subsubsection{gameElementTypes-Objekt}
+
+Bei \textit{gameElementTypes} handelt es sich um ein Array, dessen Indizes jeweils eines der Typen des Lamba Kalküls. Durch einen Zugriff auf das Array kann RetroMachines in Erfahrung bringen, um was für ein Objekt es sich handelt. Im Folgenden sehen Sie eine beispielhaftes Array für diese Typen:
+
+\begin{lstlisting}[language=json, firstnumber=1]
+{
+	"gameElementTypes" : [
+        {
+            "name" : "variable"
+        },
+        {
+            "name" : "application"
+        },
+        {
+            "name" : "abstraction"
+        }
+    ],
+	...
+}
+\end{lstlisting}
+
+\end{minipage}
+
+
+\begin{minipage}{1\textwidth}
+
+\subsubsection{Level-Array}
+
+Bei \textit{level} handelt es sich ebenfalls um ein Array, das alle vorhanden Level von RetroMachines zum Aufbau enthält.
+
+\begin{lstlisting}[language=json, firstnumber=1]
+{
+    "level" : [
+    {
+        "id" : 1,
+        "description": "Level das (lambda x . x x)(y) darstellt",
+        "hasTutorialScreen": true,
+        "data": {
+            "gameelements": [
+                // ...
+            ],
+            "tree": [
+                // ...
+            ],
+            "target": [
+                // ...
+            ],
+            "hint": [
+                // ...
+            ],
+            "tutorial" : {
+            	// ...
+            }
+        }
+    },
+    // weitere Levelobjekte
+    ]
+}
+\end{lstlisting}
+
+\begin{description}
+	\item[id] Beschreibt die jeweilige ID des Levels, um es eindeutig identifizieren zu können.
+	\item[description] Ist ein String, der intern zur Identifizierung des Ausdruckes verwendet wird, der durch das Level dargestellt wird.
+	\item[hasTutorialScreen] Beschreibt einen boolean, der gegebenenfalls einen Tutorial Overlay aktiviert, wenn das Level zum ersten Mal gestartet wird.
+	\item[data] Beschreibt ein Objekt, das über mehrere Unterobjekte verfügt:
+		\begin{itemize} 
+			\item gameelements Die Spielelemente des Levels(Maschinen, Metallstücke und Ampeln).
+			\item tree Die Baum-Repräsentation der Ablagenstruktur des Levels.
+			\item target Die Baum-Repräsentation des Ziels des Levels.
+			\item hint Die Baum-Repräsentation des Hinweises des Levels.
+			\item tutorial Kennzeichnet ein Tutorial-Level.
+		\end{itemize}
+	Auf die jeweiligen Objekte beziehungsweise Arrays wird im Folgenden genauer eingegangen.
+\end{description}
+
+\end{minipage}
+
+
+\begin{minipage}{1\textwidth}
+
+\subsubsection{gameelements-Array}
+
+Bei \textit{gameelements} handelt es sich um ein Array, welches die Objekte enthält, die später in die Spielwelt eingefügt werden und somit auf dem GameScreen angezeigt werden. Im folgenden ist ein beispielhafter Aufbau dieses Arrays zu sehen.
+
+\begin{lstlisting}[language=json,firstnumber=1] 
+	{
+		"gameelements":
+		[  
+			{  
+				"id":2,
+				"type":0,
+				"x":5,
+				"y":5
+			},
+			// ...
+		],
+		// ...
+	}
+\end{lstlisting}
+
+\begin{description}
+	\item[color] Eine Ganzzahl, die zur Laufzeit in eine Farbdarstellung übersetzt wird.
+	\item[type] Eine Ganzzahl, die durch das bereits gesehene Array gameElementTypes eine Aussage erlaubt, um was für ein Element es sich handelt.
+	\item[x] Beschreibt die X-Koordinate des jeweiligen Elements in der Spielwelt.
+	\item[y] Beschreibt die Y-Koordinate des jeweiligen Elements in der Spielwelt.
+\end{description}
+
+\end{minipage}
+
+
+\begin{minipage}{1\textwidth}
+
+\subsubsection{tree-Array}
+
+Der Lambda-Tree repräsentiert die Ablagenstruktur und die darin enthaltenen Elemente (Maschinen, Metallstücke, Ampeln) in einer Form, mit der sich $\beta$-Reduktion, $\alpha$-Konversion und sonstige Operationen bequem durchführen lassen. Dabei stehen die Knoten des Baums für die Spielelemente. Diese haben einen Typ (Abstraktion, Applikation, Variable) und eine Farbe. Jeder Knoten hat eine Referenz auf den zu verarbeitenden Knoten (Input, falls vorhanden) und eine Referenz auf den ersten Knoten in der darüber liegenden Ebene (falls vorhanden).
+Zu Beginn eines Levels ist der Knotentyp aller Knoten undefiniert. Dies repräsentiert die leeren Ablagen, die der Anwender mit Inhalt, der den Objekt-Typ definiert, füllt. Hat der Anwender alle Ablagen gefüllt, so ergibt sich ein Baum, auf dem die Auswertung durchgeführt werden kann. \\
+
+
+\begin{lstlisting}[language=json,firstnumber=1] 
+	{	
+		// ...
+		"tree": 
+		[
+		    {
+		        "color": -1,
+		        "tree": [
+		            {
+		                "color": -1,
+		                "tree": [ ]
+		            },
+		            {
+		                "color": -1,
+		                "tree": [ ]
+		            }
+		        ]
+		    },
+		    {
+		        "color": -1,
+		        "tree": [
+		        ]
+		    }
+		],
+		// ...
+	}
+\end{lstlisting}
+
+\begin{description}
+	\item[tree] Die Referenz auf den Wurzelknoten des Baumes der darüber liegenden Ebene.
+	\item[color] Die Farbe des Knoten, welche die Farbe des Spielelements repräsentiert.
+\end{description}
+
+\end{minipage}
+
+
+\begin{minipage}{1\textwidth}
+
+\subsubsection{target-Array}
+
+Hierbei handelt es sich um den Baum, der die Zielkonstellation des Levels beschreibt. Diesen Baum muss der Anwender durch korrekte Platzierung der Spielelemente erstellen, um das Level erfolgreich abschließen zu können.
+
+\begin{lstlisting}[language=json,firstnumber=1] 
+	{	
+		// ...
+		"target": 
+		[
+            {
+                "color": 1,
+                "type": 0,
+                "tree": [ ]
+            },
+            {
+                "color": 1,
+                "type": 0,
+                "tree": [ ]
+            }
+        ],
+		// ...
+	}
+\end{lstlisting}
+
+\begin{description}
+	\item[tree] Die Referenz auf den Wurzelknoten des Baumes der überliegenden Ebene.
+	\item[color] Die Farbe des Knotens, welcher die Farbe des Spielelements repräsentiert.
+\end{description}
+
+\end{minipage}
+
+
+\begin{minipage}{1\textwidth}
+
+\subsubsection{hint-Array}
+
+Dies ist ein Baum, der als Hinweis dient; er wird dem Anwender angezeigt, wenn er auf den Hinweis-Button drückt.
+
+\begin{lstlisting}[language=json,firstnumber=1] 
+	{	
+		// ...
+		"hint": 
+		[
+            {
+                "color": 1,
+                "type": 2,
+                "tree": [
+                    {
+                        "color": 1,
+                        "type": 0,
+                        "tree": [ ]
+                    },
+                    {
+                        "color": 1,
+                        "type": 0,
+                        "tree": [ ]
+                    }
+                ]
+            },
+            {
+                "color": 2,
+                "type": 0,
+                "tree": [
+                ]
+            }
+        ]
+		// ...
+	}
+\end{lstlisting}
+
+
+\begin{description}
+	\item[tree] Die Referenz auf den Wurzelknoten des Baumes der darüberliegenden Ebene.
+	\item[color] Die Farbe des Knotens, welcher die Farbe des Spielelements repräsentiert.
+\end{description}
+
+\end{minipage}
+
+
+
+
+
