@@ -41,9 +41,14 @@
    eJxjYBgFowA/kMRB0wuI4qDpBYSAWAKIBQfIfhCQxMKmZzyAwkAMiqWgtCBeHbQDAxH+yAAU7mJImN75YRSMAmoBADu/Ai4=
   </data>
  </layer>
- <layer name="Objekte" width="32" height="16">
-  <data encoding="base64" compression="zlib">
-   eJxjYBgFowA/sESjrQbKISMYaCKx1aC04UA4ZBQwGKPxtQbEFaNgFFAOABqxAYo=
-  </data>
- </layer>
+ <objectgroup draworder="index" name="Objektebene 1">
+  <object gid="51" x="830" y="702"/>
+  <object gid="49" x="960" y="514"/>
+  <object gid="58" x="832" y="320"/>
+  <object gid="57" x="576" y="320"/>
+  <object gid="57" x="702" y="318"/>
+  <object gid="42" x="1086" y="706"/>
+  <object gid="41" x="640" y="512"/>
+  <object gid="38" x="832" y="512"/>
+ </objectgroup>
 </map>
