@@ -42,14 +42,14 @@
   </data>
  </layer>
  <objectgroup name="Objekte">
-  <object gid="81" x="896" y="704"/>
-  <object gid="35" x="448" y="704"/>
-  <object gid="33" x="1728" y="640"/>
-  <object gid="41" x="768" y="256"/>
-  <object gid="49" x="128" y="128"/>
-  <object gid="49" x="768" y="512"/>
-  <object gid="53" x="1152" y="256"/>
-  <object gid="58" x="64" y="384"/>
-  <object gid="57" x="512" y="448"/>
+  <object name="Ampel" gid="81" x="896" y="704"/>
+  <object name="gelbeMaschine" gid="35" x="448" y="704"/>
+  <object name="blaueMaschine" gid="33" x="1728" y="640"/>
+  <object name="pinkeMaschine" gid="41" x="768" y="256"/>
+  <object name="blauesMetallobjekt" gid="49" x="128" y="128"/>
+  <object name="blauesMetallObjekt" gid="49" x="768" y="512"/>
+  <object name="gelbesMetallobjekt" gid="53" x="1152" y="256"/>
+  <object name="pinkesMetallobjekt" gid="58" x="64" y="384"/>
+  <object name="rotesMetallObjekt" gid="57" x="512" y="448"/>
  </objectgroup>
 </map>
