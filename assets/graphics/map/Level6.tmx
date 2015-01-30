@@ -41,9 +41,14 @@
    eJxjYBgFowA/kMRB0wuI4qDpBYSAWAKIBQfIfhCQxMKmZzyAwkAMiqWgtCBeHbQDAxH+yAAU7mJImN75YRSMAmoBADu/Ai4=
   </data>
  </layer>
- <layer name="Objekte" width="32" height="16">
-  <data encoding="base64" compression="zlib">
-   eJxjYBgFowA/sESjrQbKISMYaCKx1aC04UA4ZBQwGKPxtQbEFaNgFFAOABqxAYo=
-  </data>
- </layer>
+ <objectgroup draworder="index" name="Objektebene 1">
+  <object name="grünesMetallObjekt" gid="51" x="830" y="702"/>
+  <object name="blauesMetallObjekt" gid="49" x="960" y="514"/>
+  <object name="pinkesMetallObjekt" gid="58" x="832" y="320"/>
+  <object name="rotesMetallObjekt" gid="57" x="576" y="320"/>
+  <object name="rotesMetallObjekt" gid="57" x="702" y="318"/>
+  <object name="roteMaschine" gid="42" x="1086" y="706"/>
+  <object name="pinkeMaschine" gid="41" x="640" y="512"/>
+  <object name="grüneMaschine" gid="38" x="832" y="512"/>
+ </objectgroup>
 </map>
