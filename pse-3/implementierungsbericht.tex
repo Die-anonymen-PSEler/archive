@@ -1,4 +1,4 @@
-\documentclass{scrartcl}
+\documentclass[parskip=full]{scrreprt}
 
 \usepackage{helvet}
 \usepackage[T1]{fontenc}
@@ -32,13 +32,13 @@
 \clearpage
 \setcounter{page}{1}
 
-\section{Einleitung}
+\chapter{Einleitung}
 
-\section{Änderungen am Entwurf}
+\chapter{Änderungen am Entwurf}
 
-\section{Muss- und Wunschkriterien}
+\chapter{Muss- und Wunschkriterien}
 
-\subsection{Nicht umgesetzte Muss- und Wunschkriterien}
+\section{Nicht umgesetzte Muss- und Wunschkriterien}
 
 \begin{itemize}
 	\item Auslieferung in mehreren Sprachen
@@ -51,15 +51,82 @@
 	\item Steuerung durch Wischgesten
 \end{itemize}
 
-\subsection{Umgesetzte Muss- und Wunschkriterien}
+\section{Umgesetzte Muss- und Wunschkriterien}
 
 \begin{itemize}
 	\item Pixelgrafik / Retrolook / reduzierter Farbraum
 \end{itemize}
 
-\section{Implementierungsplan und dessen Umsetzung}
+\chapter{Implementierungsplan und dessen Umsetzung}
 
-\section{jUnit Tests}
+\chapter{jUnit Tests}
+
+\section{Package: models}
+
+\subsection{GlobalVariablesTest}
+
+Testcase zum Testen der GlobalVariables-Klasse
+
+\begin{description}
+\item[testCorrectValue]
+	Testet, ob die GlobalVariables-Klasse den richtigen default Wert zurück gibt.
+\item[testAssignValue]
+	Testet, ob die GlobalVariables-Klasse einen Wert unter einem Key speichert.
+\end{description}
+
+\subsection{ProfileTest}
+
+Testcase zum Testen der Profile-Klasse
+
+\begin{description}
+	\item[testCreateProfile] Testet, ob ein Profile erstellt werden kann und eine Statistik Instanz sowie Settings Instanz diesem zugewiesen werden kann.
+	\item[testDBFetch] Testet, ob das Test-Profil aus der Datenbank geladen werden kann und dessen Werte stimmen.
+	\item[testOverrideDB] Testet, ob ein Profil bearbeitet werden kann und diese Änderungen zurück in die Datenbank geschrieben werden.
+	\item[testGetAllProfiles] Testet, ob die statische Methode \enquote{getAllProfiles} das richtige Profile und die richtige Anzahl an Profilen sich in dem Array befindet.
+	\item[testGetAllProfilesWithCreate] Testet, ob die statische Methode \enquote{getAllProfiles} auch auf das Erstellen eines neuen Profiles reagiert.
+	\item[testGetHashMap] Testet, ob die statische Methode \enquote{getProfileNameIdMap} die richtige Anzahl an Einträgen und den richtigen Eintrag beinhaltet.
+\end{description}
+
+\subsection{SettingTest}
+
+Testcase zum Testen der Setting-Klasse.
+
+\begin{itemize}
+	\item[testCreateSetting] Testet, ob eine Einstellungs-Instanz erstellt werden kann und die richtigen Werte zugewiesen wurden.
+	\item[testDBFetch] Testet, ob eine Einstellungs-Instanz basierend auf den Demoinformationen der Datenbank erstellt werden kann und über die richtigen Werte verfügt.
+	\item[testWriteBack] Testet, ob eine Einstellungs-Instanz in der Lage ist geänderte Informationen zurück in die Datenbank zu schreiben.
+\end{itemize}
+
+\subsection{StatisticTest}
+
+\begin{itemize}
+	\item[testCreateStatistic] Testet, ob eine Statistik-Instanz erstellt werden kann und die richtigen Werte zugewiesen wurden.
+	\item[testDBFetch] Testet, ob eine Statistik-Instanz basierend auf den Demoinformationen der Datenbank erstellt werden kann und über die richtigen Werte verfügt.
+	\item[testWriteBack] Testet, ob eine Statistik-Instanz in der Lage ist geänderte Informationen zurück in die Datenbank zu schreiben.
+\end{itemize}
+
+\section{Package: controllers}
+
+\subsection{GameControllerTest}
+
+\begin{itemize}
+	\item 
+\end{itemize}
+
+\subsection{ProfileControllerTest}
+
+Testcase zum Testen der ProfileController-Klasse.
+
+\begin{itemize}
+	\item[testLoadLastProfile] Testet, ob der ProfileController in der Lage ist das zuletzt aktive Profile zu laden.
+	\item[testRightLoading] Testet, ob der Controller das richtige Profil über die \enquote{loadLastProfile}-Methode geladen hat. Testet außerdem, ob das Laden scheitern kann.
+	\item[testDoubleUserName] Testet, ob der Controller das Erstellen eines Profils mit bereits existierenden Namen erlaubt.
+	\item[testMaximumProfiles] Testet, ob der Controller die Obergrenze an Profilen einhält.
+	\item[testCreateDeleteProfile] Testet, ob der Controller ein Profil erstellt und die Vernichtung dieses Profils im Anschluss vollständig ist.
+	\item[testChangeOnProfileCreate] Testet, ob das aktive Profil des Controllers im Anschluss an die Erstellung auf das erstellte Profil gewechselt wird.
+	\item[testChangeProfile] Testet, ob der Controller beim Wechseln des Profils dieses in der Datenbank vermerkt.
+	\item[testListener] Testet, ob der Controller korrekt die Klassen benachrichtigt, die sich bei ihm angemeldet haben. Dazu benutzt es seinen eigenen MockListener.
+\end{itemize}
 
 
 
