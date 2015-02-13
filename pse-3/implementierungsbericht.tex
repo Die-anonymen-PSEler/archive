@@ -40,7 +40,7 @@
 
 \section{Nicht umgesetzte Muss- und Wunschkriterien}
 
-\begin{itemize}
+\begin{description}
 	\item Auslieferung in mehreren Sprachen
 	\item Challengemode mit Zeitdruck
 	\item Werkstatt zum Umbauen von Maschinen
@@ -49,13 +49,13 @@
 	\item Begleitende Story
 	\item Erweiternde Spielelemente
 	\item Steuerung durch Wischgesten
-\end{itemize}
+\end{description}
 
 \section{Umgesetzte Muss- und Wunschkriterien}
 
-\begin{itemize}
+\begin{description}
 	\item Pixelgrafik / Retrolook / reduzierter Farbraum
-\end{itemize}
+\end{description}
 
 \chapter{Implementierungsplan und dessen Umsetzung}
 
@@ -91,33 +91,35 @@ Testcase zum Testen der Profile-Klasse
 
 Testcase zum Testen der Setting-Klasse.
 
-\begin{itemize}
+\begin{description}
 	\item[testCreateSetting] Testet, ob eine Einstellungs-Instanz erstellt werden kann und die richtigen Werte zugewiesen wurden.
 	\item[testDBFetch] Testet, ob eine Einstellungs-Instanz basierend auf den Demoinformationen der Datenbank erstellt werden kann und über die richtigen Werte verfügt.
 	\item[testWriteBack] Testet, ob eine Einstellungs-Instanz in der Lage ist geänderte Informationen zurück in die Datenbank zu schreiben.
-\end{itemize}
+\end{description}
 
 \subsection{StatisticTest}
 
-\begin{itemize}
+\begin{description}
 	\item[testCreateStatistic] Testet, ob eine Statistik-Instanz erstellt werden kann und die richtigen Werte zugewiesen wurden.
 	\item[testDBFetch] Testet, ob eine Statistik-Instanz basierend auf den Demoinformationen der Datenbank erstellt werden kann und über die richtigen Werte verfügt.
 	\item[testWriteBack] Testet, ob eine Statistik-Instanz in der Lage ist geänderte Informationen zurück in die Datenbank zu schreiben.
-\end{itemize}
+\end{description}
+
+\clearpage
 
 \section{Package: controllers}
 
 \subsection{GameControllerTest}
 
-\begin{itemize}
+\begin{description}
 	\item 
-\end{itemize}
+\end{description}
 
 \subsection{ProfileControllerTest}
 
 Testcase zum Testen der ProfileController-Klasse.
 
-\begin{itemize}
+\begin{description}
 	\item[testLoadLastProfile] Testet, ob der ProfileController in der Lage ist das zuletzt aktive Profile zu laden.
 	\item[testRightLoading] Testet, ob der Controller das richtige Profil über die \enquote{loadLastProfile}-Methode geladen hat. Testet außerdem, ob das Laden scheitern kann.
 	\item[testDoubleUserName] Testet, ob der Controller das Erstellen eines Profils mit bereits existierenden Namen erlaubt.
@@ -126,8 +128,25 @@ Testcase zum Testen der ProfileController-Klasse.
 	\item[testChangeOnProfileCreate] Testet, ob das aktive Profil des Controllers im Anschluss an die Erstellung auf das erstellte Profil gewechselt wird.
 	\item[testChangeProfile] Testet, ob der Controller beim Wechseln des Profils dieses in der Datenbank vermerkt.
 	\item[testListener] Testet, ob der Controller korrekt die Klassen benachrichtigt, die sich bei ihm angemeldet haben. Dazu benutzt es seinen eigenen MockListener.
-\end{itemize}
+\end{description}
 
+\subsection{SettingController}
+
+\begin{description}
+	\item [testListener] Testet, ob ein MockListener durch den Controller über Änderungen an den Einstellungen benachrichtigt wird.
+\end{description}
+
+\section{Package: gameelements}
+
+\subsection{RetroManTest}
+
+\begin{description}
+	\item[testJumpLock] Testet, ob ein erneuter Sprung möglich ist, nachdem er bereits zuvor gesprungen ist.
+	\item[testFacing] Testet, ob die Figur nach links beziehungsweise nach rechts guckt.
+	\item[testLeftMovement] Testet, ob die Figur korrekt nach links beschleunigt wird.
+	\item[testRightMovement] Testet, ob die Figur korrekt nach rechts beschleunigt wird.
+	\item[testJumpLockOnFalling] Testet, ob die Figur nicht springen kann, wenn sie fällt.
+\end{description}
 
 
 \end{document}
