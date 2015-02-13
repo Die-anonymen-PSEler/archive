@@ -44,34 +44,34 @@ Falls nicht anders angegeben handelt es sich bei den Methoden um public Methoden
 
 \subsubsection{Hinzugefügte Methoden}
 \begin{description}
-	\item[destroy] Löscht den Eintrag, der aktuell durch das Model repräsentiert wird durch das Model aus der Datenbank.
+	\item[destroy] Löscht den Eintrag, der aktuell durch das Model repräsentiert wird, durch das Model aus der Datenbank.
 \end{description}
 
 \subsubsection{Modifizierte Methoden}
 \begin{description}
-	\item[getStatement - \textit{protected}] Erstellt ein Statement das zur Ausführung von Abfragen auf der Datenbank ausgeführt werden kann.
+	\item[getStatement - \textit{protected}] Erstellt ein Statement, das zur Ausführung von Abfragen auf der Datenbank ausgeführt werden kann.
 \end{description}
 
 \subsection{Profile}
 
 \subsubsection{Hinzugefügte Methoden}
 \begin{description}
-	\item[getAllProfiles] Erstellt ein String-Array welches alle Profile enthält, die sich aktuell in der Datenbank befinden.
-	\item[getProfileNameIdMap] Erstellt eine HashMap welche als Abbildung von einem Profilnamen auf dessen Identifikationsnummer dient.
+	\item[getAllProfiles] Erstellt ein String-Array, welches alle Profile enthält, die sich aktuell in der Datenbank befinden.
+	\item[getProfileNameIdMap] Erstellt eine HashMap, welche als Abbildung von einem Profilnamen auf dessen Identifikationsnummer dient.
 \end{description}
 
 \subsection{Setting}
 
 \subsubsection{Hinzugefügte Methoden}
 \begin{description}
-	\item[Konstruktor] Ein Konstruktor wurde eingefügt der das Erstellen eines Setting-Objektes mit Standardwerten erlaubt.
+	\item[Konstruktor] Es wurde ein Konstruktor eingefügt, der das Erstellen eines Setting-Objektes mit Standardwerten erlaubt.
 \end{description}
 
 \subsection{Statistic}
 
 \subsubsection{Hinzugefügte Methoden}
 \begin{description}
-	\item[Konstruktor] Ein Konstruktor wurde eingefügt der das Erstellen eines Statistic-Objektes mit Standardwerten erlaubt.
+	\item[Konstruktor] Es wurde ein Konstruktor eingefügt, der das Erstellen eines Statistic-Objektes mit Standardwerten erlaubt.
 \end{description}
 
 \section{Package: game.controller}
@@ -114,7 +114,7 @@ Falls nicht anders angegeben handelt es sich bei den Methoden um public Methoden
 
 \chapter{Implementierungsplan und dessen Umsetzung}
 
-\chapter{jUnit Tests}
+\chapter{jUnit-Tests}
 
 \section{Package: models}
 
@@ -124,7 +124,7 @@ Testcase zum Testen der GlobalVariables-Klasse
 
 \begin{description}
 \item[testCorrectValue]
-	Testet, ob die GlobalVariables-Klasse den richtigen default Wert zurück gibt.
+	Testet, ob die GlobalVariables-Klasse den richtigen default-Wert zurückgibt.
 \item[testAssignValue]
 	Testet, ob die GlobalVariables-Klasse einen Wert unter einem Key speichert.
 \end{description}
@@ -134,10 +134,10 @@ Testcase zum Testen der GlobalVariables-Klasse
 Testcase zum Testen der Profile-Klasse
 
 \begin{description}
-	\item[testCreateProfile] Testet, ob ein Profile erstellt werden kann und eine Statistik Instanz sowie Settings Instanz diesem zugewiesen werden kann.
+	\item[testCreateProfile] Testet, ob ein Profile erstellt werden kann und diesem eine Statistic- sowie Settings-Instanz zugewiesen werden kann.
 	\item[testDBFetch] Testet, ob das Test-Profil aus der Datenbank geladen werden kann und dessen Werte stimmen.
 	\item[testOverrideDB] Testet, ob ein Profil bearbeitet werden kann und diese Änderungen zurück in die Datenbank geschrieben werden.
-	\item[testGetAllProfiles] Testet, ob die statische Methode \enquote{getAllProfiles} das richtige Profile und die richtige Anzahl an Profilen sich in dem Array befindet.
+	\item[testGetAllProfiles] Testet, ob die statische Methode \enquote{getAllProfiles} das richtige Profile zurückgibt und ob sich die richtige Anzahl an Profilen in dem Array befindet.
 	\item[testGetAllProfilesWithCreate] Testet, ob die statische Methode \enquote{getAllProfiles} auch auf das Erstellen eines neuen Profiles reagiert.
 	\item[testGetHashMap] Testet, ob die statische Methode \enquote{getProfileNameIdMap} die richtige Anzahl an Einträgen und den richtigen Eintrag beinhaltet.
 \end{description}
@@ -147,17 +147,17 @@ Testcase zum Testen der Profile-Klasse
 Testcase zum Testen der Setting-Klasse.
 
 \begin{description}
-	\item[testCreateSetting] Testet, ob eine Einstellungs-Instanz erstellt werden kann und die richtigen Werte zugewiesen wurden.
-	\item[testDBFetch] Testet, ob eine Einstellungs-Instanz basierend auf den Demoinformationen der Datenbank erstellt werden kann und über die richtigen Werte verfügt.
-	\item[testWriteBack] Testet, ob eine Einstellungs-Instanz in der Lage ist geänderte Informationen zurück in die Datenbank zu schreiben.
+	\item[testCreateSetting] Testet, ob eine Settings-Instanz erstellt werden kann und die richtigen Werte zugewiesen wurden.
+	\item[testDBFetch] Testet, ob eine Settings-Instanz basierend auf den Demoinformationen der Datenbank erstellt werden kann und über die richtigen Werte verfügt.
+	\item[testWriteBack] Testet, ob eine Settings-Instanz in der Lage ist, geänderte Informationen zurück in die Datenbank zu schreiben.
 \end{description}
 
 \subsection{StatisticTest}
 
 \begin{description}
-	\item[testCreateStatistic] Testet, ob eine Statistik-Instanz erstellt werden kann und die richtigen Werte zugewiesen wurden.
-	\item[testDBFetch] Testet, ob eine Statistik-Instanz basierend auf den Demoinformationen der Datenbank erstellt werden kann und über die richtigen Werte verfügt.
-	\item[testWriteBack] Testet, ob eine Statistik-Instanz in der Lage ist geänderte Informationen zurück in die Datenbank zu schreiben.
+	\item[testCreateStatistic] Testet, ob eine Statistics-Instanz erstellt werden kann und die richtigen Werte zugewiesen wurden.
+	\item[testDBFetch] Testet, ob eine Statistics-Instanz basierend auf den Demoinformationen der Datenbank erstellt werden kann und über die richtigen Werte verfügt.
+	\item[testWriteBack] Testet, ob eine Statistics-Instanz in der Lage ist, geänderte Informationen zurück in die Datenbank zu schreiben.
 \end{description}
 
 \clearpage
@@ -175,14 +175,14 @@ Testcase zum Testen der Setting-Klasse.
 Testcase zum Testen der ProfileController-Klasse.
 
 \begin{description}
-	\item[testLoadLastProfile] Testet, ob der ProfileController in der Lage ist das zuletzt aktive Profile zu laden.
+	\item[testLoadLastProfile] Testet, ob der ProfileController in der Lage ist, das zuletzt aktive Profile zu laden.
 	\item[testRightLoading] Testet, ob der Controller das richtige Profil über die \enquote{loadLastProfile}-Methode geladen hat. Testet außerdem, ob das Laden scheitern kann.
 	\item[testDoubleUserName] Testet, ob der Controller das Erstellen eines Profils mit bereits existierenden Namen erlaubt.
 	\item[testMaximumProfiles] Testet, ob der Controller die Obergrenze an Profilen einhält.
 	\item[testCreateDeleteProfile] Testet, ob der Controller ein Profil erstellt und die Vernichtung dieses Profils im Anschluss vollständig ist.
-	\item[testChangeOnProfileCreate] Testet, ob das aktive Profil des Controllers im Anschluss an die Erstellung auf das erstellte Profil gewechselt wird.
-	\item[testChangeProfile] Testet, ob der Controller beim Wechseln des Profils dieses in der Datenbank vermerkt.
-	\item[testListener] Testet, ob der Controller korrekt die Klassen benachrichtigt, die sich bei ihm angemeldet haben. Dazu benutzt es seinen eigenen MockListener.
+	\item[testChangeOnProfileCreate] Testet, ob das aktive Profil des Controllers im Anschluss an die Erstellung auf das neu erstellte Profil gewechselt wird.
+	\item[testChangeProfile] Testet, ob der Controller den Wechsel des aktiven Profils dieses in der Datenbank vermerkt.
+	\item[testListener] Testet, ob der Controller die Klassen, die sich bei ihm angemeldet haben, korrekt benachrichtigt. Dazu benutzt es seinen eigenen MockListener.
 \end{description}
 
 \subsection{SettingController}
@@ -196,7 +196,7 @@ Testcase zum Testen der ProfileController-Klasse.
 \subsection{RetroManTest}
 
 \begin{description}
-	\item[testJumpLock] Testet, ob ein erneuter Sprung möglich ist, nachdem er bereits zuvor gesprungen ist.
+	\item[testJumpLock] Testet, ob ein erneuter Sprung möglich ist, nachdem RetroMan bereits zuvor gesprungen ist.
 	\item[testFacing] Testet, ob die Figur nach links beziehungsweise nach rechts guckt.
 	\item[testLeftMovement] Testet, ob die Figur korrekt nach links beschleunigt wird.
 	\item[testRightMovement] Testet, ob die Figur korrekt nach rechts beschleunigt wird.
