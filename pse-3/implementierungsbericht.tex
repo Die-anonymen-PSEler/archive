@@ -91,6 +91,10 @@ Falls nicht anders angegeben handelt es sich bei den Methoden um public Methoden
 	\item[deleteProfile]
 \end{description}
 
+\subsection{Lambda-Datenstruktur}
+
+Im ursprünglichen Entwurf bestand der Baum, der den Lambda-Term darstellt, aus Instanzen der Klasse \textit{Vertex}. Diese hatten als Attribut den jeweiligen Typ(Applikation, Abstraktion, Variable). Wir haben uns entschieden, das zu ändern und stattdessen Polymorphie und dynamische Bindung zu verwenden. Die Klasse \textit{Vertex} ist nun abstrakt und hat die Subklassen \textit{Application}, \textit{Abstraction}, \textit{Variable} und \textit{Dummy}, welche für die Elemente des Lambda-Terms stehen. Dabei sind Instanzen von \textit{Dummy} Platzhalter(leere Knoten) mit denen der LevelTree zu Beginn initialisiert wird.
+
 \chapter{Muss- und Wunschkriterien}
 
 \section{Nicht umgesetzte Muss- und Wunschkriterien}
