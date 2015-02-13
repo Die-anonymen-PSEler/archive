@@ -36,6 +36,61 @@
 
 \chapter{Änderungen am Entwurf}
 
+Falls nicht anders angegeben handelt es sich bei den Methoden um public Methoden.
+
+\section{Package: models}
+
+\subsection{Model}
+
+\subsubsection{Hinzugefügte Methoden}
+\begin{description}
+	\item[destroy] Löscht den Eintrag, der aktuell durch das Model repräsentiert wird durch das Model aus der Datenbank.
+\end{description}
+
+\subsubsection{Modifizierte Methoden}
+\begin{description}
+	\item[getStatement - \textit{protected}] Erstellt ein Statement das zur Ausführung von Abfragen auf der Datenbank ausgeführt werden kann.
+\end{description}
+
+\subsection{Profile}
+
+\subsubsection{Hinzugefügte Methoden}
+\begin{description}
+	\item[getAllProfiles] Erstellt ein String-Array welches alle Profile enthält, die sich aktuell in der Datenbank befinden.
+	\item[getProfileNameIdMap] Erstellt eine HashMap welche als Abbildung von einem Profilnamen auf dessen Identifikationsnummer dient.
+\end{description}
+
+\subsection{Setting}
+
+\subsubsection{Hinzugefügte Methoden}
+\begin{description}
+	\item[Konstruktor] Ein Konstruktor wurde eingefügt der das Erstellen eines Setting-Objektes mit Standardwerten erlaubt.
+\end{description}
+
+\subsection{Statistic}
+
+\subsubsection{Hinzugefügte Methoden}
+\begin{description}
+	\item[Konstruktor] Ein Konstruktor wurde eingefügt der das Erstellen eines Statistic-Objektes mit Standardwerten erlaubt.
+\end{description}
+
+\section{Package: game.controller}
+
+\subsection{GameController}
+
+\subsubsection{Hinzugefügte Methoden}
+\begin{description}
+	\item[update] Führt einen Schritt der Spielwelt aus.
+\end{description}
+
+
+\subsection{ProfileController}
+
+\subsubsection{Hinzugefügte Methoden}
+\begin{description}
+	\item[deleteProfile]
+\end{description}
+
 \chapter{Muss- und Wunschkriterien}
 
 \section{Nicht umgesetzte Muss- und Wunschkriterien}
