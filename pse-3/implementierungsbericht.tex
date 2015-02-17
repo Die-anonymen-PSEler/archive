@@ -38,6 +38,15 @@
 
 Falls nicht anders angegeben handelt es sich bei den Methoden um public Methoden.
 
+\section{Package: data}
+
+\subsection{AssetManager}
+
+\subsubsection{Hinzugefügte Methoden}
+\begin{description}
+	\item[Getter und Setter] Um auf die Spielelemente gezielt zugreifen zu können, haben wir uns entschieden, diese im AssetManager zu verwalten. Mit Übergabe der jeweiligen TiledMap werden daraufhin die Spielelemente ausgelesen und mithilfe der get-Methoden zurückgegeben.
+\end{description}
+
 \section{Package: models}
 
 \subsection{Model}
@@ -93,11 +102,12 @@ Falls nicht anders angegeben handelt es sich bei den Methoden um public Methoden
 
 \subsection{Lambda-Datenstruktur}
 
-Im ursprünglichen Entwurf bestand der Baum, der den Lambda-Term darstellt, aus Instanzen der Klasse \textit{Vertex}. Diese hatten als Attribut den jeweiligen Typ(Applikation, Abstraktion, Variable). Wir haben uns entschieden, das zu ändern und stattdessen Polymorphie und dynamische Bindung zu verwenden. Die Klasse \textit{Vertex} ist nun abstrakt und hat die Subklassen \textit{Application}, \textit{Abstraction}, \textit{Variable} und \textit{Dummy}, welche für die Elemente des Lambda-Terms stehen. Dabei sind Instanzen von \textit{Dummy} Platzhalter(leere Knoten) mit denen der LevelTree zu Beginn initialisiert wird.
+Im ursprünglichen Entwurf bestand der Baum, der den Lambda-Term darstellt, aus Instanzen der Klasse \textit{Vertex}. Diese hatten als Attribut den jeweiligen Typ (Applikation, Abstraktion, Variable). Wir haben uns entschieden, das zu ändern und stattdessen Polymorphie und dynamische Bindung zu verwenden. Die Klasse \textit{Vertex} ist nun abstrakt und hat die Subklassen \textit{Application}, \textit{Abstraction}, \textit{Variable} und \textit{Dummy}, welche für die Elemente des Lambda-Terms stehen. Dabei sind Instanzen von \textit{Dummy} Platzhalter (leere Knoten), mit denen der LevelTree zu Beginn initialisiert wird.
+Falls das JSON des Levels nun zwar an sich eine gültige JSON-Syntax hat, diese aber nicht mehr als Lambda-Term korrekt ist, wird nun eine InvalidJsonException (auch in util.lambda) verwendet, um diesen Fall angemessen zu behandeln.
 
 \chapter{Muss- und Wunschkriterien}
 
-\section{Nicht umgesetzte Muss- und Wunschkriterien}
+\section{Nicht umgesetzte Wunschkriterien}
 
 \begin{description}
 	\item Auslieferung in mehreren Sprachen
@@ -106,11 +116,12 @@ Im ursprünglichen Entwurf bestand der Baum, der den Lambda-Term darstellt, aus 
 	\item Highscore-Tabelle
 	\item Mehrere Spielmodi
 	\item Begleitende Story
-	\item Erweiternde Spielelemente
 	\item Steuerung durch Wischgesten
 \end{description}
 
-\section{Umgesetzte Muss- und Wunschkriterien}
+\section{Umgesetzte Wunschkriterien}
+	\item Mehrere Spielcharaktere
+	\item Erweiternde Spielelemente (Einstellung des Steuerungsmodus: Rechts- oder Linkshänder)
 
 \begin{description}
 	\item Pixelgrafik / Retrolook / reduzierter Farbraum
