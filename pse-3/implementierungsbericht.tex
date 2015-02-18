@@ -83,6 +83,15 @@ Falls nicht anders angegeben handelt es sich bei den Methoden um public Methoden
 	\item[Konstruktor] Es wurde ein Konstruktor eingefügt, der das Erstellen eines Statistic-Objektes mit Standardwerten erlaubt.
 \end{description}
 
+\section{Package: game}
+
+\subsection{RetroLevel und LevelBuilder}
+
+\subsubscetion{Aufgabe der Klasse}
+\begin{description}
+	RetroLevel gehört zum Model-Teil des Spiels und enthält alle wichtigen Informationen zum jeweiligen Level. Es wird mithilfe von der statischen, inneren Klasse LevelBuilder erstellt, die auch alle anderen Informationen wie die Map, die das jeweilige Level enthält, weitergibt. RetroLevel selber kann nicht direkt instanziiert werden durch einen privaten Konstruktor, um Inkonsistenzen zu vermeiden.
+\end{description}
+
 \section{Package: game.controller}
 
 \subsection{GameController}
@@ -90,6 +99,23 @@ Falls nicht anders angegeben handelt es sich bei den Methoden um public Methoden
 \subsubsection{Hinzugefügte Methoden}
 \begin{description}
 	\item[update] Führt einen Schritt der Spielwelt aus.
+\end{description}
+
+\subsubsection{Entfernte Methoden}
+\begin{description}
+	\item[Evaluation] Aufgrund unseres Ziels des modularen Designs und der leichten Austauschbarkeit von Klassen bzw. Abläufen haben wir alle Methoden, die die Evaluation direkt betreffen, ausgelagert in die Lambda-Datenstruktur, welche nun also auch die Auswertung des Lambda-Terms vornimmt. Dies betrifft folgende Methoden:
+		\begin{description}
+			\item[evaluationClicked]
+			\item[enterEvaluationScreen]
+			\item[checkPlacementOfElements]
+			\item[buildLambdaTree]
+			\item[evaluate]
+			\item[checkEvaluationResult]
+			\item[betaReduction]
+			\item[alphaConversion]
+			\item[updateEvaluationScreen]
+		\end{description}
+	
 \end{description}
 
 
@@ -120,10 +146,10 @@ Falls das JSON des Levels nun zwar an sich eine gültige JSON-Syntax hat, diese 
 \end{description}
 
 \section{Umgesetzte Wunschkriterien}
-	\item Mehrere Spielcharaktere
-	\item Erweiternde Spielelemente (Einstellung des Steuerungsmodus: Rechts- oder Linkshänder)
 
 \begin{description}
+	\item Mehrere Spielcharaktere
+	\item Erweiternde Spielelemente (Einstellung des Steuerungsmodus: Rechts- oder Linkshänder)
 	\item Pixelgrafik / Retrolook / reduzierter Farbraum
 \end{description}
 
