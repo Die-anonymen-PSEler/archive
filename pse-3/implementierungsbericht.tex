@@ -67,6 +67,8 @@ Falls nicht anders angegeben handelt es sich bei den Methoden um public Methoden
 \begin{description}
 	\item[getAllProfiles] Erstellt ein String-Array, welches alle Profile enthält, die sich aktuell in der Datenbank befinden.
 	\item[getProfileNameIdMap] Erstellt eine HashMap, welche als Abbildung von einem Profilnamen auf dessen Identifikationsnummer dient.
+	\item[setStatistic] Ändert die Statistik des Profils zur übergebenen Instanz und speichert diese in der Datenbank
+	
 \end{description}
 
 \subsection{Setting}
@@ -74,6 +76,7 @@ Falls nicht anders angegeben handelt es sich bei den Methoden um public Methoden
 \subsubsection{Hinzugefügte Methoden}
 \begin{description}
 	\item[Konstruktor] Es wurde ein Konstruktor eingefügt, der das Erstellen eines Setting-Objektes mit Standardwerten erlaubt.
+	
 \end{description}
 
 \subsection{Statistic}
@@ -87,9 +90,27 @@ Falls nicht anders angegeben handelt es sich bei den Methoden um public Methoden
 
 \subsection{RetroLevel und LevelBuilder}
 
-\subsubscetion{Aufgabe der Klasse}
+\subsubsection{Aufgabe der Klasse}
+
 \begin{description}
 	RetroLevel gehört zum Model-Teil des Spiels und enthält alle wichtigen Informationen zum jeweiligen Level. Es wird mithilfe von der statischen, inneren Klasse LevelBuilder erstellt, die auch alle anderen Informationen wie die Map, die das jeweilige Level enthält, weitergibt. RetroLevel selber kann nicht direkt instanziiert werden durch einen privaten Konstruktor, um Inkonsistenzen zu vermeiden.
+
+\subsubsection{Methoden von RetroLevel}
+
+\begin{description}
+	
+	\item[isValidGameElementPosition] vergleicht, ob an der Stelle Platz ist, um ein GameElement abzulegen
+	\item[placeGameElement] platziert ein GameElement
+	\item[removeGameElement] entfernt ein GameElement
+	\item[getTiles] gibt ein Array von Rechtecken um die angegebene Position zurück, aus denen man ablesen kann, ob dort freier Platz ist oder etwas steht auf der Map
+	\item[allDepotsFilled] gibt zurück, ob alle Ablagen gefüllt sind
+	\item[getGameElement] gibt ein GameElement an der übergebenen Position zurück
+	\item[getMap] gibt die Map zurück, die das Level hält
+	\item[getLambdaUtil] gibt das LambdaUtil, das das Level hält, zurück
+	
+\end{description}
+
+
 \end{description}
 
 \section{Package: game.controller}
