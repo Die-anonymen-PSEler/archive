@@ -34,6 +34,10 @@
 
 \chapter{Einleitung}
 
+"`Retro-Machines"' ist eine Lernapplikation, die Kindern ab dem Grundschulalter die Grundlagen der funktionalen Programmierung spielerisch näherbringen und sie so bereits früh für die Informatik begeistern soll. Wie in den vorangegangenen Phasen näher spezifiziert und skizziert wurde diese nun mithilfe von libgdx für Android implementiert.
+
+Das vorliegende Dokument fasst hierbei den Ablauf der Implementierungsphase - Änderungen zum Entwurf, Umsetzungen der Muss- und Wunschkriterien, erste Testfälle mit jUnit sowie Zeitplanung unseres Teams - zusammen. Die Änderungen zum Entwurf sind hierbei zur leichteren Orientierung nach Packages sortiert und dokumentieren insbesondere die Veränderungen unserer Lambda-Datenstruktur.
+
 \chapter{Änderungen am Entwurf}
 
 Falls nicht anders angegeben handelt es sich bei den Methoden um public Methoden.
@@ -160,6 +164,19 @@ Im ursprünglichen Entwurf bestand der Baum, der den Lambda-Term darstellt, aus 
 Falls das JSON des Levels nun zwar an sich eine gültige JSON-Syntax hat, diese aber nicht mehr als Lambda-Term korrekt ist, wird nun eine InvalidJsonException (auch in util.lambda) verwendet, um diesen Fall angemessen zu behandeln.
 
 \chapter{Muss- und Wunschkriterien}
+
+\section{Musskriterien}
+
+Alle im Pflichtenheft bestimmten Musskriterien wurden implementiert. Um eine Übersicht zu gewährleisten, werden im Folgenden alle Kriterien samt Umsetzung aufgezählt.
+
+\begin{description}
+	\item Spielerisches Vermitteln des Lambda-Kalküls für Kinder ab acht Jahren: Durch das Jump'n'Run-Gameplay und die einfache Anordnung der Elemente im Spiel kann der Anwender schnell Erfolgserlebnisse sammeln. Dies geschieht durch interaktive Anordnung auf spannende Art und Weise.
+	\item Das Spiel muss in der Simulationsumgebung von Android laufen: Dies wurde durch die Verwendung von libgdx sichergestellt. Ab API 17+ ist die Applikation auf allen Android-Geräten verfügbar.
+	\item komplett über das simulierte Touchinterface bedienbar sein: Durch die Verwendung von vielfältigen Buttons ist es möglich, das Spiel komplett ohne Hardware-Tasten zu bedienen.
+	\item eine modulare Architektur: Das Entwurfsmuster Model-View-Controller für das komplette Spiel sowie für die einzelnen Komponenten weitere Entwurfsmuster stellen die einfache Austauschbarkeit einzelner Komponenten sicher.
+	\item mindestens fünf individuelle Level: Durch die derzeitige Bereitstellung von 7 Leveln haben wir dieses Musskriterium sogar ausgebaut.
+	\item Tutorial-Level: Durch interaktive Dialoge während der ersten Level wird die einfache Einführung ins Prinzip des Spiels und des Lambda-Kalküls gewährleistet.
+\end{description}
 
 \section{Nicht umgesetzte Wunschkriterien}
 
