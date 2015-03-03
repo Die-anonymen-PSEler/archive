@@ -90,6 +90,12 @@ Falls nicht anders angegeben handelt es sich bei den Methoden um public Methoden
 	\item[Konstruktor] Es wurde ein Konstruktor eingefügt, der das Erstellen eines Statistic-Objektes mit Standardwerten erlaubt.
 \end{description}
 
+\section{Package: ui}
+
+\subsection{RetroDialog}
+
+Für verschiedene (Fehler)Dialoge, die dem Anwender während des Spieles angezeigt werden sollen - zum Beispiel bei Auswählen eines noch gesperrten Levels oder wenn er versucht, sein letztes Profil zu löschen - haben wir die Klasse RetroDialog angelegt. So sind diese leicht zu erstellen und von Design und Aufbau her einheitlich und leicht veränderbar.
+
 \section{Package: game}
 
 \subsection{RetroLevel und LevelBuilder}
@@ -115,6 +121,10 @@ Falls nicht anders angegeben handelt es sich bei den Methoden um public Methoden
 	
 \end{description}
 
+\section{Package: game.gameelements}
+
+\subsection{DepotElements}
+Durch diese Klasse können wir nun auch die Ablagen für die Spielelemente direkt platzieren und müssen sie nicht mehr schon fix auf der TiledMap festlegen. Das macht die Platzierung und somit auch Evaluation einfacher.
 
 \section{Package: game.controller}
 
@@ -157,6 +167,7 @@ Anstelle der Methoden im GameController steht nun der EvaluationController.
 \begin{description}
 	\item[deleteProfile]
 \end{description}
+
 
 \subsection{Lambda-Datenstruktur}
 
