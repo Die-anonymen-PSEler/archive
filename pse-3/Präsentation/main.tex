@@ -22,6 +22,7 @@
 \usepackage{multicol}
 \usepackage[absolute,overlay]{textpos}
 \usepackage{beamerKITdefs}
+\usepackage{caption}
 
 \pdfpageattr {/Group << /S /Transparency /I true /CS /DeviceRGB>>}	%required to prevent color shifting withd transparent images
 
@@ -44,9 +45,34 @@
 
 
 % title frame
+\section{Deckblatt}
 \begin{frame}
   \maketitle
 \end{frame}
+
+\section{Unser Projekt}
+\begin{frame}
+\frametitle{Unser Projekt - Wiederholung}
+\begin{itemize}
+\item Spielerische Darstellung des Lambda-Kalküls
+\item Android - App
+\end{itemize}
+\begin{figure}
+\includegraphics[width=0.5\textwidth]{AlligatorEggs.png}
+\caption*{Ursprüngliche Spielidee von Bret Victor}
+\end{figure}
+\end{frame}
+
+%Folie 2: Jump n Run statt Puzzle
+\begin{frame}
+\frametitle{Jump'n'Run statt Puzzle}
+\begin{figure}
+\includegraphics[scale=0.13]{RetroFactory.png}
+\vfill
+\includegraphics[scale=0.13]{ablagen.png}
+\end{figure}
+\end{frame}
+
 
 \section{Änderungen am Entwurf}
 \begin{frame}
@@ -67,7 +93,7 @@
 \begin{frame}
 	\frametitle{Zeitplan}
 	\begin{center}
-	\includegraphics[scale = 0.3]{zeitplan}
+	\includegraphics[width=\textwidth]{zeitplan_balken}
 	\end{center}
 \end{frame}
 
@@ -88,8 +114,9 @@
 \section{Statistik}
 \begin{frame}
 	\frametitle{Statistik}
+	\includegraphics*[scale=0.2]{stats_timeline.png}
 	\begin{itemize}
-		\item LOC's: $\sim$8000
+		\item LOC's: Java: 9713, Json: 986
 		\item Anzahl Commits: 537
 	\end{itemize}
 \end{frame}
@@ -97,6 +124,7 @@
 \section{Demo}
 \begin{frame}
 	\begin{center}
+	\Huge
 	\textbf{Live Demo!}
 	\end{center}
 
