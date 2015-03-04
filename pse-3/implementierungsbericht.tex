@@ -103,7 +103,7 @@ Für verschiedene (Fehler)Dialoge, die dem Anwender während des Spieles angezei
 \subsubsection{Aufgabe der Klasse}
 
 \begin{description}
-	\item RetroLevel gehört zum Model-Teil des Spiels und enthält alle wichtigen Informationen zum jeweiligen Level. Es wird mithilfe von der statischen, inneren Klasse LevelBuilder erstellt, die auch alle anderen Informationen wie die Map, die das jeweilige Level enthält, weitergibt. RetroLevel selber kann nicht direkt instanziiert werden durch einen privaten Konstruktor, um Inkonsistenzen zu vermeiden.
+	\item RetroLevel gehört zum Model-Teil des Spiels und enthält alle wichtigen Informationen zum jeweiligen Level. Es wird mithilfe von der statischen, inneren Klasse LevelBuilder erstellt, die auch alle anderen Informationen wie die Map, die das jeweilige Level enthält, weitergibt. RetroLevel selbst kann nicht direkt instanziiert werden durch einen privaten Konstruktor, um Inkonsistenzen zu vermeiden.
 \end{description}
 
 \subsubsection{Methoden von RetroLevel}
@@ -113,7 +113,7 @@ Für verschiedene (Fehler)Dialoge, die dem Anwender während des Spieles angezei
 	\item[isValidGameElementPosition] vergleicht, ob an der Stelle Platz ist, um ein GameElement abzulegen
 	\item[placeGameElement] platziert ein GameElement
 	\item[removeGameElement] entfernt ein GameElement
-	\item[getTiles] gibt ein Array von Rechtecken um die angegebene Position zurück, aus denen man ablesen kann, ob dort freier Platz ist oder etwas steht auf der Map
+	\item[getTiles] gibt ein Array von Rechtecken um die angegebene Position zurück, mit deren Hilfe sich bestimmen lässt, ob der Platz in der Map frei oder belegt ist.
 	\item[allDepotsFilled] gibt zurück, ob alle Ablagen gefüllt sind
 	\item[getGameElement] gibt ein GameElement an der übergebenen Position zurück
 	\item[getMap] gibt die Map zurück, die das Level hält
@@ -137,7 +137,7 @@ Durch diese Klasse können wir nun auch die Ablagen für die Spielelemente direk
 
 \subsubsection{Entfernte Methoden}
 \begin{description}
-	\item[Evaluation] Aufgrund unseres Ziels des modularen Designs und der leichten Austauschbarkeit von Klassen bzw. Abläufen haben wir alle Methoden, die die Evaluation direkt betreffen, ausgelagert in die Lambda-Datenstruktur, welche nun also auch die Auswertung des Lambda-Terms vornimmt. Dies betrifft folgende Methoden:
+	\item[Evaluation] Aufgrund unseres Ziels des modularen Designs und der leichten Austauschbarkeit von Klassen bzw. Abläufen haben wir alle Methoden, welche die Evaluation direkt betreffen, ausgelagert in die Lambda-Datenstruktur, welche nun also auch die Auswertung des Lambda-Terms vornimmt. Dies betrifft folgende Methoden:
 		\begin{description}
 			\item[evaluationClicked]
 			\item[enterEvaluationScreen]
@@ -221,7 +221,7 @@ Alle im Pflichtenheft bestimmten Musskriterien wurden implementiert. Um eine Üb
 	\item[04.02. - 13.02.] 
 		Erstellen der Gameelemente und Level-Setup
 	\item[14.02. - 23.02.] 
-		Evaluation der Levelergebnis
+		Evaluation des Levelergebnisses
 	\item[16.02.]
 		Fehlerbehebung im Umgang mit Android
 	\item[24.02. - 01.03]
@@ -229,7 +229,7 @@ Alle im Pflichtenheft bestimmten Musskriterien wurden implementiert. Um eine Üb
 	\item[02.03. - 04.03] 
 		Entwurf weiterer Spielcharaktere
 	\item[04.03. - 04.03]
-		Verfassen des Implementierungsbericht
+		Verfassen des Implementierungsberichts
 \end{description}
 
 \section{Henrike}
@@ -290,7 +290,7 @@ Implementierung weiterer Testcases. Fehlerbehebung des Codes
 \item[09.02 - 10.02] Erstellen der JSON-Dateien
 \item[11.02 - 13.02] Implementierung von Teilen des Packages \emph{game.gameelements}
 \item[13.02 - 14.02] Implementierung weiterer Methoden des \emph{LevelBuilder}
-\item[16.02. - 20.02] Schreiben des Implementierungsbericht
+\item[16.02. - 20.02] Schreiben des Implementierungsberichts
 \item[29.02 - 04.03.] Entwickeln der Präsentation
 \item[02.03. - 04.03] Fehlerbehebung 
 \end{description}
@@ -378,7 +378,7 @@ Testcase zum Testen der ProfileController-Klasse.
 
 \begin{description}
 	\item[testJumpLock] Testet, ob ein erneuter Sprung möglich ist, nachdem RetroMan bereits zuvor gesprungen ist.
-	\item[testFacing] Testet, ob die Figur nach links beziehungsweise nach rechts guckt.
+	\item[testFacing] Testet, ob die Figur nach links beziehungsweise nach rechts blick.
 	\item[testLeftMovement] Testet, ob die Figur korrekt nach links beschleunigt wird.
 	\item[testRightMovement] Testet, ob die Figur korrekt nach rechts beschleunigt wird.
 	\item[testJumpLockOnFalling] Testet, ob die Figur nicht springen kann, wenn sie fällt.
