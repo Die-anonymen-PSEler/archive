@@ -48,6 +48,50 @@
 
 \chapter{Überdeckung}
 
+\begin{tabular} { | l | c | c | c | c | c | c | }
+	\hline
+	\textbf{Package} & \textbf{IC} & \textbf{BC} & \textbf{CI} & \textbf{MI} & \textbf{CB} & \textbf{MB} \\
+	\hline
+	Insgesamt & 81,3\% & 60\% & 11047 & 2547 & 420 & 270 \\
+	\hline
+	com.retroMachines \\
+	\hline
+	com.retroMachines.data & 100\% & 100\% & 205 & 0 & 6 & 0  \\
+	\hline
+	com.retroMachines.data.models & 100\% & 100\% & 603 & 0 & 16 & 0 \\
+	\hline
+	com.retroMachines.game \\
+	\hline
+	com.retroMachines.game.controllers \\
+	\hline
+	com.retroMachines.game.gameelements \\
+	\hline
+	com.retroMachines.ui & 100\% & 100\% & 323 & 0 & 8 & 0 \\
+	\hline
+	com.retroMachines.ui.screens & 100\% & 100\% & 51 & 0 & 0 & 0 \\
+	\hline
+	com.retroMachines.ui.screens.game \\
+	\hline
+	com.retroMachines.ui.screens.menus & 99\% & 85\% & 3965 & 50 & 41 & 7 \\
+	\hline
+	com.retroMachines.util \\
+	\hline
+	com.retroMachines.util.lambda \\
+	\hline
+\end{tabular}
+
+Legende: \\
+	IC = Instruction Coverage \\
+	BC = Branch Coverage \\
+	CI = Covered Instruction \\
+	MI = Missed Instruction \\
+	CB = Covered Branches \\
+	MB = Missed Branches \\
+	n/a: In diesem Fall macht eine Branchabdeckung keinen Sinn da keine Abzweigungen innerhalb des Packages existieren. \\
+
+In dem mit dem Dokument mitgeschickten EclEmma Coverage Report sind diese Daten und mehr in einem interaktiven Format zusammengefasst. 
+Er erlaubt die eingehende Betrachtung der Überdeckung und ermöglicht es die Abdeckung in den einzelnen Paketen, Klassen und Methoden detailliert aufzulisten.
+
 \chapter{Lasttests}
 
 \chapter{Feldtest}
