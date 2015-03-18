@@ -38,11 +38,29 @@
 
 \chapter{Verbesserungen}
 
+Das Spiel ist genauso super als wie vorher. Haben kleine ostdeutsche Kinder testen lassen. Waren überrascht von der Technik. Unfähig zu spielen. Schieben das auf Kinder.
+
 \chapter{Codequalität}
+
+Durch den Einsatz verschiedener Tools haben wir die Codequalität unseres Codes weiter verbessern können.
+
+\section{CodePro AnalytiX}
+
+
+
+\section{FindBugs}
+
+
 
 \chapter{Unittests}
 
+Wir verwenden jUnit-Tests um unsere Klassen einer Qualitätsprüfung zu unterziehen. Zum Ende der Qualitätssicherungsphase sind über 300 jUnit-Tests.
+
 \chapter{Integrationstest}
+
+\section{Controller}
+
+\section{Spiel spielen}
 
 \chapter{Systemtests}
 
@@ -94,12 +112,15 @@ Er erlaubt die eingehende Betrachtung der Überdeckung und ermöglicht es die Ab
 
 \chapter{Lasttests}
 
-\chapter{Feldtest}
+\section{Monkey Testing}
+
+Wir haben unsere Gerät mehreren Monkey-Tests unterzogen. Dabei sind uns keinerlei Auffälligkeiten aufgefallen.
 
 \chapter{Gefundene und behobene Bugs}
 
 \begin{description}
 	\item[Löschen des aktiven Profils:] Es wurde ein Fehler behoben der Auftrifft, falls der Benutzer das aktive Profil löscht.
+	\item[Fehler beim Starten des Spiels: ] Es war möglich das Spiel zu nutzen, obwohl ein Tutorialhinweis angezeigt wurde.
 \end{description}
 
 \chapter{Testwerkzeuge}
@@ -107,5 +128,9 @@ Er erlaubt die eingehende Betrachtung der Überdeckung und ermöglicht es die Ab
 \section{EclEmma}
 
 EclEmma erlaubte es uns die Codecoverage unseres Projekt zu überprüfen. Darüber hinaus verfügt dieses Tool über die Möglichkeit eines HTML-Exports.
+
+\section{jUnit}
+
+jUnit erlaubt das Testen einzelner Bestandteile unseres Codes. Darüber hinaus waren wir durch jUnit in der Lage verschiedene Integrationstests auszuführen.
 
 \end{document}
