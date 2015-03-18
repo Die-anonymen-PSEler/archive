@@ -51,6 +51,29 @@ Durch den Einsatz verschiedener Tools haben wir die Codequalität unseres Codes 
 \section{FindBugs}
 
 
+\section{Strukturierung}
+Zur Übersichtlichkeit des Codes haben wir uns dazu entschieden den gesamten Code nach folgenden Regel zu sortieren: \newline
+Im Allgemeinem gibt es die Reihenfolge "`abstract"', "`private"', "`protected"' und "`public"', es kann zu Abweichungen kommen bei z.B. statischen Attributen oder Methoden:
+\subsection{Attribute}
+\begin{enumerate}
+	\item[static final] (allgemeine Reihenfolge) 
+	\item[static] (siehe Oben)
+	\item[private]
+	\item[protected]
+	\item[pulic]
+\end{enumerate}
+\subsection{Methoden}
+\begin{enumerate}
+	\item[Konstruktoren] (in der oben gegebenen Reihenfolge)
+	\item[abstract] (siehe Oben)
+	\item[private] (static, normal)
+	\item[protected] (static, overwritten, normal)
+	\item[public] (static, overwritten, normal, getter and setter)
+\end{enumerate}
+\subsection{Subklassen}
+Die Subklassen sind in der gleichen Reihenfolge aufgebaut wie normale Klassen.
+
+
 
 \chapter{Unittests}
 
