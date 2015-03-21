@@ -38,7 +38,15 @@
 
 \chapter{Verbesserungen}
 
-Das Spiel ist genauso super als wie vorher. Haben kleine ostdeutsche Kinder testen lassen. Waren überrascht von der Technik. Unfähig zu spielen. Schieben das auf Kinder.
+Die Qualitätssicherungsphase hat sich größtenteils auf die Verbesserung des Codes, das Testen des Codes, sowie die Optimierung der Auswertung der Lambda-Ausdrücke konzentriert. Hier konnten Signifikante Verbesserungen erzielt werden. Darüber hinaus konnten Verbesserungen an der Benutzeroberfläche des Spiels errungen werden.
+
+\begin{description}
+	\item[UI-Verbesserungen] Eine UI-Elemente haben eine Scroll-Funktion erhalten, was eine bessere Benutzung auf kleineren Displays erlaubt.
+	\item[Erweiterung der Level] Es wurden weitere Level zum Spiel hinzugefügt, um dem Benutzer einen anhaltenden Spielspaß zu gewährleisten.
+	\item[Profilsteuerung] Profile, die sich nur durch Groß- und Kleinschreibung unterschieden, sind nun nicht mehr möglich, um Verwirrung zu vermeiden.
+	\item[Profilerstellung] Dem Benutzer werden nun Fehlermeldungen angezeigt, wenn die Erstellung eines Profils fehlschlägt beziehungsweise verwerht wird.
+	\item[Scrollen] Das Scrollen in X-Richtung auf einigen UI-Elementen wurde deaktiviert.
+\end{description}
 
 \chapter{Codequalität}
 
@@ -53,7 +61,7 @@ Durch den Einsatz verschiedener Tools haben wir die Codequalität unseres Codes 
 
 \section{Strukturierung}
 Zur Übersichtlichkeit des Codes haben wir uns dazu entschieden den gesamten Code nach folgenden Regel zu sortieren: \newline
-Im Allgemeinem gibt es die Reihenfolge "`abstract"', "`private"', "`protected"' und "`public"', es kann zu Abweichungen kommen bei z.B. statischen Attributen oder Methoden:
+Im Allgemeinem gibt es die Reihenfolge "`abstract"', "`private"', "`protected"' und "`public"'. In Ausnahmefällen kann es zu Abweichungen kommen, zum Beispiel bei statischen Attributen oder Methoden:
 \subsection{Attribute}
 \begin{enumerate}
 	\item[static final] (allgemeine Reihenfolge) 
@@ -81,11 +89,20 @@ Wir verwenden jUnit-Tests um unsere Klassen einer Qualitätsprüfung zu unterzie
 
 \chapter{Integrationstest}
 
+
+
 \section{Controller}
+
+Für die Überprüfung der fehlerlosen Zusammenarbeit der voneinander abhängigen Sys- temkomponenten wurde eine Reihe weiterer Testfälle geschrieben. Dazu gehören vor allem Tests, die mittels eines TestRunners eine Instanz des Spiels beziehen, da dieser die komplette Applikation in einem „headless“ Modus. Dazu wurde die libGDX hinreichend nachgebaut. Viele der Controller konnten so bereits in einer nahezu \enquote{realen} Umgebung getestet werden, u.a.
+
+\begin{description}
+	\item[ProfileController und SettingController] Es wurde sichergestellt, das der SettingController über einen Wechsel des Profils benachrichtigt wurde, und entsprechende Anpassungen vorgenommen wurden.
+	\item[ProfileController und StatisticController] Es wurde sichergestellt, das der StatisticController über einen Wechsel des Profils benachrichtigt wurde, und entsprechende Anpassungen vorgenommen wurden.
+\end{description}
 
 \section{Spiel spielen}
 
-\chapter{Systemtests}
+Es wurden Integrationstests geschrieben, die das Zusammenspiel des GameControllers, RetroMan und der TiledMap sicherstellen.
 
 \chapter{Überdeckung}
 
@@ -133,6 +150,8 @@ Legende: \\
 In dem mit dem Dokument mitgeschickten EclEmma Coverage Report sind diese Daten und mehr in einem interaktiven Format zusammengefasst. 
 Er erlaubt die eingehende Betrachtung der Überdeckung und ermöglicht es die Abdeckung in den einzelnen Paketen, Klassen und Methoden detailliert aufzulisten.
 
+\chapter{Systemtests}
+
 \chapter{Lasttests}
 
 \section{Monkey Testing}
@@ -141,9 +160,25 @@ Wir haben unsere Gerät mehreren Monkey-Tests unterzogen. Dabei sind uns keinerl
 
 \chapter{Gefundene und behobene Bugs}
 
+\section{Löschen des aktiven Profils}
 \begin{description}
-	\item[Löschen des aktiven Profils:] Es wurde ein Fehler behoben der Auftrifft, falls der Benutzer das aktive Profil löscht.
-	\item[Fehler beim Starten des Spiels: ] Es war möglich das Spiel zu nutzen, obwohl ein Tutorialhinweis angezeigt wurde.
+	\item[Fehlersymptom] Falls ein Benutzer das aktive Profil gelöscht hat und im Anschluss ein neues erstellt hat, so hat das neue Profil die Statistiken und Einstellungen des vorherigen Profils übernommen.
+	\item[Fehlergrund] Die Einstellungen und Statistiken des Profils wurden nicht korrekt gelöscht.
+	\item[Fehlerbehebung] Es wurden entsprechende Aufrufe an die \enquote{destroy} Methoden der jeweiligen Klassen eingefügt.
+\end{description}
+
+\section{Fehler beim Starten eines Levels}
+\begin{description}
+	\item[Fehlersymptom] Es war möglich das Spiel zu nutzen, obwohl dem Spieler noch Tutorialhinweise angezeigt wurden.
+	\item[Fehlergrund] Das entsprechende Attribut, was eine Sperre der Interaktion bewirkt, wurde nicht gesetzt, wenn ein Tutorialhinweis angezeigt wird.
+	\item[Fehlerbehebung] Das entsprechende Attribut wird nun gesetzt und auch beim Beenden der Tutorialhinweise entfernt.
+\end{description}
+
+\section{Erstellen von Profilen mit unterschiedlicher Groß- und Kleinschreibung}
+\begin{description}
+	\item[Fehlersymptom] Das Erstellen eines zweiten Profils, welches sich nur durch Groß- und Kleinschreibung von einem anderen Profils unterschied, war möglich.
+	\item[Fehlergrund] Es war keine Überprüfung eines neuen Profilnamens auf diese Eigenschaft implementiert.
+	\item[Fehlerbehebung] Die Überprüfung der Methode, die die Erstellung eines Profils erlaubt, wurde verbessert.
 \end{description}
 
 \chapter{Testwerkzeuge}
