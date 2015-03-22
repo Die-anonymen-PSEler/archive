@@ -48,6 +48,27 @@ Die Qualitätssicherungsphase hat sich größtenteils auf die Verbesserung des C
 	\item[Scrollen] Das Scrollen in X-Richtung auf einigen UI-Elementen wurde deaktiviert.
 \end{description}
 
+\chapter{Abweichungen vom Pflichtenheft}
+Aufgrund der besseren Benutzbarkeit und Veranschaulichung des Lambda-Kalküls haben sich einige Änderungen im Ablauf zum Pflichtenheft ergeben.
+
+\section{Globale Testfälle}
+\begin{description}
+	\item Da die Applikation sehr schnell lädt, wurde der Ladebildschirm unnötig
+	\item Die Einstellungen öffnen sich nicht, sobald ein Profil angelegt wurde. Es wird direkt auf den Hauptbildschirm weitergeleitet, von wo alle Möglichkeiten der Applikation direkt zur Verfügung stehen.
+	\item Nach dem Laden wird automatisch das zuletzt aktive Profil wieder als aktiv gesetzt, es muss nicht mehr explizit bei jedem Spielstart ausgewählt werden, welches Profil man benutzen möchte.
+	\item Das Tutorial wurde für einen vereinfachten Ablauf in die ersten Level des Spiels integriert und erscheint in Form von Dialogen. Danach kann direkt das ausgewählte Level gespielt werden, es wird nicht mehr auf den Hauptbildschirm zurückgeleitet. Beim erneuten Auswählen des Levels wird das Tutorial nicht mehr angezeigt, da es bereits absolviert wurde. Dies kann in den benutzerspezifischen Einstellungen jedoch zurückgesetzt werden, falls noch Unklarheiten bestehen.
+	\item Legt man ein neues Profil an, so wird der gesamte Bildschirm zum Erstellen in einem statt zwei Bildschirmen angezeigt. Es muss außerdem nicht über Wischgesten an das Ende der Liste gescrollt werden, der "Benutzer anlegen"-Button befindet sich immer sichtbar auf dem unteren Teil der Profilübersicht.
+	\item Um ein Benutzerprofil als aktiv auszuwählen, genügt es nicht, es nur durch Berühren auszuwählen. Es muss außerdem noch explizit der "Benutzer verwenden"-Button betätigt werden. Dies soll ungewollte Profilwechsel vermeiden.
+	\item Möchte man ein Benutzerprofil bearbeiten, so muss dieses aktiv sein. Die benutzerspezifischen Einstellungen erreicht man nun nicht über den Benutzerverwaltungsbutton, sondern die Einstellungen und dort den weiteren "Benutzer bearbeiten"-Button.
+	\item Im Pause-Dialog während des Levels werden nur die Möglichkeiten ins Level-Menü und zurück ins Spiel angegeben, nicht zusätzlich noch zu den Einstellungen und in das Hauptmenü.
+\end{description}
+
+\section{Funktionale und nichtfunktionale Anforderungen}
+\begin{description}
+	\item Da der Ladebildschirm nicht mehr vorhanden ist, werden auch während des Ladens keine Tipps zum Spiel angezeigt.
+	\item Aufgrund der animierten Auswertung kann es in umfangreicheren Leveln zu Auswertungszeiten von über fünf Sekunden kommen.
+\end{description}
+
 \chapter{Codequalität}
 
 Durch den Einsatz verschiedener Tools haben wir die Qualität unseres Codes weiter verbessern können.
