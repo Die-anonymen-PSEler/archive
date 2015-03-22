@@ -50,14 +50,16 @@ Die Qualitätssicherungsphase hat sich größtenteils auf die Verbesserung des C
 
 \chapter{Codequalität}
 
-Durch den Einsatz verschiedener Tools haben wir die Codequalität unseres Codes weiter verbessern können.
+Durch den Einsatz verschiedener Tools haben wir die Qualität unseres Codes weiter verbessern können.
 
 \section{CodePro AnalytiX}
 
-
+CodePro AnalytiX bietet einen großen Umfang an Möglichkeiten zur statischen Codeanalyse. Wir konnten damit vor allem unseren Codestyle an Konventionen der Java-Programmierung durch Umbenennen einzelner Attribute und Methoden sowie Abändern einzelner Abfragen anpassen. Darüber hinaus haben wir toten Code entfernt sowie doppelte Abläufe im Programm in neue Methoden ausgelagert.
+Außerdem wurde uns so komfortabel angezeigt, an welchen Stellen wir unsere Dokumentation durch JavaDoc noch verbessern mussten. Dies war zum Teil bei neu hinzugefügten Methoden der Fall, aber auch, wenn sich die Aufrufparameter geändert hatten.
 
 \section{FindBugs}
 
+Auch FindBugs dient zur statischen Codeanalyse und sucht nach häufigen Fehlermustern in Programmen. Hierbei konnten wir noch ein paar Verbesserungen am Codestyle vornehmen, wirkliche Fehler gab es jedoch nicht. 
 
 \section{Strukturierung}
 Zur Übersichtlichkeit des Codes haben wir uns dazu entschieden den gesamten Code nach folgenden Regel zu sortieren: \newline
@@ -148,7 +150,7 @@ Legende: \\
 	n/a: In diesem Fall macht eine Branchabdeckung keinen Sinn da keine Abzweigungen innerhalb des Packages existieren. \\
 
 In dem mit dem Dokument mitgeschickten EclEmma Coverage Report sind diese Daten und mehr in einem interaktiven Format zusammengefasst. 
-Er erlaubt die eingehende Betrachtung der Überdeckung und ermöglicht es die Abdeckung in den einzelnen Paketen, Klassen und Methoden detailliert aufzulisten.
+Er erlaubt die eingehende Betrachtung der Überdeckung und ermöglicht es, die Abdeckung in den einzelnen Paketen, Klassen und Methoden detailliert aufzulisten.
 
 \chapter{Systemtests}
 
@@ -156,7 +158,7 @@ Er erlaubt die eingehende Betrachtung der Überdeckung und ermöglicht es die Ab
 
 \section{Monkey Testing}
 
-Wir haben unsere Gerät mehreren Monkey-Tests unterzogen. Dabei sind uns keinerlei Auffälligkeiten aufgefallen.
+Wir haben unsere Gerät mehreren Monkey-Tests unterzogen. Dabei ist es zu keinerlei auffälligem Verhalten gekommen.
 
 \chapter{Gefundene und behobene Bugs}
 
@@ -185,10 +187,10 @@ Wir haben unsere Gerät mehreren Monkey-Tests unterzogen. Dabei sind uns keinerl
 
 \section{EclEmma}
 
-EclEmma erlaubte es uns die Codecoverage unseres Projekt zu überprüfen. Darüber hinaus verfügt dieses Tool über die Möglichkeit eines HTML-Exports.
+EclEmma erlaubte es uns die Codecoverage unseres Projekts zu überprüfen. Darüber hinaus verfügt dieses Tool über die Möglichkeit eines HTML-Exports.
 
 \section{jUnit}
 
-jUnit erlaubt das Testen einzelner Bestandteile unseres Codes. Darüber hinaus waren wir durch jUnit in der Lage verschiedene Integrationstests auszuführen.
+jUnit erlaubt das Testen einzelner Bestandteile unseres Codes. Außerdem waren wir durch jUnit in der Lage verschiedene Integrationstests auszuführen.
 
 \end{document}
