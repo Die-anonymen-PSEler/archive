@@ -52,7 +52,7 @@ Die Qualitätssicherungsphase hat sich größtenteils auf die Verbesserung des C
 Aufgrund der besseren Benutzbarkeit und Veranschaulichung des Lambda-Kalküls haben sich einige Änderungen im Ablauf zum Pflichtenheft ergeben.
 
 \section{Globale Testfälle}
-\begin{description}
+\begin{enumerate}
 	\item Da die Applikation sehr schnell lädt, wurde der Ladebildschirm unnötig
 	\item Die Einstellungen öffnen sich nicht, sobald ein Profil angelegt wurde. Es wird direkt auf den Hauptbildschirm weitergeleitet, von wo alle Möglichkeiten der Applikation direkt zur Verfügung stehen.
 	\item Nach dem Laden wird automatisch das zuletzt aktive Profil wieder als aktiv gesetzt, es muss nicht mehr explizit bei jedem Spielstart ausgewählt werden, welches Profil man benutzen möchte.
@@ -61,13 +61,13 @@ Aufgrund der besseren Benutzbarkeit und Veranschaulichung des Lambda-Kalküls ha
 	\item Um ein Benutzerprofil als aktiv auszuwählen, genügt es nicht, es nur durch Berühren auszuwählen. Es muss außerdem noch explizit der "Benutzer verwenden"-Button betätigt werden. Dies soll ungewollte Profilwechsel vermeiden.
 	\item Möchte man ein Benutzerprofil bearbeiten, so muss dieses aktiv sein. Die benutzerspezifischen Einstellungen erreicht man nun nicht über den Benutzerverwaltungsbutton, sondern die Einstellungen und dort den weiteren "Benutzer bearbeiten"-Button.
 	\item Im Pause-Dialog während des Levels werden nur die Möglichkeiten ins Level-Menü und zurück ins Spiel angegeben, nicht zusätzlich noch zu den Einstellungen und in das Hauptmenü.
-\end{description}
+\end{enumerate}
 
 \section{Funktionale und nichtfunktionale Anforderungen}
-\begin{description}
+\begin{enumerate}[resume]
 	\item Da der Ladebildschirm nicht mehr vorhanden ist, werden auch während des Ladens keine Tipps zum Spiel angezeigt.
 	\item Aufgrund der animierten Auswertung kann es in umfangreicheren Leveln zu Auswertungszeiten von über fünf Sekunden kommen.
-\end{description}
+\end{enumerate}
 
 \chapter{Codequalität}
 
@@ -104,17 +104,62 @@ Im Allgemeinem gibt es die Reihenfolge "`abstract"', "`private"', "`protected"' 
 \subsection{Subklassen}
 Die Subklassen sind in der gleichen Reihenfolge aufgebaut wie normale Klassen.
 
+\chapter{Testen}
 
+\section{jUnit}
 
-\chapter{Unittests}
+Das Programm wurde über 300 Unittests unterzogen. Hierbei kam jUnit zum Einsatz, welches besonders einfaches und effiktives Testen erlaubt hat.
 
-Wir verwenden jUnit-Tests um unsere Klassen einer Qualitätsprüfung zu unterziehen. Zum Ende der Qualitätssicherungsphase sind über 300 jUnit-Tests.
+\subsection{Überdeckung}
 
-\chapter{Integrationstest}
+\begin{tabular} { | l | c | c | c | c | c | c | }
+	\hline
+	\textbf{Package} & \textbf{IC} & \textbf{BC} & \textbf{CI} & \textbf{MI} & \textbf{CB} & \textbf{MB} \\
+	\hline
+	Insgesamt & 94\% & 76\% & 13149 & 891 & 551 & 173 \\
+	\hline
+	com.retroMachines & 100\% & 75\% & 106 & 0 & 3 & 1 \\
+	\hline
+	com.retroMachines.data & 100\% & 100\% & 205 & 0 & 6 & 0  \\
+	\hline
+	com.retroMachines.data.models & 100\% & 100\% & 603 & 0 & 16 & 0 \\
+	\hline
+	com.retroMachines.game & 93\% & 72\% & 786 & 59 & 59 & 23 \\
+	\hline
+	com.retroMachines.game.controllers & 98\% & 89\% & 1579 & 39 & 105 & 13 \\
+	\hline
+	com.retroMachines.game.gameelements & 96\% & 91\% & 639 & 28 & 43 & 4 \\
+	\hline
+	com.retroMachines.ui & 100\% & 100\% & 323 & 0 & 8 & 0 \\
+	\hline
+	com.retroMachines.ui.screens & 100\% & 100\% & 51 & 0 & 0 & 0 \\
+	\hline
+	com.retroMachines.ui.screens.game & 89\% & 56\% & 1956 & 247 & 29 & 23 \\
+	\hline
+	com.retroMachines.ui.screens.menus & 99\% & 85\% & 3965 & 50 & 41 & 7 \\
+	\hline
+	com.retroMachines.util & 100\% & 67\% & 94 & 0 & 4 & 2 \\
+	\hline
+	com.retroMachines.util.lambda & 85\% & 70\% & 2663 & 464 & 234 & 99\\
+	\hline
+\end{tabular}
 
+\subsection*{Legende}
+\begin{description}
+	\item[IC] Instruction Coverage
+	\item[BC] Branch Coverage
+	\item[CI] Covered Instruction
+	\item[MI] Missed Instruction
+	\item[CB] Covered Branches
+	\item[MB] Missed Branches
+\end{description}	
 
+In dem mit dem Dokument mitgeschickten EclEmma Coverage Report sind diese Daten und mehr in einem interaktiven Format zusammengefasst. 
+Er erlaubt die eingehende Betrachtung der Überdeckung und ermöglicht es, die Abdeckung in den einzelnen Paketen, Klassen und Methoden detailliert aufzulisten.
 
-\section{Controller}
+\section{Integrationstest}
+
+\subsection{Controller}
 
 Für die Überprüfung der fehlerlosen Zusammenarbeit der voneinander abhängigen Sys- temkomponenten wurde eine Reihe weiterer Testfälle geschrieben. Dazu gehören vor allem Tests, die mittels eines TestRunners eine Instanz des Spiels beziehen, da dieser die komplette Applikation in einem „headless“ Modus. Dazu wurde die libGDX hinreichend nachgebaut. Viele der Controller konnten so bereits in einer nahezu \enquote{realen} Umgebung getestet werden, u.a.
 
@@ -123,63 +168,24 @@ Für die Überprüfung der fehlerlosen Zusammenarbeit der voneinander abhängige
 	\item[ProfileController und StatisticController] Es wurde sichergestellt, das der StatisticController über einen Wechsel des Profils benachrichtigt wurde, und entsprechende Anpassungen vorgenommen wurden.
 \end{description}
 
-\section{Spiel spielen}
+\subsection{Spiel spielen}
 
 Es wurden Integrationstests geschrieben, die das Zusammenspiel des GameControllers, RetroMan und der TiledMap sicherstellen.
 
-\chapter{Überdeckung}
+\begin{description}
+	\item[GameController, RetroMan und Level 1] Dieser Integrationstest stellt sicher, dass die grundsätzliche Logik des Spiels im ersten Level eingehalten wird. Unter anderem wurde so die \textit{Collision-Detection} oder aber das Ablegen von Spielelementen getestet.
+	\item[GameController, RetroMan und Level 6] Dieser Integrationstest erweitert die Abdeckung des ersten Tests um eine bessere Überdeckung zu erhalten.
+\end{description}
 
-\begin{tabular} { | l | c | c | c | c | c | c | }
-	\hline
-	\textbf{Package} & \textbf{IC} & \textbf{BC} & \textbf{CI} & \textbf{MI} & \textbf{CB} & \textbf{MB} \\
-	\hline
-	Insgesamt & 81,3\% & 60\% & 11047 & 2547 & 420 & 270 \\
-	\hline
-	com.retroMachines \\
-	\hline
-	com.retroMachines.data & 100\% & 100\% & 205 & 0 & 6 & 0  \\
-	\hline
-	com.retroMachines.data.models & 100\% & 100\% & 603 & 0 & 16 & 0 \\
-	\hline
-	com.retroMachines.game \\
-	\hline
-	com.retroMachines.game.controllers \\
-	\hline
-	com.retroMachines.game.gameelements \\
-	\hline
-	com.retroMachines.ui & 100\% & 100\% & 323 & 0 & 8 & 0 \\
-	\hline
-	com.retroMachines.ui.screens & 100\% & 100\% & 51 & 0 & 0 & 0 \\
-	\hline
-	com.retroMachines.ui.screens.game \\
-	\hline
-	com.retroMachines.ui.screens.menus & 99\% & 85\% & 3965 & 50 & 41 & 7 \\
-	\hline
-	com.retroMachines.util \\
-	\hline
-	com.retroMachines.util.lambda \\
-	\hline
-\end{tabular}
+\section{Monkeyrunner}
 
-Legende: \\
-	IC = Instruction Coverage \\
-	BC = Branch Coverage \\
-	CI = Covered Instruction \\
-	MI = Missed Instruction \\
-	CB = Covered Branches \\
-	MB = Missed Branches \\
-	n/a: In diesem Fall macht eine Branchabdeckung keinen Sinn da keine Abzweigungen innerhalb des Packages existieren. \\
-
-In dem mit dem Dokument mitgeschickten EclEmma Coverage Report sind diese Daten und mehr in einem interaktiven Format zusammengefasst. 
-Er erlaubt die eingehende Betrachtung der Überdeckung und ermöglicht es, die Abdeckung in den einzelnen Paketen, Klassen und Methoden detailliert aufzulisten.
-
-\chapter{Systemtests}
+Es wurden für alle Globalen Testfälle des Pflichtenheftes Skripte geschrieben, welche die Ausführung dieser Testfälle auf einem Android Testgerät erlauben. Dazu muss die Applikation gestartet sein und sich im Hauptmenü befinden.
 
 \chapter{Lasttests}
 
 \section{Monkey Testing}
 
-Wir haben unsere Gerät mehreren Monkey-Tests unterzogen. Dabei ist es zu keinerlei auffälligem Verhalten gekommen.
+Mithilfe von Android konnte unsere App auf einem Testgerät installiert werden, welches dann über einen Befehl auf der Konsole eine gewisse Anzahl an Klicks auf dem Gerät ausgeführt hat. Hierbei wurden alle Bereiche unseres Programms tangiert und es konnte kein Fehlverhalten unseres Programms festgestellt werden. Da diese Eingaben sehr schnell erfolgten ist auch sichergestellt, dass unser Programm dieser Belastung standhält.
 
 \chapter{Gefundene und behobene Bugs}
 

@@ -25,6 +25,8 @@
 \usepackage{caption}
 \usepackage{verbatim}
 
+\input{commands}
+
 \pdfpageattr {/Group << /S /Transparency /I true /CS /DeviceRGB>>}	%required to prevent color shifting withd transparent images
 
 
@@ -51,46 +53,99 @@
   \maketitle
 \end{frame}
 
-\section{Unser Projekt}
 \begin{frame}
-\frametitle{Empty Frame}
+\frametitle{Tests}
+\framesubtitle{Instruction Coverage}
+{
+  \centering
+  \includegraphics[scale=0.3]{instructions.png}
+  \par
+}
 \end{frame}
 
-\section{Codecoverage}
-\def\angle{0}
-\def\radius{3}
-\def\cyclelist{{"orange","blue","red","green"}}
-\newcount\cyclecount \cyclecount=-1
-\newcount\ind \ind=-1
-\begin{tikzpicture}[nodes = {font=\sffamily}]
-  \foreach \percent/\name in {
-      46.6/Chrome,
-      24.6/Internet Explorer,
-      20.4/Firefox,
-      5.1/Safari,
-      1.3/Opera,
-      2.0/Other
-    } {
-      \ifx\percent\empty\else               % If \percent is empty, do nothing
-        \global\advance\cyclecount by 1     % Advance cyclecount
-        \global\advance\ind by 1            % Advance list index
-        \ifnum3<\cyclecount                 % If cyclecount is larger than list
-          \global\cyclecount=0              %   reset cyclecount and
-          \global\ind=0                     %   reset list index
-        \fi
-        \pgfmathparse{\cyclelist[\the\ind]} % Get color from cycle list
-        \edef\color{\pgfmathresult}         %   and store as \color
-        % Draw angle and set labels
-        \draw[fill={\color!50},draw={\color}] (0,0) -- (\angle:\radius)
-          arc (\angle:\angle+\percent*3.6:\radius) -- cycle;
-        \node at (\angle+0.5*\percent*3.6:0.7*\radius) {\percent\,\%};
-        \node[pin=\angle+0.5*\percent*3.6:\name]
-          at (\angle+0.5*\percent*3.6:\radius) {};
-        \pgfmathparse{\angle+\percent*3.6}  % Advance angle
-        \xdef\angle{\pgfmathresult}         %   and store in \angle
-      \fi
-    };
-\end{tikzpicture}
+\begin{frame}
+  \frametitle{Tests}
+  \framesubtitle{Branch Coverage}
+  {
+    \centering
+    \includegraphics[scale=0.3]{branches.png}
+    \par
+  }
 \end{frame}
+
+\begin{frame}
+  \frametitle{Tests}
+  \framesubtitle{Tabellarische Übersicht}
+
+  \begin{tabular} { | l | c | c | c | c | c | c | }
+  \hline
+  \textbf{Package} & \textbf{IC} & \textbf{BC} \\
+  \hline
+  Insgesamt & 94\% & 76\% \\
+  \hline
+  com.retroMachines & 100\% & 75\% \\
+  \hline
+  com.retroMachines.data & 100\% & 100\%  \\
+  \hline
+  com.retroMachines.data.models & 100\% & 100\% \\
+  \hline
+  com.retroMachines.game & 93\% & 72\% \\
+  \hline
+  com.retroMachines.game.controllers & 98\% & 89\% \\
+  \hline
+  com.retroMachines.game.gameelements & 96\% & 91\% \\
+  \hline
+  com.retroMachines.ui & 100\% & 100\% \\
+  \hline
+  com.retroMachines.ui.screens & 100\% & 100\% \\
+  \hline
+  com.retroMachines.ui.screens.game & 89\% & 56\% \\
+  \hline
+  com.retroMachines.ui.screens.menus & 99\% & 85\% \\
+
+  \hline
+  com.retroMachines.util & 100\% & 67\% \\
+  \hline
+  com.retroMachines.util.lambda & 85\% & 70\% \\
+  \hline
+\end{tabular}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Änderungen}
+  \framesubtitle{Gefundene Bugs}
+  Es wurden folgende Bugs im Code gefunden:
+  \begin{itemize}
+      \item Löschen des aktiven Profils
+      \item Fehler beim Starten des Levels
+      \item Erstellen von Profilen (Groß- und Kleinschreibung)
+  \end{itemize}
+  Alle drei Fehler konnten behoben werden.
+\end{frame}
+
+\begin{frame}
+    \frametitle{Änderungen}
+    \framesubtitle{Feedback von Nutzern}
+    {
+        \LARGE
+        \textit{
+            ``Die Tutorialhinweise sind zu unverständlich!''
+        }
+    }
+    \begin{flushright}
+        Ein sonst zufriedener Spieler
+    \end{flushright}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Änderungen}
+    \framesubtitle{Feedback von Nutzern}
+    \begin{itemize}
+        \item Aufspaltung von Grafiken in Einzelne.
+        \item Hinzufügen weiterer Grafiken.
+        \item Einfügen eines Knopfes zum Zurücksetzen der Hinweise.
+    \end{itemize}
+\end{frame}
+
 
 \end{document}
