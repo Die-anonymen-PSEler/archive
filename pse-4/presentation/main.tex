@@ -33,7 +33,7 @@
 \title{Kolloquium Qualitätssicherung RetroMachines}
 \subtitle{von Retro Factory}
 
-\author[Team B (RetroFactory)]{Team B (RetroFactory)}
+\author[Team B (RetroFactory)]{RetroFactory}
 \institute{Institut für Programmierparadigmen}
 
 \TitleImage[width=\titleimagewd,height=\titleimageht]{titel}
@@ -55,7 +55,12 @@
 
 \begin{frame}
   \frametitle{Zusammenfassung}
-
+  \framesubtitle{Statistik}
+  {
+    \centering
+    \includegraphics[scale=0.25]{statistic.png}
+    \par
+  }
 \end{frame}
 
 \begin{frame}
@@ -63,68 +68,70 @@
 \framesubtitle{Instruction Coverage}
 {
   \centering
-  \includegraphics[scale=0.3]{instructions.png}
+  \includegraphics[scale=0.25]{chart_instructions_branches.png}
   \par
 }
 \end{frame}
 
-\begin{frame}
-  \frametitle{Tests}
-  \framesubtitle{Branch Coverage}
-  {
-    \centering
-    \includegraphics[scale=0.3]{branches.png}
-    \par
-  }
-\end{frame}
+% \begin{frame}
+%   \frametitle{Tests}
+%   \framesubtitle{Branch Coverage}
+%   {
+%     \centering
+%     \includegraphics[scale=0.45]{branches.png}
+%     \par
+%   }
+% \end{frame}
 
-\begin{frame}
-  \frametitle{Tests}
-  \framesubtitle{Tabellarische Übersicht}
+% \begin{frame}
+%   \frametitle{Tests}
+%   \framesubtitle{Tabellarische Übersicht}
 
-  \begin{tabular} { | l | c | c | c | c | c | c | }
-  \hline
-  \textbf{Package} & \textbf{IC} & \textbf{BC} \\
-  \hline
-  Insgesamt & 94\% & 76\% \\
-  \hline
-  com.retroMachines & 100\% & 75\% \\
-  \hline
-  com.retroMachines.data & 100\% & 100\%  \\
-  \hline
-  com.retroMachines.data.models & 100\% & 100\% \\
-  \hline
-  com.retroMachines.game & 93\% & 72\% \\
-  \hline
-  com.retroMachines.game.controllers & 98\% & 89\% \\
-  \hline
-  com.retroMachines.game.gameelements & 96\% & 91\% \\
-  \hline
-  com.retroMachines.ui & 100\% & 100\% \\
-  \hline
-  com.retroMachines.ui.screens & 100\% & 100\% \\
-  \hline
-  com.retroMachines.ui.screens.game & 89\% & 56\% \\
-  \hline
-  com.retroMachines.ui.screens.menus & 99\% & 85\% \\
-
-  \hline
-  com.retroMachines.util & 100\% & 67\% \\
-  \hline
-  com.retroMachines.util.lambda & 85\% & 70\% \\
-  \hline
-\end{tabular}
-\end{frame}
+%   \begin{tabular} { | l | c | c | c | c | c | c | }
+%     \hline
+%     \textbf{Package} & \textbf{IC} & \textbf{BC} \\
+%     \hline
+%     Insgesamt & 94\% & 78\% \\
+%     \hline
+%     com.retroMachines & 100\% & 75\% \\
+%     \hline
+%     com.retroMachines.data & 100\% & 100\% \\
+%     \hline
+%     com.retroMachines.data.models & 100\% & 100\% \\
+%     \hline
+%     com.retroMachines.game & 93\% & 72\% \\
+%     \hline
+%     com.retroMachines.game.controllers & 98\% & 89\% \\
+%     \hline
+%     com.retroMachines.game.gameelements & 96\% & 91\% \\
+%     \hline
+%     com.retroMachines.ui & 100\% & 100\% \\
+%     \hline
+%     com.retroMachines.ui.screens & 100\% & 100\% \\
+%     \hline
+%     com.retroMachines.ui.screens.game & 89\% & 56\% \\
+%     \hline
+%     com.retroMachines.ui.screens.menus & 99\% & 85\% \\
+%     \hline
+%     com.retroMachines.util & 100\% & 67\% \\
+%     \hline
+%     com.retroMachines.util.lambda & 87\% & 74\% \\
+%     \hline
+%   \end{tabular}
+% \end{frame}
 
 \begin{frame}
     \frametitle{Tests}
-    \framesubtitle{Weiterführendes}
+    \framesubtitle{Tools}
     \begin{itemize}
+        % bewerten
+        % absteigend
+        \item jUnit
+        \item eclEMMA
+        \item CodePro AnalytiX
         \item Monkey Testing
         \item monkeyrunner
-        \item CodePro AnalytiX
         \item FindBugs
-        \item Codeumstrukturierung
         \item CheckStyle
     \end{itemize}
 \end{frame}
@@ -194,10 +201,18 @@
     \frametitle{Änderungen}
     \framesubtitle{Weiterführendes}
     \begin{itemize}
-        \item Kleinere Änderungen am Pflichtenheft, vornehmlich durch Umstrukturierungen der Menüstruktur
+        \item Kleinere Anpassungen zum Pflichtenheft, vornehmlich durch Umstrukturierungen der Menüstruktur
         \item Einfügen von Fehlermeldungen und Hinweisen
         \item Optimierung der UI Elemente
     \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Ende}
+    {
+    \LARGE
+    Vielen Dank für Ihre Aufmerksamkeit.
+    }
 \end{frame}
 
 

@@ -34,7 +34,6 @@
 
 \chapter{Einleitung}
 
-\enquote{RetroMachines}
 Nach der Implementierungsphase war bereits ein erster Prototyp von RetroMachines fertiggestellt, der zwar die Grundfunktionalität abdeckte, aber an einigen Stellen noch nicht ganz den Spezifizierungen im Pflichtenheft entsprach oder gar abstürzte bei Fehlverhalten.
 Dem haben wir uns nun in der Phase der Qualitätssicherung angenommen, sodass wir die Applikation weiter verbessern sowie effizient testen konnten, um bis jetzt unentdeckte Fehler noch aufzuspüren und diesen bei anschließenden weiteren Änderungen vorzubeugen.
 Wie wir dies umgesetzt haben, dokumentiert der folgende Testbericht. Er gibt zuerst einen kurzen Überblick über die Verbesserungen und vereinfachte Bedienabläufe im Vergleich zum Pflichtenheft, die wir erzielen konnten. Danach folgt ein Abschnitt über die Qualität unseres Code, bevor ein Überblick über die tatsächlich geschriebenen Tests, Testwerkzeuge und Fehler erfolgt.
@@ -119,7 +118,7 @@ Das Programm wurde über 300 Unittests unterzogen. Hierbei kam jUnit zum Einsatz
 	\hline
 	\textbf{Package} & \textbf{IC} & \textbf{BC} & \textbf{CI} & \textbf{MI} & \textbf{CB} & \textbf{MB} \\
 	\hline
-	Insgesamt & 94\% & 76\% & 13149 & 891 & 551 & 173 \\
+	Insgesamt & 94,0\% & 78\% & 13241 & 849 & 574 & 162 \\
 	\hline
 	com.retroMachines & 100\% & 75\% & 106 & 0 & 3 & 1 \\
 	\hline
@@ -143,7 +142,7 @@ Das Programm wurde über 300 Unittests unterzogen. Hierbei kam jUnit zum Einsatz
 	\hline
 	com.retroMachines.util & 100\% & 67\% & 94 & 0 & 4 & 2 \\
 	\hline
-	com.retroMachines.util.lambda & 85\% & 70\% & 2663 & 464 & 234 & 99\\
+	com.retroMachines.util.lambda & 87\% & 74\% & 2755 & 422 & 257 & 88\\
 	\hline
 \end{tabular}
 
@@ -184,8 +183,6 @@ Es wurden Integrationstests geschrieben, die das Zusammenspiel des GameControlle
 
 Es wurden für alle Globalen Testfälle des Pflichtenheftes Skripte geschrieben, welche die Ausführung dieser auf einem Android-Testgerät mit spezifizierter Auflösung erlauben. Dazu muss die Applikation gestartet sein und sich im Hauptmenü befinden.
 
-\chapter{Lasttests}
-
 \section{Monkey Testing}
 
 Mithilfe von Android konnte unsere App auf einem Testgerät installiert werden, welches dann über einen Befehl auf der Konsole eine gewisse Anzahl an Klicks auf dem Gerät ausgeführt hat. Hierbei wurden alle Bereiche unseres Programms tangiert und es konnte kein Fehlverhalten von diesem festgestellt werden. Da diese Eingaben sehr schnell erfolgten, ist auch sichergestellt, dass unser Programm dieser Belastung standhält.
@@ -222,5 +219,13 @@ EclEmma erlaubte es uns, die Codecoverage unseres Projekts zu überprüfen. Dar�
 \section{jUnit}
 
 jUnit erlaubt das Testen einzelner Bestandteile unseres Codes. Außerdem waren wir durch jUnit in der Lage verschiedene Integrationstests auszuführen.
+
+\section{monkeyrunner}
+
+Zum Android-SDK gehört der sogenannte \enquote{monkeyrunner}. Dieser erlaubt es durch Skripte eine kontrollierte Abfolge von Eingaben auf einem Android Gerät auszuführen.
+
+\section{adb shell monkey}
+
+Darüber hinaus bietet die Android-Developer-Bridge (kurz adb) die Möglichkeit eine Vielzahl an Eingaben auf einem Android Gerät auszuführen. Hierbei kann spezifiziert werden, um welche Art von Eingaben es sich handelt, auf welche App sich die Eingaben konzentrieren und wieviele Eingaben ausgeführt werden sollen.
 
 \end{document}
