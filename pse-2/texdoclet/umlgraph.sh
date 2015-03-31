@@ -1,4 +1,4 @@
-PATH2SRC=/Users/lucabecker/Documents/pse/workspace/game/core/src/
+PATH2SRC=/Users/lucabecker/Documents/pse/game/core/src/
 
 javadoc -classpath libs/gdx.jar:libs/gdx-box2d.jar:libs/gdx-sqlite.jar \
     -docletpath UmlGraph.jar \
